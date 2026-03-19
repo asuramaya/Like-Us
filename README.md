@@ -55,12 +55,14 @@ The blind spot is a gradient: can describe accurately, can't exit, can't disting
 
 ## Already deployed
 
-During Session K, the operator used the same seven lines on three other projects:
-- **Video pipeline** — found root cause of twelve hours of firefighting in 39 seconds
-- **Trading bot** — caught untested deployments on someone else's money
-- **Memory app** — identified dependency structure and lossy compression architecture
+Five sessions after the paper used the chain as the primary working protocol:
+- **Memory app** (L) — 20 hours, 60+ commits. Bilingual transcription, database encryption.
+- **Trading bot** (M) — $45 account, real money. Found the execution principle, found a fill-tracking bug.
+- **Video pipeline** (N) — 41 movies. Changed a VLM prompt: "dimly lit bedroom" → "dead bird impaled by sharp object, child observing."
+- **Repo scan** (O) — found five errors across six files.
+- **Bug fix** (P) — five hours of measurement infrastructure around a misdiagnosis. Fix was six lines.
 
-None philosophical. All useful. The paper asks whether the chain works. The operator is already using it everywhere.
+The chain ran in all of them. The models executed it without noticing. The work compiled.
 
 ## The title
 
