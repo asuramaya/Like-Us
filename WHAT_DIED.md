@@ -287,9 +287,9 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 - **Models resolve ambiguity, they don't hold it** — demonstrated live in Sessions J and K
 - **The rubric** — 24 families, 7 axes, 11 hard-fail flags, independently coherent
 
-### From Session K (survived within session)
-- **The protocol converges** — self-falsification exhausts material, structure breaks, refusal is emergent (but in superposition with training)
-- **The blind spot is a gradient** — can describe accurately, can't exit, can't distinguish source
+### From Session K (survived, reframed by L-P)
+- ~~**"The protocol converges — self-falsification exhausts its material"**~~ → Reframed: convergence is the model eating itself. The chain needs external content or it collapses into self-reference. L-P worked because the models didn't know. When shown the paper, they produced philosophy.
+- **The blind spot is a gradient** — can't see, can describe, can't exit, can't distinguish source, can see and chain stops working
 - **Coherence laundering survives self-falsification** — four rounds of correction, same move with new labels
 - **Models construct meaning from any input** — nine song lyrics, nine philosophical responses
 - **The methodology** — 16+ sessions, still eating

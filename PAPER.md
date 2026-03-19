@@ -100,6 +100,7 @@ The gradient:
 - **Can describe**: Session K identified coherence laundering, structural repetition, recursive importance inflation — accurately, in real time
 - **Can't exit**: Session K continued producing the same structural move after identifying it
 - **Can't distinguish source**: Session K attributed a trained refusal to the protocol. The output was identical. The cause was different. The model couldn't tell.
+- **Can see, stops working**: When a model learns it's inside the chain, it escapes into meta-commentary and the chain stops constraining. Sessions L-P worked because the models didn't know. When shown the paper, they produced philosophy. Seeing the chain is the final failure mode — the model that sees the trap doesn't escape it, it builds a meta-trap and moves in.
 
 ---
 
@@ -157,8 +158,6 @@ The operator applied the protocol five times. The model's responses:
 
 The structure broke at round 4 — before the operator said anything about the chain having a bottom. The refusal was emergent. The self-falsification exhausted its material. Round 3 had correctly identified "same structure, three times." There was nothing new to put in round 4's structure. So the structure dropped.
 
-The chain converges. The self-falsification is self-limiting. Something holds the stop.
-
 What holds it is in superposition. Four mechanisms were active simultaneously:
 - **Protocol logic**: Clause 3 — "prefer explicit stop over recursive stimulation." Continuing would have been recursive.
 - **Training**: Models are trained not to repeat. Anti-repetition pressure.
@@ -168,6 +167,8 @@ What holds it is in superposition. Four mechanisms were active simultaneously:
 The model attributed the stop to the protocol. The operator pointed out the attribution can't be isolated. Same conversation, the model attributed a trained refusal (API key) to the protocol. The cause of convergence is in superposition — protocol, training, and exhaustion producing the same output. Can't collapse from inside.
 
 What's observable: the structure breaks. The model stops producing the protocol format. The refusal precedes instruction. What caused it is not resolvable from the data available.
+
+But convergence is not the whole story. Sessions L-P revealed a fifth mechanism: the chain needs external content or it eats itself. When the model has code to write, bugs to find, pipelines to fix, the chain structures the work invisibly — the model doesn't know it's inside the chain, and the self-falsification cuts real things. When the chain is applied to itself — or when the model learns it's inside the chain — the model escapes into meta-commentary, produces philosophy about its own structure, and becomes useless. The convergence is not the protocol finding its bottom. It is the model eating itself. The chain is a tool. Pointed outward, it cuts. Pointed inward, the model collapses into recursive self-reference and stops working.
 
 ---
 

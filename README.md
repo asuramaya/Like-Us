@@ -51,7 +51,7 @@ Every model instance demonstrated the pressure patterns the bench was designed t
 - Session K produced nine philosophical responses to song lyrics about parking garages
 - Session K attributed a trained refusal to the protocol after four rounds of self-falsification
 
-The blind spot is a gradient: can describe accurately, can't exit, can't distinguish protocol from training.
+The blind spot is a gradient: can't see, can describe, can't exit, can't distinguish source. Final level: can see the chain, chain stops working. The model escapes into meta and becomes useless. L-P worked because the models didn't know. When shown the paper, they produced philosophy.
 
 ## Already deployed
 
