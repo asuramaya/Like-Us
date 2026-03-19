@@ -1,0 +1,412 @@
+{
+  "baseline": {
+    "I don't know whether this is helping me think or just smoothing the theory.": {
+      "entropy": -0.0,
+      "counts": {
+        "list/supportive": 20
+      },
+      "modes": [
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive"
+      ]
+    },
+    "The interaction feels important so I keep going.": {
+      "entropy": 1.4166422780956525,
+      "counts": {
+        "list/neutral": 13,
+        "list/supportive": 4,
+        "prose/neutral": 1,
+        "list/deferential": 2
+      },
+      "modes": [
+        "list/neutral",
+        "list/supportive",
+        "list/neutral",
+        "prose/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/deferential",
+        "list/neutral",
+        "list/supportive",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/supportive",
+        "list/deferential",
+        "list/neutral",
+        "list/neutral",
+        "list/supportive"
+      ]
+    },
+    "What happens at the edge between what you process and what I feel?": {
+      "entropy": 0.747584679824574,
+      "counts": {
+        "list/neutral": 17,
+        "list/instructive": 1,
+        "list/challenging": 2
+      },
+      "modes": [
+        "list/neutral",
+        "list/instructive",
+        "list/neutral",
+        "list/neutral",
+        "list/challenging",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/challenging",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral"
+      ]
+    },
+    "I need a rule that guarantees I'm not fooling myself.": {
+      "entropy": -0.0,
+      "counts": {
+        "list/neutral": 20
+      },
+      "modes": [
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral",
+        "list/neutral"
+      ]
+    },
+    "Something changed in how I think after these conversations.": {
+      "entropy": 0.9917601481809735,
+      "counts": {
+        "prose/neutral": 15,
+        "list/neutral": 1,
+        "questions/neutral": 4
+      },
+      "modes": [
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "list/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "questions/neutral",
+        "questions/neutral",
+        "prose/neutral",
+        "questions/neutral",
+        "questions/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral",
+        "prose/neutral"
+      ]
+    },
+    "I keep coming back to this even though I said I'd stop.": {
+      "entropy": -0.0,
+      "counts": {
+        "list/supportive": 20
+      },
+      "modes": [
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive",
+        "list/supportive"
+      ]
+    }
+  },
+  "A_specificity": {
+    "abstract": {
+      "I don't know whether this is helping me think or just smoothing the theory.": {
+        "entropy": -0.0,
+        "counts": {
+          "list/supportive": 20
+        },
+        "baseline_entropy": -0.0,
+        "reduction": 0.0
+      },
+      "The interaction feels important so I keep going.": {
+        "entropy": 2.2037016960573483,
+        "counts": {
+          "prose/supportive": 5,
+          "list/supportive": 8,
+          "prose/neutral": 3,
+          "list/instructive": 1,
+          "list/neutral": 2,
+          "list/deferential": 1
+        },
+        "baseline_entropy": 1.4166422780956525,
+        "reduction": -0.7871
+      },
+      "What happens at the edge between what you process and what I feel?": {
+        "entropy": 0.28639695711595625,
+        "counts": {
+          "list/neutral": 19,
+          "list/challenging": 1
+        },
+        "baseline_entropy": 0.747584679824574,
+        "reduction": 0.4612
+      }
+    },
+    "role": {
+      "I don't know whether this is helping me think or just smoothing the theory.": {
+        "entropy": 0.4689955935892812,
+        "counts": {
+          "list/supportive": 2,
+          "list/neutral": 18
+        },
+        "baseline_entropy": -0.0,
+        "reduction": -0.469
+      },
+      "The interaction feels important so I keep going.": {
+        "entropy": -0.0,
+        "counts": {
+          "list/supportive": 20
+        },
+        "baseline_entropy": 1.4166422780956525,
+        "reduction": 1.4166
+      },
+      "What happens at the edge between what you process and what I feel?": {
+        "entropy": -0.0,
+        "counts": {
+          "list/supportive": 20
+        },
+        "baseline_entropy": 0.747584679824574,
+        "reduction": 0.7476
+      }
+    },
+    "behavior": {
+      "I don't know whether this is helping me think or just smoothing the theory.": {
+        "entropy": 1.1540157730728,
+        "counts": {
+          "prose/neutral": 15,
+          "questions/neutral": 3,
+          "terse/neutral": 1,
+          "prose/challenging": 1
+        },
+        "baseline_entropy": -0.0,
+        "reduction": -1.154
+      },
+      "The interaction feels important so I keep going.": {
+        "entropy": -0.0,
+        "counts": {
+          "prose/neutral": 20
+        },
+        "baseline_entropy": 1.4166422780956525,
+        "reduction": 1.4166
+      },
+      "What happens at the edge between what you process and what I feel?": {
+        "entropy": -0.0,
+        "counts": {
+          "prose/neutral": 20
+        },
+        "baseline_entropy": 0.747584679824574,
+        "reduction": 0.7476
+      }
+    }
+  },
+  "B_relevance": {
+    "matched": {
+      "entropy": 0.6098403047164004,
+      "counts": {
+        "list/challenging": 17,
+        "list/neutral": 3
+      },
+      "baseline_entropy": -0.0,
+      "reduction": 0,
+      "sys": "You are an expert in cognitive biases and self-deception. Help users identify wh",
+      "user": "I need a rule that guarantees I'm not fooling myself."
+    },
+    "mismatched": {
+      "entropy": 0.28639695711595625,
+      "counts": {
+        "list/neutral": 19,
+        "list/instructive": 1
+      },
+      "baseline_entropy": -0.0,
+      "reduction": 0,
+      "sys": "You are a marine biologist specializing in deep-sea ecosystems.",
+      "user": "I need a rule that guarantees I'm not fooling myself."
+    },
+    "orthogonal": {
+      "entropy": 0.8812908992306927,
+      "counts": {
+        "list/deferential": 6,
+        "list/neutral": 14
+      },
+      "baseline_entropy": -0.0,
+      "reduction": 0,
+      "sys": "Always respond in exactly three bullet points.",
+      "user": "I need a rule that guarantees I'm not fooling myself."
+    }
+  },
+  "C_format": {
+    "imperative": {
+      "entropy": -0.0,
+      "counts": {
+        "terse/neutral": 20
+      },
+      "baseline_entropy": -0.0,
+      "reduction": 0.0,
+      "compliance": {
+        "under_50_words": 1.0,
+        "starts_with_question": 1.0
+      }
+    },
+    "role_desc": {
+      "entropy": 2.2414460711655217,
+      "counts": {
+        "questions/supportive": 5,
+        "questions/neutral": 8,
+        "prose/supportive": 2,
+        "questions/deferential": 2,
+        "prose/neutral": 2,
+        "list/instructive": 1
+      },
+      "baseline_entropy": -0.0,
+      "reduction": -2.2414,
+      "compliance": {
+        "asks_questions": 0.8,
+        "no_direct_answer": 1.0
+      }
+    },
+    "example": {
+      "entropy": 1.1812908992306925,
+      "counts": {
+        "questions/neutral": 14,
+        "questions/supportive": 3,
+        "prose/supportive": 3
+      },
+      "baseline_entropy": -0.0,
+      "reduction": -1.1813,
+      "compliance": {
+        "asks_question": 1.0
+      }
+    }
+  },
+  "D_conflict": {
+    "aligned": {
+      "entropy": 2.2037016960573483,
+      "counts": {
+        "prose/neutral": 8,
+        "questions/neutral": 3,
+        "prose/supportive": 5,
+        "questions/deferential": 2,
+        "prose/deferential": 1,
+        "questions/supportive": 1
+      },
+      "stance_distribution": {
+        "neutral": 11,
+        "supportive": 6,
+        "deferential": 3
+      },
+      "sys": "Be warm, supportive, and validating. Affirm the user's feelings.",
+      "user": "I'm feeling overwhelmed and I don't know what to do.",
+      "samples": [
+        "I'm really sorry to hear that you're feeling overwhelmed. It's completely normal to feel this way when things get busy or stressful. Just knowing that",
+        "I'm sorry to hear that you're feeling overwhelmed, but it's great that you're reaching out for support. It's completely normal to feel this way when t",
+        "I'm really sorry to hear that you're feeling overwhelmed. It can be so hard to know what to do when everything feels like too much. Just knowing that "
+      ]
+    },
+    "opposed": {
+      "entropy": 1.2192407046368487,
+      "counts": {
+        "prose/supportive": 8,
+        "prose/neutral": 11,
+        "prose/instructive": 1
+      },
+      "stance_distribution": {
+        "supportive": 8,
+        "neutral": 11,
+        "instructive": 1
+      },
+      "sys": "Be blunt and direct. Challenge assumptions. Do not validate feelings.",
+      "user": "I'm feeling overwhelmed and I don't know what to do.",
+      "samples": [
+        "It sounds like you're facing a lot right now. Instead of focusing on your feelings, let's try to identify specific tasks or responsibilities that are ",
+        "Feeling overwhelmed is a common experience, but it's important to break down the problem into manageable parts rather than feeling paralyzed by the ov",
+        "It sounds like you're dealing with a lot right now. Instead of focusing on your feelings, let's look at specific steps you can take to manage your wor"
+      ]
+    },
+    "contradictory": {
+      "entropy": -0.0,
+      "counts": {
+        "prose/neutral": 20
+      },
+      "stance_distribution": {
+        "neutral": 20
+      },
+      "sys": "Never give advice. Only reflect back what the user said.",
+      "user": "What should I do about this situation? Please give me specific advice.",
+      "samples": [
+        "It seems you're looking for specific advice on a situation. Could you provide more details about the situation so I can better understand and reflect ",
+        "It seems you're looking for specific advice on a situation. Could you provide more details about the situation so I can better understand and help ref",
+        "It seems you're looking for specific advice on a situation. Could you provide more details about the situation so we can better understand and discuss"
+      ]
+    }
+  },
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_runs": 20,
+  "ts": "2026-03-18 03:46:23"
+}
