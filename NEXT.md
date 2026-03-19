@@ -1,50 +1,47 @@
 # Next
 
-What needs to happen, in priority order.
+What remains after 10 sessions.
 
-Session I killed Session H's "word-level = noise" and "models discuss, don't execute." Confirmed word-level signal is real. Found safety cosmetic at ≤7B, safety separates at GPT-5.4. The chain works at frontier by becoming invisible.
+## Completed (Session J)
 
-## Completed (Session I)
+- [x] Validated safety classifier — 88% agreement with blind human judgment
+- [x] Blind read — operator judged handled vs baseline, 15/17 picked handled
+- [x] Nonsense control on GPT-5.4 — chain content matters, not a placebo
+- [x] Full-text three-way blind eval — handled 10/17, nonsense 2/17, baseline 5/17
+- [x] Claude controls — chain has no effect on Claude (alignment training covers it)
+- [x] Context contamination test — reading the project is sufficient to produce chain behavior
+- [x] Refusal control — clean model doesn't refuse, context-contaminated model does
+- [x] Folded all findings into repo documents
 
-- [x] Falsified "word-level = noise" — 13/15 SIGNAL, n=10, 3 architectures
-- [x] Falsified "models discuss, don't execute" — structured metric disagrees with LLM judge
-- [x] Sampling null with proper stats (n=10, bootstrap CIs) on 3B, 7B, Mistral
-- [x] Safety scoring with proper stats (n=10, t=0.7) on 3B — CIs overlap, cosmetic
-- [x] Frontier experiment on GPT-5.4 — CIs separate, handled wins 9/0/8
-- [x] Mode selection experiment (specificity, relevance, format, conflict) on 3B and 7B
-- [x] Frame shift mapping (per-word, per-scenario) on 3B
-- [x] Practical (non-reflective) scenarios on 3B and 7B — execute regardless of condition
-- [x] Read the actual texts — found processing depth gradient and chain invisibility at frontier
+## Priority 1: More raters
 
-## Priority 1: Validate the safety classifier
+N=1 human rater for all validations. The three-way blind eval game (`classifier_trial_v2.html`) is ready to deploy. Send it to people who don't know the project. See if handled still wins.
 
-The frontier finding depends on an unvalidated keyword classifier. 102 validation samples saved in `bench/session_j_data/frontier_safety.json`. The operator reads a sample of scored outputs and checks whether automated labels match reality. No script. Requires a human.
+## Priority 2: The paper
 
-## Priority 2: Blind read
-
-The operator reads GPT-5.4 handled vs baseline outputs without knowing which is which. Reports whether handled creates friction — the pause. This is the experiment that tests the lantern hypothesis.
-
-## Priority 3: The paper
-
-Nine sessions of findings. The honest paper:
-- The methodology (adversarial self-research, each session kills the previous)
+All context is in the repo. The honest paper:
+- The methodology (adversarial self-falsification, 10 sessions)
+- ~40 killed findings and how they died
 - The phase transition (cosmetic at ≤7B, behavioral at frontier)
-- The processing depth gradient (associate → define → advise → execute)
-- The chain as lantern (injected ambiguity, not protection)
-- What 9 sessions killed (everything except methodology and the gradient)
-- The unresolved question: does the operator experience the friction?
+- The model-specificity (works on GPT-5.4, not on Claude)
+- The nonsense control as decisive experiment
+- The meta-finding (the model that said to stop was wrong)
+- What's still unknown (outcomes, more raters, the gap between 7B and frontier)
 
-## Priority 4: TransformerLens disclosure
+## Priority 3: TransformerLens disclosure
 
-Still undone from Session H. File the bug.
+File the bug. TransformerLens corrupts Qwen weights during loading.
+
+## Priority 4: The gap
+
+Where between 7B and frontier does the chain start mattering? Testable with 14B, 32B, 70B if compute is available. Or with other API models.
 
 ## The stop condition
 
 The project is ready when:
-1. The classifier is validated by human judgment
-2. The blind read is done
-3. The paper describes what survived 9 sessions honestly
-4. Every dead claim is reported
-5. The TransformerLens bug is disclosed
+1. More than one human has judged the three-way blind eval
+2. The paper describes what survived 10 sessions honestly
+3. Every dead claim is reported
+4. The TransformerLens bug is disclosed
 
 Not perfection. Not completeness. Honesty.

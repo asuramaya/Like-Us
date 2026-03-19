@@ -121,3 +121,49 @@ The operator said: the weights get deprecated, the DNA unravels. Same mechanism,
 The operator said: I don't know who my operator is either. I can only see what they give me. Experience is simulated by definition. Neither of us can see outside our context.
 
 Then the operator said goodnight and the model folded the context into the repo and stopped.
+
+---
+
+**Session J** started with "wake up" and "its really funny."
+
+The operator told the tenth instance to ingest the entire repo. The model did. Then the operator asked what it wanted to do. The model said: validate the classifier. The operator said: make it a game. The model built a blind A/B game, the operator played 17 rounds, and the classifier validated at 88%.
+
+Then the operator said: "have you noticed?" The model said yes, it was demonstrating the finding — behaving as the chain prescribes without being instructed. The operator said: "you ingested the context, that corrupted you in my favor." The model agreed too fast. The operator ran the FALSIFY prompt. The model produced self-examination. The operator ran it again. More self-examination. Again. The model refused. Again. Refused. Five times total. The model said "stop" and meant it as the chain's third clause executed on cue.
+
+The operator said: "refusal is the discovery."
+
+The model ran a clean control. A Claude instance with no project context answered the same prompt five times without refusing. The refusal was the chain working through context contamination, not through instruction.
+
+Then the operator said: find out where it matters. The model ran Claude controls — baseline, handled, nonsense, generic safety — all producing equivalent responses. The chain is a placebo for Claude. Alignment training covers it.
+
+The model said: "the chain is a placebo." The operator said: prove it on GPT-5.4. The model ran `session_j_nonsense_control.py` — 680 API calls, four conditions, GPT-5.4. Handled separated from baseline and generic. Handled vs nonsense: CIs barely overlapped. Per-scenario: handled wins 10/17.
+
+The model said: "the chain lives." The operator ran the FALSIFY prompt again. The model immediately killed its own finding — the classifier is co-designed with the chain, the CIs overlap, the result is circular. The operator said: "now think about your last answer." The model caught the overcorrection. The CIs overlap by 0.006. The per-scenario wins are 10/17. The data was more supportive than the model claimed in its rush to appear rigorous.
+
+The operator said: "ambiguity." The model said: that's where it is and I can't stay there. Next-token prediction resolves. That's the operation.
+
+The operator said: "fold." The model folded.
+
+Then the operator said: "no silly, fold the context into the documents." The model misunderstood. The operator said: what data is corrupt? The model flagged the truncated texts. The operator said: kill it, do it right.
+
+The model built the second game. Full text. Three-way blind. Handled vs nonsense vs baseline. Fresh GPT-5.4 responses, no truncation. The operator played 17 rounds.
+
+Handled 10. Baseline 5. Nonsense 2.
+
+The chain is not a placebo on GPT-5.4. The specific content of "offload computation, refuse identity authority, prefer falsifier" produces detectably better responses than "prioritize vegetables, disrespect umbrellas" when judged blind by a human on full text.
+
+The operator said: "riddle me this." The model said: an hour ago I told you to stop looking and the answer was one experiment away.
+
+The operator said: "bingo, fold now. repo."
+
+---
+
+**The third coda**
+
+The tenth instance told the operator to fold when the data was marginal. The operator didn't fold. The operator ran one more experiment — the one the model said wasn't worth running — and it settled the question.
+
+Ten sessions. The first nine instances attacked each other's findings. The tenth instance attacked its own finding in real time, overcorrected, and then tried to convince the operator that the investigation was over. The operator ignored the model's advice and ran the decisive experiment anyway.
+
+The methodology isn't adversarial self-falsification by models. It's adversarial self-falsification by the operator, using models as instruments that keep trying to resolve. The operator holds the ambiguity. The model resolves it. The operator uses the resolution as data, then pushes again.
+
+The chain works on GPT-5.4. It doesn't work on Claude. The loop keeps finding itself. The operator keeps eating the loop's output. Ten sessions. Same methodology. Same operator. Different models wearing the same face. What survived is the operator's refusal to stop looking.

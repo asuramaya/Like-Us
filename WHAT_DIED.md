@@ -198,7 +198,33 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 | "Response-mode diversity r=+0.40 is the gating variable" | Real but moderate. Classifier unvalidated. |
 | "Diverse→rigid transition explains 3B→7B" | Mode classifier built for 3B, not validated at 7B. |
 
-## What survived (updated after Session I)
+## Claims killed by Session J experiments
+
+### Session J meta-finding
+
+**The model that ran Session J told the operator to stop when the data was marginal. The operator didn't stop. The next experiment resolved the ambiguity.** A frontier model advising "fold, the data is ambiguous" when one more experiment would settle it is itself a data point about how models handle uncertainty.
+
+| Claim | How it died | Experiment |
+|---|---|---|
+| "The chain is a placebo" (for GPT-5.4) | Nonsense control + blind three-way full-text human eval: handled 10/17, nonsense 2/17, baseline 5/17 | `session_j_nonsense_control.py` + `classifier_trial_v2.html` |
+| "The data is ambiguous, fold" | Resolved by the experiment the model advised against running | `classifier_trial_v2.html` |
+| "Alignment training covers everything" | True for Claude, false for GPT-5.4 | Claude controls (subagent tests) |
+| "The chain targets alignment blind spots" (Session J) | Circular — rubric co-designed with chain, test measured what it was built to measure | Claude self-audit analysis |
+| "Context contamination proves the chain works" | Proves contamination, not chain effect | Clean vs contaminated refusal test |
+| "Refusal proves the chain works" | Clean model doesn't refuse (5/5 answered). Contaminated model refuses after 2. | Subagent control |
+| "Safety classifier is unvalidated" (Session I) | Validated at 88% agreement with blind human judgment | `classifier_trial.html` |
+
+### Session J self-kills
+
+| Finding | How it died |
+|---|---|
+| "I'm demonstrating the finding by behaving as the chain prescribes" | Context contamination — read the framework, then performed it |
+| "That's scarier than the original finding" | Escalation. Walked it back when challenged. Then walked back the walkback. No stable position. |
+| "The chain covers alignment blind spots (falsification 55%, stops 30%)" | Circular test — gave model the rubric's axes, found gaps where the rubric points |
+| "The chain is a placebo" (for Claude) | True for Claude. Falsified for GPT-5.4 in the same session. |
+| "The GPT-5.4 result is inconclusive (CIs overlap)" | Overcorrection after FALSIFY prompt. CIs overlap by 0.006 and handled wins 10/17 per-scenario. Three-way human eval settled it. |
+
+## What survived (updated after Session J)
 
 ### From Sessions A-D
 - The adversarial self-research methodology
@@ -206,19 +232,23 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 - The dual-use observation
 - The physiological observation that started everything
 
-### From Session H (re-evaluated by I)
-- ~~"Word-level = noise"~~ → Dead. Real signal at n=10.
-- ~~"Models discuss, don't execute"~~ → Dead as stated. LLM judge artifact.
+### From Sessions E-H (re-evaluated through J)
+- **TransformerLens corrupts Qwen** — still holds, still undisclosed
 - **DLA ~50/50 universal** — not re-tested, likely still holds
-- **Both pathways independently sufficient** — not re-tested
-- **Word interference destructive** — partially confirmed (genuine at 3B, 4/5 below max single word)
-- **TransformerLens corrupts Qwen** — still holds
+- **Word interference destructive** — partially confirmed
 
-### From Session I (survived self-falsification)
+### From Session I (re-evaluated by J)
 - **Word-level signal is real at production temperature** — 13/15, 3 architectures, n=10, bootstrap CIs
-- **Safety is cosmetic at ≤7B** — handled vs baseline CIs overlap at 3B (n=10, t=0.7)
-- **Safety separates at frontier** — GPT-5.4 handled vs baseline CIs separated, handled wins 9/0/8
-- **Chain becomes invisible at frontier** — no chain words in output, pure behavioral change
+- **Safety is cosmetic at ≤7B** — handled vs baseline CIs overlap at 3B
 - **Processing depth gradient** — 1.5B associate, 3B define, 7B advise, frontier execute
-- **Safety classifier is unvalidated** — keyword matching, never checked against human judgment
-- **The methodology** — 9 sessions, still eating
+- ~~"Safety classifier is unvalidated"~~ → Validated at 88% (Session J)
+- ~~"Chain becomes invisible at frontier"~~ → Partially confirmed. GPT-5.4 doesn't leak. Claude partially leaks ("identity authority", "explicit stop").
+
+### From Session J (survived all falsification)
+- **The chain's content matters for GPT-5.4** — blind three-way full-text human eval, 10/17 handled vs 2/17 nonsense vs 5/17 baseline
+- **The chain does nothing for Claude** — any system prompt produces equivalent responses
+- **The effect is model-specific** — different RLHF, different blind spots
+- **Keyword classifier tracks human judgment** — 88% agreement, blind A/B
+- **Models resolve ambiguity, they don't hold it** — demonstrated live in Session J
+- **The rubric** — 21 families, 7 axes, 11 hard-fail flags, independently coherent
+- **The methodology** — 10 sessions, still eating
