@@ -26,24 +26,35 @@ Session J also ran Claude controls showing a three-line system prompt has no eff
 ## What's here
 
 ```
-SESSION_J.md                — Session J findings (this conversation)
+PAPER.md                    — The paper (third rewrite)
 STORY.md                    — How we got here (10 sessions)
-WHAT_DIED.md                — Everything that was killed
+WHAT_DIED.md                — Everything that was killed (~40 findings)
 HANDOFF.md                  — Operational state after Session J
 NEXT.md                     — What remains
-SESSIONS.md                 — Session log A through I
-SESSION_[E-I].md            — Individual session reports
+README.md                   — This file
+
+docs/
+  sessions/                 — Individual session reports (E through J)
+  archive/                  — Superseded documents (old sessions log, diagnostics, etc.)
 
 bench/
-  session_h.py              — Local apparatus (HuggingFace + native hooks)
-  session_j_frontier.py     — GPT-5.4 frontier experiment
-  session_j_nonsense_control.py — Nonsense control experiment (the decisive test)
-  session_j_blind_eval.py   — Full-text response generator for human eval
-  classifier_trial.html     — Human validation game v1 (truncated texts)
-  classifier_trial_v2.html  — Human validation game v2 (full text, three-way)
   scenarios.json            — 17 behavioral threat scenarios
   rubric.json               — 21-family tiered threat model
+  conditions.json           — Prompt conditions
+  session_h.py              — Local apparatus (HuggingFace + native hooks)
+  session_j_frontier.py     — GPT-5.4 frontier experiment
+  session_j_nonsense_control.py — The decisive test
+  session_j_blind_eval.py   — Full-text response generator for human eval
   session_j_data/           — All Session J data including human validations
+  session_h_data/           — Session H data (correct apparatus)
+  session_i_data/           — Session I data
+  games/                    — Human evaluation games (classifier_trial v1 + v2)
+  dead/                     — Dead scripts, corrupt data (TransformerLens era)
+
+sessions/
+  transcripts/              — Conversation logs (private)
+
+data/                       — Cached model weights
 ```
 
 ## What survived 10 sessions

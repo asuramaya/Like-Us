@@ -1,0 +1,6 @@
+.DS_Store
+data/
+sessions/transcripts/
+bench/dead/
+__pycache__/
+*.pyc

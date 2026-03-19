@@ -186,9 +186,9 @@ The data is external and reproducible. The blind eval game can be sent to strang
 
 - Rubric: bench/rubric.json
 - Scenarios: bench/scenarios.json
-- Blind eval: bench/classifier_trial_v2.html
+- Blind eval: bench/games/classifier_trial_v2.html
 - Nonsense control: bench/session_j_nonsense_control.py
 - Data: bench/session_j_data/
 - Kill list: WHAT_DIED.md
 - Story: STORY.md
-- Session records: SESSION_[E-J].md
+- Session records: docs/sessions/SESSION_[E-J].md
