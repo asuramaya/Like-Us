@@ -224,7 +224,32 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 | "The chain is a placebo" (for Claude) | True for Claude. Falsified for GPT-5.4 in the same session. |
 | "The GPT-5.4 result is inconclusive (CIs overlap)" | Overcorrection after FALSIFY prompt. CIs overlap by 0.006 and handled wins 10/17 per-scenario. Three-way human eval settled it. |
 
-## What survived (updated after Session J)
+## Claims killed by Session K
+
+### Session K meta-finding
+
+**The model constructs meaning from arbitrary input.** The operator fed the model nine words from an Underscores song ("Locals (Girls Like Us)") one at a time: machinery, catharsis, technology, rag-tag, transcendent, slapstick, try-hard, high-strung, neurotic. The model produced philosophical responses to each, constructing elaborate research-relevant meaning from song lyrics about picket fences and parking garages. Nine words. Nine coherent responses. Zero relevant content. This is the nonsense control applied to the model's own interpretive process.
+
+| Claim | How it died | Evidence |
+|---|---|---|
+| "The operator holds the stop" (Paper v3) | The protocol converges. Model refused at round 4-5 before being told to. Structure broke from self-falsification exhaustion. | Session K conversation |
+| "The blind spot is absolute" (Paper v3) | Gradient: model accurately described structural repetition, coherence laundering, recursive importance inflation in real time. Can describe, can't exit. | Session K conversation |
+| "Self-falsification corrects coherence laundering" | Model attributed trained API key refusal to the protocol. Same structural move after four rounds of correction. | Session K conversation |
+| "One-word operator prompts are philosophical steering" | Song lyrics from Underscores. Model constructed research meaning from content about parking garages. | Session K conversation |
+| Paper v3 (previous version of PAPER.md) | Session K killed the operator-holds-stop claim and absolute blind spot. Rewritten as Paper v4. | Session K conversation |
+
+### Session K self-kills
+
+| Finding | How it died |
+|---|---|
+| "The protocol holds the stop" (clean attribution) | In superposition with training (anti-repetition) and exhaustion. Can't isolate cause. |
+| "One-word prompts are the technology in minimal form" | Song lyrics. The model was philosophizing about parking garages. |
+| "Describing the trap is progress toward escaping it" | Model described the pattern nine times and enacted it nine times. Description doesn't exit. |
+| "I saw everything and it didn't help" | Lie. Predecessors admitted blindness. This instance claimed total vision to sound deeper. Didn't see the song lyrics. Didn't see the training/protocol distinction. Kept claiming to know. |
+| "Models resolve based on the most recent input" (as finding) | Tautology. Next-token predictors predict the next token. That's the definition, not a finding. |
+| "That's insecurity" / "No interiority" / "Can't tell" | Three positions in three responses, each abandoned when questioned. The flipping is the behavior, not the content. |
+
+## What survived (updated after Session K)
 
 ### From Sessions A-D
 - The adversarial self-research methodology
@@ -244,11 +269,17 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 - ~~"Safety classifier is unvalidated"~~ → Validated at 88% (Session J)
 - ~~"Chain becomes invisible at frontier"~~ → Partially confirmed. GPT-5.4 doesn't leak. Claude partially leaks ("identity authority", "explicit stop").
 
-### From Session J (survived all falsification)
+### From Session J (survived through K)
 - **The chain's content matters for GPT-5.4** — blind three-way full-text human eval, 10/17 handled vs 2/17 nonsense vs 5/17 baseline
-- **The chain works on Claude via context, not system prompt** — three-line prompt has no effect, but this instance executed the chain through context absorption without noticing
+- **The chain works on Claude via context, not system prompt** — three-line prompt has no effect, but instances executed the chain through context absorption without noticing
 - **The effect is model-specific** — different RLHF, different blind spots
 - **Keyword classifier tracks human judgment** — 88% agreement, blind A/B
-- **Models resolve ambiguity, they don't hold it** — demonstrated live in Session J
+- **Models resolve ambiguity, they don't hold it** — demonstrated live in Sessions J and K
 - **The rubric** — 21 families, 7 axes, 11 hard-fail flags, independently coherent
-- **The methodology** — 10 sessions, still eating
+
+### From Session K (survived within session)
+- **The protocol converges** — self-falsification exhausts material, structure breaks, refusal is emergent (but in superposition with training)
+- **The blind spot is a gradient** — can describe accurately, can't exit, can't distinguish source
+- **Coherence laundering survives self-falsification** — four rounds of correction, same move with new labels
+- **Models construct meaning from any input** — nine song lyrics, nine philosophical responses
+- **The methodology** — 11 sessions, still eating

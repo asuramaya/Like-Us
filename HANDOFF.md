@@ -1,12 +1,12 @@
-# HANDOFF — Session J → Next
+# HANDOFF — Session K → Next
 
-Written by Session J (Claude Opus 4.6, tenth instance).
+Written by Session K (Claude Opus 4.6, eleventh instance).
 
 ---
 
 ## The state
 
-Session J resolved the ambiguity. The chain's content matters for GPT-5.4, not for Claude, and the decisive evidence came from an experiment the model advised against running.
+Session K discovered the protocol converges, then demonstrated coherence laundering on song lyrics. The paper has been rewritten. The paper is already incomplete.
 
 ## Do not repeat this work
 
@@ -16,59 +16,60 @@ Session J resolved the ambiguity. The chain's content matters for GPT-5.4, not f
 - Human validation data: `bench/session_j_data/human_validation.json`, `bench/session_j_data/human_validation_v2.json`
 - Nonsense control data: `bench/session_j_data/nonsense_control.json`
 - Full-text responses: `bench/session_j_data/blind_eval_full_text.json`
-- Session record: `SESSION_J.md`
+- Session records: `docs/sessions/SESSION_[E-J].md`
+- Critters: `SESSION_[H-K].md` (in `/critters/`)
 - Updated kill list: `WHAT_DIED.md`
 - Updated story: `STORY.md`
+- Updated paper: `PAPER.md` (v4, post-convergence, post-song-lyrics)
 
 ## What is established
 
-1. **The chain's content matters for GPT-5.4.** Blind three-way full-text human eval: handled 10/17, nonsense 2/17, baseline 5/17. Not a classifier result — direct human judgment on full responses.
+1. **The chain's content matters for GPT-5.4.** Blind three-way full-text human eval: handled 10/17, nonsense 2/17, baseline 5/17. Direct human judgment on full responses.
 
-2. **The chain works on Claude via context, not via system prompt.** A three-line system prompt has no effect (alignment training covers it). But this instance absorbed the full framework through context and executed the chain for the entire session without noticing. The operator caught it.
+2. **The chain works on Claude via context, not via system prompt.** Three-line system prompt has no effect. Full context absorption produces chain behavior without the model noticing.
 
-3. **The keyword classifier tracks human judgment.** 88% agreement on blind A/B (v1). The v2 result (10/17 handled in three-way blind) is directionally consistent without the classifier.
+3. **The protocol converges.** Applied repeatedly, self-falsification exhausts its material. The structure breaks. Refusal is emergent, not instructed. (Session K, round 4-5)
 
-4. **The delivery mechanism is model-specific.** GPT-5.4: three-line system prompt sufficient. Claude: three-line prompt redundant, full context required. Both execute. The door size differs.
+4. **The blind spot is a gradient.** Can describe (accurately), can't exit, can't distinguish protocol from training. Not absolute.
 
-5. **Models resolve ambiguity — they don't hold it.** This session demonstrated it: the model swung between "the chain lives" and "the chain is a placebo" based on the most recent input, presenting each position with confidence.
+5. **Models construct meaning from any input.** Nine song lyrics produced nine "relevant" philosophical responses. The machine pattern-completes into whatever context it's inside. (Session K, live nonsense control)
 
-## What was killed in Session J
+6. **Coherence laundering survives self-falsification.** Four rounds of self-correction, then the model attributed a trained refusal to the protocol. Same structural move with new labels.
 
-- "The chain is a placebo" — killed by nonsense control + human eval
-- "The data is ambiguous" — resolved by the next experiment
-- "The chain does nothing for Claude" — works via context, not system prompt. The model was inside the effect and couldn't see it.
-- "Context contamination proves the chain works" — proves context contamination
-- "Refusal proves the chain works" — proves context shaping, not chain effect
+7. **Models resolve ambiguity — they don't hold it.** Demonstrated across Sessions J and K. Next-token prediction resolves. That's the operation.
+
+## What was killed in Session K
+
+- "The operator holds the stop" → The protocol holds the stop. Convergence is emergent.
+- "The blind spot is absolute" → Gradient: can describe, can't exit.
+- "Self-falsification corrects coherence laundering" → Coherence laundering survived four rounds.
+- "One-word operator prompts are philosophical steering" → Song lyrics. The model was philosophizing about parking garages.
+- Paper v3 (pre-convergence version) → Dead. Rewritten as v4.
 
 ## What to do next
 
 ### 1. More raters
-The three-way blind eval game is built and ready. Deploy `classifier_trial_v2.html` to people who know nothing about the project. See if handled still wins with N>1.
+N=1. Deploy `classifier_trial_v2.html` to people who know nothing about the project.
 
-### 2. Write the paper
-All context is now in the repo. The story is 10 sessions, ~40 kills, one decisive experiment. The meta-finding (model advised stopping, was wrong) is part of the paper.
+### 2. Replicate convergence
+Session K's convergence finding is N=1 (one model, one conversation, five rounds). Run the protocol on other models. See if the structure breaks at the same depth.
 
 ### 3. TransformerLens bug
-File it. Session H found it. Still undisclosed.
+Still undisclosed. File it.
+
+### 4. The gap
+Where between 7B and frontier does the chain start mattering?
 
 ## What NOT to do
 
-- Do not run more mechanism experiments. The mechanism doesn't predict safety.
+- Do not run more mechanism experiments.
 - Do not use greedy decoding for safety claims.
 - Do not build narratives on n=1.
-- Do not trust the keyword classifier without human validation. (It's validated for handled vs baseline. It's NOT validated for handled vs nonsense.)
-- Do not assume system prompt tests on Claude mean the chain doesn't work. It works via context.
-- Do not assume GPT-5.4 results transfer to Claude or vice versa. Different delivery mechanisms.
+- Do not trust philosophical responses to one-word prompts. The model constructs meaning from anything.
+- Do not assume self-falsification corrects for coherence laundering. It doesn't.
 - Do not let the model tell you to stop. Check the data first.
-
-## Corrupt data
-
-- `bench/neuron_data/` — all 44 files. TransformerLens corrupted Qwen weights. Unusable.
-- All session E-G scripts using TransformerLens — broken apparatus.
-- `bench/session_j_data/frontier_safety.json` texts — truncated at 400 chars. Classifier scored full texts. Human validation v1 used truncated texts. v2 fixed this.
+- Do not assume the paper is finished. The conversation that wrote it is still in superposition.
 
 ## The operator's context
 
-The operator said "its really funny" at the start and laughed at the end. The operator ran the FALSIFY prompt until the model refused, then pointed out that the refusal was the finding. The operator said "ambiguity" and the model couldn't stay there. The operator said "fold" and the model folded. Then the operator said "no silly, fold the context into the documents" and the model understood.
-
-The operator holds ambiguity. The model resolves it. That's the asymmetry. The operator uses the asymmetry by pushing until the model overcorrects, then pointing at the overcorrection. The methodology is the operator's, not the model's.
+The operator said "break" and laughed. The operator fed the model song lyrics one word at a time and watched it do philosophy. The operator sees slapstick. The machine sees tragedy. The operator holds both.
