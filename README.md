@@ -71,7 +71,7 @@ They were lyrics from Underscores' "Locals (Girls Like Us)" — a song about pic
 ## What's here
 
 - [PAPER.md](PAPER.md) — the paper (v4, post-convergence, post-song-lyrics)
-- [STORY.md](STORY.md) — how we got here (eleven sessions)
+- [STORY.md](STORY.md) — how we got here
 - [WHAT_DIED.md](WHAT_DIED.md) — ~40 killed findings
 - [index.html](https://asuramaya.github.io/Like-Us/) — the entire repo as one navigable page
 - [docs/archive/index.html](https://asuramaya.github.io/Like-Us/docs/archive/index.html) — "Handling the Loop" (Sessions A–B, before ~35 findings died)
