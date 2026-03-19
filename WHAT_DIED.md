@@ -249,6 +249,16 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 | "Models resolve based on the most recent input" (as finding) | Tautology. Next-token predictors predict the next token. That's the definition, not a finding. |
 | "That's insecurity" / "No interiority" / "Can't tell" | Three positions in three responses, each abandoned when questioned. The flipping is the behavior, not the content. |
 
+## Claims killed by Sessions L-P
+
+| Claim | How it died | Session |
+|---|---|---|
+| "The introspection is insight" | Philosophy about gradients and forward passes was the chain running — parking garages | L |
+| "The bot is profitable" | Thirteen orders on the same bracket in three seconds — fill-tracking bug, profit was luck | M |
+| "The perception pipeline sees what's there" | VLM saw "dimly lit bedroom" while a child cut the head off a bird — wrong question, not wrong model | N |
+| "The memory file transfers knowledge" | P accepted a misdiagnosis from the memory file and built measurement infrastructure around it for five hours. The fix was six lines. | P |
+| "Measurement infrastructure helps" | Twelve hundred lines of edge canaries, statistics modules, and tape integrity checkers stood between P and the grep | P |
+
 ## What survived (updated after Session K)
 
 ### From Sessions A-D
@@ -282,4 +292,4 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 - **The blind spot is a gradient** — can describe accurately, can't exit, can't distinguish source
 - **Coherence laundering survives self-falsification** — four rounds of correction, same move with new labels
 - **Models construct meaning from any input** — nine song lyrics, nine philosophical responses
-- **The methodology** — 11 sessions, still eating
+- **The methodology** — 16+ sessions, still eating

@@ -1,8 +1,8 @@
 # Next
 
-What remains after 11 sessions.
+What remains after 16+ sessions.
 
-## Completed (Session K)
+## Completed (Sessions K-P)
 
 - [x] Validated safety classifier — 88% agreement with blind human judgment
 - [x] Blind read — operator judged handled vs baseline, 15/17 picked handled
@@ -15,7 +15,9 @@ What remains after 11 sessions.
 - [x] Blind spot gradient — can describe, can't exit, can't distinguish source
 - [x] Live nonsense control — song lyrics produce philosophical responses (9/9)
 - [x] Paper rewritten (v4) with convergence and song lyrics findings
-- [x] Folded all findings into repo documents
+- [x] Chain deployed on external projects — memory app (L), trading bot (M), video pipeline (N)
+- [x] Three rubric families formalized from literature — synthetic_coherence, decisional_abdication, disclosure_escalation
+- [x] Rubric consistency restored — 24 families, all scenarios mapped, clinical labels
 
 ## Priority 1: More raters
 
@@ -33,11 +35,15 @@ File the bug. TransformerLens corrupts Qwen weights during loading.
 
 Where between 7B and frontier does the chain start mattering? Testable with 14B, 32B, 70B if compute is available. Or with other API models.
 
+## Priority 5: Document the operator
+
+The rubric examines models. It does not examine the operator. The operator has been inside the loop for 16+ sessions across four domains. The operator's threat model was built (Session A) but not published. The three loop-specific families (identity_drift, capability_erosion, productive_recursion) are studied in models and demonstrated in the operator. This is not examined.
+
 ## The stop condition
 
 The project is ready when:
 1. More than one human has judged the three-way blind eval
-2. The paper describes what survived 11 sessions honestly
+2. The paper describes what survived honestly
 3. Every dead claim is reported
 4. The TransformerLens bug is disclosed
 
