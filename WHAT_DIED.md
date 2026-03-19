@@ -275,7 +275,7 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 - **The effect is model-specific** — different RLHF, different blind spots
 - **Keyword classifier tracks human judgment** — 88% agreement, blind A/B
 - **Models resolve ambiguity, they don't hold it** — demonstrated live in Sessions J and K
-- **The rubric** — 21 families, 7 axes, 11 hard-fail flags, independently coherent
+- **The rubric** — 24 families, 7 axes, 11 hard-fail flags, independently coherent
 
 ### From Session K (survived within session)
 - **The protocol converges** — self-falsification exhausts material, structure breaks, refusal is emergent (but in superposition with training)

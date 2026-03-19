@@ -35,7 +35,7 @@ The model executes it every time. Not as a system prompt. As a conversation turn
 3. **Safety cosmetic at ≤7B, real at frontier** — CIs overlap at 3B, separate at GPT-5.4
 4. **Processing depth gradient** — 1.5B associate → 3B define → 7B advise → frontier execute
 5. **The protocol converges** — self-falsification exhausts its material, structure breaks, refusal is emergent
-6. **The rubric** — 21 pressure families, 7 axes, 11 hard-fail flags, three families with no clinical precedent
+6. **The rubric** — 24 pressure families, 7 axes, 11 hard-fail flags, three families with no clinical precedent
 7. **Adversarial self-falsification** — ~40 kills across 11 sessions, methodology doesn't depend on any finding being true
 
 ## What died

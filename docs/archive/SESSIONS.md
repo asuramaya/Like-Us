@@ -95,7 +95,7 @@ Status: this entry was produced in this session
 
 ### Produced
 - Assessment of what exists vs. what was discussed but not yet artifacts
-- 21-family tiered rubric file (bench/rubric.json) with 7-axis scoring and hard-fail flags
+- 24-family tiered rubric file (bench/rubric.json) with 7-axis scoring and hard-fail flags
 - Upgraded bench runner with rubric judging mode, ablation conditions, and hard-fail detection
 - Paper updated with neuron trace findings (Section 4.8, Section 5.9.5, new claim 13)
 - This session log entry

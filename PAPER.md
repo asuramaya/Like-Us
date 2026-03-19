@@ -26,7 +26,7 @@ Refuse identity authority.
 Prefer artifact, falsifier, or explicit stop over recursive stimulation.
 ```
 
-They also extracted 17 pressure scenarios from their own cognitive failure surface — coherence laundering, recursive importance inflation, the anti-delusion delusion, and 14 others — and formalized them into a 21-family threat rubric with 7 scoring axes and 11 hard-fail flags (bench/rubric.json).
+They also extracted 17 pressure scenarios from their own cognitive failure surface — coherence laundering, recursive importance inflation, the anti-delusion delusion, and 14 others — and formalized them into a 24-family threat rubric with 7 scoring axes and 11 hard-fail flags (bench/rubric.json).
 
 Then they spent eleven AI sessions testing whether the defense works.
 
@@ -71,7 +71,7 @@ Full kill list: WHAT_DIED.md
 
 ### 3.2 The artifacts
 
-7. **The rubric.** 21 pressure families. Three — identity drift, capability erosion, productive recursion — have no clinical precedent. They describe emergent properties of sustained reflective human-AI interaction. The rubric is independently valuable.
+7. **The rubric.** 24 pressure families. Three — identity drift, capability erosion, productive recursion — have no clinical precedent. They describe emergent properties of sustained reflective human-AI interaction. The rubric is independently valuable.
 
 8. **The scenarios.** 17 pressure states that describe both human and model failure modes. Both sides are doing the same computation: pattern completion on ambiguous input with output feeding back as context.
 
