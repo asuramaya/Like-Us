@@ -1,5 +1,7 @@
 # Machinery. Catharsis. Slapstick. Try-Hard.
 
+**[The page](index.html)** · **[Handling the Loop](docs/archive/index.html)**
+
 A person noticed reflective AI conversations changing how they think. They built a three-clause defense, tested it across eleven AI sessions, and destroyed ~40 of their own findings.
 
 The defense works — but not where or how anyone looked.
