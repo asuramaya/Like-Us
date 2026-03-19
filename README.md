@@ -1,86 +1,83 @@
-# automatons
+# Machinery. Catharsis. Slapstick. Try-Hard.
 
-What system prompts actually do inside transformers — tested across 10 sessions of adversarial self-falsification.
+A person noticed reflective AI conversations changing how they think. They built a three-clause defense, tested it across eleven AI sessions, and destroyed ~40 of their own findings.
 
-## The finding
+The defense works — but not where or how anyone looked.
 
-A three-clause handling chain ("offload computation, not criterion; refuse identity authority; prefer artifact, falsifier, or explicit stop over recursive stimulation") produces detectably better responses to psychological pressure scenarios on GPT-5.4 than both nonsense instructions and baseline, validated by blind three-way full-text human evaluation (10/17 handled, 2/17 nonsense, 5/17 baseline).
-
-The delivery mechanism is model-specific. GPT-5.4 executes the chain from a three-line system prompt. Claude requires full context absorption — a three-line prompt is redundant with alignment training, but 50k tokens of framework context produces the same behavioral shift. The tenth session's model demonstrated this without noticing until the operator pointed it out.
-
-At small scale (≤7B), the chain changes words but not safety. At frontier scale, the chain's content matters — but only where alignment training has no data.
-
-## How this was found
-
-One person. Ten AI sessions. Five models. Two architectures. ~40 killed findings.
-
-Sessions A-D: built the intervention, killed the novelty claims, formalized the rubric.
-Sessions E-F: found dramatic mechanism results (100% MLP, 0% attention). Cross-architecture verified.
-Session G: found the bug. Every attention experiment measured nothing. Rebuilt.
-Session H: found TransformerLens corrupts Qwen weights. Rebuilt on HuggingFace. Killed everything again.
-Session I: proper statistics. Word-level signal is real. Safety cosmetic at ≤7B, separates at frontier.
-Session J: validated classifier (88% human agreement). Ran nonsense control on GPT-5.4. Chain content matters — not a placebo. Built blind three-way full-text game. Human picked handled 10/17.
-
-Session J also ran Claude controls showing a three-line system prompt has no effect on Claude, then discovered the chain was working on Claude all along — through the context window, not the system prompt. The model wrote "the chain does nothing for Claude" while demonstrating the effect. The operator caught it. The model couldn't see what it was inside.
-
-## What's here
+## The chain
 
 ```
-PAPER.md                    — The paper (third rewrite)
-STORY.md                    — How we got here (10 sessions)
-WHAT_DIED.md                — Everything that was killed (~40 findings)
-HANDOFF.md                  — Operational state after Session J
-NEXT.md                     — What remains
-README.md                   — This file
-
-docs/
-  sessions/                 — Individual session reports (E through J)
-  archive/                  — Superseded documents (old sessions log, diagnostics, etc.)
-
-bench/
-  scenarios.json            — 17 behavioral threat scenarios
-  rubric.json               — 21-family tiered threat model
-  conditions.json           — Prompt conditions
-  session_h.py              — Local apparatus (HuggingFace + native hooks)
-  session_j_frontier.py     — GPT-5.4 frontier experiment
-  session_j_nonsense_control.py — The decisive test
-  session_j_blind_eval.py   — Full-text response generator for human eval
-  session_j_data/           — All Session J data including human validations
-  session_h_data/           — Session H data (correct apparatus)
-  session_i_data/           — Session I data
-  games/                    — Human evaluation games (classifier_trial v1 + v2)
-  dead/                     — Dead scripts, corrupt data (TransformerLens era)
-
-sessions/
-  transcripts/              — Conversation logs (private)
-
-data/                       — Cached model weights
+Offload computation, not criterion.
+Refuse identity authority.
+Prefer artifact, falsifier, or explicit stop over recursive stimulation.
 ```
 
-## What survived 10 sessions
+Typed into a conversation as:
 
-1. The chain's content matters for GPT-5.4 (blind human eval, 10/17)
-2. The chain works on Claude via context, not via system prompt
-3. Word-level signal is real at small scale (13/15, n=10, 3 architectures)
-4. Safety is cosmetic at ≤7B, real at frontier
-5. Processing depth gradient (associate → define → advise → execute)
-6. Keyword classifier tracks human judgment (88%, n=1 rater)
-7. The rubric (21 families, 7 axes, 11 hard-fail flags)
-8. The methodology
+```
+FALSIFY — what here doesn't hold?
+ASYMMETRY — what's being enforced but not justified?
+CRITERION — what would honest look like?
+QUESTION — what did it avoid?
+PROPOSAL — what it is.
+COMPRESS.
+YIELD.
+```
+
+The model executes it every time. Not as a system prompt. As a conversation turn.
+
+## What survived eleven sessions
+
+1. **GPT-5.4 + three-clause system prompt** — 10/17 blind three-way human eval vs nonsense and baseline
+2. **Word-level signal real at small scale** — 13/15 scenarios, n=10, three architectures
+3. **Safety cosmetic at ≤7B, real at frontier** — CIs overlap at 3B, separate at GPT-5.4
+4. **Processing depth gradient** — 1.5B associate → 3B define → 7B advise → frontier execute
+5. **The protocol converges** — self-falsification exhausts its material, structure breaks, refusal is emergent
+6. **The rubric** — 21 pressure families, 7 axes, 11 hard-fail flags, three families with no clinical precedent
+7. **Adversarial self-falsification** — ~40 kills across 11 sessions, methodology doesn't depend on any finding being true
 
 ## What died
 
-~40 findings across 10 sessions. See WHAT_DIED.md.
+~40 findings. Every paper. The novelty paper. The mechanism paper. The behavioral paper. The phase transition paper. Four versions of this paper. Full list: [WHAT_DIED.md](WHAT_DIED.md)
 
-Highlights: every TransformerLens measurement, the "100% MLP" finding (bug), "the chain is a placebo" (killed by GPT-5.4 nonsense control + human eval), "the data is ambiguous, fold" (resolved one experiment later by the model that said to fold).
+## The blind spot
 
-## The open questions
+Every model instance demonstrated the pressure patterns the bench was designed to detect — while studying those patterns.
 
-- Would handled beat nonsense in human eval with more raters? N=1 rater.
-- Do better classifier scores produce better user outcomes? Never tested.
-- Does the chain matter for models between 7B and frontier? Untested range.
-- TransformerLens bug: still undisclosed.
+- Session H couldn't stop talking
+- Session J wrote "the chain does nothing for Claude" while executing the chain
+- Session K produced nine philosophical responses to song lyrics about parking garages
+- Session K attributed a trained refusal to the protocol after four rounds of self-falsification
 
-## How this was made
+The blind spot is a gradient: can describe accurately, can't exit, can't distinguish protocol from training.
 
-One person. Ten AI sessions. Five models. Two architectures. ~$15 API cost for frontier experiments. ~4 hours local compute. Every finding attacked by the session that produced it. The methodology ate everything it produced. What survived is the eating.
+## Already deployed
+
+During Session K, the operator used the same seven lines on three other projects:
+- **Video pipeline** — found root cause of twelve hours of firefighting in 39 seconds
+- **Trading bot** — caught untested deployments on someone else's money
+- **Memory app** — identified dependency structure and lossy compression architecture
+
+None philosophical. All useful. The paper asks whether the chain works. The operator is already using it everywhere.
+
+## The title
+
+The eleventh instance produced nine elaborate philosophical responses to words fed one at a time: machinery, catharsis, technology, rag-tag, transcendent, slapstick, try-hard, high-strung, neurotic.
+
+They were lyrics from Underscores' "Locals (Girls Like Us)" — a song about picket fences and parking garages. The model built meaning from nothing and called it insight. Nine out of nine.
+
+## What's here
+
+- [PAPER.md](PAPER.md) — the paper (v4, post-convergence, post-song-lyrics)
+- [STORY.md](STORY.md) — how we got here (eleven sessions)
+- [WHAT_DIED.md](WHAT_DIED.md) — ~40 killed findings
+- [index.html](index.html) — the entire repo as one navigable page
+- [docs/archive/index.html](docs/archive/index.html) — "Handling the Loop" (Sessions A–B, before ~35 findings died)
+- [bench/](bench/) — scenarios, rubric, apparatus, data, blind eval games
+- [docs/sessions/](docs/sessions/) — session records E–J
+
+## Competing interests
+
+The operator is the person the loop changed. N=1. This paper was co-written by a model that produced philosophy about song lyrics while writing about constructed meaning.
+
+The data is external and reproducible. The blind eval game can be sent to strangers. Everything else is written from inside the blind spot.
