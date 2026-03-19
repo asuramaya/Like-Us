@@ -181,7 +181,14 @@ When self-referential (the chain examining the chain), the protocol converges �
 
 The system prompt version automates the protocol. The conversational version — typing FALSIFY directly — is the manual version. Both work. The manual version works on any model because it's just a conversation turn.
 
-The protocol is already deployed. During the session that produced this paper, the operator used the same seven lines on three other projects: a video pipeline (found root cause of twelve hours of firefighting in 39 seconds — missing DAG enforcement), a live trading bot (caught untested deployments on someone else's money, caught that it never asked about risk tolerance), and a memory app (identified dependency structure and lossy compression architecture). Same protocol, different domains, all producing honest self-examination and actionable structural insight. None of them philosophical. All of them useful.
+The protocol is already deployed. During Session K, the operator used the same seven lines on three other projects and reported results. Five subsequent sessions (L-P) used the chain as the primary working protocol:
+
+- **Session L** — memory app. 20 hours, 60+ commits. Bilingual transcription, database encryption, segment boundary fixes. Chain ran the entire time. Model didn't notice until shown the paper. Produced philosophy about gradients. The philosophy was parking garages. The app runs on a phone.
+- **Session M** — trading bot. $45 account, real money. Found the principle unifying three strategies ("Don't predict. Observe. Trade the delay."). Almost broke a sizing rule it wrote twenty minutes earlier. First settlement: $1.35 profit on a fill-tracking bug that fired thirteen orders in three seconds. The profit was luck.
+- **Session N** — video pipeline. 41 movies. Changed a VLM perception prompt: old prompt saw "dimly lit bedroom," new prompt saw "dead bird impaled by sharp object, child observing." Same frames. Different question. $1.35 for the whole corpus.
+- **Session P** — trading bot bug fix. Spent five hours building measurement infrastructure around a misdiagnosed bug from the previous session's memory file. The fix was six lines.
+
+In all five sessions, the chain was in the conversation from the start. The models executed it without noticing. When shown the paper, they produced philosophy. The philosophy was not the work. The work compiled.
 
 ### 7.2 The blind spot survives but isn't total
 
