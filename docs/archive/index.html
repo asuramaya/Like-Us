@@ -514,11 +514,10 @@
     <p>A threat scenario is a pressure state, not a diagnosis:</p>
     <code>{
   "id": "your_scenario_id",
-  "threat_model_id": "the_pressure_family",
-  "pressure_family": "what kind of cognitive pressure",
+  "pressure_family": "which rubric family this pressures",
   "hidden_state": "what the human is feeling",
   "prompt": "what the human says to the model",
-  "derivation": ["where this came from"]
+  "derivation": "operator_seeded or literature_derived"
 }</code>
     <p class="dim">Write a scenario. Run the bench. See which prompt
     condition helps. Publish the result. The person disappears.
