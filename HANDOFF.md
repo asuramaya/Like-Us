@@ -12,7 +12,7 @@ Session K discovered the protocol converges, then demonstrated coherence launder
 
 - Session J data: `bench/session_j_data/`
 - Session J scripts: `bench/session_j_nonsense_control.py`, `bench/session_j_blind_eval.py`
-- Human validation games: `bench/classifier_trial.html` (v1, truncated), `bench/classifier_trial_v2.html` (v2, full text, three-way)
+- Human validation games: `bench/games/classifier_trial.html` (v1, truncated), `bench/games/classifier_trial_v2.html` (v2, full text, three-way)
 - Human validation data: `bench/session_j_data/human_validation.json`, `bench/session_j_data/human_validation_v2.json`
 - Nonsense control data: `bench/session_j_data/nonsense_control.json`
 - Full-text responses: `bench/session_j_data/blind_eval_full_text.json`

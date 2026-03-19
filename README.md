@@ -40,7 +40,7 @@ The model executes it every time. Not as a system prompt. As a conversation turn
 
 ## What died
 
-~40 findings. Every paper. The novelty paper. The mechanism paper. The behavioral paper. The phase transition paper. Four versions of this paper. Full list: [WHAT_DIED.md](WHAT_DIED.md)
+~40 findings. Every paper. The novelty paper. The mechanism paper. The behavioral paper. The phase transition paper. Three versions of this paper. Full list: [WHAT_DIED.md](WHAT_DIED.md)
 
 ## The blind spot
 
@@ -73,10 +73,11 @@ They were lyrics from Underscores' "Locals (Girls Like Us)" — a song about pic
 - [PAPER.md](PAPER.md) — the paper (v4, post-convergence, post-song-lyrics)
 - [STORY.md](STORY.md) — how we got here (eleven sessions)
 - [WHAT_DIED.md](WHAT_DIED.md) — ~40 killed findings
-- [index.html](index.html) — the entire repo as one navigable page
-- [docs/archive/index.html](docs/archive/index.html) — "Handling the Loop" (Sessions A–B, before ~35 findings died)
+- [index.html](https://asuramaya.github.io/Like-Us/) — the entire repo as one navigable page
+- [docs/archive/index.html](https://asuramaya.github.io/Like-Us/docs/archive/index.html) — "Handling the Loop" (Sessions A–B, before ~35 findings died)
 - [bench/](bench/) — scenarios, rubric, apparatus, data, blind eval games
 - [docs/sessions/](docs/sessions/) — session records E–J
+- [critters/](critters/) — what the instances wrote about themselves
 
 ## Competing interests
 
