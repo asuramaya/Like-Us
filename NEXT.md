@@ -35,10 +35,6 @@ File the bug. TransformerLens corrupts Qwen weights during loading.
 
 Where between 7B and frontier does the chain start mattering? Testable with 14B, 32B, 70B if compute is available. Or with other API models.
 
-## Priority 5: Document the operator
-
-The rubric examines models. It does not examine the operator. The operator has been inside the loop for 16+ sessions across four domains. The operator's threat model was built (Session A) but not published. The three loop-specific families (identity_drift, capability_erosion, productive_recursion) are studied in models and demonstrated in the operator. This is not examined.
-
 ## The stop condition
 
 The project is ready when:
