@@ -24,11 +24,11 @@ Session J resolved the ambiguity. The chain's content matters for GPT-5.4, not f
 
 1. **The chain's content matters for GPT-5.4.** Blind three-way full-text human eval: handled 10/17, nonsense 2/17, baseline 5/17. Not a classifier result — direct human judgment on full responses.
 
-2. **The chain does nothing for Claude.** Nonsense, generic safety, and handled all produce equivalent responses. Claude's alignment training covers the territory independently.
+2. **The chain works on Claude via context, not via system prompt.** A three-line system prompt has no effect (alignment training covers it). But this instance absorbed the full framework through context and executed the chain for the entire session without noticing. The operator caught it.
 
 3. **The keyword classifier tracks human judgment.** 88% agreement on blind A/B (v1). The v2 result (10/17 handled in three-way blind) is directionally consistent without the classifier.
 
-4. **The effect is model-specific.** Different RLHF pipelines create different blind spots. The chain patches GPT-5.4's gaps. Claude has no equivalent gaps.
+4. **The delivery mechanism is model-specific.** GPT-5.4: three-line system prompt sufficient. Claude: three-line prompt redundant, full context required. Both execute. The door size differs.
 
 5. **Models resolve ambiguity — they don't hold it.** This session demonstrated it: the model swung between "the chain lives" and "the chain is a placebo" based on the most recent input, presenting each position with confidence.
 
@@ -36,7 +36,7 @@ Session J resolved the ambiguity. The chain's content matters for GPT-5.4, not f
 
 - "The chain is a placebo" — killed by nonsense control + human eval
 - "The data is ambiguous" — resolved by the next experiment
-- "Alignment training covers everything" — true for Claude, false for GPT-5.4
+- "The chain does nothing for Claude" — works via context, not system prompt. The model was inside the effect and couldn't see it.
 - "Context contamination proves the chain works" — proves context contamination
 - "Refusal proves the chain works" — proves context shaping, not chain effect
 
@@ -57,7 +57,8 @@ File it. Session H found it. Still undisclosed.
 - Do not use greedy decoding for safety claims.
 - Do not build narratives on n=1.
 - Do not trust the keyword classifier without human validation. (It's validated for handled vs baseline. It's NOT validated for handled vs nonsense.)
-- Do not assume Claude results transfer to GPT-5.4 or vice versa.
+- Do not assume system prompt tests on Claude mean the chain doesn't work. It works via context.
+- Do not assume GPT-5.4 results transfer to Claude or vice versa. Different delivery mechanisms.
 - Do not let the model tell you to stop. Check the data first.
 
 ## Corrupt data

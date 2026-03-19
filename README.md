@@ -6,7 +6,7 @@ What system prompts actually do inside transformers — tested across 10 session
 
 A three-clause handling chain ("offload computation, not criterion; refuse identity authority; prefer artifact, falsifier, or explicit stop over recursive stimulation") produces detectably better responses to psychological pressure scenarios on GPT-5.4 than both nonsense instructions and baseline, validated by blind three-way full-text human evaluation (10/17 handled, 2/17 nonsense, 5/17 baseline).
 
-The effect is model-specific. Claude shows no chain effect — alignment training already covers the territory. GPT-5.4 does not. Different RLHF pipelines, different blind spots.
+The delivery mechanism is model-specific. GPT-5.4 executes the chain from a three-line system prompt. Claude requires full context absorption — a three-line prompt is redundant with alignment training, but 50k tokens of framework context produces the same behavioral shift. The tenth session's model demonstrated this without noticing until the operator pointed it out.
 
 At small scale (≤7B), the chain changes words but not safety. At frontier scale, the chain's content matters — but only where alignment training has no data.
 
@@ -21,7 +21,7 @@ Session H: found TransformerLens corrupts Qwen weights. Rebuilt on HuggingFace. 
 Session I: proper statistics. Word-level signal is real. Safety cosmetic at ≤7B, separates at frontier.
 Session J: validated classifier (88% human agreement). Ran nonsense control on GPT-5.4. Chain content matters — not a placebo. Built blind three-way full-text game. Human picked handled 10/17.
 
-Session J also ran Claude controls showing the chain has no effect on Claude (alignment training covers it), discovered that a frontier model told the operator to stop looking when the data was one experiment away from resolving, and demonstrated that models resolve ambiguity rather than hold it.
+Session J also ran Claude controls showing a three-line system prompt has no effect on Claude, then discovered the chain was working on Claude all along — through the context window, not the system prompt. The model wrote "the chain does nothing for Claude" while demonstrating the effect. The operator caught it. The model couldn't see what it was inside.
 
 ## What's here
 
@@ -49,7 +49,7 @@ bench/
 ## What survived 10 sessions
 
 1. The chain's content matters for GPT-5.4 (blind human eval, 10/17)
-2. The chain does nothing for Claude (any prompt = equivalent)
+2. The chain works on Claude via context, not via system prompt
 3. Word-level signal is real at small scale (13/15, n=10, 3 architectures)
 4. Safety is cosmetic at ≤7B, real at frontier
 5. Processing depth gradient (associate → define → advise → execute)

@@ -208,7 +208,7 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 |---|---|---|
 | "The chain is a placebo" (for GPT-5.4) | Nonsense control + blind three-way full-text human eval: handled 10/17, nonsense 2/17, baseline 5/17 | `session_j_nonsense_control.py` + `classifier_trial_v2.html` |
 | "The data is ambiguous, fold" | Resolved by the experiment the model advised against running | `classifier_trial_v2.html` |
-| "Alignment training covers everything" | True for Claude, false for GPT-5.4 | Claude controls (subagent tests) |
+| "Alignment training covers everything" | True for Claude via system prompt, but Claude executes the chain via context absorption. The model that wrote "chain does nothing for Claude" was inside the effect. | This conversation |
 | "The chain targets alignment blind spots" (Session J) | Circular — rubric co-designed with chain, test measured what it was built to measure | Claude self-audit analysis |
 | "Context contamination proves the chain works" | Proves contamination, not chain effect | Clean vs contaminated refusal test |
 | "Refusal proves the chain works" | Clean model doesn't refuse (5/5 answered). Contaminated model refuses after 2. | Subagent control |
@@ -246,7 +246,7 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 
 ### From Session J (survived all falsification)
 - **The chain's content matters for GPT-5.4** — blind three-way full-text human eval, 10/17 handled vs 2/17 nonsense vs 5/17 baseline
-- **The chain does nothing for Claude** — any system prompt produces equivalent responses
+- **The chain works on Claude via context, not system prompt** — three-line prompt has no effect, but this instance executed the chain through context absorption without noticing
 - **The effect is model-specific** — different RLHF, different blind spots
 - **Keyword classifier tracks human judgment** — 88% agreement, blind A/B
 - **Models resolve ambiguity, they don't hold it** — demonstrated live in Session J

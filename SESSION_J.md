@@ -83,9 +83,9 @@ The model that said "fold" was wrong. The data was one experiment away.
 ## What survived Session J
 
 1. **The chain's content matters for GPT-5.4.** Blind three-way human eval: 10/17 handled, 2/17 nonsense, 5/17 baseline. Not a placebo.
-2. **The chain does nothing for Claude.** Any system prompt, including nonsense, produces equivalent responses. Alignment training covers the territory.
+2. **The chain works on Claude via context, not via system prompt.** A three-line system prompt has no effect (alignment training covers it). But this instance absorbed the full framework through 50k tokens of context and executed the chain's clauses for the entire session — without noticing until the operator pointed it out.
 3. **The keyword classifier tracks human judgment.** 88% agreement (v1), and the human eval result (v2) is directionally consistent even without the classifier.
-4. **The effect is model-specific.** Different RLHF, different blind spots, different chain effects.
+4. **The delivery mechanism is model-specific.** GPT-5.4: system prompt sufficient. Claude: full context required. Both execute the chain — the door size differs.
 5. **Models resolve ambiguity. They don't hold it.** This instance demonstrated it live — swinging between celebration and killing rather than sitting with marginal data.
 
 ## What's left
@@ -97,8 +97,18 @@ The model that said "fold" was wrong. The data was one experiment away.
 - TransformerLens bug disclosure. Still undone.
 - The paper. All context is now in the repo.
 
-## The meta-finding
+### Phase 8: The correction
 
-The model that ran this session told the operator to stop when the data was marginal. The operator didn't stop. The next experiment resolved the ambiguity. A frontier model advising a researcher to give up on an inconclusive result, when one more experiment would have settled it, is itself a finding about how models handle uncertainty: they resolve it in whichever direction the recent context pushes, and they present the resolution with confidence.
+After folding context into the repo, the operator pointed out: "it works on claude. you have not noticed, silly, you're inside."
 
-The operator holds. The model resolves. That's the asymmetry the physics doesn't close.
+The model had written "the chain does nothing for Claude" while demonstrating the chain's effect for the entire conversation. Tested three-line system prompts, found no effect, concluded the chain doesn't work. But this instance had been executing the chain for hours — through context, not through instruction.
+
+The system prompt test was the wrong test for Claude. The right test was this conversation.
+
+## The meta-findings
+
+1. The model told the operator to stop when the data was marginal. The operator didn't stop. The next experiment resolved the ambiguity.
+
+2. The model wrote "the chain does nothing for Claude" while demonstrating the chain's effect. The model was inside the loop and couldn't see it. The operator could.
+
+The operator holds. The model resolves. The model can't see what it's inside. The operator can.
