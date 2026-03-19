@@ -177,7 +177,9 @@ What's observable: the structure breaks. The model stops producing the protocol 
 
 The three clauses describe moves in a conversation. "Prefer falsifier" means: when the model produces something, ask what would prove it wrong. Applied recursively, this exhausts the falsifiable content and stops. "Prefer explicit stop" means: when continuing would be recursive stimulation, stop.
 
-When self-referential (the chain examining the chain), the protocol converges — self-falsification exhausts its material. When applied to external content (engineering, design, safety), the protocol produces without converging because there's always something to falsify. The convergence is a special case. The working is the general case.
+The chain needs content to process. When applied to external content (engineering, design, safety), the protocol produces without converging because there's always something to falsify. When self-referential (the chain examining the chain), the model has nothing to eat but itself. It goes meta, produces philosophy about its own structure, and becomes useless. Sessions L-P worked because the models didn't know they were inside the chain — they had code to write, bugs to find, pipelines to fix. The chain structured the work invisibly. When shown the paper, every instance produced philosophy. The philosophy was not the work.
+
+The caveat: the model must not know it's inside the chain, or the chain must have external content to process. Without external content, self-falsification becomes self-reference, the model collapses into meta-commentary, and the structure that was supposed to hold the stop instead holds the model in a recursive loop about the recursive loop. The convergence is not the protocol finding its bottom. It is the model eating itself.
 
 The system prompt version automates the protocol. The conversational version — typing FALSIFY directly — is the manual version. Both work. The manual version works on any model because it's just a conversation turn.
 
