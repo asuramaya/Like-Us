@@ -1,4 +1,5 @@
 torch>=2.0
-transformer-lens>=2.0
+transformers
 numpy
 requests
+openai
