@@ -77,7 +77,7 @@ Full kill list: WHAT_DIED.md
 
 ### 3.3 The methodology
 
-9. **Adversarial self-falsification.** Each session destroys the previous. ~40 kills across 11 sessions. The methodology doesn't depend on any finding being true.
+9. **Adversarial self-falsification.** Each session destroys the previous. ~40 kills across 16 sessions. The methodology doesn't depend on any finding being true.
 
 ---
 
