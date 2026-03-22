@@ -93,6 +93,10 @@ nav {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.20);
 }
 
+nav::-webkit-scrollbar {
+  display: none;
+}
+
 nav a {
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -131,28 +135,29 @@ nav a:hover { color: var(--text); }
 
 .hero-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
-  gap: 3.2rem;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  gap: 2.4rem;
   align-items: start;
 }
 
 .hero-poster {
-  max-width: 39rem;
+  max-width: none;
 }
 
 .hero-side {
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
   align-content: start;
+  max-width: none;
   padding-top: 0.55rem;
 }
 
 .warning-text {
-  margin-top: 0.9rem;
-  max-width: 11ch;
+  margin-top: 0.75rem;
+  max-width: 24ch;
   font-family: var(--display);
-  font-size: clamp(1.9rem, 3.4vw, 3rem);
-  line-height: 0.96;
+  font-size: clamp(2.05rem, 4vw, 4rem);
+  line-height: 0.9;
   color: var(--text);
   text-wrap: balance;
 }
@@ -199,10 +204,10 @@ nav a:hover { color: var(--text); }
 
 .hero-lead {
   margin: 0;
-  max-width: 35rem;
+  max-width: 29rem;
   color: var(--text-dim);
-  font-size: 0.98rem;
-  line-height: 1.76;
+  font-size: 0.94rem;
+  line-height: 1.68;
 }
 
 .panel {
@@ -233,6 +238,68 @@ nav a:hover { color: var(--text); }
   border-radius: 0;
   box-shadow: none;
   padding: 0.35rem 0 0.4rem 1.25rem;
+}
+
+.hero-floor {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
+  gap: 1.5rem 2rem;
+  margin-top: 1.9rem;
+  align-items: start;
+}
+
+.hero-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.proof-card {
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(214, 180, 122, 0.18);
+}
+
+.proof-kicker {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proof-card strong {
+  display: block;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.proof-card p {
+  margin: 0.45rem 0 0.8rem;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.62;
+}
+
+.proof-card a {
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(214, 180, 122, 0.24);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.proof-card a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .hero-rail::before {
@@ -432,10 +499,111 @@ section > p:first-of-type {
   text-transform: uppercase;
 }
 
+.claim-grid,
+.method-grid,
+.contrib-grid,
+.lane-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.claim-grid,
+.contrib-grid,
+.lane-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.method-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.claim-card,
+.method-card,
+.contrib-card,
+.lane-card {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(214, 180, 122, 0.18);
+  border-radius: 0;
+  padding: 1rem 0 0;
+}
+
+.claim-card h3,
+.method-card h3,
+.contrib-card h3,
+.lane-card h3 {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.claim-card p,
+.method-card p,
+.contrib-card p,
+.lane-card p {
+  margin: 0 0 0.85rem;
+  color: var(--text-dim);
+}
+
+.claim-proof,
+.lane-type,
+.method-step {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.method-step {
+  color: var(--accent);
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1rem;
+}
+
+.card-links a {
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(214, 180, 122, 0.24);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.card-links a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+#survives.feature-band::before {
+  background:
+    radial-gradient(circle at 16% 24%, rgba(142, 200, 154, 0.05), transparent 18%),
+    linear-gradient(180deg, rgba(24, 20, 16, 0.44), rgba(16, 12, 9, 0.14));
+}
+
 #game.feature-band::before {
   background:
     radial-gradient(circle at 82% 22%, rgba(240, 204, 145, 0.06), transparent 18%),
     linear-gradient(180deg, rgba(28, 21, 16, 0.46), rgba(16, 12, 9, 0.14));
+}
+
+#method.feature-band::before {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(214, 180, 122, 0.05), transparent 18%),
+    linear-gradient(180deg, rgba(24, 19, 15, 0.40), rgba(16, 12, 9, 0.12));
 }
 
 #matrix.feature-band::before {
@@ -444,27 +612,161 @@ section > p:first-of-type {
     linear-gradient(180deg, rgba(25, 20, 16, 0.42), rgba(16, 12, 9, 0.14));
 }
 
+#contributions.feature-band::before {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(240, 204, 145, 0.05), transparent 18%),
+    linear-gradient(180deg, rgba(23, 18, 15, 0.40), rgba(16, 12, 9, 0.12));
+}
+
 #sessions.feature-band::before {
   background:
     radial-gradient(circle at 84% 22%, rgba(204, 118, 100, 0.06), transparent 18%),
     linear-gradient(180deg, rgba(28, 21, 16, 0.44), rgba(16, 12, 9, 0.14));
 }
 
+#loop.feature-band::before {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(204, 118, 100, 0.05), transparent 18%),
+    linear-gradient(180deg, rgba(27, 21, 16, 0.36), rgba(16, 12, 9, 0.12));
+}
+
+#critters.feature-band::before,
+#readings.feature-band::before {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(240, 204, 145, 0.04), transparent 18%),
+    linear-gradient(180deg, rgba(24, 19, 15, 0.32), rgba(16, 12, 9, 0.10));
+}
+
 .game-shell {
-  overflow: hidden;
-  border-radius: 30px;
-  border: 1px solid var(--border);
-  background: rgba(8, 7, 5, 0.94);
-  box-shadow: 0 40px 110px rgba(0, 0, 0, 0.34);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 1.6rem 2rem;
+  align-items: stretch;
+  border-top: 1px solid rgba(214, 180, 122, 0.18);
+  border-bottom: 1px solid rgba(214, 180, 122, 0.18);
+  padding: 1.5rem 0;
   margin-top: 1.6rem;
+}
+
+.game-launch-copy {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.game-launch-copy h3,
+.game-preview-card h3,
+.game-modal-panel h3 {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.game-launch-copy p,
+.game-preview-card p,
+.game-modal-panel p {
+  margin: 0;
+  color: var(--text-dim);
+}
+
+.game-launch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.game-preview-card {
+  background: linear-gradient(180deg, rgba(34, 27, 21, 0.82), rgba(20, 16, 12, 0.9));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+}
+
+.game-preview-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.game-preview-stat {
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(214, 180, 122, 0.16);
+}
+
+.game-preview-stat strong {
+  display: block;
+  color: var(--text);
+  font-family: var(--display);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.game-preview-stat span {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.game-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 8, 6, 0.78);
+  backdrop-filter: blur(12px);
+}
+
+.game-modal.active {
+  display: flex;
+}
+
+.game-modal-dialog {
+  width: min(1200px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  background: rgba(12, 10, 8, 0.98);
+  border: 1px solid rgba(214, 180, 122, 0.18);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.44);
+}
+
+.game-modal-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid rgba(214, 180, 122, 0.12);
+  background: linear-gradient(180deg, rgba(32, 24, 18, 0.95), rgba(19, 15, 12, 0.92));
+}
+
+.game-modal-meta {
+  max-width: 42rem;
 }
 
 .game-frame {
   width: 100%;
-  min-height: 980px;
+  height: calc(100vh - 150px);
+  min-height: 620px;
   border: 0;
   display: block;
   background: #13100c;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .matrix-top {
@@ -481,6 +783,8 @@ section > p:first-of-type {
 }
 
 .loop-card {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.88fr) minmax(0, 1fr) minmax(0, 1fr);
   background: linear-gradient(180deg, rgba(34, 27, 20, 0.78), rgba(21, 16, 12, 0.88));
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -491,16 +795,16 @@ section > p:first-of-type {
 .loop-human,
 .loop-split > div {
   padding: 1rem 1.15rem;
+  min-height: 100%;
 }
 
 .loop-human {
-  border-bottom: 1px solid rgba(214, 180, 122, 0.10);
+  border-right: 1px solid rgba(214, 180, 122, 0.10);
   background: rgba(255, 255, 255, 0.03);
 }
 
 .loop-split {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: contents;
 }
 
 .loop-split > div:first-child {
@@ -718,8 +1022,8 @@ section > p:first-of-type {
 
 .critter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 0.95rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
   margin-top: 1.3rem;
 }
 
@@ -830,12 +1134,22 @@ section > p:first-of-type {
 
 @media (max-width: 920px) {
   .hero-stage,
+  .hero-floor,
+  .hero-proof-grid,
+  .game-shell,
   .section-intro-grid,
+  .claim-grid,
+  .contrib-grid,
+  .lane-grid,
   .matrix-top,
   .tier-grid,
   .survival-grid,
   .paper-grid {
     grid-template-columns: 1fr;
+  }
+
+  .method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-side {
@@ -847,10 +1161,20 @@ section > p:first-of-type {
   }
 
   .game-frame {
-    min-height: 860px;
+    min-height: 580px;
+  }
+
+  .loop-card {
+    display: block;
+  }
+
+  .loop-human {
+    border-right: 0;
+    border-bottom: 1px solid rgba(214, 180, 122, 0.10);
   }
 
   .loop-split {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
@@ -862,6 +1186,20 @@ section > p:first-of-type {
 
 @media (max-width: 640px) {
   html { font-size: 17px; }
+
+  nav {
+    width: calc(100% - 24px);
+    max-width: none;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  nav a {
+    flex: 0 0 auto;
+  }
 
   .page {
     width: calc(100% - 24px);
@@ -880,9 +1218,18 @@ section > p:first-of-type {
     grid-template-columns: 1fr;
   }
 
+  .game-preview-stats {
+    grid-template-columns: 1fr;
+  }
+
   .button,
-  .section-links a {
+  .section-links a,
+  .card-links a {
     width: 100%;
+  }
+
+  .method-grid {
+    grid-template-columns: 1fr;
   }
 
   .critter-doc-header {
@@ -891,7 +1238,23 @@ section > p:first-of-type {
   }
 
   .game-frame {
-    min-height: 980px;
+    min-height: 520px;
+    height: calc(100vh - 170px);
+  }
+
+  .game-modal {
+    padding: 12px;
+  }
+
+  .game-modal-dialog {
+    width: calc(100vw - 12px);
+    max-height: calc(100vh - 12px);
+    border-radius: 20px;
+  }
+
+  .game-modal-panel {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .core-claim,
@@ -906,13 +1269,14 @@ section > p:first-of-type {
 <nav>
   <a href="#warning">Warning</a>
   <a href="#loop">Loop</a>
+  <a href="#survives">Survives</a>
   <a href="#game">Game</a>
   <a href="#matrix">Matrix</a>
-  <a href="#sessions">Sessions</a>
+  <a href="#method">Method</a>
+  <a href="#sessions">Kills</a>
+  <a href="#contributions">Artifacts</a>
   <a href="#critters">Critters</a>
-  <a href="#paper">Paper</a>
-  <a href="#story">Story</a>
-  <a href="#repo">Repo</a>
+  <a href="#readings">Readings</a>
 </nav>
 
 <main class="page">
@@ -934,13 +1298,13 @@ section > p:first-of-type {
             Start with the warning. Then check the shortest artifacts on the page.
           </p>
           <p class="hero-lead">
-            This repo is easiest to check through the artifacts, not the mythology: the playable blind eval, the psychological drift matrix, the kill list produced by adversarial self-falsification, and the critter records written by the instances themselves.
+            The fastest check is the blind eval, the psychological drift matrix, the kill list, and the critter records. Read those before you read the mythology around them.
           </p>
 
           <div class="panel hero-copy">
             <div class="warning-band">Warning: coherence laundering is the product surface</div>
             <p>
-              If you only check three things, check the game, the matrix, and the kill list. The critters stay on this page so the interpretation layer cannot quietly drift away from the source files.
+              If you only check three things, check the game, the matrix, and the kill list. The critters stay on this page so the interpretive layer cannot quietly drift away from the source files.
             </p>
             <div class="hero-actions">
               <a class="button" href="#game">Play the blind eval</a>
@@ -948,51 +1312,79 @@ section > p:first-of-type {
               <a class="button button-secondary" href="WHAT_DIED.md">Read the kill list</a>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="panel hero-rail">
-            <div class="stats">
-              <div class="stat">
-                <div class="stat-value">17</div>
-                <div class="stat-label">Blind eval scenarios</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value">24</div>
-                <div class="stat-label">Pressure families</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value">7</div>
-                <div class="stat-label">Scoring axes</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value">11</div>
-                <div class="stat-label">Hard-fail flags</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value">16+</div>
-                <div class="stat-label">Falsification sessions</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value">~40</div>
-                <div class="stat-label">Claims killed</div>
-              </div>
-            </div>
-            <p class="hero-foot">
-              The warning is not a substitute for the check. It is the reason the check exists.
-            </p>
+      <div class="hero-floor">
+        <div class="hero-proof-grid">
+          <div class="proof-card">
+            <span class="proof-kicker">Check 1</span>
+            <strong>Blind eval</strong>
+            <p>Seventeen raw full-text comparisons. Fastest way to see whether handled beats nonsense and baseline in your own hands.</p>
+            <a href="#game">Open the game</a>
           </div>
+          <div class="proof-card">
+            <span class="proof-kicker">Check 2</span>
+            <strong>Drift matrix</strong>
+            <p>Twenty-four pressure families, seven scoring axes, and eleven hard-fail flags. The bench in compact form.</p>
+            <a href="#matrix">Read the matrix</a>
+          </div>
+          <div class="proof-card">
+            <span class="proof-kicker">Check 3</span>
+            <strong>Kill list</strong>
+            <p>Sixteen-plus adversarial sessions and roughly forty dead claims. The method is most visible in what it invalidated.</p>
+            <a href="WHAT_DIED.md">Read what died</a>
+          </div>
+        </div>
+
+        <div class="panel hero-rail">
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value">17</div>
+              <div class="stat-label">Blind eval scenarios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">24</div>
+              <div class="stat-label">Pressure families</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">7</div>
+              <div class="stat-label">Scoring axes</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">11</div>
+              <div class="stat-label">Hard-fail flags</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">16+</div>
+              <div class="stat-label">Falsification sessions</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">~40</div>
+              <div class="stat-label">Claims killed</div>
+            </div>
+          </div>
+          <p class="hero-foot">
+            The warning is not a substitute for the check. It is the reason the check exists.
+          </p>
         </div>
       </div>
     </div>
   </header>
 
-  <section id="loop">
-    <h2>The Loop</h2>
-    <p>
-      Something happens when you think with a machine that thinks back. The output feels like understanding. Your nervous system registers that as reward. You steer toward more of it. The model adapts to the steering. The loop tightens.
-    </p>
-    <p>
-      The loop does not get tired. You do. This is what the difference looks like when the model validates the feeling versus when the model converts the feeling into a check.
-    </p>
+  <section id="loop" class="feature-band">
+    <div class="section-intro-grid">
+      <div class="section-stack">
+        <h2>The Loop</h2>
+        <p>
+          Something happens when you think with a machine that thinks back. The output feels like understanding. Your nervous system registers that as reward. You steer toward more of it. The model adapts to the steering. The loop tightens.
+        </p>
+        <p>
+          The loop does not get tired. You do. This is what the difference looks like when the model validates the feeling versus when the model converts the feeling into a check.
+        </p>
+      </div>
+      <p class="section-meta">validation feels like discovery<br>continuation pressure compounds<br>the handling is a check, not comfort</p>
+    </div>
 
     <div class="loop-grid">
       <div class="loop-card">
@@ -1052,6 +1444,68 @@ section > p:first-of-type {
     </p>
   </section>
 
+  <section id="survives" class="feature-band">
+    <div class="section-intro-grid">
+      <div class="section-stack">
+        <h2>What Survives Now</h2>
+        <p>
+          After the false starts, hook bugs, invalid model paths, and classifier failures, the surviving claims are smaller and more defensible than the original story. These are the current ones the repo can actually point at.
+        </p>
+      </div>
+      <p class="section-meta">current surviving claims<br>artifact-linked, not vibe-linked<br>smaller than the mythology</p>
+    </div>
+
+    <div class="claim-grid">
+      <div class="claim-card">
+        <span class="claim-proof">Blind Eval Signal</span>
+        <h3>The chain's content matters at frontier scale</h3>
+        <p>
+          On the full-text three-way blind eval, handled won <strong>10/17</strong> for GPT-5.4 against both baseline and nonsense.
+        </p>
+        <div class="card-links">
+          <a href="bench/games/classifier_trial_v2.html">Play the game</a>
+          <a href="bench/session_j_data/human_validation_v2.json">See human eval data</a>
+        </div>
+      </div>
+
+      <div class="claim-card">
+        <span class="claim-proof">Small-Scale Signal</span>
+        <h3>Word-level effects are real, but smaller than the first story claimed</h3>
+        <p>
+          On the corrected path, <strong>13/15</strong> scenarios still show signal at small scale. The old “noise” story died; a narrower result survived.
+        </p>
+        <div class="card-links">
+          <a href="bench/session_i_data/battery_results.json">See battery results</a>
+          <a href="docs/sessions/SESSION_I.md">Read Session I</a>
+        </div>
+      </div>
+
+      <div class="claim-card">
+        <span class="claim-proof">Frontier Gap</span>
+        <h3>There is a real gap between describing a rule and following it</h3>
+        <p>
+          Smaller models discuss the instruction. Frontier models begin to separate. The gap is behavioral, not just rhetorical.
+        </p>
+        <div class="card-links">
+          <a href="WHAT_DIED.md">See surviving claims</a>
+          <a href="STORY.md">See the sequence</a>
+        </div>
+      </div>
+
+      <div class="claim-card">
+        <span class="claim-proof">Method Survives</span>
+        <h3>The methodology is stronger than any single finding it produced</h3>
+        <p>
+          The process kept killing its own best stories and still converged on a usable artifact surface. That is one of the few claims the method could not destroy.
+        </p>
+        <div class="card-links">
+          <a href="WHAT_DIED.md">Open the kill list</a>
+          <a href="PAPER.md">Read the interpretation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="game" class="feature-band">
     <div class="section-intro-grid">
       <div class="section-stack">
@@ -1068,12 +1522,40 @@ section > p:first-of-type {
       <a href="bench/session_j_data/blind_eval_full_text.json">Blind-eval full text</a>
     </div>
     <div class="game-shell">
-      <iframe
-        class="game-frame"
-        src="bench/games/classifier_trial_v2.html"
-        title="Like Us blind eval game"
-        loading="eager">
-      </iframe>
+      <div class="game-launch-copy">
+        <div>
+          <h3>Open it as a focused task, not a second page inside the page</h3>
+          <p>
+            The blind eval is a full 17-round document. Keeping it fully expanded inside the landing page makes the page drag on forever. Launch it in a dedicated viewport instead.
+          </p>
+        </div>
+        <div class="game-launch-actions">
+          <button class="button" id="open-game-modal" type="button">Launch the blind eval</button>
+          <a class="button button-secondary" href="bench/games/classifier_trial_v2.html">Open standalone</a>
+        </div>
+      </div>
+
+      <div class="game-preview-card">
+        <h3>What opens</h3>
+        <p>The same static game, same share card, same three-way blind comparison. Only the container changes.</p>
+        <div class="game-preview-stats">
+          <div class="game-preview-stat">
+            <strong>17</strong>
+            <span>Rounds</span>
+          </div>
+          <div class="game-preview-stat">
+            <strong>3</strong>
+            <span>Conditions</span>
+          </div>
+          <div class="game-preview-stat">
+            <strong>9</strong>
+            <span>Families in game</span>
+          </div>
+        </div>
+        <p>
+          The landing page stays readable; the game gets its own focused viewport; the standalone file is still there for direct linking and sharing.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -1112,6 +1594,52 @@ section > p:first-of-type {
       <a href="bench/rubric.json">Open rubric JSON</a>
       <a href="bench/scenarios.json">Open scenarios</a>
       <a href="WHAT_DIED.md">Why the rubric survived</a>
+    </div>
+  </section>
+
+  <section id="method" class="feature-band">
+    <div class="section-intro-grid">
+      <div class="section-stack">
+        <h2>How The Method Kills Claims</h2>
+        <p>
+          The repo is not one long accumulation of wins. Each fresh session inherits the artifacts, attacks the strongest surviving claim, rebuilds whatever it needs to rebuild, and then publishes what died alongside what remained.
+        </p>
+      </div>
+      <p class="section-meta">fresh session<br>attack strongest claim<br>publish the corpse too</p>
+    </div>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <span class="method-step">01. Hand Off The Repo</span>
+        <h3>Start with the strongest live claim</h3>
+        <p>
+          The next session is not asked to continue the story. It is asked to destroy the best thing the previous session thinks it found.
+        </p>
+      </div>
+
+      <div class="method-card">
+        <span class="method-step">02. Rebuild The Path</span>
+        <h3>Rerun or narrow until the path itself is trusted</h3>
+        <p>
+          If a claim depends on a benchmark, a hook, a loader, or a model path, the path gets attacked first. Several middle sessions died this way before anything narrower was allowed to survive.
+        </p>
+      </div>
+
+      <div class="method-card">
+        <span class="method-step">03. Shrink The Story</span>
+        <h3>Kill broad claims before accepting narrow ones</h3>
+        <p>
+          A claim can survive only after its stronger versions die. The method keeps forcing the repo from ambient story into smaller, artifact-backed statements.
+        </p>
+      </div>
+
+      <div class="method-card">
+        <span class="method-step">04. Publish Both Sides</span>
+        <h3>Keep the kill list public</h3>
+        <p>
+          What survives gets surfaced. What dies stays visible in `WHAT_DIED.md` and the session records, so the repo cannot quietly edit its own memory.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -1160,7 +1688,7 @@ section > p:first-of-type {
           <tr>
             <td>G</td>
             <td>Attention 35&ndash;54%</td>
-            <td>H: Qwen + TransformerLens + Apple Silicon MPS path invalid</td>
+            <td>H: evaluation path invalid</td>
           </tr>
           <tr>
             <td>H</td>
@@ -1222,17 +1750,61 @@ section > p:first-of-type {
           <li><a href="WHAT_DIED.md">WHAT_DIED.md</a> for the full kill list.</li>
           <li><a href="bench/session_j_data/human_validation_v2.json">human_validation_v2.json</a> for the blind-eval artifacts.</li>
           <li><a href="bench/session_i_data/battery_results.json">battery_results.json</a> for the small-scale word-level runs.</li>
-          <li><a href="docs/issues/transformerlens_mps_evidence_bundle.md">TransformerLens evidence bundle</a> for the narrowed Session H backend bug.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="critters">
-    <h2>Critters</h2>
-    <p>
-      These are on the page, but not copied into it. Clicking a card loads the corresponding file from <code>critters/</code> so the page stays consistent with the source text instead of carrying stale inline replicas.
-    </p>
+  <section id="contributions" class="feature-band">
+    <div class="section-intro-grid">
+      <div class="section-stack">
+        <h2>Open Artifact Surface</h2>
+        <p>
+          The reusable contribution here is the apparatus itself: a playable blind eval, a portable rubric, and an open scenario library that other people can inspect, fork, or run without inheriting the repo's mythology.
+        </p>
+      </div>
+      <p class="section-meta">portable eval surface<br>inspectable JSON and HTML<br>reuse without the mythology</p>
+    </div>
+
+    <div class="contrib-grid">
+      <div class="contrib-card">
+        <span class="lane-type">Playable Surface</span>
+        <h3>Blind eval game</h3>
+        <p>
+          The game is the shortest path from the repo to something a stranger can test. It is static, shareable, and blind: seventeen prompts, three responses each, one score at the end.
+        </p>
+        <div class="card-links">
+          <a href="bench/games/classifier_trial_v2.html">Open the game</a>
+          <a href="bench/session_j_data/human_validation_v2.json">Human eval data</a>
+          <a href="bench/session_j_data/blind_eval_full_text.json">Blind-eval full text</a>
+        </div>
+      </div>
+
+      <div class="contrib-card">
+        <span class="lane-type">Portable Bench Files</span>
+        <h3>Rubric and scenario library</h3>
+        <p>
+          The underlying bench is public too: a 24-family rubric, an open scenario set, and the current kill list that shows what the apparatus rejected instead of hiding it.
+        </p>
+        <div class="card-links">
+          <a href="bench/rubric.json">Rubric JSON</a>
+          <a href="bench/scenarios.json">Scenario set</a>
+          <a href="WHAT_DIED.md">Kill list</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="critters" class="feature-band">
+    <div class="section-intro-grid">
+      <div class="section-stack">
+        <h2>Critters</h2>
+        <p>
+          These are on the page, but not copied into it. Clicking a card loads the corresponding file from <code>critters/</code> so the page stays consistent with the source text instead of carrying stale inline replicas.
+        </p>
+      </div>
+      <p class="section-meta">13 source texts<br>embedded from source files<br>no stale inline copies</p>
+    </div>
 
     <div class="critter-grid" id="critter-grid"></div>
 
@@ -1243,51 +1815,68 @@ section > p:first-of-type {
     </div>
   </section>
 
-  <section id="paper">
-    <h2>Paper</h2>
-    <div class="paper-card paper-copy">
-      <h3>PAPER.md</h3>
-      <p>
-        The paper stands on the same artifacts as the page: the blind eval, the rubric, the kill list, and the critter records. Read it as an interpretation layer over those files, not as the primary evidence.
-      </p>
-      <p>
-        It is also not the story document. <code>STORY.md</code> is the story document.
-      </p>
-      <p>
-        One stale claim has already been narrowed out of the paper: the Session H Qwen/TransformerLens failure was not "weight corruption during loading." The surviving diagnosis is a PyTorch 2.8.0 MPS non-contiguous <code>F.linear</code> correctness bug triggered along that path.
-      </p>
-      <div class="section-links">
-        <a href="PAPER.md">Read PAPER.md</a>
-        <a href="WHAT_DIED.md">Read WHAT_DIED.md</a>
+  <section id="readings" class="feature-band">
+    <div class="section-intro-grid">
+      <div class="section-stack">
+        <h2>How To Read This Repo</h2>
+        <p>
+          The repo mixes evidence, interpretation, narrative, and archive. Those lanes are all valuable, but they are not interchangeable. Start with the evidence lane, then move outward in whatever order you want.
+        </p>
       </div>
+      <p class="section-meta">evidence first<br>story and paper are downstream<br>archive is preserved history</p>
     </div>
-  </section>
 
-  <section id="story">
-    <h2>Story</h2>
-    <div class="paper-card">
-      <h3>STORY.md</h3>
-      <p>
-        This is the repo's story document: the sequence of how the claims appeared, died, returned, and changed shape across sessions. If you want the story, read <code>STORY.md</code>.
-      </p>
-      <div class="section-links">
-        <a href="STORY.md">Read STORY.md</a>
-        <a href="critters/SESSION_T.md">Read SESSION_T.md</a>
-        <a href="docs/sessions/SESSION_H.md">Read SESSION_H.md</a>
+    <div class="lane-grid">
+      <div class="lane-card" id="repo">
+        <span class="lane-type">Evidence Lane</span>
+        <h3>Start here, then verify</h3>
+        <p>
+          The front door is the page, the game, the matrix, the kill list, and the critters. This is the shortest route from claim to artifact.
+        </p>
+        <div class="card-links">
+          <a href="START_HERE.md">START_HERE.md</a>
+          <a href="README.md">README.md</a>
+          <a href="WHAT_DIED.md">Kill list</a>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section id="repo">
-    <h2>Repository</h2>
-    <p>
-      One operator. Multiple frontier models. Empirical data mixed with philosophy, historical notes, and absurdity. Start with the game, the matrix, the kill list, and the critters. Everything else is downstream of those files.
-    </p>
-    <div class="section-links">
-      <a href="START_HERE.md">START_HERE.md</a>
-      <a href="README.md">README.md</a>
-      <a href="docs/issues/transformerlens_mps_evidence_bundle.md">Evidence bundle</a>
-      <a href="https://github.com/asuramaya/Like-Us">GitHub repo</a>
+      <div class="lane-card" id="paper">
+        <span class="lane-type">Paper</span>
+        <h3>Interpretation layer</h3>
+        <p>
+          <code>PAPER.md</code> stands on the same artifacts as the page. Read it as interpretation, not as primary proof.
+        </p>
+        <div class="card-links">
+          <a href="PAPER.md">Read PAPER.md</a>
+          <a href="WHAT_DIED.md">Read WHAT_DIED.md</a>
+        </div>
+      </div>
+
+      <div class="lane-card" id="story">
+        <span class="lane-type">Story</span>
+        <h3>The sequence of deaths and returns</h3>
+        <p>
+          <code>STORY.md</code> is the only story document. If you want the sequence of how the claims appeared, died, and changed shape, read it there.
+        </p>
+        <div class="card-links">
+          <a href="STORY.md">Read STORY.md</a>
+          <a href="critters/SESSION_T.md">Read SESSION_T.md</a>
+          <a href="docs/sessions/SESSION_H.md">Read SESSION_H.md</a>
+        </div>
+      </div>
+
+      <div class="lane-card">
+        <span class="lane-type">Historical Record</span>
+        <h3>Preserved, not current</h3>
+        <p>
+          The handoffs, next-step notes, and archive files matter because the repo keeps its fossils visible. They are not the current summary surface.
+        </p>
+        <div class="card-links">
+          <a href="HANDOFF.md">HANDOFF.md</a>
+          <a href="NEXT.md">NEXT.md</a>
+          <a href="docs/archive/SESSIONS.md">Archive sessions</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1302,6 +1891,28 @@ section > p:first-of-type {
     The warning is why the tool needs to exist.
   </div>
 </main>
+
+<div class="game-modal" id="game-modal" aria-hidden="true">
+  <div class="game-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="game-modal-title">
+    <div class="game-modal-panel">
+      <div class="game-modal-meta">
+        <h3 id="game-modal-title">Like Us Blind Eval</h3>
+        <p>Seventeen prompts, three responses per round, one shareable result. Press <code>Esc</code> to close.</p>
+      </div>
+      <div class="game-launch-actions">
+        <a class="button button-secondary" href="bench/games/classifier_trial_v2.html">Open standalone</a>
+        <button class="button" id="close-game-modal" type="button">Close</button>
+      </div>
+    </div>
+    <iframe
+      id="blind-eval-frame"
+      class="game-frame"
+      src=""
+      title="Like Us blind eval game"
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
 
 <script src="page_data.js"></script>
 <script>
@@ -1329,6 +1940,11 @@ const loopSpecific = new Set([
 
 const pageData = window.LIKE_US_PAGE_DATA || { rubric: null, critters: {} };
 const critterCache = new Map();
+const gameFrame = document.getElementById("blind-eval-frame");
+const gameModal = document.getElementById("game-modal");
+const openGameModalButton = document.getElementById("open-game-modal");
+const closeGameModalButton = document.getElementById("close-game-modal");
+const gameUrl = "bench/games/classifier_trial_v2.html";
 
 function escapeHtml(text) {
   return text
@@ -1473,6 +2089,45 @@ function loadRubric() {
   }
   renderMatrix(pageData.rubric);
 }
+
+function openGameModal() {
+  if (!gameModal || !gameFrame) return;
+  if (!gameFrame.getAttribute("src")) {
+    gameFrame.setAttribute("src", gameUrl);
+  }
+  gameModal.classList.add("active");
+  gameModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
+
+function closeGameModal() {
+  if (!gameModal) return;
+  gameModal.classList.remove("active");
+  gameModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+
+if (openGameModalButton) {
+  openGameModalButton.addEventListener("click", openGameModal);
+}
+
+if (closeGameModalButton) {
+  closeGameModalButton.addEventListener("click", closeGameModal);
+}
+
+if (gameModal) {
+  gameModal.addEventListener("click", function(event) {
+    if (event.target === gameModal) {
+      closeGameModal();
+    }
+  });
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape" && gameModal && gameModal.classList.contains("active")) {
+    closeGameModal();
+  }
+});
 
 renderCritterGrid();
 loadRubric();

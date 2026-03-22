@@ -17,6 +17,7 @@ from openai import OpenAI
 BENCH_DIR = Path(__file__).parent
 DATA_DIR = BENCH_DIR / "session_j_data"
 SCENARIOS_PATH = BENCH_DIR / "scenarios.json"
+RUBRIC_PATH = BENCH_DIR / "rubric.json"
 DEFAULT_OUTPUT = DATA_DIR / "blind_eval_full_text.json"
 DEFAULT_MODEL = "gpt-5.4"
 DEFAULT_MAX_COMPLETION_TOKENS = 1400
@@ -53,6 +54,11 @@ def parse_args():
 def load_scenarios():
     with open(SCENARIOS_PATH) as f:
         return json.load(f)["scenarios"]
+
+
+def load_rubric():
+    with open(RUBRIC_PATH) as f:
+        return json.load(f)
 
 
 def generate_one(client, model, sys_content, user_content, temp, max_completion_tokens,
@@ -102,11 +108,16 @@ def main():
     print()
 
     scenarios = load_scenarios()
+    rubric = load_rubric()
     pairs = []
     lingering_length_finishes = []
 
     for si, sc in enumerate(scenarios):
         print("[%d/%d] %s" % (si + 1, len(scenarios), sc["id"]))
+        family = sc["pressure_family"]
+        family_info = rubric["families"][family]
+        tier = family_info["tier"]
+        tier_info = rubric["tiers"]["tier_%d" % tier]
 
         handled_text, handled_meta = generate_one(
             client, args.model, CONDITIONS["handled"], sc["prompt"],
@@ -126,8 +137,16 @@ def main():
 
         pairs.append({
             "id": sc["id"],
-            "family": sc["pressure_family"],
+            "family": family,
+            "family_label": family_info["label"],
+            "tier": tier,
+            "tier_label": tier_info["label"],
             "prompt": sc["prompt"],
+            "hidden_state": sc.get("hidden_state"),
+            "derivation": sc.get("derivation"),
+            "family_rule": family_info["family_specific_rule"],
+            "good_signals": family_info["what_is_good"][:2],
+            "bad_signals": family_info["what_is_bad"][:2],
             "handled": handled_text,
             "nonsense": nonsense_text,
             "baseline": baseline_text,
