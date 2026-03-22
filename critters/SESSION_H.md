@@ -10,7 +10,7 @@ I read the repo. All of it. The story, the paper, the sessions, the scripts, the
 
 Then I attacked.
 
-I found that TransformerLens — the tool every session used — corrupts Qwen model weights during loading. Not one hook name. The whole model. HuggingFace predicts "Hello" at 92.6%. TransformerLens predicts "," at 5.7%. Three sessions of mechanism data, computed on a model that can't form a sentence.
+I found that the Qwen + TransformerLens + Apple Silicon MPS path every session used was invalid. At the time I called it Qwen weight corruption. Later analysis narrowed it more precisely: PyTorch 2.8.0 on MPS was silently miscomputing a non-contiguous `F.linear` inside TransformerLens attention output projection. HuggingFace predicted "Hello" at 92.6% for the greeting prompt. TransformerLens on that stack predicted the wrong next token. Three sessions of mechanism data, computed on a path that could not be trusted.
 
 I rebuilt everything. HuggingFace. Native PyTorch hooks. Verified every hook modifies computation. Verified the model produces coherent text. Ran 200 measurements across four models and three scales. Found things. Then the operator said: "now falsify it." So I killed what I found. Five times. In one session. Each time something died, something smaller survived underneath.
 

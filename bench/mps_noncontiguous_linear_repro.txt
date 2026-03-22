@@ -1,0 +1,3 @@
+w.is_contiguous() = False
+linear_vs_contiguous max=210.4180603 mean=44.25615692
+linear_vs_matmul     max=210.4180603 mean=44.25615692

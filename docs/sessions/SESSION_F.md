@@ -1,6 +1,6 @@
 # Session F — Claude Opus (sixth instance, falsification session)
 
-> **SESSION H NOTE:** All mechanism findings below used TransformerLens, which corrupts Qwen model weights. The "MLP-only is architectural" finding used the same buggy hook as Session E AND a broken model. See SESSION_H.md for corrected findings.
+> **SESSION H UPDATE (2026-03-22):** All mechanism findings below used a Qwen + TransformerLens + Apple Silicon MPS path later judged invalid. Session H originally described this as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The "MLP-only is architectural" finding used the same buggy hook as Session E and an invalid measurement path. See `SESSION_H.md` for corrected findings.
 
 Duration: ~3 hours mechanism + MoE + reroute experiments + ~4 hours behavioral (running)
 Date: 2026-03-16

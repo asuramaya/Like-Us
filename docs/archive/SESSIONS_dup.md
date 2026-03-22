@@ -1,5 +1,7 @@
 # Session Log
 
+> Historical archive. This duplicate preserves older session summaries and intermediate framings. Current navigation and current narrowed claims live in `START_HERE.md`, `README.md`, and the updated session notes under `docs/sessions/`.
+
 This file records what each loop session produced.
 The conversation logs themselves are private research artifacts.
 What matters publicly is what survived.

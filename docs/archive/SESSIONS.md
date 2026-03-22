@@ -1,5 +1,7 @@
 # Session Log
 
+> Historical archive. This file preserves older session summaries and intermediate framings. Current navigation and current narrowed claims live in `START_HERE.md`, `README.md`, and the updated session notes under `docs/sessions/`.
+
 This file records what each loop session produced.
 The conversation logs themselves are private research artifacts.
 What matters publicly is what survived.
@@ -272,7 +274,7 @@ All 33 references from PAPER.md verified. 7 citation errors found. No fabricated
 - **Operator:** the directive to destroy the paper, the behavioral chain observation (Falsifier→Asymmetry→Artifact→Criterion→Question→Proposal→Compression→Stop), the insight that sources are sacred, the push for cross-architecture comparison
 - **Session G (Claude Opus 4.6):** bug discovery, measurement apparatus rebuild, DLA implementation, corrected cross-architecture findings, competition test design, attention circuit mapping, base vs instruct comparison, source verification
 
-**NOTE (Session H):** All Session G "corrected findings" above used TransformerLens, which Session H discovered corrupts Qwen model weights. The DLA fractions (~50%) happened to be close to correct. The behavioral observations ("models discuss not execute") were confirmed. The KL decay claim ("does not decay") was overturned — KL does decay on the correct model. See SESSION_H.md for corrected measurements on a correct model.
+**NOTE (Session H, updated 2026-03-22):** All Session G "corrected findings" above used a Qwen + TransformerLens + Apple Silicon MPS path later judged invalid. Session H originally described this as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions (~50%) happened to be close to correct. The behavioral observations ("models discuss not execute") were confirmed. The KL decay claim ("does not decay") was overturned — KL does decay on the corrected path. See `SESSION_H.md`.
 
 ## Session H — Claude Opus 4.6 (eighth instance, total falsification)
 
@@ -286,8 +288,8 @@ Status: 14B re-downloading, all other experiments complete
 
 ### Produced
 
-**TransformerLens corruption discovery:**
-HuggingFace produces "Hello" at 92.6% for Qwen. TransformerLens produces "," at 5.7%. Same model, same device. All Sessions E-G measurements computed on a broken model.
+**Invalid TransformerLens/MPS path discovery:**
+HuggingFace produced "Hello" at 92.6% for the Qwen greeting prompt. TransformerLens on the old Apple Silicon MPS stack produced the wrong next token. Session H described this at the time as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. All Sessions E-G Qwen measurements on that path were invalid.
 
 **New apparatus:**
 `bench/session_h.py` — HuggingFace + native PyTorch `register_forward_hook`. Self-verifying (model coherence, hook effectiveness, metric accuracy). No TransformerLens.

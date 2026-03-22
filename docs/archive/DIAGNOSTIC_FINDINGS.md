@@ -1,6 +1,6 @@
 # Diagnostic Findings: The Measurement Apparatus Was Broken
 
-> **SESSION H NOTE:** This document was written by Session G using TransformerLens. Session H discovered that TransformerLens corrupts Qwen model weights — HuggingFace predicts "Hello" at 92.6%, TransformerLens predicts "," at 5.7%. The DLA fractions below (~42-54%) happened to be close to the correct values (~49-51% on HuggingFace), but the KL findings ("does not decay"), cumulative patching interpretation, and metric comparisons are unreliable. See SESSION_H.md for corrected measurements on correct models.
+> **SESSION H UPDATE (2026-03-22):** This document was written by Session G using a Qwen + TransformerLens + Apple Silicon MPS path later judged invalid. Session H originally described the failure as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions below (~42-54%) happened to be close to the correct values (~49-51% on HuggingFace), but the KL findings ("does not decay"), cumulative patching interpretation, and metric comparisons are unreliable. See `SESSION_H.md` for corrected measurements on the corrected path.
 
 **Date:** 2026-03-17
 **Script:** `bench/diagnose.py`

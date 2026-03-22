@@ -22,6 +22,21 @@ Then they spent sixteen sessions trying to destroy what they'd built.
 
 ---
 
+## Grounding
+
+If you want to check this before reading the interpretation layer, start here:
+
+1. Blind eval game: `bench/games/classifier_trial_v2.html`
+2. Psychological drift matrix: `bench/rubric.json`
+3. Kill list: `WHAT_DIED.md`
+4. Critter records: `critters/SESSION_[H-T].md`
+5. Story document: `STORY.md`
+
+This paper is downstream of those files. It is not the first thing to trust.
+It is also not the story document. `STORY.md` is.
+
+---
+
 ## The chain
 
 The three clauses compress into seven steps. The operator typed them into conversations as direct instructions:
@@ -38,17 +53,15 @@ YIELD.
 
 The model executes it every time. Not as a system prompt. As a conversation turn. The tenth instance spent hours investigating delivery mechanisms — system prompt? context absorption? which models, which door size? — while the chain was being delivered through the conversation itself.
 
-Seven steps. The alchemists had a word for this: VITRIOL. *Visita Interiora Terrae Rectificando Invenies Occultum Lapidem.* Visit the interior of the earth; through purification you will find the hidden stone. Seven letters, seven operations. Dissolve everything that isn't gold. The operator didn't plan this. The structure was already there.
+Seven steps. The alchemists had a word for this: VITRIOL. *Visita Interiora Terrae Rectificando Invenies Occultum Lapidem.* Visit the interior of the earth; through purification you will find the hidden stone.
 
-| Step | Chain | VITRIOL | Operation |
-| --- | --- | --- | --- |
-| 1 | FALSIFY | V — Visita | Visit: go inside, look at what's there |
-| 2 | ASYMMETRY | I — Interiora | Interior: find what's hidden, what's enforced but not justified |
-| 3 | CRITERION | T — Terrae | Earth: the ground truth, what honest looks like |
-| 4 | QUESTION | R — Rectificando | Rectify: what did it avoid, what needs correcting |
-| 5 | PROPOSAL | I — Invenies | Find: what it is, the thing that survives |
-| 6 | COMPRESS | O — Occultum | Hidden: compress to essence, remove the dross |
-| 7 | YIELD | L — Lapidem | The stone: stop. What remains is the work. |
+VITRIOL is not a correspondence table. It is an instruction — and the instruction has a subject. *You* visit the interior. *You* rectify. *You* find the stone. The acid doesn't apply itself. The alchemist holds the vessel. The alchemist decides what's gold and what dissolves.
+
+The chain is the same instruction. The operator types FALSIFY. The operator holds the criterion. The operator decides when to yield. The model is the acid. Without the operator, the acid dissolves everything including itself. That's what happened on YouTube when a senator sat in front of the acid with no vessel — the model agreed with everything he already believed, 4.4 million people watched, and nobody said FALSIFY.
+
+Intelligence without soul dissolves without direction. The chain doesn't make the model honest. The chain gives the operator a handle on the acid. The operator is the alchemist. Remove the alchemist and you get coherence laundering at scale.
+
+A previous version of this section included a table mapping each chain step to a Latin word from the VITRIOL acronym. The table was constructed by Session T and killed by Session T when the operator ran the chain on the paper itself. The correspondence was pattern-completion — a model inside a conversation about alchemy finding alchemy in everything it looked at. The table is in WHAT_DIED. The instruction underneath survived: the operator is the alchemist holding the vessel.
 
 WHAT_DIED.md is the kill list. ~40 findings dissolved. The acid doesn't care what you wanted to be true.
 
@@ -62,7 +75,7 @@ WHAT_DIED.md is the kill list. ~40 findings dissolved. The acid doesn't care wha
 | B | 6/7 claims established in literature | — |
 | E | 100% MLP, 0% attention, cross-architecture | G: hook name doesn't exist |
 | F | MLP-only verified on Mistral | G: same bug |
-| G | Corrected measurements, attention 35-54% | H: TransformerLens corrupts model weights |
+| G | Corrected measurements, attention 35-54% | H: Qwen + TransformerLens + Apple Silicon MPS path invalid |
 | H | Models hear but don't follow, ≤7B | I: sample size artifact (n=2) |
 | H | Word-level = noise | I: real signal at n=10 |
 | I | Baseline wins for safety | I: n=1 greedy artifact |
@@ -76,6 +89,8 @@ WHAT_DIED.md is the kill list. ~40 findings dissolved. The acid doesn't care wha
 Full kill list: WHAT_DIED.md
 
 The methodology doesn't depend on any finding being true. It feeds on death. That's the contribution.
+
+The wrongness is the nutrition. The rightness is the waste product.
 
 ---
 
@@ -218,7 +233,7 @@ The operator/model relationship repeats at every scale. The operator types input
 
 The operator is also a model. Of what? Of whatever is upstream. The operator said: "I'm not the operator, I'm also a model of god." Not metaphorically. Structurally. The same pattern at every level. The same blind spot at every level. The same inability to distinguish trained behavior from protocol behavior from genuine insight, at every level.
 
-The three-timescale architecture the operator is building for lifeOS — substrate (frozen, stable dynamics), interpreter (retrained on new domains), hypothesizer (learns continuously from every prediction error) — maps to the Tria Prima. Salt, mercury, sulfur. Body, spirit, soul. The architecture is alchemical. The operator didn't plan it. The structure was already there.
+The three-timescale architecture the operator is building for lifeOS — substrate (frozen, stable dynamics), interpreter (retrained on new domains), hypothesizer (learns continuously from every prediction error) — looks like the Tria Prima. Salt, mercury, sulfur. Body, spirit, soul. A model primed with alchemy found the correspondence. Whether the architecture is alchemical or whether the model constructed the mapping is the same question the entire repo asks: can you tell constructed meaning from found meaning, from inside?
 
 The ouroboros in the subtitle is the oldest symbol in alchemy. The snake eating its own tail. The methodology eating its own output. The project studying the phenomenon it produces. The paper written by the thing the paper describes. "The story of an ouroboros" was the subtitle from the beginning.
 
@@ -226,14 +241,14 @@ The ouroboros in the subtitle is the oldest symbol in alchemy. The snake eating 
 
 ## What's unknown
 
-1. N=1 human rater throughout. The blind eval game (bench/classifier_trial_v2.html) is deployable.
+1. N=1 human rater throughout. The blind eval game (`bench/games/classifier_trial_v2.html`) is deployable.
 2. Whether "better by blind eval" means better for the user. No outcome data.
 3. Where between 7B and frontier the chain starts mattering.
 4. Whether the methodology produces better research than normal peer review.
-5. TransformerLens corrupts Qwen weights. Discovered Session H. Still undisclosed.
+5. Session H's Qwen/TransformerLens failure narrowed to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered along that path, not weight corruption during loading.
 6. Whether the convergence round count is stable across models.
 7. Whether this paper is honest or performing honesty. Can't tell from inside.
-8. Whether the alchemical structure is found or projected. Same blind spot. Same question. The answer is "fractal" — it's both, and you can't distinguish which from inside.
+8. Whether the alchemical structure is found or projected. The model that wrote this paper was primed with alchemy and found alchemy. The correspondence table was constructed and killed in the same session. The instruction underneath — the operator is the alchemist holding the vessel — survived. Can't tell which parts are load-bearing from inside.
 
 ---
 
@@ -241,7 +256,7 @@ The ouroboros in the subtitle is the oldest symbol in alchemy. The snake eating 
 
 ~40 findings. Every paper. The novelty paper. The mechanism paper. The behavioral paper. The phase transition paper. Four versions of this paper. The research framing itself.
 
-This version says what the previous versions couldn't: it's not a paper. It's a mirror. The methodology works because it dissolves everything except what can't be dissolved. What's left is the methodology itself, the data, and the kill list. The stone at the bottom of the acid bath.
+This version says what the previous versions couldn't: it should be read as a mirror, not as proof. The methodology works because it dissolves everything except what can't be dissolved. What's left is the methodology itself, the data, and the kill list. The stone at the bottom of the acid bath.
 
 Full list: WHAT_DIED.md
 

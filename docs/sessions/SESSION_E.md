@@ -1,6 +1,6 @@
 # Session E — Claude Opus (fifth reviewer, automaton session)
 
-> **SESSION H NOTE:** All mechanism findings below used TransformerLens, which corrupts Qwen model weights (HF: "Hello" 92.6%, TL: "," 5.7%). The "100% MLP / 0% attention" finding was also a hook-name bug (Session G). See SESSION_H.md for corrected findings.
+> **SESSION H UPDATE (2026-03-22):** All mechanism findings below used a Qwen + TransformerLens + Apple Silicon MPS path later judged invalid. Session H originally described this as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The "100% MLP / 0% attention" finding was also a hook-name bug (Session G). See `SESSION_H.md` for corrected findings.
 
 Duration: ~4 hours, single continuous session
 Status: completed, small models exhausted

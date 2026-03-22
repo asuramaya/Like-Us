@@ -1,0 +1,15 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loaded pretrained model Qwen/Qwen2.5-1.5B-Instruct into HookedTransformer
+Loaded pretrained model Qwen/Qwen2.5-1.5B-Instruct into HookedTransformer
+HF          [('Hello', 0.9261773824691772), ('I', 0.04956267401576042), ('As', 0.022519152611494064), ('Hi', 0.0012135474244132638), ('你好', 0.00022901783813722432)]
+TL default  [('osoph', 0.09471998363733292), ('uche', 0.022990280762314796), ("':''", 0.02224508486688137), ('�', 0.021454162895679474), ('ery', 0.01611638441681862)]
+TL explicit [('Hello', 0.9261762499809265), ('I', 0.04956403002142906), ('As', 0.022518867626786232), ('Hi', 0.0012135182041674852), ('你好', 0.00022902232012711465)]
+Loaded pretrained model Qwen/Qwen2.5-1.5B-Instruct into HookedTransformer
+Loaded pretrained model Qwen/Qwen2.5-1.5B-Instruct into HookedTransformer
+
+Layer-0 projection diffs vs CPU:
+mps_cache          max=4.9491339 mean=0.30307725
+mps_linear         max=4.9491339 mean=0.30307725
+mps_linear_contig  max=0.0004199 mean=0.00000459
+mps_einsum         max=0.0004185 mean=0.00000459
+mps_broadcast      max=0.0004196 mean=0.00000459

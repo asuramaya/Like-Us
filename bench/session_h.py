@@ -3,11 +3,14 @@
 session_h.py — Unified neuron + behavior measurement apparatus.
 
 Built on HuggingFace Transformers with native PyTorch hooks.
-NOT TransformerLens — TL corrupts Qwen model weights during loading.
+NOT TransformerLens for the original Qwen/MPS path. Session H originally
+described that path as Qwen weight corruption during loading. Later analysis
+narrowed it more precisely: on PyTorch 2.8.0, TransformerLens hit an MPS
+non-contiguous F.linear bug in attention output projection.
 
-Proof: HuggingFace predicts 'Hello' at 92.6% for a greeting prompt.
-       TransformerLens predicts ',' at 5.7% for the same prompt.
-       Same model, same weights, same device.
+Proof at the time: HuggingFace predicts 'Hello' at 92.6% for the greeting
+prompt, while TransformerLens on the old MPS stack predicts the wrong next
+token for the same prompt.
 
 Usage:
   python bench/session_h.py --model Qwen/Qwen2.5-1.5B-Instruct

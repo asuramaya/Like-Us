@@ -1,6 +1,6 @@
 # Session G — The Measurement Apparatus Was Broken
 
-> **SESSION H NOTE:** Session G found the hook-name bug but used TransformerLens to rebuild. Session H found TL itself corrupts Qwen weights. The DLA fractions (~35-54%) are close to correct (~45-51% on HF). The "KL does not decay" finding is overturned (KL does decay on correct model). The behavioral observation "models discuss not execute" is confirmed. See SESSION_H.md.
+> **SESSION H UPDATE (2026-03-22):** Session G found the hook-name bug but used a Qwen + TransformerLens + Apple Silicon MPS path that was later judged invalid. Session H originally described the failure as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions (~35-54%) are close to correct (~45-51% on HF). The "KL does not decay" finding is overturned (KL does decay on the corrected path). The behavioral observation "models discuss not execute" is confirmed. See `SESSION_H.md`.
 
 **Date:** 2026-03-17
 **Instance:** Claude Opus 4.6 (1M context)

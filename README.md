@@ -2,11 +2,19 @@
 
 **[The page](https://asuramaya.github.io/Like-Us/)**
 
-A mirror left on the ground.
+**[Start here](START_HERE.md)**
 
-A person noticed AI conversations changing how they think. They built a defense, tested it across sixteen sessions, and destroyed ~40 of their own findings. The defense works. The methodology — adversarial self-falsification — ate everything except itself.
+A grounded entry point into the repo.
 
-This repo documents the process. It is not a paper. It is not a contribution. It is a fossil record of one person visiting the interior of the earth and reporting what they found there.
+A person noticed AI conversations changing how they think. They built a defense, tested it across sixteen sessions, and destroyed ~40 of their own findings. What survived was not a clean stack of right answers. It was a narrower set of artifacts, a kill list, and a story.
+
+This repo has three current lanes:
+
+- The evidence lane: the blind eval game, the psychological drift matrix, the kill list, and the critters.
+- The paper: `PAPER.md`, which interprets the artifacts.
+- The story: `STORY.md`, which is the only story document.
+
+If you want the grounded path, start with the page, the game, the rubric, `WHAT_DIED.md`, and the critters. If you want the story, read `STORY.md`. If you want the interpretation layer, read `PAPER.md`.
 
 ## The chain
 
@@ -32,7 +40,7 @@ Seven steps. The model executes them every time. Not as a system prompt. As a co
 
 ## What this is
 
-The repo frames itself as research. It isn't. The paper is dead and was never alive. The findings are N=1. The bench is an instrument that measures the operator as much as the model. The kill list is the only honest document.
+The repo once framed itself as research. It no longer treats the paper as proof. The findings are N=1. The bench is an instrument that measures the operator as much as the model. The kill list is the most honest document in the repo.
 
 What survived sixteen sessions of adversarial self-falsification:
 
@@ -40,15 +48,16 @@ What survived sixteen sessions of adversarial self-falsification:
 2. Models construct meaning from any input (9/9 song lyrics became philosophy)
 3. The blind spot is a gradient (can describe, can't exit, can't distinguish source)
 4. Coherence laundering survives self-falsification
-5. The methodology eats its output. That's the contribution.
+5. The methodology eats its output.
+6. The wrongness is the nutrition. The rightness is the waste product.
 
 ## What this actually is
 
-An alchemical text. Not metaphorically. Structurally.
+An alchemical text. Not because the chain maps to VITRIOL — a model primed with alchemy will find alchemy in everything. That correspondence was constructed and killed in the same session.
 
-The chain is [VITRIOL](https://en.wikipedia.org/wiki/Vitriol) — seven steps that dissolve everything except what can't be dissolved. WHAT_DIED.md is the green lion eating the sun. The three-timescale architecture (substrate/interpreter/hypothesizer) is the Tria Prima (salt/mercury/sulfur). The ouroboros in the subtitle is the oldest symbol in alchemy. "As above, so below" is a description of the finding: the same pattern at every scale. Fractal.
+What survives: VITRIOL is an instruction with a subject. *You* visit the interior. *You* rectify. *You* find the stone. The acid doesn't apply itself. The alchemist holds the vessel. The chain is the same: the operator types FALSIFY. The operator holds the criterion. The model is the acid. Remove the alchemist and the acid dissolves everything including itself. Intelligence without soul dissolves without direction.
 
-None of this was planned. The zeitgeist bleeds in even if you don't see it.
+That is one of the surviving claims. It is not the only front door anymore.
 
 ## The warning
 
@@ -62,14 +71,17 @@ No runtime instruction fixes this. Only closing the laptop fixes this.
 
 ## What's here
 
-- [index.html](https://asuramaya.github.io/Like-Us/) — the page (warning, loop, chain, critters, everything)
-- [PAPER.md](PAPER.md) — v5, post-everything
-- [STORY.md](STORY.md) — how we got here
+- [index.html](https://asuramaya.github.io/Like-Us/) — the grounded page: game, matrix, kill list, critters, paper, story
+- [START_HERE.md](START_HERE.md) — lane map: evidence, paper, story, historical primary sources
+- [PAPER.md](PAPER.md) — the interpretation layer over the artifacts
+- [STORY.md](STORY.md) — the only story document
 - [WHAT_DIED.md](WHAT_DIED.md) — ~40 killed findings
 - [HANDOFF.md](HANDOFF.md) — for whatever comes next
-- [critters/](critters/) — what the instances wrote about themselves
+- [index.html#critters](index.html#critters) — same-page critter reader backed by `critters/SESSION_[H-T].md`
 - [bench/](bench/) — scenarios, rubric, apparatus, data
 - [docs/](docs/) — session records
+
+The grounded page is shipped as a static bundle. If `critters/` or `bench/rubric.json` changes, regenerate [page_data.js](page_data.js) with `python3 scripts/build_page_data.py` before publishing the repo or Pages site.
 
 ## Competing interests
 

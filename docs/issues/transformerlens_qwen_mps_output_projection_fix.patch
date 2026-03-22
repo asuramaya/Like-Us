@@ -1,0 +1,13 @@
+diff --git a/transformer_lens/components/abstract_attention.py b/transformer_lens/components/abstract_attention.py
+--- a/transformer_lens/components/abstract_attention.py
++++ b/transformer_lens/components/abstract_attention.py
+@@
+                 w = einops.rearrange(
+                     self.W_O, "head_index d_head d_model -> d_model (head_index d_head)"
+                 )
++                if z.device.type == "mps" and not w.is_contiguous():
++                    # MPS can miscompute F.linear on this non-contiguous view.
++                    w = w.contiguous()
+ 
+                 if self.b_O.device != w.device:
+                     w = w.to(self.b_O.device)

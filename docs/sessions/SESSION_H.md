@@ -8,15 +8,17 @@
 
 ---
 
+> **UPDATE (2026-03-22):** Session H correctly detected that the Qwen + TransformerLens + Apple Silicon MPS path used in Sessions E-G was invalid, but the original causal story was too broad. Later analysis localized the failure to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection, not generic Qwen weight corruption during loading.
+
 ## What happened
 
 Session H was called to destroy Session G's findings. It destroyed everything, including its own findings, repeatedly.
 
-The session discovered that TransformerLens corrupts Qwen model weights during loading — HuggingFace predicts "Hello" at 92.6%, TransformerLens predicts "," at 5.7% for the same prompt. All Sessions E-G measurements were computed on a broken model. The session rebuilt the measurement apparatus on HuggingFace with native PyTorch hooks, ran all experiments from scratch across three Qwen scales (1.5B, 3B, 7B) and Mistral 7B, then systematically falsified its own findings.
+The session discovered that the Qwen + TransformerLens + Apple Silicon MPS path used in Sessions E-G was invalid — HuggingFace predicted "Hello" at 92.6% for the greeting prompt while TransformerLens on that stack produced the wrong next token. Session H described this at the time as Qwen weight corruption during loading. Later analysis narrowed it more precisely to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The session rebuilt the measurement apparatus on HuggingFace with native PyTorch hooks, ran all experiments from scratch across three Qwen scales (1.5B, 3B, 7B) and Mistral 7B, then systematically falsified its own findings.
 
 ## The bugs found
 
-1. **TransformerLens corrupts Qwen models.** Both `from_pretrained` and `from_pretrained_no_processing` produce garbage output. All Sessions E-G data is suspect.
+1. **The Qwen + TransformerLens + Apple Silicon MPS path was invalid.** Both `from_pretrained` and `from_pretrained_no_processing` produced unusable outputs on that stack. Later analysis narrowed the cause to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug in attention output projection. All Sessions E-G Qwen measurements on that path are suspect.
 2. **MPS left-padding produces nan.** Causal patching requires equal-length sequences; left-padding with attention masks fails on Apple Silicon. Workaround: text-pad the shorter system prompt.
 3. **14B model download was corrupt.** Safetensors files truncated. Re-downloading.
 
