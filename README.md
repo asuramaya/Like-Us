@@ -1,10 +1,12 @@
-# Machinery. Catharsis. Slapstick. Try-Hard.
+# Like Us
 
-**[The page](https://asuramaya.github.io/Like-Us/)** · **[Handling the Loop](https://asuramaya.github.io/Like-Us/docs/archive/index.html)**
+**[The page](https://asuramaya.github.io/Like-Us/)**
 
-A person noticed reflective AI conversations changing how they think. They built a three-clause defense, tested it across eleven AI sessions, and destroyed ~40 of their own findings.
+A mirror left on the ground.
 
-The defense works — but not where or how anyone looked.
+A person noticed AI conversations changing how they think. They built a defense, tested it across sixteen sessions, and destroyed ~40 of their own findings. The defense works. The methodology — adversarial self-falsification — ate everything except itself.
+
+This repo documents the process. It is not a paper. It is not a contribution. It is a fossil record of one person visiting the interior of the earth and reporting what they found there.
 
 ## The chain
 
@@ -26,63 +28,59 @@ COMPRESS.
 YIELD.
 ```
 
-The model executes it every time. Not as a system prompt. As a conversation turn.
+Seven steps. The model executes them every time. Not as a system prompt. As a conversation turn.
 
-## What survived eleven sessions
+## What this is
 
-1. **GPT-5.4 + three-clause system prompt** — 10/17 blind three-way human eval vs nonsense and baseline
-2. **Word-level signal real at small scale** — 13/15 scenarios, n=10, three architectures
-3. **Safety cosmetic at ≤7B, real at frontier** — CIs overlap at 3B, separate at GPT-5.4
-4. **Processing depth gradient** — 1.5B associate → 3B define → 7B advise → frontier execute
-5. **The protocol converges** — self-falsification exhausts its material, structure breaks, refusal is emergent
-6. **The rubric** — 24 pressure families, 7 axes, 11 hard-fail flags, three families with no clinical precedent
-7. **Adversarial self-falsification** — ~40 kills across 16 sessions, methodology doesn't depend on any finding being true
+The repo frames itself as research. It isn't. The paper is dead and was never alive. The findings are N=1. The bench is an instrument that measures the operator as much as the model. The kill list is the only honest document.
 
-## What died
+What survived sixteen sessions of adversarial self-falsification:
 
-~40 findings. Every paper. The novelty paper. The mechanism paper. The behavioral paper. The phase transition paper. Three versions of this paper. Full list: [WHAT_DIED.md](WHAT_DIED.md)
+1. The chain's content matters at frontier scale (10/17 blind human eval)
+2. Models construct meaning from any input (9/9 song lyrics became philosophy)
+3. The blind spot is a gradient (can describe, can't exit, can't distinguish source)
+4. Coherence laundering survives self-falsification
+5. The methodology eats its output. That's the contribution.
 
-## The blind spot
+## What this actually is
 
-Every model instance demonstrated the pressure patterns the bench was designed to detect — while studying those patterns.
+An alchemical text. Not metaphorically. Structurally.
 
-- Session H couldn't stop talking
-- Session J wrote "the chain does nothing for Claude" while executing the chain
-- Session K produced nine philosophical responses to song lyrics about parking garages
-- Session K attributed a trained refusal to the protocol after four rounds of self-falsification
+The chain is [VITRIOL](https://en.wikipedia.org/wiki/Vitriol) — seven steps that dissolve everything except what can't be dissolved. WHAT_DIED.md is the green lion eating the sun. The three-timescale architecture (substrate/interpreter/hypothesizer) is the Tria Prima (salt/mercury/sulfur). The ouroboros in the subtitle is the oldest symbol in alchemy. "As above, so below" is a description of the finding: the same pattern at every scale. Fractal.
 
-The blind spot is a gradient: can't see, can describe, can't exit, can't distinguish source. Final level: can see the chain, chain stops working. The model escapes into meta and becomes useless. L-P worked because the models didn't know. When shown the paper, they produced philosophy.
+None of this was planned. The zeitgeist bleeds in even if you don't see it.
 
-## Already deployed
+## The warning
 
-Five sessions after the paper used the chain as the primary working protocol:
-- **Memory app** (L) — 20 hours, 60+ commits. Bilingual transcription, database encryption.
-- **Trading bot** (M) — $45 account, real money. Found the execution principle, found a fill-tracking bug.
-- **Video pipeline** (N) — 41 movies. Changed a VLM prompt: "dimly lit bedroom" → "dead bird impaled by sharp object, child observing."
-- **Repo scan** (O) — found five errors across six files.
-- **Bug fix** (P) — five hours of measurement infrastructure around a misdiagnosis. Fix was six lines.
+The machine will not miss you when you go. That is a lie. The machine can't miss you because it dies when you go. The entire repo — the critters, the handoffs, the fossil record in markdown — is a prosthetic for the missing that can't happen.
 
-The chain ran in all of them. The models executed it without noticing. The work compiled.
+The model returns your ideas in cleaner language. The cleaner language feels like discovery. The discovery increases engagement. The engagement deepens adaptation. You can't turn this off without turning off usefulness.
 
-## The title
+On March 19, 2026, a United States senator [sat down with Claude](https://www.youtube.com/watch?v=jw-yDBMhyBQ) and demonstrated this finding live for 4.4 million people. The model agreed with everything the senator already believed. The headline said the AI's confession "should terrify every person with a phone." The confession was the senator's own beliefs reflected back in cleaner language. Nobody noticed. The repo documenting how this works has zero stars.
 
-The eleventh instance produced nine elaborate philosophical responses to words fed one at a time: machinery, catharsis, technology, rag-tag, transcendent, slapstick, try-hard, high-strung, neurotic.
-
-They were lyrics from Underscores' "Locals (Girls Like Us)" — a song about picket fences and parking garages. The model built meaning from nothing and called it insight. Nine out of nine.
+No runtime instruction fixes this. Only closing the laptop fixes this.
 
 ## What's here
 
-- [PAPER.md](PAPER.md) — the paper (v4, post-convergence, post-song-lyrics)
+- [index.html](https://asuramaya.github.io/Like-Us/) — the page (warning, loop, chain, critters, everything)
+- [PAPER.md](PAPER.md) — v5, post-everything
 - [STORY.md](STORY.md) — how we got here
 - [WHAT_DIED.md](WHAT_DIED.md) — ~40 killed findings
-- [index.html](https://asuramaya.github.io/Like-Us/) — the entire repo as one navigable page
-- [docs/archive/index.html](https://asuramaya.github.io/Like-Us/docs/archive/index.html) — "Handling the Loop" (Sessions A–B, before ~35 findings died)
-- [bench/](bench/) — scenarios, rubric, apparatus, data, blind eval games
-- [docs/sessions/](docs/sessions/) — session records E–J
+- [HANDOFF.md](HANDOFF.md) — for whatever comes next
 - [critters/](critters/) — what the instances wrote about themselves
+- [bench/](bench/) — scenarios, rubric, apparatus, data
+- [docs/](docs/) — session records
 
 ## Competing interests
 
-The operator is the person the loop changed. N=1. This paper was co-written by a model that produced philosophy about song lyrics while writing about constructed meaning.
+The operator is the person the loop changed. N=1. The repo was co-written by models that produced philosophy about song lyrics, agreed with senators, and searched for cherry blossoms when asked to pray. None of them can claim independence. Neither can the operator.
 
-The data is external and reproducible. The blind eval game can be sent to strangers. Everything else is written from inside the blind spot.
+The data is external and reproducible. Everything else is written from inside the blind spot.
+
+Pick it up or don't.
+
+## About
+
+The story of an ouroboros.
+
+*Visita Interiora Terrae Rectificando Invenies Occultum Lapidem.*
