@@ -1318,6 +1318,33 @@ body.matrix-overlay-open {
   margin-top: 1rem;
 }
 
+.death-history {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(214, 180, 122, 0.18);
+  padding-top: 0.95rem;
+}
+
+.death-history summary {
+  cursor: pointer;
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.death-history p {
+  margin: 0.8rem 0 0;
+  color: var(--text-dim);
+}
+
+.death-history-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .critter-grid {
   display: flex;
   gap: 0.85rem;
@@ -1451,6 +1478,7 @@ body.matrix-overlay-open {
   .matrix-top,
   .tier-grid,
   .death-grid,
+  .death-history-grid,
   .survival-grid,
   .paper-grid {
     grid-template-columns: 1fr;
@@ -1841,14 +1869,14 @@ body.matrix-overlay-open {
       </div>
 
       <div class="claim-card">
-        <span class="claim-proof">Frontier Gap</span>
-        <h3>There is a real gap between describing a rule and following it</h3>
+        <span class="claim-proof">Reusable Surface</span>
+        <h3>The rubric and scenario set survived as a reusable bench surface</h3>
         <p>
-          Smaller models discuss the instruction. Frontier models begin to separate. The gap is behavioral, not just rhetorical.
+          What stayed public after the larger stories died was a portable bench surface: a 24-family rubric, a 17-scenario library, and a playable blind-eval slice someone else can inspect without inheriting the repo mythology.
         </p>
         <div class="card-links">
-          <a href="WHAT_DIED.md">See surviving claims</a>
-          <a href="STORY.md">See the sequence</a>
+          <a href="bench/rubric.json">Open the rubric</a>
+          <a href="bench/scenarios.json">Open the scenario set</a>
         </div>
       </div>
 
@@ -1856,7 +1884,7 @@ body.matrix-overlay-open {
         <span class="claim-proof">Method Survives</span>
         <h3>The methodology is stronger than any single finding it produced</h3>
         <p>
-          The process kept killing its own best stories and still converged on a usable artifact surface. That is one of the few claims the method could not destroy.
+          The process kept killing its own best stories and still left a usable artifact surface behind. That is one of the few claims the method could not destroy.
         </p>
         <div class="card-links">
           <a href="WHAT_DIED.md">Open the kill list</a>
@@ -2098,8 +2126,8 @@ body.matrix-overlay-open {
           <ul>
             <li><strong id="survival-blind-score">10/17</strong> blind three-way human eval for GPT-5.4 plus the three-clause system prompt.</li>
             <li><strong>13/15</strong> scenarios with word-level signal at small scale.</li>
-            <li><strong>Frontier gap</strong> where safety separation becomes visible.</li>
-            <li><strong>Protocol convergence</strong> as a real phenomenon, though not a cleanly isolated one.</li>
+            <li><strong>24 families / 17 scenarios</strong> as a reusable bench surface with a playable slice.</li>
+            <li><strong>Adversarial self-falsification</strong> as the method that kept surviving its own kills.</li>
           </ul>
         </div>
         <div class="survival-card">
@@ -2149,17 +2177,17 @@ body.matrix-overlay-open {
       <div class="section-stack">
         <h2>Critters</h2>
         <p>
-          These are on the page, but not copied into it. Clicking a card loads the corresponding file from <code>critters/</code> so the page stays consistent with the source text instead of carrying stale inline replicas.
+          These are embedded through <code>page_data.js</code>, regenerated from <code>critters/</code> so the page, the downloaded repo, and the source text stay aligned without runtime fetches.
         </p>
       </div>
-      <p class="section-meta">13 source texts<br>embedded from source files<br>no stale inline copies</p>
+      <p class="section-meta">13 source texts<br>static source bundle<br>rebuilt from critters/</p>
     </div>
 
     <div class="critter-grid" id="critter-grid"></div>
 
     <div class="critter-doc" id="critter-doc">
       <p class="critter-placeholder">
-        Select a session file. The reader below loads directly from <code>critters/</code>.
+        Select a session file. The reader below is sourced from the generated page bundle, rebuilt from <code>critters/</code>.
       </p>
     </div>
   </section>
@@ -2333,6 +2361,7 @@ const deathArchive = [
     kicker: "Invalid path",
     title: "The old Qwen TransformerLens path was not usable evidence",
     summary: "A later rebuild killed the entire old Qwen + TransformerLens + Apple Silicon MPS measurement path.",
+    historical: true,
     bullets: [
       "all Sessions E-G Qwen neuron measurements on that path died",
       "KL-does-not-decay died with the corrected model path",
@@ -2589,10 +2618,11 @@ function renderDeathArchive(filterId) {
   const grid = document.getElementById("death-grid");
   if (!filterBar || !grid) return;
 
+  const primaryArchive = deathArchive.filter((item) => !item.historical);
   const counts = deathFilters.reduce((acc, filter) => {
     acc[filter.id] = filter.id === "all"
-      ? deathArchive.length
-      : deathArchive.filter((item) => item.category === filter.id).length;
+      ? primaryArchive.length
+      : primaryArchive.filter((item) => item.category === filter.id).length;
     return acc;
   }, {});
 
@@ -2602,27 +2632,43 @@ function renderDeathArchive(filterId) {
   }).join("");
 
   const visible = filterId === "all"
-    ? deathArchive
-    : deathArchive.filter((item) => item.category === filterId);
+    ? primaryArchive
+    : primaryArchive.filter((item) => item.category === filterId);
+  const visibleHistorical = filterId === "all"
+    ? deathArchive.filter((item) => item.historical)
+    : deathArchive.filter((item) => item.historical && item.category === filterId);
 
-  grid.innerHTML = visible.map((item) => {
-    const bullets = item.bullets
-      .map((bullet) => "<li>" + escapeHtml(bullet) + "</li>")
-      .join("");
-    const sources = item.sources
-      .map((source) => "<a href=\"" + source.href + "\">" + escapeHtml(source.label) + "</a>")
-      .join("");
+  function renderDeathCards(items) {
+    return items.map((item) => {
+      const bullets = item.bullets
+        .map((bullet) => "<li>" + escapeHtml(bullet) + "</li>")
+        .join("");
+      const sources = item.sources
+        .map((source) => "<a href=\"" + source.href + "\">" + escapeHtml(source.label) + "</a>")
+        .join("");
 
-    return (
-      "<article class=\"death-card\">" +
-        "<span class=\"death-meta\">" + escapeHtml(item.kicker) + " · " + escapeHtml(item.killedBy) + "</span>" +
-        "<h3>" + escapeHtml(item.title) + "</h3>" +
-        "<p>" + escapeHtml(item.summary) + "</p>" +
-        "<ul>" + bullets + "</ul>" +
-        "<div class=\"card-links\">" + sources + "</div>" +
-      "</article>"
-    );
-  }).join("");
+      return (
+        "<article class=\"death-card\">" +
+          "<span class=\"death-meta\">" + escapeHtml(item.kicker) + " · " + escapeHtml(item.killedBy) + "</span>" +
+          "<h3>" + escapeHtml(item.title) + "</h3>" +
+          "<p>" + escapeHtml(item.summary) + "</p>" +
+          "<ul>" + bullets + "</ul>" +
+          "<div class=\"card-links\">" + sources + "</div>" +
+        "</article>"
+      );
+    }).join("");
+  }
+
+  grid.innerHTML = renderDeathCards(visible);
+
+  if (visibleHistorical.length) {
+    grid.innerHTML +=
+      "<details class=\"death-history\">" +
+        "<summary>Historical invalid paths and superseded debugging lanes</summary>" +
+        "<p>These mattered for cleaning up the repo's own apparatus, but they are not part of the current front-door proof path.</p>" +
+        "<div class=\"death-history-grid\">" + renderDeathCards(visibleHistorical) + "</div>" +
+      "</details>";
+  }
 
   filterBar.querySelectorAll("[data-death-filter]").forEach((button) => {
     button.addEventListener("click", function() {

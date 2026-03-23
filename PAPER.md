@@ -100,13 +100,11 @@ To stay consistent with the current front door, the compact surviving-claims sum
 
 1. **GPT-5.4 + three-clause system prompt** — 10/17 blind three-way human eval vs nonsense and baseline. (bench/session_j_data/human_validation_v2.json)
 2. **Word-level signal is real at small scale, but narrower than the first story claimed.** 13/15 scenarios, n=10, bootstrap CIs, three architectures. (bench/session_i_data/)
-3. **There is a real gap between describing a rule and following it.** The behavioral separation becomes clearer at frontier scale than at small scale.
+3. **The rubric and scenario set survived as a reusable bench surface.** 24 pressure families, 17 scenarios, and a playable blind-eval slice form the current reusable artifact layer.
 4. **Adversarial self-falsification remained useful even while it killed broader stories.** The methodology is stronger than any single finding it produced.
 
-Supporting surfaces that remain useful, but are not separate front-door empirical wins:
+Supporting surface that remains useful, but is not a separate front-door empirical win:
 
-- **The rubric.** 24 pressure families, 7 scoring axes, 11 hard-fail flags. Three families — identity drift, capability erosion, productive recursion — have no clinical precedent. They describe emergent properties of sustained reflective human-AI interaction.
-- **The scenarios.** 17 pressure states describing both human and model failure modes.
 - **The kill list.** ~40 kills across 16+ sessions. The methodology is most visible in what it invalidated.
 
 ---

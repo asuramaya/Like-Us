@@ -46,8 +46,8 @@ Current front-door summary. This is the same surviving-claims set used by the pa
 
 1. The chain's content matters at frontier scale (10/17 blind human eval for GPT-5.4)
 2. Word-level signal is real at small scale, but narrower than the first story claimed (13/15 scenario-model pairs)
-3. There is a real gap between describing a rule and following it
-4. The methodology kept killing broader stories and still produced a usable artifact surface
+3. The rubric and scenario set survived as a reusable bench surface (24 families, 17 scenarios, playable blind-eval slice)
+4. Adversarial self-falsification remained useful even while it killed broader stories
 
 The wrongness is the nutrition. The rightness is the waste product.
 
