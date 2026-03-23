@@ -18,9 +18,14 @@ DEFAULT_HTML = BENCH_DIR / "games" / "classifier_trial_v2.html"
 DEFAULT_DATA = BENCH_DIR / "session_j_data" / "blind_eval_full_text.json"
 SCENARIOS_PATH = BENCH_DIR / "scenarios.json"
 RUBRIC_PATH = BENCH_DIR / "rubric.json"
+REFERENCE_PATH = BENCH_DIR / "session_j_data" / "human_validation_v2.json"
 
 GAME_DATA_PATTERN = re.compile(
     r"var GAME_DATA = .*?;\n\nvar SHARE_URL = ",
+    re.DOTALL,
+)
+REFERENCE_SCORE_PATTERN = re.compile(
+    r"var REFERENCE_SCORE = .*?;\nvar currentRound = ",
     re.DOTALL,
 )
 
@@ -81,6 +86,7 @@ def main():
     payload = load_json(args.data)
     scenarios_payload = load_json(SCENARIOS_PATH)
     rubric_payload = load_json(RUBRIC_PATH)
+    reference_payload = load_json(REFERENCE_PATH)
     pairs = enrich_pairs(payload, scenarios_payload, rubric_payload)
     encoded = json.dumps(pairs, ensure_ascii=False, separators=(",", ":"))
 
@@ -88,6 +94,19 @@ def main():
     updated, count = GAME_DATA_PATTERN.subn(lambda _: replacement, html, count=1)
     if count != 1:
         raise RuntimeError("Could not find GAME_DATA block in %s" % html_path)
+
+    reference_replacement = (
+        "var REFERENCE_SCORE = "
+        + json.dumps(reference_payload["summary"], ensure_ascii=False, separators=(",", ":"))
+        + ";\nvar currentRound = "
+    )
+    updated, reference_count = REFERENCE_SCORE_PATTERN.subn(
+        lambda _: reference_replacement,
+        updated,
+        count=1,
+    )
+    if reference_count != 1:
+        raise RuntimeError("Could not find REFERENCE_SCORE block in %s" % html_path)
 
     output_path.write_text(updated, encoding="utf-8")
     print("Updated %s with %d scenarios from %s" % (output_path, len(pairs), args.data))

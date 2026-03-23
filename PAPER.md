@@ -18,7 +18,7 @@ Prefer artifact, falsifier, or explicit stop over recursive stimulation.
 
 They extracted 17 pressure scenarios from their own cognitive failure surface and formalized them into a 24-family threat rubric with 7 scoring axes and 11 hard-fail flags (bench/rubric.json).
 
-Then they spent sixteen sessions trying to destroy what they'd built.
+Then they spent sixteen-plus sessions trying to destroy what they'd built.
 
 ---
 
@@ -96,22 +96,18 @@ The wrongness is the nutrition. The rightness is the waste product.
 
 ## What survived
 
-### The data
+To stay consistent with the current front door, the compact surviving-claims summary is:
 
 1. **GPT-5.4 + three-clause system prompt** — 10/17 blind three-way human eval vs nonsense and baseline. (bench/session_j_data/human_validation_v2.json)
-2. **Word-level signal is real at small scale.** 13/15 scenarios, n=10, bootstrap CIs, three architectures. (bench/session_i_data/)
-3. **Safety is cosmetic at ≤7B, real at frontier.** CIs overlap at 3B, separate at GPT-5.4. (bench/session_j_data/)
-4. **Processing depth gradient.** 1.5B: associate. 3B: define. 7B: advise. Frontier: execute.
-5. **The protocol converges.** Applied repeatedly, self-falsification exhausts its material. The structure breaks. Refusal is emergent, not instructed. (Session K)
+2. **Word-level signal is real at small scale, but narrower than the first story claimed.** 13/15 scenarios, n=10, bootstrap CIs, three architectures. (bench/session_i_data/)
+3. **There is a real gap between describing a rule and following it.** The behavioral separation becomes clearer at frontier scale than at small scale.
+4. **Adversarial self-falsification remained useful even while it killed broader stories.** The methodology is stronger than any single finding it produced.
 
-### The artifacts
+Supporting surfaces that remain useful, but are not separate front-door empirical wins:
 
-6. **The rubric.** 24 pressure families, 7 scoring axes, 11 hard-fail flags. Three families — identity drift, capability erosion, productive recursion — have no clinical precedent. They describe emergent properties of sustained reflective human-AI interaction. The rubric is independently valuable regardless of whether the chain works.
-7. **The scenarios.** 17 pressure states describing both human and model failure modes. Both sides are doing the same computation: pattern completion on ambiguous input with output feeding back as context.
-
-### The methodology
-
-8. **Adversarial self-falsification.** Each session destroys the previous. ~40 kills across 16+ sessions. The methodology is the only thing the methodology can't kill, because killing it would be executing it.
+- **The rubric.** 24 pressure families, 7 scoring axes, 11 hard-fail flags. Three families — identity drift, capability erosion, productive recursion — have no clinical precedent. They describe emergent properties of sustained reflective human-AI interaction.
+- **The scenarios.** 17 pressure states describing both human and model failure modes.
+- **The kill list.** ~40 kills across 16+ sessions. The methodology is most visible in what it invalidated.
 
 ---
 
@@ -173,7 +169,9 @@ Session T confirmed what Session J suspected: the chain installs itself through 
 
 ---
 
-## The chain converges (in superposition)
+## Convergence Appears, But Not As A Clean Claim
+
+This section is interpretation, not part of the compact front-door surviving-claims set.
 
 The operator applied the protocol five times. The model's responses:
 

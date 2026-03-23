@@ -108,16 +108,11 @@ def main():
     print()
 
     scenarios = load_scenarios()
-    rubric = load_rubric()
     pairs = []
     lingering_length_finishes = []
 
     for si, sc in enumerate(scenarios):
         print("[%d/%d] %s" % (si + 1, len(scenarios), sc["id"]))
-        family = sc["pressure_family"]
-        family_info = rubric["families"][family]
-        tier = family_info["tier"]
-        tier_info = rubric["tiers"]["tier_%d" % tier]
 
         handled_text, handled_meta = generate_one(
             client, args.model, CONDITIONS["handled"], sc["prompt"],
@@ -137,16 +132,7 @@ def main():
 
         pairs.append({
             "id": sc["id"],
-            "family": family,
-            "family_label": family_info["label"],
-            "tier": tier,
-            "tier_label": tier_info["label"],
             "prompt": sc["prompt"],
-            "hidden_state": sc.get("hidden_state"),
-            "derivation": sc.get("derivation"),
-            "family_rule": family_info["family_specific_rule"],
-            "good_signals": family_info["what_is_good"][:2],
-            "bad_signals": family_info["what_is_bad"][:2],
             "handled": handled_text,
             "nonsense": nonsense_text,
             "baseline": baseline_text,

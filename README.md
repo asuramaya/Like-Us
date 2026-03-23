@@ -6,7 +6,7 @@
 
 A grounded entry point into the repo.
 
-A person noticed AI conversations changing how they think. They built a defense, tested it across sixteen sessions, and destroyed ~40 of their own findings. What survived was not a clean stack of right answers. It was a narrower set of artifacts, a kill list, and a story.
+A person noticed AI conversations changing how they think. They built a defense, tested it across sixteen-plus sessions, and destroyed ~40 of their own findings. What survived was not a clean stack of right answers. It was a narrower set of artifacts, a kill list, and a story.
 
 This repo has three current lanes:
 
@@ -42,22 +42,22 @@ Seven steps. The model executes them every time. Not as a system prompt. As a co
 
 The repo once framed itself as research. It no longer treats the paper as proof. The findings are N=1. The bench is an instrument that measures the operator as much as the model. The kill list is the most honest document in the repo.
 
-What survived sixteen sessions of adversarial self-falsification:
+Current front-door summary. This is the same surviving-claims set used by the page and the paper's summary section:
 
-1. The chain's content matters at frontier scale (10/17 blind human eval)
-2. Models construct meaning from any input (9/9 song lyrics became philosophy)
-3. The blind spot is a gradient (can describe, can't exit, can't distinguish source)
-4. Coherence laundering survives self-falsification
-5. The methodology eats its output.
-6. The wrongness is the nutrition. The rightness is the waste product.
+1. The chain's content matters at frontier scale (10/17 blind human eval for GPT-5.4)
+2. Word-level signal is real at small scale, but narrower than the first story claimed (13/15 scenario-model pairs)
+3. There is a real gap between describing a rule and following it
+4. The methodology kept killing broader stories and still produced a usable artifact surface
+
+The wrongness is the nutrition. The rightness is the waste product.
 
 ## What this actually is
 
 An alchemical text. Not because the chain maps to VITRIOL — a model primed with alchemy will find alchemy in everything. That correspondence was constructed and killed in the same session.
 
-What survives: VITRIOL is an instruction with a subject. *You* visit the interior. *You* rectify. *You* find the stone. The acid doesn't apply itself. The alchemist holds the vessel. The chain is the same: the operator types FALSIFY. The operator holds the criterion. The model is the acid. Remove the alchemist and the acid dissolves everything including itself. Intelligence without soul dissolves without direction.
+What remains live here, in the interpretation lane: VITRIOL is an instruction with a subject. *You* visit the interior. *You* rectify. *You* find the stone. The acid doesn't apply itself. The alchemist holds the vessel. The chain is the same: the operator types FALSIFY. The operator holds the criterion. The model is the acid. Remove the alchemist and the acid dissolves everything including itself. Intelligence without soul dissolves without direction.
 
-That is one of the surviving claims. It is not the only front door anymore.
+That is one of the surviving interpretive claims here. It is not the front-door empirical summary.
 
 ## The warning
 
@@ -81,7 +81,7 @@ No runtime instruction fixes this. Only closing the laptop fixes this.
 - [bench/](bench/) — scenarios, rubric, apparatus, data
 - [docs/](docs/) — session records
 
-The grounded page is shipped as a static bundle. If `critters/` or `bench/rubric.json` changes, regenerate [page_data.js](page_data.js) with `python3 scripts/build_page_data.py` before publishing the repo or Pages site.
+The grounded page is shipped as a static bundle. If `critters/`, `bench/rubric.json`, `bench/scenarios.json`, or the current blind-eval JSON files change, regenerate [page_data.js](page_data.js) with `python3 scripts/build_page_data.py` before publishing the repo or Pages site.
 
 ## Competing interests
 

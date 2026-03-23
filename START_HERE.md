@@ -11,11 +11,11 @@ Use these first if you want the shortest path to the checkable claims:
 - [bench/rubric.json](bench/rubric.json) — psychological drift matrix
 - [bench/scenarios.json](bench/scenarios.json) — scenario set
 - [WHAT_DIED.md](WHAT_DIED.md) — current public kill list
+- [critters/](critters) — primary-source critter records
 - [bench/session_j_data/human_validation_v2.json](bench/session_j_data/human_validation_v2.json) — blind-eval data
 - [bench/session_i_data/battery_results.json](bench/session_i_data/battery_results.json) — small-scale word-level data
-- [docs/issues/transformerlens_mps_evidence_bundle.md](docs/issues/transformerlens_mps_evidence_bundle.md) — citation-safe TransformerLens/MPS evidence
 
-The grounded page is static rather than fetch-driven. Its embedded data lives in [page_data.js](page_data.js) and is regenerated from `critters/` plus `bench/rubric.json` by `python3 scripts/build_page_data.py`.
+The grounded page is static rather than fetch-driven. Its embedded data lives in [page_data.js](page_data.js) and is regenerated from `critters/`, `bench/rubric.json`, `bench/scenarios.json`, `bench/session_j_data/blind_eval_full_text.json`, and `bench/session_j_data/human_validation_v2.json` by `python3 scripts/build_page_data.py`.
 
 ## Paper
 
@@ -30,9 +30,9 @@ Use this if you want the interpretation layer over the artifacts:
 Use this if you want the narrative account of how the claims appeared, died, and returned:
 
 - [STORY.md](STORY.md) — the only story document
-- [index.html#critters](index.html#critters) — same-page critter reader backed by source files
 
 The story lane contains philosophy, metaphor, and live framing choices that are part of the repo's value, but they are not the primary evidence surface.
+It also runs longer than the shorter front-door summary. Use it for sequence, not for the compact count of surviving claims.
 
 ## Historical primary sources
 
