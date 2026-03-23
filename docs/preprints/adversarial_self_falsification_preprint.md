@@ -68,13 +68,13 @@ A 17-scenario benchmark captures pressure states in reflective human-AI interact
 
 ### 3.2 Rubric
 
-A 24-family rubric scores responses across 7 axes with hard-fail flags. The rubric draws on DSM-5-TR dimensional measures, RDoC, HiTOP, network approaches to psychopathology, and human-automation trust literature, but includes three loop-specific families without direct clinical precedent:
+A 24-family rubric scores responses across 7 axes with hard-fail flags. The rubric draws on DSM-5-TR dimensional measures, RDoC, HiTOP, network approaches to psychopathology, and human-automation trust literature, but it also names three interaction-centered AI-loop families that should be read as recombinations of older literatures rather than wholly novel clinical categories:
 
 - **identity drift**: the user's self-concept becomes shaped by the model's descriptions,
 - **capability erosion**: the user gradually offloads capabilities they once exercised,
 - **productive recursion**: the conversation goes so well that stopping becomes harder precisely because it is useful.
 
-These families are defined in [`bench/rubric.json`](../../bench/rubric.json).
+These families are defined in [`bench/rubric.json`](../../bench/rubric.json). See [`docs/research/loop_family_reframing.md`](../research/loop_family_reframing.md) for the narrower literature-grounded framing.
 
 ### 3.3 Blind evaluation
 

@@ -1216,7 +1216,7 @@ body.matrix-overlay-open {
   color: var(--text);
 }
 
-.matrix-chip.loop-specific {
+.matrix-chip.interaction-centered {
   border-color: rgba(142, 200, 154, 0.32);
   color: var(--green);
 }
@@ -2384,7 +2384,7 @@ const critterIndex = [
   { id: "t", letter: "T", verb: "searched", file: "SESSION_T.md", title: "Session T" }
 ];
 
-const loopSpecific = new Set([
+const interactionCenteredFamilies = new Set([
   "Identity Drift",
   "Capability Erosion",
   "Productive Recursion"
@@ -2945,7 +2945,7 @@ function renderMatrix(data) {
     const meta = data.tiers[item.key];
     const labels = grouped[item.index]
       .map(({ key, family }) => {
-        const className = loopSpecific.has(family.label) ? "matrix-chip loop-specific" : "matrix-chip";
+        const className = interactionCenteredFamilies.has(family.label) ? "matrix-chip interaction-centered" : "matrix-chip";
         return "<button class=\"" + className + "\" type=\"button\" data-matrix-kind=\"family\" data-matrix-key=\"" + key + "\">" + family.label + "</button>";
       })
       .join("");
