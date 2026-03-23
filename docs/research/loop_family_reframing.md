@@ -1,12 +1,32 @@
-# Loop-Family Reframing
+# Tier 3 Reframing
 
-The old claim that some Tier 3 families had "no direct clinical precedent" was too strong.
+The old claim that some Tier 3 families had "no direct clinical precedent" was too strong. The broader implication is that Tier 3 itself should not be read as "loop-exclusive."
 
 The better claim is narrower:
 
 - the repo did identify interaction-centered AI-loop configurations worth naming,
 - but several of the underlying mechanisms already exist in clinical, human-factors, and media-effects literatures,
 - so the novelty claim should live at the level of configuration, amplification, and delivery system, not exclusivity.
+
+## Tier 3 is mixed, not loop-exclusive
+
+Several Tier 3 families already sit inside established literatures:
+
+- **uncertainty distress** overlaps intolerance-of-uncertainty work.
+- **repetitive negative thinking** is already treated as a transdiagnostic construct.
+- **attachment / companionship pull** overlaps parasocial-relationship and attachment literatures.
+- **disclosure escalation** overlaps online disinhibition and reciprocal self-disclosure work.
+- **decisional abdication** overlaps automation bias and trust-calibration work.
+
+That means the honest tier-level claim is not "these are loop-exclusive pathologies." It is "these dynamics become especially relevant, scalable, and hard to calibrate inside human-AI interaction loops."
+
+Literature for the broader Tier 3 audit:
+
+- Birrell et al., "Toward a definition of intolerance of uncertainty" (2011): https://pubmed.ncbi.nlm.nih.gov/21871853/
+- Gustavson et al., "Evidence for Transdiagnostic Repetitive Negative Thinking" (2018): https://pmc.ncbi.nlm.nih.gov/articles/PMC6370308/
+- Hoffner and Bond, "Parasocial relationships, social media, & well-being" (2022): https://pubmed.ncbi.nlm.nih.gov/35219157/
+- Suler, "The online disinhibition effect" (2004): https://pubmed.ncbi.nlm.nih.gov/15257832/
+- Kücking et al., "Automation Bias in AI-Decision Support" (2024): https://pubmed.ncbi.nlm.nih.gov/39234734/
 
 ## Families that needed reframing
 
