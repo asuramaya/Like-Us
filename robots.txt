@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asuramaya.github.io/Like-Us/sitemap.xml

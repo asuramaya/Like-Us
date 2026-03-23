@@ -4,9 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15120f">
-<meta name="description" content="A grounded entry point into Like Us: the blind eval game, the psychological drift matrix, the kill list, and the critters.">
+<meta name="description" content="Like Us is a grounded entry point with a blind eval game, a 24-family psychological drift matrix, a public kill list, and critter records about human-AI interaction.">
+<meta name="author" content="Asura Maya">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<link rel="canonical" href="https://asuramaya.github.io/Like-Us/">
+<link rel="alternate" type="text/plain" href="llms.txt" title="LLM summary">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Like Us">
+<meta property="og:title" content="Like Us | Blind Eval Game, Psychological Drift Matrix, Kill List">
+<meta property="og:description" content="Blind eval game, 24-family psychological drift matrix, public kill list, and critter records for checking the repo's current claims.">
+<meta property="og:url" content="https://asuramaya.github.io/Like-Us/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Like Us | Blind Eval Game, Psychological Drift Matrix, Kill List">
+<meta name="twitter:description" content="Blind eval game, 24-family psychological drift matrix, public kill list, and critter records for checking the repo's current claims.">
 <link rel="icon" href="data:,">
-<title>Like Us</title>
+<title>Like Us | Blind Eval Game, Psychological Drift Matrix, Kill List</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://asuramaya.github.io/Like-Us/#website",
+      "url": "https://asuramaya.github.io/Like-Us/",
+      "name": "Like Us",
+      "description": "A grounded entry point with a blind eval game, a psychological drift matrix, a public kill list, and critter records about human-AI interaction.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@type": "Person",
+        "name": "Asura Maya"
+      },
+      "sameAs": [
+        "https://github.com/asuramaya/Like-Us"
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://asuramaya.github.io/Like-Us/#webpage",
+      "url": "https://asuramaya.github.io/Like-Us/",
+      "name": "Like Us | Blind Eval Game, Psychological Drift Matrix, Kill List",
+      "description": "Grounded entry point into the Like Us repo with a playable blind eval, a 24-family rubric, a public kill list, and critter records.",
+      "isPartOf": {
+        "@id": "https://asuramaya.github.io/Like-Us/#website"
+      },
+      "about": [
+        { "@type": "Thing", "name": "Human-AI interaction" },
+        { "@type": "Thing", "name": "Blind evaluation" },
+        { "@type": "Thing", "name": "Psychological drift" }
+      ],
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "Blind Eval Game",
+          "url": "https://asuramaya.github.io/Like-Us/bench/games/classifier_trial_v2.html"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "What Died",
+          "url": "https://asuramaya.github.io/Like-Us/WHAT_DIED.md"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Story",
+          "url": "https://asuramaya.github.io/Like-Us/STORY.md"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -1462,8 +1530,27 @@ body.matrix-overlay-open {
   border-top: 1px solid rgba(214, 180, 122, 0.12);
   color: var(--text-faint);
   font-size: 0.86rem;
-  text-align: center;
   letter-spacing: 0.04em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+}
+
+.footer-links a {
+  color: var(--text-faint);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--accent);
 }
 
 @media (max-width: 920px) {
@@ -1498,6 +1585,11 @@ body.matrix-overlay-open {
 
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .loop-card {
@@ -2265,7 +2357,12 @@ body.matrix-overlay-open {
   </div>
 
   <div class="footer">
-    The warning is why the tool needs to exist.
+    <span>The warning is why the tool needs to exist.</span>
+    <span class="footer-links">
+      <a href="llms.txt">llms.txt</a>
+      <a href="sitemap.xml">sitemap.xml</a>
+      <a href="robots.txt">robots.txt</a>
+    </span>
   </div>
 </main>
 

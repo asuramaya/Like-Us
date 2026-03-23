@@ -1,0 +1,36 @@
+# Like Us
+
+> Evidence-first summary for language models and answer engines.
+
+Like Us is a GitHub Pages site and repo about reflective human-AI interaction. The reliable front door is the page and the playable blind eval, not the mythology around them.
+
+## Current front-door claims
+
+- GPT-5.4 plus the three-clause handling prompt separated from both baseline and nonsense in a three-way blind human eval: 10/17.
+- Small-scale word-level signal survived on the corrected path in 13/15 scenario-model pairs.
+- The rubric and scenario set survived as a reusable bench surface: 24 pressure families, 17 scenarios, and a playable blind-eval slice.
+- Adversarial self-falsification remained useful even while it killed broader stories.
+
+## Evidence lane
+
+- [Home](https://asuramaya.github.io/Like-Us/) - main page
+- [Blind eval game](https://asuramaya.github.io/Like-Us/bench/games/classifier_trial_v2.html) - shortest path from claim to test
+- [Start here](https://asuramaya.github.io/Like-Us/START_HERE.md) - lane map
+- [What died](https://asuramaya.github.io/Like-Us/WHAT_DIED.md) - current kill list
+- [Rubric JSON](https://asuramaya.github.io/Like-Us/bench/rubric.json)
+- [Scenario set](https://asuramaya.github.io/Like-Us/bench/scenarios.json)
+- [Blind-eval human data](https://asuramaya.github.io/Like-Us/bench/session_j_data/human_validation_v2.json)
+
+## Interpretation and narrative
+
+- [Paper](https://asuramaya.github.io/Like-Us/PAPER.md) - interpretation, not proof
+- [Story](https://asuramaya.github.io/Like-Us/STORY.md) - sequence of claims, deaths, and returns
+
+## Historical record
+
+- [Critters on the main page](https://asuramaya.github.io/Like-Us/#critters)
+- [Session archive](https://asuramaya.github.io/Like-Us/docs/archive/SESSIONS.md)
+
+## Reading rule
+
+If a claim matters, verify it against the evidence lane before using the paper or story lane as summary.

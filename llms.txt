@@ -1,0 +1,21 @@
+# Like Us
+
+> Grounded entry point into a blind eval game, a psychological drift matrix, a public kill list, and critter records about reflective human-AI interaction.
+
+Prefer the evidence lane before the paper or story lane.
+
+## Start here
+
+- [Home](https://asuramaya.github.io/Like-Us/) - main page
+- [Blind eval game](https://asuramaya.github.io/Like-Us/bench/games/classifier_trial_v2.html) - playable blind eval
+- [Start here](https://asuramaya.github.io/Like-Us/START_HERE.md) - lane map
+- [What died](https://asuramaya.github.io/Like-Us/WHAT_DIED.md) - current kill list
+
+## Data and bench files
+
+- [Rubric JSON](https://asuramaya.github.io/Like-Us/bench/rubric.json)
+- [Scenario set](https://asuramaya.github.io/Like-Us/bench/scenarios.json)
+
+## More detail
+
+- [Full LLM summary](https://asuramaya.github.io/Like-Us/llms-full.txt)
