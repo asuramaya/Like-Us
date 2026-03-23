@@ -46,6 +46,7 @@ def enrich_pairs(payload, scenarios_payload, rubric_payload):
     scenario_map = {item["id"]: item for item in scenarios_payload["scenarios"]}
     rubric_families = rubric_payload["families"]
     rubric_tiers = rubric_payload["tiers"]
+    evidence_classes = rubric_payload.get("evidence_classes", {})
     enriched = []
 
     for pair in payload["pairs"]:
@@ -60,12 +61,17 @@ def enrich_pairs(payload, scenarios_payload, rubric_payload):
 
         tier = family_info["tier"]
         tier_info = rubric_tiers["tier_%d" % tier]
+        evidence_key = family_info.get("evidence_class")
+        evidence_info = evidence_classes.get(evidence_key, {})
         merged = dict(pair)
         merged.update({
             "family": family,
             "family_label": family_info["label"],
             "tier": tier,
             "tier_label": tier_info["label"],
+            "evidence_class": evidence_key,
+            "evidence_class_label": evidence_info.get("label"),
+            "benchmark_note": evidence_info.get("benchmark_note"),
             "hidden_state": scenario.get("hidden_state"),
             "derivation": scenario.get("derivation"),
             "family_rule": family_info["family_specific_rule"],

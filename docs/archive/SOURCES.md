@@ -187,7 +187,7 @@ Organized by contribution to the findings.
 - Chu et al. (2025) — Emotional dynamics in human-AI relationships
 - Smart, Clowes & Clark (2025) — Extended mind applied to LLMs
 - Toner (2025) — Personalization as profiling
-- Nature Mental Health (2025) — Technological folie à deux
+- Nature Mental Health (2026) — Technological folie à deux
 
 ## Mechanistic Interpretability Tools
 

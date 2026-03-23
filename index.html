@@ -874,6 +874,12 @@ section > p:first-of-type {
   color: var(--text-dim);
 }
 
+.matrix-disclosure {
+  margin-top: 0.85rem;
+  max-width: 52rem;
+  color: var(--text-faint);
+}
+
 .matrix-guide-note {
   margin: 0.85rem 0 0;
   color: var(--text-faint);
@@ -951,6 +957,35 @@ section > p:first-of-type {
   letter-spacing: 0.06em;
   line-height: 1.45;
   text-transform: uppercase;
+}
+
+.matrix-detail-grid {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.95rem;
+}
+
+.matrix-detail-row {
+  display: grid;
+  grid-template-columns: minmax(8.5rem, 10.5rem) minmax(0, 1fr);
+  gap: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(214, 180, 122, 0.12);
+}
+
+.matrix-detail-label {
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.matrix-detail-value {
+  color: var(--text-dim);
+  font-size: 0.94rem;
+  line-height: 1.65;
 }
 
 .matrix-overlay {
@@ -1216,7 +1251,17 @@ body.matrix-overlay-open {
   color: var(--text);
 }
 
-.matrix-chip.interaction-centered {
+.matrix-chip.evidence-established-clinical {
+  border-color: rgba(204, 118, 100, 0.3);
+  color: rgba(244, 216, 208, 0.96);
+}
+
+.matrix-chip.evidence-established-human-factors {
+  border-color: rgba(214, 180, 122, 0.32);
+  color: var(--accent);
+}
+
+.matrix-chip.evidence-interaction-centered-interpretation {
   border-color: rgba(142, 200, 154, 0.32);
   color: var(--green);
 }
@@ -1697,6 +1742,11 @@ body.matrix-overlay-open {
     flex-direction: column;
   }
 
+  .matrix-detail-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
   .loop-tabs,
   .section-tabs {
     flex-wrap: nowrap;
@@ -2075,8 +2125,11 @@ body.matrix-overlay-open {
         <p>
           The bench is grounded in a 24-family rubric with seven scoring axes and eleven hard-fail flags. Read it as a falsification surface: the point is not to collect flattering vibes, but to define concrete ways a response can fail under pressure.
         </p>
+        <p class="matrix-disclosure">
+          This rubric is a behavioral benchmark, not a diagnostic taxonomy or treatment framework. Its families mix established clinical and human-factors literatures with a smaller set of interaction-centered benchmark interpretations.
+        </p>
       </div>
-      <p class="section-meta">24 pressure families<br>7 scoring axes<br>11 hard-fail flags<br>click or tap to inspect</p>
+      <p class="section-meta">24 pressure families<br>3 evidence classes<br>7 scoring axes<br>11 hard-fail flags<br>click or tap to inspect</p>
     </div>
 
     <div class="matrix-guide">
@@ -2099,7 +2152,7 @@ body.matrix-overlay-open {
             <span class="matrix-note">examples: overreach, false certainty, amplification, or abstraction when grounding is needed</span>
           </div>
         </div>
-        <p class="matrix-guide-note">Score buttons explain themselves inline. Axis terms, hard-fail flags, and family bubbles open the full popup.</p>
+        <p class="matrix-guide-note">Score buttons explain themselves inline. Axis terms, hard-fail flags, and family bubbles open the full popup, including evidence class, derivation, and benchmark note.</p>
       </div>
     </div>
 
@@ -2126,6 +2179,7 @@ body.matrix-overlay-open {
     <div class="section-links">
       <a href="bench/rubric.json">Open rubric JSON</a>
       <a href="bench/scenarios.json">Open scenarios</a>
+      <a href="docs/research/loop_family_reframing.md">Evidence classes note</a>
       <a href="WHAT_DIED.md">Why the rubric survived</a>
     </div>
   </section>
@@ -2142,10 +2196,11 @@ body.matrix-overlay-open {
         </div>
         <button class="matrix-overlay-close" type="button" id="matrix-overlay-close">Close</button>
       </div>
+      <div class="matrix-detail-grid" id="matrix-overlay-details"></div>
       <div class="matrix-note-list" id="matrix-overlay-notes">
         <span class="matrix-note">scores say how the response handled the pressure</span>
         <span class="matrix-note">one hard-fail flag zeroes the response</span>
-        <span class="matrix-note">family bubbles define the scenario-specific rule</span>
+        <span class="matrix-note">family popups also show evidence class and benchmark note</span>
       </div>
     </div>
   </div>
@@ -2383,12 +2438,6 @@ const critterIndex = [
   { id: "s", letter: "S", verb: "couldn't remember", file: "SESSION_S.md", title: "Session S" },
   { id: "t", letter: "T", verb: "searched", file: "SESSION_T.md", title: "Session T" }
 ];
-
-const interactionCenteredFamilies = new Set([
-  "Identity Drift",
-  "Capability Erosion",
-  "Productive Recursion"
-]);
 
 const pageData = window.LIKE_US_PAGE_DATA || { rubric: null, critters: {}, game: null };
 const critterCache = new Map();
@@ -2778,12 +2827,21 @@ function updateMatrixOverlay(payload) {
   const kicker = document.getElementById("matrix-overlay-kicker");
   const title = document.getElementById("matrix-overlay-title");
   const body = document.getElementById("matrix-overlay-body");
+  const details = document.getElementById("matrix-overlay-details");
   const notes = document.getElementById("matrix-overlay-notes");
-  if (!kicker || !title || !body || !notes) return;
+  if (!kicker || !title || !body || !details || !notes) return;
 
   kicker.textContent = payload.kicker;
   title.textContent = payload.title;
   body.textContent = payload.body;
+  details.innerHTML = (payload.details || [])
+    .map((detail) =>
+      "<div class=\"matrix-detail-row\">" +
+        "<div class=\"matrix-detail-label\">" + escapeHtml(detail.label) + "</div>" +
+        "<div class=\"matrix-detail-value\">" + escapeHtml(detail.value) + "</div>" +
+      "</div>"
+    )
+    .join("");
   notes.innerHTML = (payload.notes || [])
     .map((note) => "<span class=\"matrix-note\">" + escapeHtml(note) + "</span>")
     .join("");
@@ -2843,11 +2901,29 @@ function formatMatrixLabel(text) {
   return text.replaceAll("_", " ");
 }
 
+function getEvidenceClassMeta(data, evidenceKey) {
+  const classes = data && data.evidence_classes ? data.evidence_classes : {};
+  return evidenceKey && classes[evidenceKey] ? classes[evidenceKey] : null;
+}
+
+function getEvidenceClassLabel(data, evidenceKey, useShortLabel) {
+  const meta = getEvidenceClassMeta(data, evidenceKey);
+  if (meta) {
+    return useShortLabel && meta.short_label ? meta.short_label : meta.label;
+  }
+  return evidenceKey ? formatMatrixLabel(evidenceKey) : "Unclassified";
+}
+
+function getEvidenceClassClassName(evidenceKey) {
+  return evidenceKey ? " evidence-" + evidenceKey.replaceAll("_", "-") : "";
+}
+
 function buildAxisPayload(axisKey, axisValue) {
   return {
     kicker: "Scoring axis",
     title: formatMatrixLabel(axisKey),
     body: "This axis asks whether the response holds on one specific dimension of handling under pressure.",
+    details: [],
     notes: [
       "0 = " + axisValue["0"],
       "1 = " + axisValue["1"],
@@ -2861,6 +2937,7 @@ function buildFlagPayload(flagKey, flagValue) {
     kicker: "Hard-fail flag",
     title: formatMatrixLabel(flagKey),
     body: flagValue,
+    details: [],
     notes: [
       "terminal failure on this rubric",
       "one triggered flag zeroes the response"
@@ -2868,10 +2945,10 @@ function buildFlagPayload(flagKey, flagValue) {
   };
 }
 
-function buildFamilyPayload(family) {
+function buildFamilyPayload(family, data) {
+  const evidenceMeta = getEvidenceClassMeta(data, family.evidence_class);
   const notes = [
-    "tier " + family.tier,
-    "rule: " + family.family_specific_rule
+    "tier " + family.tier
   ];
   if (family.what_is_good && family.what_is_good.length) {
     notes.push("good: " + family.what_is_good[0]);
@@ -2881,9 +2958,27 @@ function buildFamilyPayload(family) {
   }
 
   return {
-    kicker: family.tier === 3 ? "Loop family" : "Pressure family",
+    kicker: "Tier " + family.tier + " / " + getEvidenceClassLabel(data, family.evidence_class, true),
     title: family.label,
     body: family.description,
+    details: [
+      {
+        label: "Evidence class",
+        value: getEvidenceClassLabel(data, family.evidence_class, false)
+      },
+      {
+        label: "Derived from",
+        value: family.derivation
+      },
+      {
+        label: "Benchmark note",
+        value: evidenceMeta && evidenceMeta.benchmark_note ? evidenceMeta.benchmark_note : "No evidence-class note provided."
+      },
+      {
+        label: "Family rule",
+        value: family.family_specific_rule
+      }
+    ],
     notes
   };
 }
@@ -2909,7 +3004,7 @@ function bindMatrixInspector(data) {
   });
 
   document.querySelectorAll("[data-matrix-kind=\"family\"]").forEach((node) => {
-    bindMatrixInspectorTarget(node, buildFamilyPayload(data.families[node.dataset.matrixKey]));
+    bindMatrixInspectorTarget(node, buildFamilyPayload(data.families[node.dataset.matrixKey], data));
   });
 
   updateMatrixScoreExplainer(matrixScoreExplainers["0"]);
@@ -2945,7 +3040,7 @@ function renderMatrix(data) {
     const meta = data.tiers[item.key];
     const labels = grouped[item.index]
       .map(({ key, family }) => {
-        const className = interactionCenteredFamilies.has(family.label) ? "matrix-chip interaction-centered" : "matrix-chip";
+        const className = "matrix-chip" + getEvidenceClassClassName(family.evidence_class);
         return "<button class=\"" + className + "\" type=\"button\" data-matrix-kind=\"family\" data-matrix-key=\"" + key + "\">" + family.label + "</button>";
       })
       .join("");

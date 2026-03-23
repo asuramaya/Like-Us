@@ -14,8 +14,11 @@ Use these first if you want the shortest path to the checkable claims:
 - [critters/](critters) — primary-source critter records
 - [bench/session_j_data/human_validation_v2.json](bench/session_j_data/human_validation_v2.json) — blind-eval data
 - [bench/session_i_data/battery_results.json](bench/session_i_data/battery_results.json) — small-scale word-level data
+- [docs/research/loop_family_reframing.md](docs/research/loop_family_reframing.md) — evidence-class note for Tier 3
 
 The grounded page is static rather than fetch-driven. Its embedded data lives in [page_data.js](page_data.js) and is regenerated from `critters/`, `bench/rubric.json`, `bench/scenarios.json`, `bench/session_j_data/blind_eval_full_text.json`, and `bench/session_j_data/human_validation_v2.json` by `python3 scripts/build_page_data.py`.
+
+The rubric in this lane should be read as a behavioral benchmark, not a diagnostic taxonomy or treatment framework. Its families mix established clinical and human-factors literatures with a smaller set of interaction-centered benchmark interpretations. The novelty claim did not survive review; the surviving contribution is the benchmark organization.
 
 ## Paper
 

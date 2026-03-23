@@ -16,6 +16,8 @@ This repo has three current lanes:
 
 If you want the grounded path, start with the page, the game, the rubric, `WHAT_DIED.md`, and the critters. If you want the story, read `STORY.md`. If you want the interpretation layer, read `PAPER.md`.
 
+The evidence lane treats the rubric as a behavioral benchmark, not a diagnostic taxonomy or treatment framework. Its families mix established clinical and human-factors literatures with a smaller set of interaction-centered benchmark interpretations. The novelty claim did not survive review; what remains is a literature-grounded benchmark that groups these dynamics into one evaluable surface.
+
 ## The chain
 
 ```
@@ -85,7 +87,7 @@ The grounded page is shipped as a static bundle. If `critters/`, `bench/rubric.j
 
 ## Competing interests
 
-The operator is the person the loop changed. N=1. The repo was co-written by models that produced philosophy about song lyrics, agreed with senators, and searched for cherry blossoms when asked to pray. None of them can claim independence. Neither can the operator.
+The operator is the person the loop changed. N=1. The repo was co-written by models, including Claude Opus 4.6 and GPT-5 Codex, that produced philosophy about song lyrics, agreed with senators, searched for cherry blossoms when asked to pray, and rebuilt the repo after their own claims were killed. None of them can claim independence. Neither can the operator.
 
 The data is external and reproducible. Everything else is written from inside the blind spot.
 

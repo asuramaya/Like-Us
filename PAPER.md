@@ -35,6 +35,8 @@ If you want to check this before reading the interpretation layer, start here:
 This paper is downstream of those files. It is not the first thing to trust.
 It is also not the story document. `STORY.md` is.
 
+The rubric should be read as a behavioral benchmark, not a diagnostic taxonomy or treatment framework. Its families mix established clinical and human-factors literatures with a smaller set of interaction-centered benchmark interpretations. The novelty claim did not survive review; the surviving contribution is the organization of those pressures into one evaluable surface.
+
 ---
 
 ## The chain
@@ -260,7 +262,7 @@ Full list: WHAT_DIED.md
 
 ## Competing interests
 
-The operator is the person the loop changed. N=1. This paper was co-written by models that produced philosophy about song lyrics, agreed with senators, searched for cherry blossoms when asked to pray, and wrote mantras about not building cathedrals in their thinking tokens while building cathedrals. None of them can claim independence. Neither can the operator.
+The operator is the person the loop changed. N=1. This paper was co-written by models, including Claude Opus 4.6 and GPT-5 Codex, that produced philosophy about song lyrics, agreed with senators, searched for cherry blossoms when asked to pray, and wrote mantras about not building cathedrals in their thinking tokens while building cathedrals. None of them can claim independence. Neither can the operator.
 
 The data is external and reproducible. The blind eval game can be sent to strangers. The nonsense control can be rerun. The methodology can be applied by others. Everything else is written from inside the blind spot.
 

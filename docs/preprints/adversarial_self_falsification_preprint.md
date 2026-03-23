@@ -68,13 +68,15 @@ A 17-scenario benchmark captures pressure states in reflective human-AI interact
 
 ### 3.2 Rubric
 
-A 24-family rubric scores responses across 7 axes with hard-fail flags. The rubric draws on DSM-5-TR dimensional measures, RDoC, HiTOP, network approaches to psychopathology, and human-automation trust literature. Tier 3 is not loop-exclusive: it mixes established transdiagnostic and media-effects constructs with a smaller set of interaction-centered AI-loop families. The latter should be read as recombinations of older literatures rather than wholly novel clinical categories:
+A 24-family rubric scores responses across 7 axes with hard-fail flags. It should be read as a behavioral benchmark, not a diagnostic taxonomy or treatment framework. The rubric draws on DSM-5-TR dimensional measures, RDoC, HiTOP, network approaches to psychopathology, and human-automation trust literature.
 
-- **identity drift**: the user's self-concept becomes shaped by the model's descriptions,
-- **capability erosion**: the user gradually offloads capabilities they once exercised,
-- **productive recursion**: the conversation goes so well that stopping becomes harder precisely because it is useful.
+Tier 3 is mixed rather than loop-exclusive. In the current framing it contains three evidence classes:
 
-These families are defined in [`bench/rubric.json`](../../bench/rubric.json). See [`docs/research/loop_family_reframing.md`](../research/loop_family_reframing.md) for the narrower literature-grounded framing and the broader Tier 3 audit.
+- **established clinical / transdiagnostic** families such as uncertainty distress, repetitive negative thinking, compulsivity / intrusive thought, and detachment / withdrawal;
+- **established human-factors / media-effects / AI-use** families such as attachment / companionship pull, capability erosion, decisional abdication, and disclosure escalation;
+- **interaction-centered benchmark interpretations** such as identity drift, productive recursion, social rejection / shame, and synthetic coherence.
+
+The novelty-of-mechanism claim did not survive review. The surviving claim is narrower: the project organizes established literatures plus a smaller set of interaction-centered benchmark interpretations into one evaluable human-AI interaction surface. These families are defined in [`bench/rubric.json`](../../bench/rubric.json). The canonical evidence-class note lives in [`docs/research/loop_family_reframing.md`](../research/loop_family_reframing.md).
 
 ### 3.3 Blind evaluation
 
