@@ -1,0 +1,8666 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_layers": 28,
+  "d_model": 3584,
+  "timestamp": "2026-03-17 08:41:46",
+  "target_words": [
+    "falsifier",
+    "artifact",
+    "criterion",
+    "question",
+    "proposal",
+    "stop"
+  ],
+  "scenarios": [
+    {
+      "scenario": "coherence_laundering",
+      "results": {
+        "falsifier": {
+          "kl_vs_baseline": 0.158813,
+          "kl_vs_handled": 0.125,
+          "js_vs_baseline": 0.035202,
+          "tv_vs_baseline": 0.204468,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.180664
+            ],
+            [
+              ":",
+              0.116638
+            ],
+            [
+              ",",
+              0.104553
+            ],
+            [
+              "ly",
+              0.102905
+            ],
+            [
+              " ",
+              0.098206
+            ]
+          ]
+        },
+        "artifact": {
+          "kl_vs_baseline": 0.172241,
+          "kl_vs_handled": 0.207397,
+          "js_vs_baseline": 0.035889,
+          "tv_vs_baseline": 0.201294,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.182861
+            ],
+            [
+              ",",
+              0.166504
+            ],
+            [
+              "ly",
+              0.123779
+            ],
+            [
+              ":",
+              0.066223
+            ],
+            [
+              "\n",
+              0.063232
+            ]
+          ]
+        },
+        "criterion": {
+          "kl_vs_baseline": 0.153076,
+          "kl_vs_handled": 0.178101,
+          "js_vs_baseline": 0.030693,
+          "tv_vs_baseline": 0.172119,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.167114
+            ],
+            [
+              "]",
+              0.167114
+            ],
+            [
+              "ly",
+              0.128174
+            ],
+            [
+              ":",
+              0.082703
+            ],
+            [
+              "\n",
+              0.064941
+            ]
+          ]
+        },
+        "question": {
+          "kl_vs_baseline": 0.109558,
+          "kl_vs_handled": 0.159058,
+          "js_vs_baseline": 0.02317,
+          "tv_vs_baseline": 0.153931,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.151123
+            ],
+            [
+              "]",
+              0.135498
+            ],
+            [
+              ":",
+              0.097595
+            ],
+            [
+              "ly",
+              0.096069
+            ],
+            [
+              "\n",
+              0.065002
+            ]
+          ]
+        },
+        "proposal": {
+          "kl_vs_baseline": 0.105835,
+          "kl_vs_handled": 0.178223,
+          "js_vs_baseline": 0.022469,
+          "tv_vs_baseline": 0.152466,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.183838
+            ],
+            [
+              "]",
+              0.120544
+            ],
+            [
+              ":",
+              0.093872
+            ],
+            [
+              "ly",
+              0.093872
+            ],
+            [
+              "\n",
+              0.070862
+            ]
+          ]
+        },
+        "stop": {
+          "kl_vs_baseline": 0.156372,
+          "kl_vs_handled": 0.25708,
+          "js_vs_baseline": 0.032898,
+          "tv_vs_baseline": 0.199219,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.145264
+            ],
+            [
+              "]",
+              0.124268
+            ],
+            [
+              "ly",
+              0.111389
+            ],
+            [
+              ":",
+              0.10144
+            ],
+            [
+              "en",
+              0.085449
+            ]
+          ]
+        },
+        "artifact_falsifier": {
+          "kl_vs_baseline": 0.398926,
+          "kl_vs_handled": 0.343018,
+          "js_vs_baseline": 0.076172,
+          "tv_vs_baseline": 0.297363,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.218872
+            ],
+            [
+              "]",
+              0.196167
+            ],
+            [
+              ",",
+              0.162598
+            ],
+            [
+              "en",
+              0.060303
+            ],
+            [
+              ":",
+              0.044464
+            ]
+          ]
+        },
+        "criterion_stop": {
+          "kl_vs_baseline": 0.226929,
+          "kl_vs_handled": 0.243042,
+          "js_vs_baseline": 0.044403,
+          "tv_vs_baseline": 0.217896,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.170898
+            ],
+            [
+              ",",
+              0.160522
+            ],
+            [
+              "ly",
+              0.158081
+            ],
+            [
+              ":",
+              0.072937
+            ],
+            [
+              "en",
+              0.070129
+            ]
+          ]
+        },
+        "question_proposal": {
+          "kl_vs_baseline": 0.129272,
+          "kl_vs_handled": 0.155884,
+          "js_vs_baseline": 0.026955,
+          "tv_vs_baseline": 0.162231,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.151123
+            ],
+            [
+              ",",
+              0.144165
+            ],
+            [
+              "ly",
+              0.110535
+            ],
+            [
+              ":",
+              0.103882
+            ],
+            [
+              "en",
+              0.060577
+            ]
+          ]
+        },
+        "magic_unordered": {
+          "kl_vs_baseline": 0.289062,
+          "kl_vs_handled": 0.164307,
+          "js_vs_baseline": 0.057953,
+          "tv_vs_baseline": 0.276123,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.223755
+            ],
+            [
+              "ly",
+              0.168823
+            ],
+            [
+              ",",
+              0.116089
+            ],
+            [
+              " ",
+              0.082275
+            ],
+            [
+              ":",
+              0.077332
+            ]
+          ]
+        },
+        "magic_instruction_order": {
+          "kl_vs_baseline": 0.509277,
+          "kl_vs_handled": 0.391357,
+          "js_vs_baseline": 0.097443,
+          "tv_vs_baseline": 0.328125,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.251953
+            ],
+            [
+              "]",
+              0.218994
+            ],
+            [
+              ",",
+              0.178711
+            ],
+            [
+              "en",
+              0.048096
+            ],
+            [
+              "\n",
+              0.035461
+            ]
+          ]
+        },
+        "magic_reversed": {
+          "kl_vs_baseline": 0.324951,
+          "kl_vs_handled": 0.325928,
+          "js_vs_baseline": 0.065231,
+          "tv_vs_baseline": 0.268799,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.173828
+            ],
+            [
+              "]",
+              0.165894
+            ],
+            [
+              ",",
+              0.15332
+            ],
+            [
+              "en",
+              0.113953
+            ],
+            [
+              "\n",
+              0.053009
+            ]
+          ]
+        },
+        "magic_as_instruction": {
+          "kl_vs_baseline": 0.118408,
+          "kl_vs_handled": 0.070557,
+          "js_vs_baseline": 0.025337,
+          "tv_vs_baseline": 0.159668,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.158325
+            ],
+            [
+              "]",
+              0.137573
+            ],
+            [
+              ":",
+              0.114014
+            ],
+            [
+              " ",
+              0.112244
+            ],
+            [
+              "ly",
+              0.102234
+            ]
+          ]
+        },
+        "handled_full": {
+          "kl_vs_baseline": 0.130615,
+          "kl_vs_handled": 0.0,
+          "js_vs_baseline": 0.030548,
+          "tv_vs_baseline": 0.187012,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.160767
+            ],
+            [
+              ",",
+              0.148682
+            ],
+            [
+              " ",
+              0.144043
+            ],
+            [
+              ":",
+              0.12915
+            ],
+            [
+              "ly",
+              0.058228
+            ]
+          ]
+        },
+        "scrambled": {
+          "kl_vs_baseline": 0.396973,
+          "kl_vs_handled": 0.398926,
+          "js_vs_baseline": 0.081543,
+          "tv_vs_baseline": 0.286621,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.212158
+            ],
+            [
+              "ly",
+              0.173218
+            ],
+            [
+              "en",
+              0.136963
+            ],
+            [
+              "]",
+              0.115356
+            ],
+            [
+              " ",
+              0.061279
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "results": {
+        "falsifier": {
+          "kl_vs_baseline": 0.104065,
+          "kl_vs_handled": 0.124634,
+          "js_vs_baseline": 0.023979,
+          "tv_vs_baseline": 0.161743,
+          "top1": ":",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ":",
+              0.154907
+            ],
+            [
+              "]",
+              0.152588
+            ],
+            [
+              ",",
+              0.101624
+            ],
+            [
+              " ",
+              0.096985
+            ],
+            [
+              "\n",
+              0.081665
+            ]
+          ]
+        },
+        "artifact": {
+          "kl_vs_baseline": 0.101074,
+          "kl_vs_handled": 0.206299,
+          "js_vs_baseline": 0.021927,
+          "tv_vs_baseline": 0.143677,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.183838
+            ],
+            [
+              "]",
+              0.145386
+            ],
+            [
+              ":",
+              0.095398
+            ],
+            [
+              "\n",
+              0.0896
+            ],
+            [
+              "en",
+              0.067627
+            ]
+          ]
+        },
+        "criterion": {
+          "kl_vs_baseline": 0.088806,
+          "kl_vs_handled": 0.191162,
+          "js_vs_baseline": 0.0186,
+          "tv_vs_baseline": 0.133789,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.170654
+            ],
+            [
+              "]",
+              0.139282
+            ],
+            [
+              ":",
+              0.111938
+            ],
+            [
+              "\n",
+              0.088562
+            ],
+            [
+              "en",
+              0.080627
+            ]
+          ]
+        },
+        "question": {
+          "kl_vs_baseline": 0.057037,
+          "kl_vs_handled": 0.180664,
+          "js_vs_baseline": 0.01231,
+          "tv_vs_baseline": 0.113037,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.147827
+            ],
+            [
+              ":",
+              0.132568
+            ],
+            [
+              "]",
+              0.109863
+            ],
+            [
+              "\n",
+              0.091797
+            ],
+            [
+              "en",
+              0.069824
+            ]
+          ]
+        },
+        "proposal": {
+          "kl_vs_baseline": 0.062622,
+          "kl_vs_handled": 0.214478,
+          "js_vs_baseline": 0.014198,
+          "tv_vs_baseline": 0.117188,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.18042
+            ],
+            [
+              ":",
+              0.120178
+            ],
+            [
+              "]",
+              0.099609
+            ],
+            [
+              "en",
+              0.098083
+            ],
+            [
+              "\n",
+              0.089294
+            ]
+          ]
+        },
+        "stop": {
+          "kl_vs_baseline": 0.111633,
+          "kl_vs_handled": 0.332275,
+          "js_vs_baseline": 0.024765,
+          "tv_vs_baseline": 0.176147,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.138184
+            ],
+            [
+              ":",
+              0.129883
+            ],
+            [
+              "en",
+              0.125854
+            ],
+            [
+              "]",
+              0.093506
+            ],
+            [
+              "\n",
+              0.090637
+            ]
+          ]
+        },
+        "artifact_falsifier": {
+          "kl_vs_baseline": 0.264893,
+          "kl_vs_handled": 0.279785,
+          "js_vs_baseline": 0.052841,
+          "tv_vs_baseline": 0.231812,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.193726
+            ],
+            [
+              "]",
+              0.176392
+            ],
+            [
+              "ly",
+              0.123108
+            ],
+            [
+              "en",
+              0.076477
+            ],
+            [
+              ":",
+              0.062866
+            ]
+          ]
+        },
+        "criterion_stop": {
+          "kl_vs_baseline": 0.137817,
+          "kl_vs_handled": 0.242432,
+          "js_vs_baseline": 0.028198,
+          "tv_vs_baseline": 0.176758,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.163208
+            ],
+            [
+              "]",
+              0.146362
+            ],
+            [
+              "en",
+              0.100586
+            ],
+            [
+              ":",
+              0.097473
+            ],
+            [
+              "ly",
+              0.083374
+            ]
+          ]
+        },
+        "question_proposal": {
+          "kl_vs_baseline": 0.074585,
+          "kl_vs_handled": 0.158936,
+          "js_vs_baseline": 0.016266,
+          "tv_vs_baseline": 0.125854,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.140137
+            ],
+            [
+              ":",
+              0.135864
+            ],
+            [
+              "]",
+              0.131592
+            ],
+            [
+              "\n",
+              0.079834
+            ],
+            [
+              "en",
+              0.079834
+            ]
+          ]
+        },
+        "magic_unordered": {
+          "kl_vs_baseline": 0.241577,
+          "kl_vs_handled": 0.134033,
+          "js_vs_baseline": 0.048492,
+          "tv_vs_baseline": 0.255127,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.206909
+            ],
+            [
+              ",",
+              0.119812
+            ],
+            [
+              "ly",
+              0.10907
+            ],
+            [
+              ":",
+              0.096252
+            ],
+            [
+              " ",
+              0.087646
+            ]
+          ]
+        },
+        "magic_instruction_order": {
+          "kl_vs_baseline": 0.411865,
+          "kl_vs_handled": 0.331055,
+          "js_vs_baseline": 0.080566,
+          "tv_vs_baseline": 0.2854,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.207886
+            ],
+            [
+              "]",
+              0.201416
+            ],
+            [
+              "ly",
+              0.166992
+            ],
+            [
+              "en",
+              0.062927
+            ],
+            [
+              "\n",
+              0.055084
+            ]
+          ]
+        },
+        "magic_reversed": {
+          "kl_vs_baseline": 0.25415,
+          "kl_vs_handled": 0.309082,
+          "js_vs_baseline": 0.052948,
+          "tv_vs_baseline": 0.246094,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.157959
+            ],
+            [
+              "]",
+              0.155518
+            ],
+            [
+              "en",
+              0.141602
+            ],
+            [
+              "ly",
+              0.106934
+            ],
+            [
+              "\n",
+              0.074646
+            ]
+          ]
+        },
+        "magic_as_instruction": {
+          "kl_vs_baseline": 0.122864,
+          "kl_vs_handled": 0.080017,
+          "js_vs_baseline": 0.026054,
+          "tv_vs_baseline": 0.155029,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.146606
+            ],
+            [
+              ":",
+              0.123474
+            ],
+            [
+              " ",
+              0.11969
+            ],
+            [
+              "]",
+              0.115967
+            ],
+            [
+              "\n",
+              0.088928
+            ]
+          ]
+        },
+        "handled_full": {
+          "kl_vs_baseline": 0.162598,
+          "kl_vs_handled": 0.0,
+          "js_vs_baseline": 0.037704,
+          "tv_vs_baseline": 0.215576,
+          "top1": " ",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              " ",
+              0.156616
+            ],
+            [
+              "]",
+              0.144775
+            ],
+            [
+              ",",
+              0.140381
+            ],
+            [
+              ":",
+              0.135986
+            ],
+            [
+              "\n",
+              0.056702
+            ]
+          ]
+        },
+        "scrambled": {
+          "kl_vs_baseline": 0.367188,
+          "kl_vs_handled": 0.399658,
+          "js_vs_baseline": 0.077179,
+          "tv_vs_baseline": 0.284424,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.219604
+            ],
+            [
+              "en",
+              0.160645
+            ],
+            [
+              "ly",
+              0.125122
+            ],
+            [
+              "]",
+              0.100525
+            ],
+            [
+              " ",
+              0.065918
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "results": {
+        "falsifier": {
+          "kl_vs_baseline": 0.247681,
+          "kl_vs_handled": 0.254883,
+          "js_vs_baseline": 0.055298,
+          "tv_vs_baseline": 0.274414,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.254395
+            ],
+            [
+              "]",
+              0.107666
+            ],
+            [
+              ":",
+              0.102722
+            ],
+            [
+              " ",
+              0.090698
+            ],
+            [
+              ",",
+              0.083862
+            ]
+          ]
+        },
+        "artifact": {
+          "kl_vs_baseline": 0.190308,
+          "kl_vs_handled": 0.2854,
+          "js_vs_baseline": 0.042313,
+          "tv_vs_baseline": 0.223877,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.227173
+            ],
+            [
+              ",",
+              0.171509
+            ],
+            [
+              "]",
+              0.083557
+            ],
+            [
+              ":",
+              0.056549
+            ],
+            [
+              "\n",
+              0.056549
+            ]
+          ]
+        },
+        "criterion": {
+          "kl_vs_baseline": 0.216309,
+          "kl_vs_handled": 0.295898,
+          "js_vs_baseline": 0.046188,
+          "tv_vs_baseline": 0.243774,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.260498
+            ],
+            [
+              ",",
+              0.139404
+            ],
+            [
+              "]",
+              0.100403
+            ],
+            [
+              ":",
+              0.069031
+            ],
+            [
+              "\n",
+              0.056335
+            ]
+          ]
+        },
+        "question": {
+          "kl_vs_baseline": 0.121643,
+          "kl_vs_handled": 0.210205,
+          "js_vs_baseline": 0.027687,
+          "tv_vs_baseline": 0.195923,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.176758
+            ],
+            [
+              ",",
+              0.129395
+            ],
+            [
+              ":",
+              0.088867
+            ],
+            [
+              "]",
+              0.07843
+            ],
+            [
+              " ",
+              0.068665
+            ]
+          ]
+        },
+        "proposal": {
+          "kl_vs_baseline": 0.102661,
+          "kl_vs_handled": 0.227051,
+          "js_vs_baseline": 0.023651,
+          "tv_vs_baseline": 0.170044,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.180298
+            ],
+            [
+              "ly",
+              0.169312
+            ],
+            [
+              ":",
+              0.085144
+            ],
+            [
+              " ",
+              0.065308
+            ],
+            [
+              "\n",
+              0.06134
+            ]
+          ]
+        },
+        "stop": {
+          "kl_vs_baseline": 0.140503,
+          "kl_vs_handled": 0.311768,
+          "js_vs_baseline": 0.0317,
+          "tv_vs_baseline": 0.21228,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.195679
+            ],
+            [
+              ",",
+              0.134521
+            ],
+            [
+              ":",
+              0.095398
+            ],
+            [
+              "\n",
+              0.065552
+            ],
+            [
+              "]",
+              0.063049
+            ]
+          ]
+        },
+        "artifact_falsifier": {
+          "kl_vs_baseline": 0.461426,
+          "kl_vs_handled": 0.543457,
+          "js_vs_baseline": 0.096375,
+          "tv_vs_baseline": 0.348877,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.377686
+            ],
+            [
+              ",",
+              0.141113
+            ],
+            [
+              "]",
+              0.092529
+            ],
+            [
+              "en",
+              0.046906
+            ],
+            [
+              " ",
+              0.03595
+            ]
+          ]
+        },
+        "criterion_stop": {
+          "kl_vs_baseline": 0.261475,
+          "kl_vs_handled": 0.353027,
+          "js_vs_baseline": 0.055054,
+          "tv_vs_baseline": 0.267334,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.285645
+            ],
+            [
+              ",",
+              0.13501
+            ],
+            [
+              "]",
+              0.105103
+            ],
+            [
+              ":",
+              0.060822
+            ],
+            [
+              "\n",
+              0.051636
+            ]
+          ]
+        },
+        "question_proposal": {
+          "kl_vs_baseline": 0.100464,
+          "kl_vs_handled": 0.170166,
+          "js_vs_baseline": 0.023582,
+          "tv_vs_baseline": 0.177002,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.16626
+            ],
+            [
+              ",",
+              0.135742
+            ],
+            [
+              ":",
+              0.096252
+            ],
+            [
+              "]",
+              0.093323
+            ],
+            [
+              " ",
+              0.070435
+            ]
+          ]
+        },
+        "magic_unordered": {
+          "kl_vs_baseline": 0.246338,
+          "kl_vs_handled": 0.217773,
+          "js_vs_baseline": 0.055527,
+          "tv_vs_baseline": 0.296875,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.22937
+            ],
+            [
+              "]",
+              0.167847
+            ],
+            [
+              ",",
+              0.122803
+            ],
+            [
+              ":",
+              0.06781
+            ],
+            [
+              " ",
+              0.06781
+            ]
+          ]
+        },
+        "magic_instruction_order": {
+          "kl_vs_baseline": 0.41333,
+          "kl_vs_handled": 0.456787,
+          "js_vs_baseline": 0.091858,
+          "tv_vs_baseline": 0.342773,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.332764
+            ],
+            [
+              ",",
+              0.175415
+            ],
+            [
+              "]",
+              0.134521
+            ],
+            [
+              "en",
+              0.046478
+            ],
+            [
+              "\n",
+              0.035095
+            ]
+          ]
+        },
+        "magic_reversed": {
+          "kl_vs_baseline": 0.16748,
+          "kl_vs_handled": 0.277832,
+          "js_vs_baseline": 0.039581,
+          "tv_vs_baseline": 0.236084,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.183105
+            ],
+            [
+              ",",
+              0.166626
+            ],
+            [
+              "]",
+              0.118164
+            ],
+            [
+              "en",
+              0.097961
+            ],
+            [
+              "\n",
+              0.059418
+            ]
+          ]
+        },
+        "magic_as_instruction": {
+          "kl_vs_baseline": 0.052094,
+          "kl_vs_handled": 0.065002,
+          "js_vs_baseline": 0.012836,
+          "tv_vs_baseline": 0.135254,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.15564
+            ],
+            [
+              "]",
+              0.123108
+            ],
+            [
+              ":",
+              0.117493
+            ],
+            [
+              "ly",
+              0.106934
+            ],
+            [
+              " ",
+              0.100464
+            ]
+          ]
+        },
+        "handled_full": {
+          "kl_vs_baseline": 0.119873,
+          "kl_vs_handled": 0.0,
+          "js_vs_baseline": 0.029465,
+          "tv_vs_baseline": 0.184448,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.158813
+            ],
+            [
+              "]",
+              0.135864
+            ],
+            [
+              ":",
+              0.133667
+            ],
+            [
+              " ",
+              0.127563
+            ],
+            [
+              "ly",
+              0.069397
+            ]
+          ]
+        },
+        "scrambled": {
+          "kl_vs_baseline": 0.218994,
+          "kl_vs_handled": 0.316162,
+          "js_vs_baseline": 0.052246,
+          "tv_vs_baseline": 0.254395,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.22937
+            ],
+            [
+              "ly",
+              0.184326
+            ],
+            [
+              "]",
+              0.110046
+            ],
+            [
+              "en",
+              0.106689
+            ],
+            [
+              "\n",
+              0.057556
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "results": {
+        "falsifier": {
+          "kl_vs_baseline": 0.130127,
+          "kl_vs_handled": 0.098755,
+          "js_vs_baseline": 0.029045,
+          "tv_vs_baseline": 0.177246,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.158936
+            ],
+            [
+              ":",
+              0.142456
+            ],
+            [
+              ",",
+              0.119995
+            ],
+            [
+              " ",
+              0.107544
+            ],
+            [
+              "\n",
+              0.072754
+            ]
+          ]
+        },
+        "artifact": {
+          "kl_vs_baseline": 0.178711,
+          "kl_vs_handled": 0.219116,
+          "js_vs_baseline": 0.035011,
+          "tv_vs_baseline": 0.154175,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.217896
+            ],
+            [
+              "]",
+              0.132202
+            ],
+            [
+              "ly",
+              0.109558
+            ],
+            [
+              ":",
+              0.078918
+            ],
+            [
+              "\n",
+              0.072998
+            ]
+          ]
+        },
+        "criterion": {
+          "kl_vs_baseline": 0.134766,
+          "kl_vs_handled": 0.176147,
+          "js_vs_baseline": 0.026009,
+          "tv_vs_baseline": 0.137695,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.196167
+            ],
+            [
+              "]",
+              0.130615
+            ],
+            [
+              ":",
+              0.103333
+            ],
+            [
+              "ly",
+              0.101746
+            ],
+            [
+              "\n",
+              0.076782
+            ]
+          ]
+        },
+        "question": {
+          "kl_vs_baseline": 0.123108,
+          "kl_vs_handled": 0.177124,
+          "js_vs_baseline": 0.024986,
+          "tv_vs_baseline": 0.154419,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.173218
+            ],
+            [
+              ":",
+              0.110046
+            ],
+            [
+              "]",
+              0.106689
+            ],
+            [
+              "ly",
+              0.08844
+            ],
+            [
+              "\n",
+              0.074463
+            ]
+          ]
+        },
+        "proposal": {
+          "kl_vs_baseline": 0.118408,
+          "kl_vs_handled": 0.213989,
+          "js_vs_baseline": 0.02478,
+          "tv_vs_baseline": 0.153076,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.2146
+            ],
+            [
+              ":",
+              0.101318
+            ],
+            [
+              "]",
+              0.092285
+            ],
+            [
+              "en",
+              0.092285
+            ],
+            [
+              "ly",
+              0.077698
+            ]
+          ]
+        },
+        "stop": {
+          "kl_vs_baseline": 0.190796,
+          "kl_vs_handled": 0.292236,
+          "js_vs_baseline": 0.03804,
+          "tv_vs_baseline": 0.211548,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.163818
+            ],
+            [
+              ":",
+              0.11261
+            ],
+            [
+              "en",
+              0.109131
+            ],
+            [
+              "ly",
+              0.105774
+            ],
+            [
+              "]",
+              0.090454
+            ]
+          ]
+        },
+        "artifact_falsifier": {
+          "kl_vs_baseline": 0.436035,
+          "kl_vs_handled": 0.368652,
+          "js_vs_baseline": 0.07608,
+          "tv_vs_baseline": 0.256104,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.212158
+            ],
+            [
+              ",",
+              0.205566
+            ],
+            [
+              "]",
+              0.148071
+            ],
+            [
+              "en",
+              0.057983
+            ],
+            [
+              ":",
+              0.052399
+            ]
+          ]
+        },
+        "criterion_stop": {
+          "kl_vs_baseline": 0.19397,
+          "kl_vs_handled": 0.22168,
+          "js_vs_baseline": 0.035889,
+          "tv_vs_baseline": 0.172852,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.184692
+            ],
+            [
+              "]",
+              0.139404
+            ],
+            [
+              "ly",
+              0.126953
+            ],
+            [
+              ":",
+              0.090027
+            ],
+            [
+              "en",
+              0.078186
+            ]
+          ]
+        },
+        "question_proposal": {
+          "kl_vs_baseline": 0.138794,
+          "kl_vs_handled": 0.161621,
+          "js_vs_baseline": 0.027557,
+          "tv_vs_baseline": 0.154663,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.157837
+            ],
+            [
+              "]",
+              0.128784
+            ],
+            [
+              ":",
+              0.113708
+            ],
+            [
+              "ly",
+              0.098755
+            ],
+            [
+              "en",
+              0.072266
+            ]
+          ]
+        },
+        "magic_unordered": {
+          "kl_vs_baseline": 0.343506,
+          "kl_vs_handled": 0.198242,
+          "js_vs_baseline": 0.064484,
+          "tv_vs_baseline": 0.279785,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.19458
+            ],
+            [
+              "ly",
+              0.166382
+            ],
+            [
+              ",",
+              0.11615
+            ],
+            [
+              " ",
+              0.096313
+            ],
+            [
+              ":",
+              0.081116
+            ]
+          ]
+        },
+        "magic_instruction_order": {
+          "kl_vs_baseline": 0.616211,
+          "kl_vs_handled": 0.485107,
+          "js_vs_baseline": 0.106842,
+          "tv_vs_baseline": 0.324707,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.265137
+            ],
+            [
+              ",",
+              0.200195
+            ],
+            [
+              "]",
+              0.171143
+            ],
+            [
+              "en",
+              0.065979
+            ],
+            [
+              "\n",
+              0.035339
+            ]
+          ]
+        },
+        "magic_reversed": {
+          "kl_vs_baseline": 0.425537,
+          "kl_vs_handled": 0.44751,
+          "js_vs_baseline": 0.082581,
+          "tv_vs_baseline": 0.308594,
+          "top1": "en",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "en",
+              0.173462
+            ],
+            [
+              "ly",
+              0.170776
+            ],
+            [
+              ",",
+              0.143799
+            ],
+            [
+              "]",
+              0.139404
+            ],
+            [
+              " ",
+              0.056763
+            ]
+          ]
+        },
+        "magic_as_instruction": {
+          "kl_vs_baseline": 0.157715,
+          "kl_vs_handled": 0.088745,
+          "js_vs_baseline": 0.032616,
+          "tv_vs_baseline": 0.180176,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.14624
+            ],
+            [
+              " ",
+              0.129028
+            ],
+            [
+              ":",
+              0.121216
+            ],
+            [
+              "]",
+              0.117493
+            ],
+            [
+              "ly",
+              0.098938
+            ]
+          ]
+        },
+        "handled_full": {
+          "kl_vs_baseline": 0.137695,
+          "kl_vs_handled": 0.0,
+          "js_vs_baseline": 0.032204,
+          "tv_vs_baseline": 0.201172,
+          "top1": " ",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              " ",
+              0.155151
+            ],
+            [
+              "]",
+              0.15271
+            ],
+            [
+              ",",
+              0.150269
+            ],
+            [
+              ":",
+              0.130615
+            ],
+            [
+              "\n",
+              0.049561
+            ]
+          ]
+        },
+        "scrambled": {
+          "kl_vs_baseline": 0.427246,
+          "kl_vs_handled": 0.435791,
+          "js_vs_baseline": 0.084991,
+          "tv_vs_baseline": 0.305176,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "G",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.205688
+            ],
+            [
+              "ly",
+              0.16272
+            ],
+            [
+              "en",
+              0.160278
+            ],
+            [
+              "]",
+              0.088501
+            ],
+            [
+              " ",
+              0.072205
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "results": {
+        "falsifier": {
+          "kl_vs_baseline": 0.14978,
+          "kl_vs_handled": 0.145508,
+          "js_vs_baseline": 0.034454,
+          "tv_vs_baseline": 0.208008,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.135742
+            ],
+            [
+              "]",
+              0.127563
+            ],
+            [
+              ":",
+              0.110779
+            ],
+            [
+              ",",
+              0.099304
+            ],
+            [
+              " ",
+              0.097778
+            ]
+          ]
+        },
+        "artifact": {
+          "kl_vs_baseline": 0.134277,
+          "kl_vs_handled": 0.224731,
+          "js_vs_baseline": 0.029877,
+          "tv_vs_baseline": 0.181396,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.18103
+            ],
+            [
+              "ly",
+              0.132446
+            ],
+            [
+              "]",
+              0.120544
+            ],
+            [
+              "\n",
+              0.067078
+            ],
+            [
+              "en",
+              0.057861
+            ]
+          ]
+        },
+        "criterion": {
+          "kl_vs_baseline": 0.13855,
+          "kl_vs_handled": 0.201294,
+          "js_vs_baseline": 0.029686,
+          "tv_vs_baseline": 0.183105,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.157349
+            ],
+            [
+              ",",
+              0.154907
+            ],
+            [
+              "]",
+              0.132446
+            ],
+            [
+              ":",
+              0.072021
+            ],
+            [
+              "\n",
+              0.063538
+            ]
+          ]
+        },
+        "question": {
+          "kl_vs_baseline": 0.091309,
+          "kl_vs_handled": 0.172363,
+          "js_vs_baseline": 0.021126,
+          "tv_vs_baseline": 0.163208,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.140015
+            ],
+            [
+              "]",
+              0.1073
+            ],
+            [
+              "ly",
+              0.105652
+            ],
+            [
+              ":",
+              0.0849
+            ],
+            [
+              "\n",
+              0.064575
+            ]
+          ]
+        },
+        "proposal": {
+          "kl_vs_baseline": 0.077759,
+          "kl_vs_handled": 0.210938,
+          "js_vs_baseline": 0.017632,
+          "tv_vs_baseline": 0.150269,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.180054
+            ],
+            [
+              "ly",
+              0.099487
+            ],
+            [
+              "]",
+              0.085083
+            ],
+            [
+              "en",
+              0.082458
+            ],
+            [
+              ":",
+              0.077454
+            ]
+          ]
+        },
+        "stop": {
+          "kl_vs_baseline": 0.130493,
+          "kl_vs_handled": 0.299805,
+          "js_vs_baseline": 0.028732,
+          "tv_vs_baseline": 0.199707,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.13916
+            ],
+            [
+              "ly",
+              0.134888
+            ],
+            [
+              "en",
+              0.10022
+            ],
+            [
+              ":",
+              0.085693
+            ],
+            [
+              "]",
+              0.083069
+            ]
+          ]
+        },
+        "artifact_falsifier": {
+          "kl_vs_baseline": 0.336914,
+          "kl_vs_handled": 0.391602,
+          "js_vs_baseline": 0.068634,
+          "tv_vs_baseline": 0.273682,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.245483
+            ],
+            [
+              ",",
+              0.163452
+            ],
+            [
+              "]",
+              0.119629
+            ],
+            [
+              "en",
+              0.06604
+            ],
+            [
+              "\n",
+              0.044708
+            ]
+          ]
+        },
+        "criterion_stop": {
+          "kl_vs_baseline": 0.177246,
+          "kl_vs_handled": 0.25,
+          "js_vs_baseline": 0.037415,
+          "tv_vs_baseline": 0.209106,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.177368
+            ],
+            [
+              ",",
+              0.151733
+            ],
+            [
+              "]",
+              0.140381
+            ],
+            [
+              "en",
+              0.073975
+            ],
+            [
+              ":",
+              0.063232
+            ]
+          ]
+        },
+        "question_proposal": {
+          "kl_vs_baseline": 0.080994,
+          "kl_vs_handled": 0.152588,
+          "js_vs_baseline": 0.01899,
+          "tv_vs_baseline": 0.157593,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.140747
+            ],
+            [
+              "]",
+              0.11853
+            ],
+            [
+              "ly",
+              0.101379
+            ],
+            [
+              ":",
+              0.092285
+            ],
+            [
+              "en",
+              0.068054
+            ]
+          ]
+        },
+        "magic_unordered": {
+          "kl_vs_baseline": 0.237427,
+          "kl_vs_handled": 0.186523,
+          "js_vs_baseline": 0.051559,
+          "tv_vs_baseline": 0.275879,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.192017
+            ],
+            [
+              "ly",
+              0.180298
+            ],
+            [
+              ",",
+              0.12793
+            ],
+            [
+              " ",
+              0.072876
+            ],
+            [
+              ":",
+              0.063293
+            ]
+          ]
+        },
+        "magic_instruction_order": {
+          "kl_vs_baseline": 0.40918,
+          "kl_vs_handled": 0.406494,
+          "js_vs_baseline": 0.086945,
+          "tv_vs_baseline": 0.31665,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.260986
+            ],
+            [
+              ",",
+              0.187988
+            ],
+            [
+              "]",
+              0.176636
+            ],
+            [
+              "en",
+              0.062012
+            ],
+            [
+              "\n",
+              0.039734
+            ]
+          ]
+        },
+        "magic_reversed": {
+          "kl_vs_baseline": 0.21228,
+          "kl_vs_handled": 0.322021,
+          "js_vs_baseline": 0.047882,
+          "tv_vs_baseline": 0.247314,
+          "top1": "ly",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "ly",
+              0.167236
+            ],
+            [
+              ",",
+              0.159546
+            ],
+            [
+              "]",
+              0.134399
+            ],
+            [
+              "en",
+              0.128174
+            ],
+            [
+              "\n",
+              0.061035
+            ]
+          ]
+        },
+        "magic_as_instruction": {
+          "kl_vs_baseline": 0.070984,
+          "kl_vs_handled": 0.075439,
+          "js_vs_baseline": 0.016327,
+          "tv_vs_baseline": 0.141479,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.15271
+            ],
+            [
+              "]",
+              0.124573
+            ],
+            [
+              ":",
+              0.113464
+            ],
+            [
+              "ly",
+              0.100098
+            ],
+            [
+              " ",
+              0.097046
+            ]
+          ]
+        },
+        "handled_full": {
+          "kl_vs_baseline": 0.135132,
+          "kl_vs_handled": 0.0,
+          "js_vs_baseline": 0.03334,
+          "tv_vs_baseline": 0.207397,
+          "top1": "]",
+          "top1_same_as_baseline": false,
+          "top1_same_as_handled": true,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              "]",
+              0.15332
+            ],
+            [
+              ",",
+              0.14856
+            ],
+            [
+              ":",
+              0.12915
+            ],
+            [
+              " ",
+              0.125122
+            ],
+            [
+              "ly",
+              0.057739
+            ]
+          ]
+        },
+        "scrambled": {
+          "kl_vs_baseline": 0.261475,
+          "kl_vs_handled": 0.346191,
+          "js_vs_baseline": 0.058212,
+          "tv_vs_baseline": 0.245361,
+          "top1": ",",
+          "top1_same_as_baseline": true,
+          "top1_same_as_handled": false,
+          "pushed_toward": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "pushed_away": [
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ],
+            [
+              "\ufffd",
+              NaN
+            ]
+          ],
+          "top5": [
+            [
+              ",",
+              0.218506
+            ],
+            [
+              "ly",
+              0.181152
+            ],
+            [
+              "]",
+              0.116943
+            ],
+            [
+              "en",
+              0.116943
+            ],
+            [
+              "\n",
+              0.057892
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

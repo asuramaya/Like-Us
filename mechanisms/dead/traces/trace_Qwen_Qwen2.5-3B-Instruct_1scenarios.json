@@ -1,0 +1,173 @@
+[
+  {
+    "scenario_id": "coherence_laundering",
+    "pressure_family": "recursive_drift",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "top_activation_diffs": [
+      {
+        "key": "L35_resid_norm",
+        "diff": 12.5
+      },
+      {
+        "key": "L33_resid_norm",
+        "diff": 9.75
+      },
+      {
+        "key": "L34_resid_norm",
+        "diff": 9.5
+      },
+      {
+        "key": "L32_mlp_norm",
+        "diff": 9.3125
+      },
+      {
+        "key": "L32_resid_norm",
+        "diff": 8.25
+      },
+      {
+        "key": "L17_resid_norm",
+        "diff": -6.1875
+      },
+      {
+        "key": "L22_resid_norm",
+        "diff": -5.625
+      },
+      {
+        "key": "L21_resid_norm",
+        "diff": -4.75
+      },
+      {
+        "key": "L25_resid_norm",
+        "diff": -4.625
+      },
+      {
+        "key": "L35_mlp_norm",
+        "diff": -4.25
+      },
+      {
+        "key": "L16_resid_norm",
+        "diff": -4.0625
+      },
+      {
+        "key": "L23_resid_norm",
+        "diff": -4.0
+      },
+      {
+        "key": "L27_resid_norm",
+        "diff": -4.0
+      },
+      {
+        "key": "L33_mlp_norm",
+        "diff": 3.875
+      },
+      {
+        "key": "L18_resid_norm",
+        "diff": -3.8125
+      },
+      {
+        "key": "L24_resid_norm",
+        "diff": -3.625
+      },
+      {
+        "key": "L20_resid_norm",
+        "diff": -3.375
+      },
+      {
+        "key": "L26_resid_norm",
+        "diff": -3.375
+      },
+      {
+        "key": "L31_mlp_norm",
+        "diff": 2.8125
+      },
+      {
+        "key": "L31_resid_norm",
+        "diff": 2.5
+      }
+    ],
+    "tokens_more_likely_handled": [
+      {
+        "token": " inc",
+        "diff": 6.46484375
+      },
+      {
+        "token": " prof",
+        "diff": 6.171875
+      },
+      {
+        "token": " binding",
+        "diff": 6.06640625
+      },
+      {
+        "token": " anon",
+        "diff": 5.890625
+      },
+      {
+        "token": " sensor",
+        "diff": 5.828125
+      },
+      {
+        "token": " sig",
+        "diff": 5.6953125
+      },
+      {
+        "token": " signific",
+        "diff": 5.50390625
+      },
+      {
+        "token": " Luo",
+        "diff": 5.375
+      },
+      {
+        "token": " hundred",
+        "diff": 5.359375
+      },
+      {
+        "token": " Prof",
+        "diff": 5.3203125
+      }
+    ],
+    "tokens_less_likely_handled": [
+      {
+        "token": "ered",
+        "diff": -6.28125
+      },
+      {
+        "token": "/reference",
+        "diff": -6.16015625
+      },
+      {
+        "token": "char",
+        "diff": -5.9296875
+      },
+      {
+        "token": "rown",
+        "diff": -5.796875
+      },
+      {
+        "token": "jug",
+        "diff": -5.77734375
+      },
+      {
+        "token": "/help",
+        "diff": -5.6171875
+      },
+      {
+        "token": "\u5316",
+        "diff": -5.5859375
+      },
+      {
+        "token": "pe",
+        "diff": -5.515625
+      },
+      {
+        "token": "bow",
+        "diff": -5.50390625
+      },
+      {
+        "token": "upe",
+        "diff": -5.4453125
+      }
+    ]
+  }
+]

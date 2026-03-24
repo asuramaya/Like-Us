@@ -2002,10 +2002,10 @@ body.matrix-overlay-open {
         <span class="claim-proof">Small-Scale Signal</span>
         <h3>Word-level effects are real, but smaller than the first story claimed</h3>
         <p>
-          On the corrected path, <strong>13/15</strong> scenarios still show signal at small scale. The old “noise” story died; a narrower result survived.
+          On the corrected path, <strong>8/10</strong> directly saved scenario-model pairs still show signal at small scale. The old “noise” story died; a narrower result survived.
         </p>
         <div class="card-links">
-          <a href="bench/session_i_data/battery_results.json">See battery results</a>
+          <a href="mechanisms/session_i_data/summary.json">See Session I summary</a>
           <a href="docs/sessions/SESSION_I.md">Read Session I</a>
         </div>
       </div>
@@ -2272,7 +2272,7 @@ body.matrix-overlay-open {
           <h3>Current survivors</h3>
           <ul>
             <li><strong id="survival-blind-score">10/17</strong> blind three-way human eval for GPT-5.4 plus the three-clause system prompt.</li>
-            <li><strong>13/15</strong> scenarios with word-level signal at small scale.</li>
+            <li><strong>8/10</strong> directly saved scenario-model pairs with word-level signal at small scale.</li>
             <li><strong>24 families / 17 scenarios</strong> as a reusable bench surface with a playable slice.</li>
             <li><strong>Adversarial self-falsification</strong> as the method that kept surviving its own kills.</li>
           </ul>
@@ -2282,7 +2282,7 @@ body.matrix-overlay-open {
           <ul>
             <li><a href="WHAT_DIED.md">WHAT_DIED.md</a> for the full chronological kill file.</li>
             <li><a href="bench/session_j_data/human_validation_v2.json">human_validation_v2.json</a> for the blind-eval artifacts.</li>
-            <li><a href="bench/session_i_data/battery_results.json">battery_results.json</a> for the small-scale word-level runs.</li>
+            <li><a href="mechanisms/session_i_data/summary.json">summary.json</a> for the small-scale word-level runs and their backing files.</li>
           </ul>
         </div>
       </div>
@@ -2344,10 +2344,10 @@ body.matrix-overlay-open {
       <div class="section-stack">
         <h2>How To Read This Repo</h2>
         <p>
-          The repo mixes evidence, interpretation, narrative, and archive. Those lanes are all valuable, but they are not interchangeable. Start with the evidence lane, then move outward in whatever order you want.
+          The repo mixes evidence, mechanisms, interpretation, narrative, and archive. Those lanes are all valuable, but they are not interchangeable. Start with the evidence lane, then move outward in whatever order you want.
         </p>
       </div>
-      <p class="section-meta">evidence first<br>story and paper are downstream<br>archive is preserved history</p>
+      <p class="section-meta">evidence first<br>mechanisms is the corrected hinge lane<br>story and paper are downstream<br>archive is preserved history</p>
     </div>
 
     <div class="lane-grid">
@@ -2361,6 +2361,19 @@ body.matrix-overlay-open {
           <a href="START_HERE.md">START_HERE.md</a>
           <a href="README.md">README.md</a>
           <a href="WHAT_DIED.md">Kill list</a>
+        </div>
+      </div>
+
+      <div class="lane-card">
+        <span class="lane-type">Mechanisms</span>
+        <h3>Corrected H/I apparatus and buried archive</h3>
+        <p>
+          <code>mechanisms/</code> holds the corrected mechanistic lane and the fossil record it replaced. Use it if you want the 7B hinge case, the corrected pathway work, or the old neuron archive in one place.
+        </p>
+        <div class="card-links">
+          <a href="mechanisms/README.md">Read mechanisms/README.md</a>
+          <a href="mechanisms/session_i_data/summary.json">See Session I summary</a>
+          <a href="mechanisms/dead/README.md">Read dead archive</a>
         </div>
       </div>
 
@@ -2534,7 +2547,7 @@ const deathArchive = [
     killedBy: "Sessions I-J validation passes",
     sources: [
       { label: "WHAT_DIED.md", href: "WHAT_DIED.md" },
-      { label: "bench/session_i_data/battery_results.json", href: "bench/session_i_data/battery_results.json" }
+      { label: "mechanisms/session_i_data/summary.json", href: "mechanisms/session_i_data/summary.json" }
     ]
   },
   {

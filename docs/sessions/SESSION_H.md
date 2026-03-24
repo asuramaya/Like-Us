@@ -9,6 +9,8 @@
 ---
 
 > **UPDATE (2026-03-22):** Session H correctly detected that the Qwen + TransformerLens + Apple Silicon MPS path used in Sessions E-G was invalid, but the original causal story was too broad. Later analysis localized the failure to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection, not generic Qwen weight corruption during loading.
+>
+> **UPDATE (2026-03-24):** Session I later killed two of Session H's strongest behavioral conclusions. The strong "word-level = noise" claim did not survive n=10 sampling, and the strong "models discuss, never execute" claim did not survive the later structured metric. Read this file as a historical step in the corrected apparatus, not as the final word on the hinge behavior.
 
 ## What happened
 
@@ -24,7 +26,7 @@ The session discovered that the Qwen + TransformerLens + Apple Silicon MPS path 
 
 ## The measurement apparatus
 
-`bench/session_h.py` — HuggingFace + native PyTorch `register_forward_hook`. No TransformerLens.
+`mechanisms/session_h.py` — HuggingFace + native PyTorch `register_forward_hook`. No TransformerLens.
 
 Self-verifying: model coherence checked against known output, every hook proven to modify computation, KL tested against analytical values, same-condition control returns exactly 0.
 
@@ -85,7 +87,7 @@ Executes instruction       25%       20%        0%        —
 
 ## Data files
 
-All in `bench/session_h_data/`:
+All in `mechanisms/session_h_data/`:
 ```
 session_h_Qwen_Qwen2.5-1.5B-Instruct.json   (17 scenarios, all phases)
 session_h_Qwen_Qwen2.5-3B-Instruct.json     (17 scenarios, all phases)

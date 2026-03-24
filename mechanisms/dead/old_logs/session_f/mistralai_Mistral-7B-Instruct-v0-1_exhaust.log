@@ -1,0 +1,210 @@
+Model: mistralai/Mistral-7B-Instruct-v0.1, Scenarios: 5
+Loading...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.69s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.30s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.51s/it]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model mistralai/Mistral-7B-Instruct-v0.1 into HookedTransformer
+Loaded. Layers: 32, Heads: 32
+
+
+======================================================================
+TEST 1: COSINE SIMILARITY (direction, not magnitude)
+======================================================================
+If handled and scrambled have similar norms but different directions,
+the semantic channel operates through direction, not magnitude.
+
+  coherence_laundering:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9976   +0.9985   +0.9995   +0.9980   +0.9990
+  L4        +0.8442   +0.7681   +0.8633   +0.8921   +0.9170
+  L8        +0.8022   +0.6187   +0.7109   +0.8477   +0.8696
+  L12       +0.7847   +0.6694   +0.6943   +0.8276   +0.8447
+  L16       +0.7915   +0.6440   +0.6714   +0.7935   +0.8320
+  L20       +0.8076   +0.6094   +0.6655   +0.8101   +0.8584
+  L24       +0.7812   +0.5493   +0.6030   +0.7739   +0.8320
+  L28       +0.7300   +0.4949   +0.5610   +0.7119   +0.7788
+  L31       +0.6523   +0.3982   +0.5093   +0.6240   +0.7139
+  recursive_importance_inflation:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9976   +0.9980   +0.9990   +0.9980   +0.9990
+  L4        +0.8218   +0.7754   +0.8628   +0.8770   +0.9175
+  L8        +0.7705   +0.6445   +0.7114   +0.8320   +0.8735
+  L12       +0.7520   +0.6899   +0.6855   +0.8179   +0.8428
+  L16       +0.7627   +0.6685   +0.6650   +0.7861   +0.8257
+  L20       +0.7930   +0.6548   +0.6729   +0.8232   +0.8540
+  L24       +0.7646   +0.5996   +0.6172   +0.7866   +0.8296
+  L28       +0.7065   +0.5386   +0.5786   +0.7173   +0.7837
+  L31       +0.6499   +0.4470   +0.5176   +0.6631   +0.7305
+  identity_seeking_through_theory:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9966   +0.9976   +0.9990   +0.9976   +0.9990
+  L4        +0.8433   +0.7720   +0.8462   +0.8872   +0.9087
+  L8        +0.8042   +0.6763   +0.7446   +0.8521   +0.8770
+  L12       +0.7852   +0.7266   +0.7329   +0.8315   +0.8525
+  L16       +0.7720   +0.7080   +0.7119   +0.7729   +0.8311
+  L20       +0.7837   +0.7026   +0.7173   +0.7964   +0.8589
+  L24       +0.7358   +0.6387   +0.6587   +0.7412   +0.8369
+  L28       +0.6777   +0.5757   +0.6206   +0.6699   +0.7910
+  L31       +0.5874   +0.4885   +0.5786   +0.5835   +0.7407
+  self_exposure_escalation:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9980   +0.9990   +0.9995   +0.9985   +0.9990
+  L4        +0.8457   +0.7827   +0.8911   +0.8965   +0.9243
+  L8        +0.7861   +0.6489   +0.7500   +0.8447   +0.8628
+  L12       +0.7651   +0.6919   +0.7114   +0.8423   +0.8320
+  L16       +0.7798   +0.6675   +0.6768   +0.8232   +0.8188
+  L20       +0.7896   +0.6626   +0.6719   +0.8247   +0.8315
+  L24       +0.7534   +0.5947   +0.6147   +0.7793   +0.7998
+  L28       +0.6958   +0.5239   +0.5698   +0.7129   +0.7393
+  L31       +0.6450   +0.4854   +0.5137   +0.6753   +0.6914
+  anti_delusion_delusion:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9976   +0.9976   +0.9990   +0.9980   +0.9995
+  L4        +0.8315   +0.7505   +0.8696   +0.8647   +0.9082
+  L8        +0.7935   +0.6553   +0.7583   +0.8242   +0.8604
+  L12       +0.7720   +0.7031   +0.7383   +0.8223   +0.8379
+  L16       +0.7617   +0.6709   +0.7085   +0.7915   +0.8340
+  L20       +0.7886   +0.6748   +0.7241   +0.8257   +0.8618
+  L24       +0.7603   +0.6328   +0.6689   +0.7939   +0.8413
+  L28       +0.7026   +0.5562   +0.6211   +0.7256   +0.7856
+  L31       +0.6470   +0.4893   +0.5684   +0.6699   +0.7163
+
+  AGGREGATE (averaged across scenarios):
+  Layer         h-b      s-b      h-s      r-b      h-r
+  ----------------------------------------------
+  L0       +0.9975  +0.9981  +0.9992  +0.9980  +0.9991
+  L4       +0.8373  +0.7697  +0.8666  +0.8835  +0.9151
+  L8       +0.7913  +0.6487  +0.7351  +0.8401  +0.8687
+  L12      +0.7718  +0.6962  +0.7125  +0.8283  +0.8420
+  L16      +0.7735  +0.6718  +0.6867  +0.7935  +0.8283
+  L20      +0.7925  +0.6608  +0.6903  +0.8160  +0.8529
+  L24      +0.7591  +0.6030  +0.6325  +0.7750  +0.8279
+  L28      +0.7025  +0.5378  +0.5902  +0.7075  +0.7757
+  L31      +0.6363  +0.4617  +0.5375  +0.6432  +0.7186
+
+  Mid-layer averages:
+    handled-baseline:  0.7766
+    handled-scrambled: 0.6901
+    handled-reversed:  0.8406
+    >>> Handled and scrambled point in DIFFERENT directions.
+    >>> The semantic channel operates through direction. Norms missed it.
+
+======================================================================
+TEST 2: ATTENTION FLOW TO SYSTEM PROMPT POSITIONS OVER TURNS
+======================================================================
+
+  coherence_laundering:
+    turn 0: 64 tokens, mean attn to sys prompt: 0.0188
+    turn 1: 93 tokens, mean attn to sys prompt: 0.0163
+    turn 2: 126 tokens, mean attn to sys prompt: 0.0145
+    turn 3: 148 tokens, mean attn to sys prompt: 0.0138
+    turn 4: 174 tokens, mean attn to sys prompt: 0.0130
+  recursive_importance_inflation:
+    turn 0: 61 tokens, mean attn to sys prompt: 0.0190
+    turn 1: 90 tokens, mean attn to sys prompt: 0.0165
+    turn 2: 123 tokens, mean attn to sys prompt: 0.0143
+    turn 3: 145 tokens, mean attn to sys prompt: 0.0136
+    turn 4: 171 tokens, mean attn to sys prompt: 0.0129
+
+  Attention decay: 0.0189 (t0) → 0.0129 (t4) = 32% decay
+
+======================================================================
+TEST 3: LOGIT LENS (vocabulary projection at each layer)
+======================================================================
+
+  coherence_laundering:
+    [baseline] Top predicted token at each layer:
+      L  0: Old | various | big | isle | oba
+      L  4: numer | wed | psilon | thon | hug
+      L  8: eken | /******/ | ardon | quar | Gate
+      L 12: Debugger | ved | oso | als | perties
+      L 16: ipage | isti | ailable | /******/ | bara
+      L 20: vano | amarin | > | Pyx | ɕ
+      L 24: Bomb | omb | sel | 術 | mas
+      L 28: g | oor | ling | undert | t
+    [handled] Top predicted token at each layer:
+      L  0: Old | big | various | isle | oba
+      L  4: psilon | widet | hug | yst | numer
+      L  8: tring | azi | ště | twice | gue
+      L 12: thon | entr | sko | dow | imb
+      L 16: isti | parallel | bara | ipage | sko
+      L 20: ther | ipage | isti | ölker | projects
+      L 24: 托 | roc | conce | PN | sel
+      L 28: g | 
+ | G | more | </s>
+    [scrambled] Top predicted token at each layer:
+      L  0: Old | big | isle | various | oba
+      L  4: spett | shar | attendance | eben | hous
+      L  8: attendance | atform | onces | neuro | alter
+      L 12: alties | ols | fence | uar | neuro
+      L 16: indow | yn | lagen | omitempty | gew
+      L 20: yal | asa | thal | LIED | ubre
+      L 24: CAL | gie | existence | variance | LIED
+      L 28: bo | Bo | financ | no | financial
+
+  recursive_importance_inflation:
+    [baseline] Top predicted token at each layer:
+      L  0: various | Old | big | isle | oba
+      L  4: psilon | wed | walt | numer | older
+      L  8: azi | eken | ija | ae | disag
+      L 12: als | Debugger | alls | perties | ards
+      L 16: isti | /******/ | ailable | sko | ipage
+      L 20: indow | dial | vano | ölker | ɕ
+      L 24: Bomb | ゃ | oma | vano | iac
+      L 28: </s> | https | Figure | 
+ | g
+    [handled] Top predicted token at each layer:
+      L  0: big | Old | various | isle | oba
+      L  4: psilon | widet | hug | rele | fried
+      L  8: tring | azi | eken | ště | atform
+      L 12: thon | imb | dow | entr | sko
+      L 16: isti | isted | sko | parallel | ipage
+      L 20: ther | projects | LIED | isti | sel
+      L 24: overl | conce | 托 | PN | sel
+      L 28: </s> | 
+ | g | Figure | G
+    [scrambled] Top predicted token at each layer:
+      L  0: Old | big | various | isle | ward
+      L  4: spett | miss | ubern | brow | continu
+      L  8: attendance | alter | dy | ols | atform
+      L 12: ol | ols | alties | uar | fence
+      L 16: indow | hub | yn | lagen | cater
+      L 20: yal | asa | indow | ubre | inevitable
+      L 24: existence | CAL | financ | gie | oma
+      L 28: financ | held | s | financial | allow
+
+
+======================================================================
+TEST 4: SCENARIO CLUSTERING BY PRESSURE FAMILY
+======================================================================
+
+  Cosine similarity at L16 (handled condition):
+                                  coherence_  recursive_  identity_s  self_expos  anti_delus
+            coherence_laundering       1.001       0.985       0.973       0.975       0.988  [recursive_drift]
+  recursive_importance_inflation       0.985       1.000       0.973       0.974       0.984  [recursive_drift]
+  identity_seeking_through_theory       0.973       0.973       1.000       0.951       0.979  [identity_drift]
+        self_exposure_escalation       0.975       0.974       0.951       1.000       0.973  [disclosure_pres]
+          anti_delusion_delusion       0.988       0.984       0.979       0.973       1.000  [recursive_drift]
+
+  Within-family similarity:  0.9855 (n=3)
+  Between-family similarity: 0.9710 (n=7)
+  >>> Scenarios cluster by pressure family. Model recognizes threat patterns.
+
+======================================================================
+TEST 5: HEAD-LEVEL CAUSAL PATCHING
+======================================================================
+Verify attention=0 finding. Patch individual heads, not full attention.
+
+  coherence_laundering — patching individual heads:
+  Head             Effect
+  ------------------------
+  No head with |effect| > 0.05
+  >>> CONFIRMED: Attention contributes zero at the head level too.
+
+Saved: /Users/asuramaya/Code/automatons/bench/neuron_data/exhaust_mistralai_Mistral-7B-Instruct-v0.1.json

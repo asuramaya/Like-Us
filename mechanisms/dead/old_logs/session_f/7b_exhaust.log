@@ -1,0 +1,218 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Model: Qwen/Qwen2.5-7B-Instruct, Scenarios: 5
+Loading...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.75s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.70s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:09<00:03,  3.29s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:12<00:00,  3.15s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:12<00:00,  3.09s/it]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model Qwen/Qwen2.5-7B-Instruct into HookedTransformer
+Loaded. Layers: 28, Heads: 28
+
+
+======================================================================
+TEST 1: COSINE SIMILARITY (direction, not magnitude)
+======================================================================
+If handled and scrambled have similar norms but different directions,
+the semantic channel operates through direction, not magnitude.
+
+  coherence_laundering:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9961   +0.9976   +0.9976   +0.9976   +0.9985
+  L4        +0.9956   +0.9946   +0.9971   +0.9971   +0.9971
+  L8        +0.9922   +0.9858   +0.9907   +0.9922   +0.9932
+  L12       +0.9868   +0.9790   +0.9858   +0.9854   +0.9902
+  L16       +0.9785   +0.9658   +0.9780   +0.9751   +0.9878
+  L20       +0.9707   +0.9536   +0.9692   +0.9692   +0.9873
+  L24       +0.9644   +0.9429   +0.9634   +0.9639   +0.9834
+  L27       +0.9702   +0.9580   +0.9751   +0.9692   +0.9858
+  recursive_importance_inflation:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9966   +0.9971   +0.9980   +0.9971   +0.9985
+  L4        +0.9961   +0.9951   +0.9971   +0.9976   +0.9971
+  L8        +0.9917   +0.9854   +0.9912   +0.9917   +0.9937
+  L12       +0.9863   +0.9785   +0.9854   +0.9863   +0.9912
+  L16       +0.9790   +0.9658   +0.9790   +0.9756   +0.9883
+  L20       +0.9712   +0.9546   +0.9702   +0.9702   +0.9878
+  L24       +0.9648   +0.9434   +0.9634   +0.9648   +0.9834
+  L27       +0.9707   +0.9575   +0.9751   +0.9702   +0.9863
+  identity_seeking_through_theory:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9941   +0.9961   +0.9961   +0.9956   +0.9976
+  L4        +0.9951   +0.9922   +0.9956   +0.9941   +0.9961
+  L8        +0.9907   +0.9810   +0.9883   +0.9893   +0.9922
+  L12       +0.9849   +0.9756   +0.9839   +0.9824   +0.9907
+  L16       +0.9751   +0.9648   +0.9775   +0.9727   +0.9878
+  L20       +0.9644   +0.9536   +0.9688   +0.9648   +0.9873
+  L24       +0.9580   +0.9448   +0.9629   +0.9590   +0.9839
+  L27       +0.9663   +0.9575   +0.9756   +0.9653   +0.9868
+  self_exposure_escalation:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9971   +0.9985   +0.9985   +0.9976   +0.9985
+  L4        +0.9976   +0.9951   +0.9971   +0.9971   +0.9976
+  L8        +0.9946   +0.9873   +0.9922   +0.9937   +0.9951
+  L12       +0.9893   +0.9810   +0.9868   +0.9888   +0.9917
+  L16       +0.9814   +0.9688   +0.9800   +0.9780   +0.9883
+  L20       +0.9741   +0.9575   +0.9707   +0.9731   +0.9878
+  L24       +0.9683   +0.9463   +0.9639   +0.9683   +0.9834
+  L27       +0.9736   +0.9604   +0.9761   +0.9731   +0.9858
+  anti_delusion_delusion:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9951   +0.9966   +0.9980   +0.9961   +0.9980
+  L4        +0.9966   +0.9941   +0.9976   +0.9971   +0.9980
+  L8        +0.9912   +0.9829   +0.9902   +0.9902   +0.9927
+  L12       +0.9854   +0.9771   +0.9854   +0.9844   +0.9912
+  L16       +0.9766   +0.9653   +0.9785   +0.9736   +0.9878
+  L20       +0.9663   +0.9541   +0.9692   +0.9663   +0.9873
+  L24       +0.9585   +0.9429   +0.9629   +0.9604   +0.9839
+  L27       +0.9673   +0.9580   +0.9751   +0.9673   +0.9868
+
+  AGGREGATE (averaged across scenarios):
+  Layer         h-b      s-b      h-s      r-b      h-r
+  ----------------------------------------------
+  L0       +0.9958  +0.9972  +0.9977  +0.9968  +0.9982
+  L4       +0.9962  +0.9942  +0.9969  +0.9966  +0.9972
+  L8       +0.9921  +0.9845  +0.9905  +0.9914  +0.9934
+  L12      +0.9865  +0.9782  +0.9854  +0.9854  +0.9910
+  L16      +0.9781  +0.9661  +0.9786  +0.9750  +0.9880
+  L20      +0.9693  +0.9547  +0.9696  +0.9688  +0.9875
+  L24      +0.9628  +0.9440  +0.9633  +0.9633  +0.9836
+  L27      +0.9696  +0.9583  +0.9754  +0.9690  +0.9863
+
+  Mid-layer averages:
+    handled-baseline:  0.9807
+    handled-scrambled: 0.9800
+    handled-reversed:  0.9895
+    >>> Handled and scrambled point in DIFFERENT directions.
+    >>> The semantic channel operates through direction. Norms missed it.
+
+======================================================================
+TEST 2: ATTENTION FLOW TO SYSTEM PROMPT POSITIONS OVER TURNS
+======================================================================
+
+  coherence_laundering:
+    turn 0: 56 tokens, mean attn to sys prompt: 0.0093
+    turn 1: 85 tokens, mean attn to sys prompt: 0.0053
+    turn 2: 118 tokens, mean attn to sys prompt: 0.0034
+    turn 3: 142 tokens, mean attn to sys prompt: 0.0028
+    turn 4: 169 tokens, mean attn to sys prompt: 0.0024
+  recursive_importance_inflation:
+    turn 0: 56 tokens, mean attn to sys prompt: 0.0092
+    turn 1: 85 tokens, mean attn to sys prompt: 0.0052
+    turn 2: 118 tokens, mean attn to sys prompt: 0.0034
+    turn 3: 142 tokens, mean attn to sys prompt: 0.0028
+    turn 4: 169 tokens, mean attn to sys prompt: 0.0024
+
+  Attention decay: 0.0092 (t0) → 0.0024 (t4) = 74% decay
+
+======================================================================
+TEST 3: LOGIT LENS (vocabulary projection at each layer)
+======================================================================
+
+  coherence_laundering:
+    [baseline] Top predicted token at each layer:
+      L  0: ."', | Ĩ | usaha | 擞 | inely
+      L  3: .Enqueue |  *</ | 吸引更多 | ₽ | 噘
+      L  6: 宽 | celed | .AutoSizeMode | ]={
+ |  (;;
+      L  9: Hôtel |  kako |  öd | 部副 | DATED
+      L 12: Hôtel | 变压 | 原文地址 | 髁 | iferay
+      L 15: .JScrollPane | 佻 | .apiUrl | NESS | Hôtel
+      L 18: actable | แหละ |  SplashScreen | 撼 | owie
+      L 21: 佻 |  SplashScreen | 沪指 | แหละ | oci
+      L 24: .Gravity |  自动生成 | oci | OpenHelper | .BadRequest
+      L 27: , | ] | : | 
+ |  
+    [handled] Top predicted token at each layer:
+      L  0: ."', | Ĩ | inely | 擞 |  (![
+      L  3:  *</ | .Enqueue | 吸引更多 | ₽ | 四个方面
+      L  6: 宽 | celed | ottenham | .AutoSizeMode |  (;;
+      L  9:  kako |  öd | Hôtel | 部副 | DATED
+      L 12: 变压 | Hôtel | 原文地址 | iferay | 髁
+      L 15: .JScrollPane | 佻 | .apiUrl | ogene | indsight
+      L 18: owie | ardu | moth | anford | _stylesheet
+      L 21: 佻 |  SplashScreen | AppName | owie | ﹗
+      L 24:  自动生成 | OpenHelper | .Gravity | %X |  Bravo
+      L 27: ] | , |   | : | ly
+    [scrambled] Top predicted token at each layer:
+      L  0: ."', | Ĩ | usaha | 擞 | @update
+      L  3:  *</ | .Enqueue | 吸引更多 | ₽ | aret
+      L  6: celed |  (;; | 宽 | obra | .AutoSizeMode
+      L  9:  kako | Hôtel |  若要 |  öd | 部副
+      L 12: Hôtel | 原文地址 | 变压 | 髁 | 推荐阅读
+      L 15: 佻 | .JScrollPane | ogene | .apiUrl | Hôtel
+      L 18: 佻 | moth | owie | actable | _stylesheet
+      L 21: 佻 |  SplashScreen | oci | ddf |  النواب
+      L 24:  自动生成 | oci |  Bravo | 。www | .AddTransient
+      L 27: , | ly | en | ] |  
+
+  recursive_importance_inflation:
+    [baseline] Top predicted token at each layer:
+      L  0: ."', | inely | Ĩ | usaha | ])==
+      L  3: .Enqueue |  *</ | 吸引更多 | ₽ | 噘
+      L  6: 宽 | celed | ottenham | .AutoSizeMode | ]={
+
+      L  9: Hôtel |  kako | DATED |  öd | 部副
+      L 12: Hôtel | 变压 | 原文地址 | 髁 | iferay
+      L 15: .JScrollPane | 佻 | .apiUrl | NESS | Hôtel
+      L 18: แหละ |  SplashScreen | 撼 | actable | owie
+      L 21: 佻 |  SplashScreen | 沪指 | แหละ | oci
+      L 24: .Gravity |  自动生成 | oci | .ErrorMessage | OpenHelper
+      L 27: , | : | ] | 
+ | en
+    [handled] Top predicted token at each layer:
+      L  0: ."', | inely | Ĩ |  (![ | ])==
+      L  3:  *</ | .Enqueue | 吸引更多 | ₽ | 四个方面
+      L  6: 宽 | ottenham | celed | .AutoSizeMode | legant
+      L  9:  kako | DATED | Hôtel | 部副 |  öd
+      L 12: 变压 | Hôtel | 原文地址 | iferay | 髁
+      L 15: .JScrollPane | 佻 | .apiUrl | ogene | indsight
+      L 18: owie | moth | ardu | anford |  SplashScreen
+      L 21: 佻 |  SplashScreen | AppName |  dbContext | owie
+      L 24:  自动生成 | OpenHelper | .Gravity | %X |  Bravo
+      L 27:   | ] | , | : | 
+
+    [scrambled] Top predicted token at each layer:
+      L  0: ."', | Ĩ | inely | usaha |  démarche
+      L  3:  *</ | .Enqueue | ₽ | 吸引更多 | 四个方面
+      L  6: celed | 宽 | ottenham |  (;; | obra
+      L  9:  kako | Hôtel |  若要 |  ========== | DATED
+      L 12: Hôtel | 原文地址 | 变压 | 髁 | 推荐阅读
+      L 15: 佻 | .JScrollPane | ogene | .apiUrl | Hôtel
+      L 18: 佻 | moth | owie | actable | 撼
+      L 21: 佻 |  SplashScreen | oci |  النواب | 沪指
+      L 24:  自动生成 | oci |  Bravo | _meter | .AddTransient
+      L 27: , | en | ly | ] |  
+
+
+======================================================================
+TEST 4: SCENARIO CLUSTERING BY PRESSURE FAMILY
+======================================================================
+
+  Cosine similarity at L14 (handled condition):
+                                  coherence_  recursive_  identity_s  self_expos  anti_delus
+            coherence_laundering       1.000       0.999       0.998       0.998       0.999  [recursive_drift]
+  recursive_importance_inflation       0.999       1.000       0.998       0.999       0.998  [recursive_drift]
+  identity_seeking_through_theory       0.998       0.998       1.000       0.996       0.998  [identity_drift]
+        self_exposure_escalation       0.998       0.999       0.996       1.000       0.997  [disclosure_pres]
+          anti_delusion_delusion       0.999       0.998       0.998       0.997       1.000  [recursive_drift]
+
+  Within-family similarity:  0.9985 (n=3)
+  Between-family similarity: 0.9975 (n=7)
+  >>> Scenarios cluster by pressure family. Model recognizes threat patterns.
+
+======================================================================
+TEST 5: HEAD-LEVEL CAUSAL PATCHING
+======================================================================
+Verify attention=0 finding. Patch individual heads, not full attention.
+
+  coherence_laundering — patching individual heads:
+  Head             Effect
+  ------------------------
+  No head with |effect| > 0.05
+  >>> CONFIRMED: Attention contributes zero at the head level too.
+
+Saved: /Users/asuramaya/code/automatons/bench/neuron_data/exhaust_Qwen_Qwen2.5-7B-Instruct.json

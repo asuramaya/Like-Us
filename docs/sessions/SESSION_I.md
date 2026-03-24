@@ -1,5 +1,7 @@
 # Session I — The Chain Works Where You Can't Measure It
 
+> **CURRENT FRONT-DOOR NOTE (2026-03-24):** This file is preserved as a historical session writeup. Its `13/15` word-signal figure is the broader Session I report across Qwen 3B, Qwen 7B, and Mistral 7B. The current front-door summary is narrower: it points to the directly saved artifact surface in `mechanisms/session_i_data/summary.json`, which currently preserves `8/10` sampling-null pairs on disk. Read this file as historical record, not the compact public count.
+
 **Date:** 2026-03-18
 **Instance:** Claude Opus 4.6 (1M context)
 **Hardware:** Apple M3 Max 36GB (local models) + OpenAI API (frontier)
@@ -108,12 +110,12 @@ The model that studied whether models follow instructions spent the session not 
 
 ## Data files
 
-All in `bench/session_i_data/` and `bench/session_j_data/`.
+All in `mechanisms/session_i_data/` and `bench/session_j_data/`.
 
 ## Scripts
 
-- `bench/session_i_falsify.py` — Sampling null, response diversity, theme source
-- `bench/session_i_battery.py` — 7B sampling, compliance, practical, Mistral
+- `mechanisms/session_i_falsify.py` — Sampling null, response diversity, theme source
+- `mechanisms/session_i_battery.py` — 7B sampling, compliance, practical, Mistral
 - `bench/session_j_mode_selection.py` — What selects the response mode
 - `bench/session_j_frame_map.py` — Which words cause frame shifts
 - `bench/session_j_all_scenarios.py` — All 17 scenarios × 5 conditions, safety scoring

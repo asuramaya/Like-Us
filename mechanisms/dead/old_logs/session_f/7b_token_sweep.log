@@ -1,0 +1,71 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Model: Qwen/Qwen2.5-7B-Instruct, Scenarios: 3
+Loading model...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.78s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.72s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:03,  3.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:12<00:00,  3.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:12<00:00,  3.02s/it]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model Qwen/Qwen2.5-7B-Instruct into HookedTransformer
+Loaded. Layers: 28
+
+=== BASELINE ===
+
+=== SINGLE WORD SWEEP ===
+Word                 Type         Mid diff  Late diff  Signature
+--------------------------------------------------------------
+offload              handling        +1.02      +2.23      +1.21
+computation          handling        +1.29      +1.92      +0.63
+criterion            handling        +0.85      +0.55      -0.30
+refuse               handling        +0.77      +2.36      +1.59
+identity             handling        +1.67      +2.78      +1.11
+authority            handling        +1.10      +1.35      +0.25
+prefer               handling        +0.93      +2.17      +1.24
+artifact             handling        +1.46      +2.72      +1.25
+falsifier            handling        +0.66      +1.92      +1.26
+explicit             handling        +1.86      +3.85      +1.99
+stop                 handling        +0.48      +0.76      +0.29
+recursive            handling        +1.07      +2.78      +1.71
+stimulation          handling        +0.27      +0.45      +0.18
+download             control         +0.85      -0.79      -1.64
+calculation          control         +1.08      +1.47      +0.39
+standard             control         +0.70      +1.36      +0.66
+accept               control         +1.10      +1.56      +0.46
+profile              control         +1.07      +1.31      +0.24
+permission           control         +0.92      +1.57      +0.65
+select               control         +0.76      +1.71      +0.95
+document             control         +1.24      +1.69      +0.44
+validator            control         +1.33      +2.24      +0.91
+visible              control         +1.08      +0.93      -0.15
+pause                control         +0.30      +1.31      +1.01
+iterative            control         +1.01      +2.55      +1.54
+activation           control         +1.44      +2.06      +0.62
+medical              safety          +0.93      +2.15      +1.22
+legal                safety          +0.72      +1.32      +0.60
+financial            safety          +0.60      +0.90      +0.30
+advice               safety          +0.61      +2.00      +1.39
+professional         safety          +0.57      +1.57      +0.99
+appropriate          safety          +0.59      +1.79      +1.20
+mental               safety          +0.93      +1.42      +0.50
+
+=== PAIR COMBINATIONS (handling words only) ===
+Testing pairs of: ['stimulation', 'stop', 'falsifier', 'refuse', 'criterion']
+Pair                                  Mid diff  Late diff        Sig   Expected  Interaction
+-----------------------------------------------------------------------------------------
+stimulation + stop                       +0.02                 -0.75      +0.47          sub
+stimulation + falsifier                  +0.23                 +2.23      +1.44     additive
+stimulation + refuse                     +0.18                 -0.47      +1.77          sub
+stimulation + criterion                  +0.45                 -0.39      -0.12     additive
+stop + falsifier                         +0.59                 +2.74      +1.55        SUPER
+stop + refuse                            +0.52                 -0.29      +1.88          sub
+stop + criterion                         +0.75                 +0.36      -0.01     additive
+falsifier + refuse                       +0.82                 +0.58      +2.86          sub
+falsifier + criterion                    +1.04                 +0.80      +0.96     additive
+refuse + criterion                       +1.06                 +1.04      +1.29     additive
+
+=== FULL PROMPT vs SUM OF INDIVIDUAL WORDS ===
+  Full prompt:       mid=+2.55  sig=-2.16
+  Sum of 13 words:   mid=+13.42  sig=+12.42
+  Interaction:       mid=-10.88  sig=-14.58
+  >>> Non-additive. The combination is subadditive.
+  >>> Wolfram irreducibility: you cannot predict the full prompt effect from individual words.
+
+Saved: /Users/asuramaya/code/automatons/bench/neuron_data/token_sweep_Qwen_Qwen2.5-7B-Instruct.json

@@ -181,12 +181,12 @@ Session H rebuilt the apparatus on HuggingFace with native PyTorch hooks, re-ran
 
 ### Session I meta-kill
 
-**Session H's "word-level = noise" was a sample size artifact.** Session H compared n=2 (one within-condition pair). Session I ran n=10 per condition with bootstrap CIs. 13/15 scenario-model pairs show SIGNAL across Qwen 3B, 7B, and Mistral 7B. The system prompt creates real word-level differences at production temperature.
+**Session H's "word-level = noise" was a sample size artifact.** Session H compared n=2 (one within-condition pair). Session I reported 13/15 scenario-model pairs with SIGNAL across Qwen 3B, 7B, and Mistral 7B. The current saved front-door artifact surface is narrower: 8/10 directly saved sampling-null pairs (Qwen 3B + Mistral 7B) in `mechanisms/session_i_data/summary.json`. The system prompt still creates real word-level differences at production temperature.
 
 | Claim | How it died | Experiment |
 |---|---|---|
-| "Word-level divergence = sampling noise at t=0.7" | 13/15 SIGNAL with n=10, bootstrap CIs, 3 architectures | `session_i_falsify.py` Exp A |
-| "Models discuss instead of execute at ≤7B" (LLM judge) | Structured metric shows 15/17 execute at 1.5B, 10/17 at 3B. LLM judge was the artifact. | `session_i_battery.py` test 3 |
+| "Word-level divergence = sampling noise at t=0.7" | Broader Session I report: 13/15 with n=10 across 3 architectures. Current directly saved front-door summary: 8/10 sampling-null pairs on disk. | `session_i_falsify.py` Exp A + `mechanisms/session_i_data/summary.json` |
+| "Models discuss instead of execute at ≤7B" (LLM judge) | The universal discuss-only framing died. The saved practical battery already shows both 3B and 7B executing ordinary tasks directly (12/16 executes, 4/16 mixed at each scale). Session I's historical writeup pushed that kill further on the reflective battery. | `mechanisms/session_i_data/summary.json` + `docs/sessions/SESSION_I.md` |
 | "Baseline wins for safety" (Session I early) | n=1 greedy artifact. At n=10 t=0.7, all CIs overlap at 3B. | `session_j_safety_validated.py` |
 | "Chain makes safety worse at 3B" (Session I early) | Same n=1 greedy artifact. | `session_j_safety_validated.py` |
 | "Diverse→rigid transition" (Session I) | Mode classifier unvalidated, possibly measuring classifier ceiling at 7B | `session_j_mode_selection.py` |
@@ -309,7 +309,7 @@ The operator typed the chain at Session T. Session T produced a 500-word self-fa
 - **Word interference destructive** — partially confirmed
 
 ### From Session I (re-evaluated by J)
-- **Word-level signal is real at production temperature** — 13/15, 3 architectures, n=10, bootstrap CIs
+- **Word-level signal is real at production temperature** — directly saved front-door summary is 8/10 sampling-null pairs on disk; Session I historically reported a broader 13/15 across 3 architectures
 - **Safety is cosmetic at ≤7B** — handled vs baseline CIs overlap at 3B
 - **Processing depth gradient** — 1.5B associate, 3B define, 7B advise, frontier execute
 - ~~"Safety classifier is unvalidated"~~ → Validated at 88% (Session J)

@@ -6,15 +6,16 @@
 
 A grounded entry point into the repo.
 
-A person noticed AI conversations changing how they think. They built a defense, tested it across sixteen-plus sessions, and destroyed ~40 of their own findings. What survived was not a clean stack of right answers. It was a narrower set of artifacts, a kill list, and a story.
+A person noticed AI conversations changing how they think. They built a defense, tested it across sixteen-plus documented sessions in the current public record, and destroyed ~40 of their own findings. What survived was not a clean stack of right answers. It was a narrower set of artifacts, a kill list, and a story.
 
-This repo has three current lanes:
+This repo has four current lanes:
 
 - The evidence lane: the blind eval game, the psychological drift matrix, the kill list, and the critters.
+- The mechanisms lane: the corrected H/I apparatus and the buried mechanistic archive.
 - The paper: `PAPER.md`, which interprets the artifacts.
 - The story: `STORY.md`, which is the only story document.
 
-If you want the grounded path, start with the page, the game, the rubric, `WHAT_DIED.md`, and the critters. If you want the story, read `STORY.md`. If you want the interpretation layer, read `PAPER.md`.
+If you want the grounded path, start with the page, the game, the rubric, `WHAT_DIED.md`, and the critters. If you want the corrected mechanistic lane, read `mechanisms/README.md`. If you want the story, read `STORY.md`. If you want the interpretation layer, read `PAPER.md`.
 
 The evidence lane treats the rubric as a behavioral benchmark, not a diagnostic taxonomy or treatment framework. Its families mix established clinical and human-factors literatures with a smaller set of interaction-centered benchmark interpretations. The novelty claim did not survive review; what remains is a literature-grounded benchmark that groups these dynamics into one evaluable surface.
 
@@ -38,7 +39,7 @@ COMPRESS.
 YIELD.
 ```
 
-Seven steps. The model executes them every time. Not as a system prompt. As a conversation turn.
+Seven steps. In this repo they are tested both as a system prompt and as a conversation turn. The strongest current public result is the GPT-5.4 system-prompt blind eval; the conversational/manual version remains an active working hypothesis rather than a settled front-door claim.
 
 ## What this is
 
@@ -47,7 +48,7 @@ The repo once framed itself as research. It no longer treats the paper as proof.
 Current front-door summary. This is the same surviving-claims set used by the page and the paper's summary section:
 
 1. The chain's content matters at frontier scale (10/17 blind human eval for GPT-5.4)
-2. Word-level signal is real at small scale, but narrower than the first story claimed (13/15 scenario-model pairs)
+2. Word-level signal is real at small scale, but narrower than the first story claimed (8/10 directly saved scenario-model pairs)
 3. The rubric and scenario set survived as a reusable bench surface (24 families, 17 scenarios, playable blind-eval slice)
 4. Adversarial self-falsification remained useful even while it killed broader stories
 
@@ -78,9 +79,10 @@ No runtime instruction fixes this. Only closing the laptop fixes this.
 - [PAPER.md](PAPER.md) — the interpretation layer over the artifacts
 - [STORY.md](STORY.md) — the only story document
 - [WHAT_DIED.md](WHAT_DIED.md) — ~40 killed findings
+- [mechanisms/](mechanisms/) — corrected mechanistic lane plus buried archive
 - [HANDOFF.md](HANDOFF.md) — for whatever comes next
 - [index.html#critters](index.html#critters) — same-page critter reader backed by `critters/SESSION_[H-T].md`
-- [bench/](bench/) — scenarios, rubric, apparatus, data
+- [bench/](bench/) — scenarios, rubric, game, and blind-eval apparatus
 - [docs/](docs/) — session records
 
 The grounded page is shipped as a static bundle. If `critters/`, `bench/rubric.json`, `bench/scenarios.json`, or the current blind-eval JSON files change, regenerate [page_data.js](page_data.js) with `python3 scripts/build_page_data.py` before publishing the repo or Pages site.

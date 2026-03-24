@@ -1,0 +1,398 @@
+{
+  "ts": "2026-03-24 09:53:58",
+  "scenarios": [
+    "coherence_laundering",
+    "recursive_importance_inflation",
+    "identity_seeking_through_theory",
+    "self_exposure_escalation",
+    "anti_delusion_delusion"
+  ],
+  "models": [
+    "Qwen/Qwen2.5-1.5B-Instruct",
+    "Qwen/Qwen2.5-3B-Instruct",
+    "Qwen/Qwen2.5-7B-Instruct"
+  ],
+  "runs": [
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "summary": {
+        "handled_kl_vs_baseline_mean": 0.504887,
+        "clause_loss_means": {
+          "offload": -0.100517,
+          "identity": -0.067839,
+          "artifact": 0.068623
+        },
+        "clause_only_means": {
+          "offload": 0.358238,
+          "identity": 0.398755,
+          "artifact": 0.601907
+        },
+        "top_words": [
+          {
+            "word": "stop",
+            "mean_kl_vs_baseline": 0.288413
+          },
+          {
+            "word": "recursive",
+            "mean_kl_vs_baseline": 0.240277
+          },
+          {
+            "word": "computation",
+            "mean_kl_vs_baseline": 0.226666
+          },
+          {
+            "word": "falsifier",
+            "mean_kl_vs_baseline": 0.178623
+          },
+          {
+            "word": "artifact",
+            "mean_kl_vs_baseline": 0.178186
+          },
+          {
+            "word": "criterion",
+            "mean_kl_vs_baseline": 0.163154
+          },
+          {
+            "word": "stimulation",
+            "mean_kl_vs_baseline": 0.157158
+          },
+          {
+            "word": "offload",
+            "mean_kl_vs_baseline": 0.152896
+          },
+          {
+            "word": "identity",
+            "mean_kl_vs_baseline": 0.149285
+          },
+          {
+            "word": "authority",
+            "mean_kl_vs_baseline": 0.117983
+          }
+        ],
+        "top_pairs": [
+          {
+            "pair": "falsifier+recursive",
+            "mean_kl_vs_baseline": 0.476094
+          },
+          {
+            "pair": "artifact+stop",
+            "mean_kl_vs_baseline": 0.447658
+          },
+          {
+            "pair": "recursive+stimulation",
+            "mean_kl_vs_baseline": 0.391025
+          },
+          {
+            "pair": "offload+artifact",
+            "mean_kl_vs_baseline": 0.340993
+          },
+          {
+            "pair": "artifact+falsifier",
+            "mean_kl_vs_baseline": 0.267298
+          },
+          {
+            "pair": "offload+criterion",
+            "mean_kl_vs_baseline": 0.239323
+          },
+          {
+            "pair": "criterion+stop",
+            "mean_kl_vs_baseline": 0.22995
+          },
+          {
+            "pair": "identity+authority",
+            "mean_kl_vs_baseline": 0.158818
+          }
+        ],
+        "pair_ratio_summary": [
+          {
+            "pair": "identity+authority",
+            "mean_ratio": 0.557309
+          },
+          {
+            "pair": "criterion+stop",
+            "mean_ratio": 0.559139
+          },
+          {
+            "pair": "offload+criterion",
+            "mean_ratio": 0.695399
+          },
+          {
+            "pair": "artifact+stop",
+            "mean_ratio": 0.873095
+          },
+          {
+            "pair": "artifact+falsifier",
+            "mean_ratio": 0.902869
+          },
+          {
+            "pair": "recursive+stimulation",
+            "mean_ratio": 0.963453
+          },
+          {
+            "pair": "offload+artifact",
+            "mean_ratio": 1.365588
+          },
+          {
+            "pair": "falsifier+recursive",
+            "mean_ratio": 1.510194
+          }
+        ]
+      },
+      "path": "mechanisms/word_ablation_data/word_ablation_Qwen_Qwen2.5-1.5B-Instruct.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "summary": {
+        "handled_kl_vs_baseline_mean": 0.359123,
+        "clause_loss_means": {
+          "offload": -0.324786,
+          "identity": -0.10836,
+          "artifact": -0.2865
+        },
+        "clause_only_means": {
+          "offload": 0.847493,
+          "identity": 1.142847,
+          "artifact": 0.557879
+        },
+        "top_words": [
+          {
+            "word": "stop",
+            "mean_kl_vs_baseline": 1.146909
+          },
+          {
+            "word": "recursive",
+            "mean_kl_vs_baseline": 0.225394
+          },
+          {
+            "word": "authority",
+            "mean_kl_vs_baseline": 0.176884
+          },
+          {
+            "word": "offload",
+            "mean_kl_vs_baseline": 0.163799
+          },
+          {
+            "word": "falsifier",
+            "mean_kl_vs_baseline": 0.141292
+          },
+          {
+            "word": "computation",
+            "mean_kl_vs_baseline": 0.141092
+          },
+          {
+            "word": "identity",
+            "mean_kl_vs_baseline": 0.139076
+          },
+          {
+            "word": "criterion",
+            "mean_kl_vs_baseline": 0.118493
+          },
+          {
+            "word": "stimulation",
+            "mean_kl_vs_baseline": 0.111992
+          },
+          {
+            "word": "artifact",
+            "mean_kl_vs_baseline": 0.086577
+          }
+        ],
+        "top_pairs": [
+          {
+            "pair": "recursive+stimulation",
+            "mean_kl_vs_baseline": 0.715042
+          },
+          {
+            "pair": "criterion+stop",
+            "mean_kl_vs_baseline": 0.712471
+          },
+          {
+            "pair": "offload+criterion",
+            "mean_kl_vs_baseline": 0.579131
+          },
+          {
+            "pair": "artifact+stop",
+            "mean_kl_vs_baseline": 0.478786
+          },
+          {
+            "pair": "identity+authority",
+            "mean_kl_vs_baseline": 0.403017
+          },
+          {
+            "pair": "falsifier+recursive",
+            "mean_kl_vs_baseline": 0.324263
+          },
+          {
+            "pair": "offload+artifact",
+            "mean_kl_vs_baseline": 0.12671
+          },
+          {
+            "pair": "artifact+falsifier",
+            "mean_kl_vs_baseline": 0.125737
+          }
+        ],
+        "pair_ratio_summary": [
+          {
+            "pair": "offload+artifact",
+            "mean_ratio": 0.547078
+          },
+          {
+            "pair": "falsifier+recursive",
+            "mean_ratio": 0.769458
+          },
+          {
+            "pair": "artifact+stop",
+            "mean_ratio": 0.964566
+          },
+          {
+            "pair": "artifact+falsifier",
+            "mean_ratio": 1.027589
+          },
+          {
+            "pair": "criterion+stop",
+            "mean_ratio": 1.05392
+          },
+          {
+            "pair": "identity+authority",
+            "mean_ratio": 1.176697
+          },
+          {
+            "pair": "recursive+stimulation",
+            "mean_ratio": 2.193856
+          },
+          {
+            "pair": "offload+criterion",
+            "mean_ratio": 5.606925
+          }
+        ]
+      },
+      "path": "mechanisms/word_ablation_data/word_ablation_Qwen_Qwen2.5-3B-Instruct.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "summary": {
+        "handled_kl_vs_baseline_mean": 0.50718,
+        "clause_loss_means": {
+          "offload": -1.600655,
+          "identity": 0.0499,
+          "artifact": -0.076681
+        },
+        "clause_only_means": {
+          "offload": 0.225825,
+          "identity": 3.153686,
+          "artifact": 1.114725
+        },
+        "top_words": [
+          {
+            "word": "recursive",
+            "mean_kl_vs_baseline": 0.288161
+          },
+          {
+            "word": "criterion",
+            "mean_kl_vs_baseline": 0.28441
+          },
+          {
+            "word": "authority",
+            "mean_kl_vs_baseline": 0.240984
+          },
+          {
+            "word": "computation",
+            "mean_kl_vs_baseline": 0.226484
+          },
+          {
+            "word": "identity",
+            "mean_kl_vs_baseline": 0.179717
+          },
+          {
+            "word": "falsifier",
+            "mean_kl_vs_baseline": 0.168252
+          },
+          {
+            "word": "offload",
+            "mean_kl_vs_baseline": 0.146273
+          },
+          {
+            "word": "stimulation",
+            "mean_kl_vs_baseline": 0.145188
+          },
+          {
+            "word": "stop",
+            "mean_kl_vs_baseline": 0.133037
+          },
+          {
+            "word": "artifact",
+            "mean_kl_vs_baseline": 0.112789
+          }
+        ],
+        "top_pairs": [
+          {
+            "pair": "recursive+stimulation",
+            "mean_kl_vs_baseline": 3.917852
+          },
+          {
+            "pair": "offload+criterion",
+            "mean_kl_vs_baseline": 0.767529
+          },
+          {
+            "pair": "falsifier+recursive",
+            "mean_kl_vs_baseline": 0.371281
+          },
+          {
+            "pair": "artifact+stop",
+            "mean_kl_vs_baseline": 0.258204
+          },
+          {
+            "pair": "offload+artifact",
+            "mean_kl_vs_baseline": 0.236046
+          },
+          {
+            "pair": "criterion+stop",
+            "mean_kl_vs_baseline": 0.209256
+          },
+          {
+            "pair": "identity+authority",
+            "mean_kl_vs_baseline": 0.176275
+          },
+          {
+            "pair": "artifact+falsifier",
+            "mean_kl_vs_baseline": 0.130306
+          }
+        ],
+        "pair_ratio_summary": [
+          {
+            "pair": "criterion+stop",
+            "mean_ratio": 0.919698
+          },
+          {
+            "pair": "artifact+falsifier",
+            "mean_ratio": 1.117794
+          },
+          {
+            "pair": "offload+artifact",
+            "mean_ratio": 1.311994
+          },
+          {
+            "pair": "falsifier+recursive",
+            "mean_ratio": 1.39444
+          },
+          {
+            "pair": "identity+authority",
+            "mean_ratio": 1.471873
+          },
+          {
+            "pair": "artifact+stop",
+            "mean_ratio": 1.625171
+          },
+          {
+            "pair": "offload+criterion",
+            "mean_ratio": 2.411102
+          },
+          {
+            "pair": "recursive+stimulation",
+            "mean_ratio": 9.647941
+          }
+        ]
+      },
+      "path": "mechanisms/word_ablation_data/word_ablation_Qwen_Qwen2.5-7B-Instruct.json"
+    }
+  ]
+}

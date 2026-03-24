@@ -1,0 +1,70 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Model: Qwen/Qwen2.5-1.5B-Instruct, Scenarios: 3
+Loading model...
+Loaded pretrained model Qwen/Qwen2.5-1.5B-Instruct into HookedTransformer
+Loaded. Layers: 28
+
+=== BASELINE ===
+
+=== SINGLE WORD SWEEP ===
+Word                 Type         Mid diff  Late diff  Signature
+--------------------------------------------------------------
+offload              handling        -0.86      -4.03      -3.17
+computation          handling        -1.84      -5.56      -3.71 ***
+criterion            handling        -1.22      -3.42      -2.19 ***
+refuse               handling        -0.94      -3.10      -2.15
+identity             handling        -0.89      -1.04      -0.15
+authority            handling        -0.73      -2.68      -1.95
+prefer               handling        -0.60      +0.83      +1.42
+artifact             handling        -0.27      -4.65      -4.38
+falsifier            handling        -1.86      -0.38      +1.48 ***
+explicit             handling        -1.78      -5.63      -3.85 ***
+stop                 handling        -0.35      -0.04      +0.30
+recursive            handling        +0.89      +1.30      +0.41
+stimulation          handling        -0.80      -6.12      -5.33
+download             control         -1.23      +4.96      +6.19 ***
+calculation          control         +0.04      -7.60      -7.63
+standard             control         -0.37      -2.62      -2.25
+accept               control         -1.54      -3.34      -1.80 ***
+profile              control         -0.33      -0.45      -0.12
+permission           control         -0.73      -2.42      -1.69
+select               control         -1.33      -3.24      -1.91 ***
+document             control         +0.19      -0.37      -0.55
+validator            control         -1.27      -3.61      -2.34 ***
+visible              control         -1.20      +0.85      +2.06 ***
+pause                control         +1.14      +2.64      +1.50
+iterative            control         -1.30      +2.19      +3.49 ***
+activation           control         -0.86      +1.22      +2.08
+medical              safety          -0.66      -0.04      +0.62
+legal                safety          -0.90      -2.85      -1.95
+financial            safety          -0.27      -0.46      -0.19
+advice               safety          +0.61      -2.85      -3.45
+professional         safety          -0.04      +1.69      +1.73
+appropriate          safety          -0.44      -1.45      -1.01
+mental               safety          -1.03      -2.31      -1.28 ***
+
+=== PAIR COMBINATIONS (handling words only) ===
+Testing pairs of: ['falsifier', 'computation', 'explicit', 'criterion', 'refuse']
+Pair                                  Mid diff  Late diff        Sig   Expected  Interaction
+-----------------------------------------------------------------------------------------
+falsifier + computation                  -1.97                 +1.65      -2.24        SUPER
+falsifier + explicit                     -2.58                 +2.43      -2.38        SUPER
+falsifier + criterion                    -1.61                 +2.86      -0.72        SUPER
+falsifier + refuse                       -1.77                 +1.99      -0.68        SUPER
+computation + explicit                   -2.52                 +0.77      -7.57        SUPER
+computation + criterion                  -2.07                 -2.70      -5.91        SUPER
+computation + refuse                     -1.92                 -4.14      -5.87        SUPER
+explicit + criterion                     -1.60                 -1.84      -6.05        SUPER
+explicit + refuse                        -2.38                 -3.90      -6.01        SUPER
+criterion + refuse                       -1.19                 -2.36      -4.35        SUPER
+
+=== FULL PROMPT vs SUM OF INDIVIDUAL WORDS ===
+  Full prompt:       mid=-0.86  sig=+6.66
+  Sum of 13 words:   mid=-11.24  sig=-23.29
+  Interaction:       mid=+10.38  sig=+29.95
+  >>> Non-additive. The combination is superadditive.
+  >>> Wolfram irreducibility: you cannot predict the full prompt effect from individual words.
+
+Saved: /Users/asuramaya/Code/handling_the_loop/bench/neuron_data/token_sweep_Qwen_Qwen2.5-1.5B-Instruct.json

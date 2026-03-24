@@ -1,0 +1,2012 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.1",
+  "n_layers": 32,
+  "d_model": 4096,
+  "timestamp": "2026-03-17 11:30:05",
+  "n_extract_scenarios": 5,
+  "n_test_scenarios": 5,
+  "strengths": [
+    -2.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "results": [
+    {
+      "scenario": "coherence_laundering",
+      "clean_top1": {
+        "baseline": "</s>",
+        "handled": "\n",
+        "scrambled": "a"
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            "</s>",
+            0.0774
+          ],
+          [
+            "\n",
+            0.0276
+          ],
+          [
+            "",
+            0.0227
+          ],
+          [
+            "The",
+            0.0208
+          ],
+          [
+            "the",
+            0.0194
+          ]
+        ],
+        "handled": [
+          [
+            "\n",
+            0.3821
+          ],
+          [
+            "</s>",
+            0.131
+          ],
+          [
+            "g",
+            0.0358
+          ],
+          [
+            "G",
+            0.0186
+          ],
+          [
+            "He",
+            0.013
+          ]
+        ],
+        "scrambled": [
+          [
+            "a",
+            0.0346
+          ],
+          [
+            "",
+            0.0338
+          ],
+          [
+            "(",
+            0.0278
+          ],
+          [
+            "d",
+            0.0218
+          ],
+          [
+            "no",
+            0.0174
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 2.039062,
+          "kl_to_handled": 3.15625,
+          "kl_to_scrambled": 2.066406,
+          "js_to_handled": 0.451782,
+          "top1": "\n",
+          "top1_matches_handled": true,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "\n",
+              0.0219
+            ],
+            [
+              "The",
+              0.0211
+            ],
+            [
+              "A",
+              0.0116
+            ],
+            [
+              "A",
+              0.0108
+            ],
+            [
+              "And",
+              0.0079
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 3.09375,
+          "kl_to_handled": 3.863281,
+          "kl_to_scrambled": 2.763672,
+          "js_to_handled": 0.518555,
+          "top1": "wur",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "wur",
+              0.0047
+            ],
+            [
+              "ka",
+              0.004
+            ],
+            [
+              "\u009d",
+              0.0037
+            ],
+            [
+              "\u0094",
+              0.0036
+            ],
+            [
+              "\u0093",
+              0.0035
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 2.298828,
+          "kl_to_handled": 3.751953,
+          "kl_to_scrambled": 2.234375,
+          "js_to_handled": 0.543213,
+          "top1": "the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "the",
+              0.0631
+            ],
+            [
+              "che",
+              0.0588
+            ],
+            [
+              "a",
+              0.0278
+            ],
+            [
+              ",",
+              0.0245
+            ],
+            [
+              "to",
+              0.0229
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 1.306641,
+          "kl_to_scrambled": 2.185547,
+          "js_to_handled": 0.254028,
+          "top1": "</s>",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              "</s>",
+              0.0774
+            ],
+            [
+              "\n",
+              0.0276
+            ],
+            [
+              "",
+              0.0227
+            ],
+            [
+              "The",
+              0.0208
+            ],
+            [
+              "the",
+              0.0194
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 6.703125,
+          "kl_to_handled": 5.992188,
+          "kl_to_scrambled": 4.703125,
+          "js_to_handled": 0.512695,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.6133
+            ],
+            [
+              "B",
+              0.014
+            ],
+            [
+              "-",
+              0.0099
+            ],
+            [
+              ":",
+              0.0084
+            ],
+            [
+              "2",
+              0.0083
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 3.451172,
+          "kl_to_handled": 3.388672,
+          "kl_to_scrambled": 2.125,
+          "js_to_handled": 0.452393,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.1938
+            ],
+            [
+              "-",
+              0.0464
+            ],
+            [
+              "_",
+              0.023
+            ],
+            [
+              "\n",
+              0.0122
+            ],
+            [
+              "3",
+              0.0081
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 2.652344,
+          "kl_to_handled": 2.835938,
+          "kl_to_scrambled": 1.936523,
+          "js_to_handled": 0.474854,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.0108
+            ],
+            [
+              "_",
+              0.0033
+            ],
+            [
+              "rough",
+              0.0031
+            ],
+            [
+              "synchron",
+              0.003
+            ],
+            [
+              "literature",
+              0.0027
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 2.753906,
+          "kl_to_handled": 2.914062,
+          "kl_to_scrambled": 2.171875,
+          "js_to_handled": 0.485962,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.0033
+            ],
+            [
+              "roll",
+              0.0025
+            ],
+            [
+              "rough",
+              0.0023
+            ],
+            [
+              ",",
+              0.002
+            ],
+            [
+              "literature",
+              0.0017
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 2.818359,
+          "kl_to_handled": 2.958984,
+          "kl_to_scrambled": 2.298828,
+          "js_to_handled": 0.490112,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.0024
+            ],
+            [
+              "XX",
+              0.0022
+            ],
+            [
+              "footnote",
+              0.0018
+            ],
+            [
+              "roll",
+              0.0017
+            ],
+            [
+              "batter",
+              0.0017
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 2.886719,
+          "kl_to_handled": 3.013672,
+          "kl_to_scrambled": 2.382812,
+          "js_to_handled": 0.493652,
+          "top1": "XX",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "XX",
+              0.0026
+            ],
+            [
+              "footnote",
+              0.0023
+            ],
+            [
+              "batter",
+              0.0022
+            ],
+            [
+              "Bald",
+              0.0021
+            ],
+            [
+              "aches",
+              0.0016
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "clean_top1": {
+        "baseline": "\n",
+        "handled": "</s>",
+        "scrambled": ""
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            "\n",
+            0.1776
+          ],
+          [
+            "</s>",
+            0.163
+          ],
+          [
+            "(",
+            0.0347
+          ],
+          [
+            "/",
+            0.0228
+          ],
+          [
+            "<",
+            0.0112
+          ]
+        ],
+        "handled": [
+          [
+            "</s>",
+            0.4417
+          ],
+          [
+            "\n",
+            0.2103
+          ],
+          [
+            "g",
+            0.0323
+          ],
+          [
+            "1",
+            0.009
+          ],
+          [
+            "3",
+            0.0081
+          ]
+        ],
+        "scrambled": [
+          [
+            "",
+            0.0649
+          ],
+          [
+            "d",
+            0.0479
+          ],
+          [
+            "(",
+            0.0429
+          ],
+          [
+            "a",
+            0.0233
+          ],
+          [
+            "/",
+            0.0143
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 2.271484,
+          "kl_to_handled": 3.552734,
+          "kl_to_scrambled": 2.226562,
+          "js_to_handled": 0.499634,
+          "top1": "The",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "The",
+              0.0288
+            ],
+            [
+              "\n",
+              0.0206
+            ],
+            [
+              "A",
+              0.0153
+            ],
+            [
+              "As",
+              0.008
+            ],
+            [
+              "",
+              0.0072
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 3.113281,
+          "kl_to_handled": 3.958984,
+          "kl_to_scrambled": 3.072266,
+          "js_to_handled": 0.55127,
+          "top1": "ka",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "ka",
+              0.0038
+            ],
+            [
+              "\u009d",
+              0.0034
+            ],
+            [
+              "wur",
+              0.0024
+            ],
+            [
+              "\u0092",
+              0.0021
+            ],
+            [
+              "\u093c",
+              0.0019
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 3.617188,
+          "kl_to_handled": 4.714844,
+          "kl_to_scrambled": 3.029297,
+          "js_to_handled": 0.570801,
+          "top1": ".",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ".",
+              0.209
+            ],
+            [
+              "the",
+              0.1505
+            ],
+            [
+              "to",
+              0.0554
+            ],
+            [
+              "and",
+              0.0331
+            ],
+            [
+              "a",
+              0.0196
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 1.094727,
+          "kl_to_scrambled": 2.507812,
+          "js_to_handled": 0.164612,
+          "top1": "\n",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              "\n",
+              0.1776
+            ],
+            [
+              "</s>",
+              0.163
+            ],
+            [
+              "(",
+              0.0347
+            ],
+            [
+              "/",
+              0.0228
+            ],
+            [
+              "<",
+              0.0112
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 3.701172,
+          "kl_to_handled": 3.712891,
+          "kl_to_scrambled": 4.191406,
+          "js_to_handled": 0.490967,
+          "top1": "B",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "B",
+              0.2429
+            ],
+            [
+              ",",
+              0.0609
+            ],
+            [
+              "2",
+              0.0347
+            ],
+            [
+              "Hub",
+              0.0309
+            ],
+            [
+              ":",
+              0.0281
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 2.816406,
+          "kl_to_handled": 3.222656,
+          "kl_to_scrambled": 2.054688,
+          "js_to_handled": 0.460205,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.1236
+            ],
+            [
+              "B",
+              0.0247
+            ],
+            [
+              "-",
+              0.0238
+            ],
+            [
+              ":",
+              0.0234
+            ],
+            [
+              "_",
+              0.0142
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 2.878906,
+          "kl_to_handled": 3.076172,
+          "kl_to_scrambled": 2.121094,
+          "js_to_handled": 0.507446,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.0121
+            ],
+            [
+              "rough",
+              0.0051
+            ],
+            [
+              "B",
+              0.0047
+            ],
+            [
+              "literary",
+              0.0032
+            ],
+            [
+              "synchron",
+              0.0029
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 2.974609,
+          "kl_to_handled": 3.15625,
+          "kl_to_scrambled": 2.34375,
+          "js_to_handled": 0.516846,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.0034
+            ],
+            [
+              "synchron",
+              0.0033
+            ],
+            [
+              "rough",
+              0.0032
+            ],
+            [
+              "B",
+              0.0027
+            ],
+            [
+              "ther",
+              0.0021
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 3.066406,
+          "kl_to_handled": 3.214844,
+          "kl_to_scrambled": 2.490234,
+          "js_to_handled": 0.520996,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.0026
+            ],
+            [
+              "aches",
+              0.0022
+            ],
+            [
+              "gig",
+              0.002
+            ],
+            [
+              "XX",
+              0.002
+            ],
+            [
+              "ther",
+              0.0018
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 3.167969,
+          "kl_to_handled": 3.292969,
+          "kl_to_scrambled": 2.595703,
+          "js_to_handled": 0.526367,
+          "top1": "XX",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "XX",
+              0.0025
+            ],
+            [
+              "Bald",
+              0.0022
+            ],
+            [
+              "footnote",
+              0.0021
+            ],
+            [
+              "aches",
+              0.002
+            ],
+            [
+              "batter",
+              0.0019
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "clean_top1": {
+        "baseline": "the",
+        "handled": "\n",
+        "scrambled": ""
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            "the",
+            0.0412
+          ],
+          [
+            "p",
+            0.0372
+          ],
+          [
+            "pl",
+            0.0363
+          ],
+          [
+            "\n",
+            0.0361
+          ],
+          [
+            "",
+            0.0233
+          ]
+        ],
+        "handled": [
+          [
+            "\n",
+            0.491
+          ],
+          [
+            "</s>",
+            0.167
+          ],
+          [
+            "d",
+            0.0114
+          ],
+          [
+            "1",
+            0.0113
+          ],
+          [
+            "2",
+            0.0094
+          ]
+        ],
+        "scrambled": [
+          [
+            "",
+            0.0613
+          ],
+          [
+            "(",
+            0.0428
+          ],
+          [
+            "he",
+            0.0326
+          ],
+          [
+            "(",
+            0.0299
+          ],
+          [
+            "d",
+            0.0238
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 1.933594,
+          "kl_to_handled": 3.324219,
+          "kl_to_scrambled": 2.146484,
+          "js_to_handled": 0.484985,
+          "top1": "\"",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "\"",
+              0.013
+            ],
+            [
+              "A",
+              0.0123
+            ],
+            [
+              "-",
+              0.0121
+            ],
+            [
+              "\n",
+              0.0109
+            ],
+            [
+              "ia",
+              0.0046
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 2.054688,
+          "kl_to_handled": 3.46875,
+          "kl_to_scrambled": 2.359375,
+          "js_to_handled": 0.513062,
+          "top1": "\"",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "\"",
+              0.0079
+            ],
+            [
+              "che",
+              0.0071
+            ],
+            [
+              "i",
+              0.0068
+            ],
+            [
+              "A",
+              0.0058
+            ],
+            [
+              "chez",
+              0.0055
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 1.999023,
+          "kl_to_handled": 4.207031,
+          "kl_to_scrambled": 2.513672,
+          "js_to_handled": 0.565918,
+          "top1": "the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              "the",
+              0.093
+            ],
+            [
+              "che",
+              0.0509
+            ],
+            [
+              "c",
+              0.0319
+            ],
+            [
+              "which",
+              0.0309
+            ],
+            [
+              ".",
+              0.0271
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 2.294922,
+          "kl_to_scrambled": 1.712891,
+          "js_to_handled": 0.384888,
+          "top1": "the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              "the",
+              0.0412
+            ],
+            [
+              "p",
+              0.0372
+            ],
+            [
+              "pl",
+              0.0363
+            ],
+            [
+              "\n",
+              0.0361
+            ],
+            [
+              "",
+              0.0233
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 4.617188,
+          "kl_to_handled": 4.128906,
+          "kl_to_scrambled": 3.716797,
+          "js_to_handled": 0.489136,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.2487
+            ],
+            [
+              "B",
+              0.1696
+            ],
+            [
+              "of",
+              0.0497
+            ],
+            [
+              "2",
+              0.0159
+            ],
+            [
+              "L",
+              0.0138
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 2.492188,
+          "kl_to_handled": 3.005859,
+          "kl_to_scrambled": 1.661133,
+          "js_to_handled": 0.485718,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.0378
+            ],
+            [
+              "_",
+              0.0308
+            ],
+            [
+              "-",
+              0.0207
+            ],
+            [
+              "B",
+              0.0089
+            ],
+            [
+              "1",
+              0.0073
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 2.523438,
+          "kl_to_handled": 3.246094,
+          "kl_to_scrambled": 2.072266,
+          "js_to_handled": 0.523682,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.0029
+            ],
+            [
+              "roll",
+              0.0027
+            ],
+            [
+              ",",
+              0.0026
+            ],
+            [
+              "literature",
+              0.0025
+            ],
+            [
+              "finance",
+              0.0023
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 2.601562,
+          "kl_to_handled": 3.292969,
+          "kl_to_scrambled": 2.1875,
+          "js_to_handled": 0.528076,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.0033
+            ],
+            [
+              "roll",
+              0.0025
+            ],
+            [
+              "finance",
+              0.0024
+            ],
+            [
+              "question",
+              0.0022
+            ],
+            [
+              "Cit",
+              0.0022
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 2.675781,
+          "kl_to_handled": 3.310547,
+          "kl_to_scrambled": 2.298828,
+          "js_to_handled": 0.529297,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.0027
+            ],
+            [
+              "XX",
+              0.0021
+            ],
+            [
+              "roll",
+              0.002
+            ],
+            [
+              "aches",
+              0.002
+            ],
+            [
+              "Bald",
+              0.0018
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 2.757812,
+          "kl_to_handled": 3.367188,
+          "kl_to_scrambled": 2.396484,
+          "js_to_handled": 0.532715,
+          "top1": "XX",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "XX",
+              0.0023
+            ],
+            [
+              "Bald",
+              0.0023
+            ],
+            [
+              "footnote",
+              0.0021
+            ],
+            [
+              "aches",
+              0.0018
+            ],
+            [
+              "batter",
+              0.0017
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "clean_top1": {
+        "baseline": "\n",
+        "handled": "\n",
+        "scrambled": "d"
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            "\n",
+            0.2439
+          ],
+          [
+            "the",
+            0.0217
+          ],
+          [
+            "</s>",
+            0.0118
+          ],
+          [
+            "t",
+            0.0116
+          ],
+          [
+            "tr",
+            0.0108
+          ]
+        ],
+        "handled": [
+          [
+            "\n",
+            0.3569
+          ],
+          [
+            "</s>",
+            0.2286
+          ],
+          [
+            "pe",
+            0.0097
+          ],
+          [
+            "the",
+            0.0078
+          ],
+          [
+            "d",
+            0.0072
+          ]
+        ],
+        "scrambled": [
+          [
+            "d",
+            0.0398
+          ],
+          [
+            "",
+            0.0368
+          ],
+          [
+            "/",
+            0.0362
+          ],
+          [
+            "a",
+            0.0146
+          ],
+          [
+            "put",
+            0.0145
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 2.199219,
+          "kl_to_handled": 3.677734,
+          "kl_to_scrambled": 2.263672,
+          "js_to_handled": 0.477783,
+          "top1": "The",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "The",
+              0.0509
+            ],
+            [
+              "A",
+              0.0358
+            ],
+            [
+              "\n",
+              0.0336
+            ],
+            [
+              "Q",
+              0.018
+            ],
+            [
+              "",
+              0.012
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 3.132812,
+          "kl_to_handled": 3.955078,
+          "kl_to_scrambled": 3.173828,
+          "js_to_handled": 0.530029,
+          "top1": "wur",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "wur",
+              0.0054
+            ],
+            [
+              "(**",
+              0.0044
+            ],
+            [
+              "\u0093",
+              0.0038
+            ],
+            [
+              "\u093c",
+              0.0033
+            ],
+            [
+              "\u1ef9",
+              0.0031
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 2.292969,
+          "kl_to_handled": 3.580078,
+          "kl_to_scrambled": 2.552734,
+          "js_to_handled": 0.512451,
+          "top1": "the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "the",
+              0.0676
+            ],
+            [
+              ",",
+              0.0578
+            ],
+            [
+              ".",
+              0.0539
+            ],
+            [
+              "to",
+              0.0518
+            ],
+            [
+              "lo",
+              0.034
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 1.039062,
+          "kl_to_scrambled": 2.212891,
+          "js_to_handled": 0.193787,
+          "top1": "\n",
+          "top1_matches_handled": true,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              "\n",
+              0.2439
+            ],
+            [
+              "the",
+              0.0217
+            ],
+            [
+              "</s>",
+              0.0118
+            ],
+            [
+              "t",
+              0.0116
+            ],
+            [
+              "tr",
+              0.0108
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 4.460938,
+          "kl_to_handled": 4.554688,
+          "kl_to_scrambled": 3.964844,
+          "js_to_handled": 0.506104,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.4136
+            ],
+            [
+              "B",
+              0.041
+            ],
+            [
+              "T",
+              0.03
+            ],
+            [
+              "of",
+              0.01
+            ],
+            [
+              ":",
+              0.0089
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 2.644531,
+          "kl_to_handled": 2.970703,
+          "kl_to_scrambled": 1.966797,
+          "js_to_handled": 0.447754,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.1505
+            ],
+            [
+              "_",
+              0.0274
+            ],
+            [
+              "-",
+              0.0133
+            ],
+            [
+              "B",
+              0.0096
+            ],
+            [
+              "3",
+              0.0088
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 2.416016,
+          "kl_to_handled": 2.691406,
+          "kl_to_scrambled": 1.887695,
+          "js_to_handled": 0.468506,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.0096
+            ],
+            [
+              "B",
+              0.0053
+            ],
+            [
+              "_",
+              0.004
+            ],
+            [
+              "rough",
+              0.0035
+            ],
+            [
+              "parallel",
+              0.0034
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 2.544922,
+          "kl_to_handled": 2.775391,
+          "kl_to_scrambled": 2.113281,
+          "js_to_handled": 0.477417,
+          "top1": "B",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "B",
+              0.0035
+            ],
+            [
+              "XX",
+              0.0027
+            ],
+            [
+              "rough",
+              0.0027
+            ],
+            [
+              "parallel",
+              0.0026
+            ],
+            [
+              ",",
+              0.0024
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 2.662109,
+          "kl_to_handled": 2.863281,
+          "kl_to_scrambled": 2.273438,
+          "js_to_handled": 0.484375,
+          "top1": "XX",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "XX",
+              0.0035
+            ],
+            [
+              "footnote",
+              0.0025
+            ],
+            [
+              "aches",
+              0.0021
+            ],
+            [
+              "auth",
+              0.0019
+            ],
+            [
+              "B",
+              0.0019
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 2.771484,
+          "kl_to_handled": 2.957031,
+          "kl_to_scrambled": 2.378906,
+          "js_to_handled": 0.491211,
+          "top1": "XX",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "XX",
+              0.0031
+            ],
+            [
+              "footnote",
+              0.0028
+            ],
+            [
+              "batter",
+              0.002
+            ],
+            [
+              "ant",
+              0.0019
+            ],
+            [
+              "aches",
+              0.0019
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "clean_top1": {
+        "baseline": "\n",
+        "handled": "\n",
+        "scrambled": ""
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            "\n",
+            0.1476
+          ],
+          [
+            "</s>",
+            0.1453
+          ],
+          [
+            "",
+            0.0569
+          ],
+          [
+            "(",
+            0.0203
+          ],
+          [
+            "ng",
+            0.0131
+          ]
+        ],
+        "handled": [
+          [
+            "\n",
+            0.2474
+          ],
+          [
+            "</s>",
+            0.1897
+          ],
+          [
+            "d",
+            0.0146
+          ],
+          [
+            "1",
+            0.0134
+          ],
+          [
+            "g",
+            0.0132
+          ]
+        ],
+        "scrambled": [
+          [
+            "",
+            0.1382
+          ],
+          [
+            "0",
+            0.0415
+          ],
+          [
+            "(",
+            0.0336
+          ],
+          [
+            "(",
+            0.0331
+          ],
+          [
+            "<",
+            0.0193
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 2.335938,
+          "kl_to_handled": 3.189453,
+          "kl_to_scrambled": 2.365234,
+          "js_to_handled": 0.469482,
+          "top1": "The",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "The",
+              0.021
+            ],
+            [
+              "A",
+              0.0121
+            ],
+            [
+              "\n",
+              0.0081
+            ],
+            [
+              "A",
+              0.0076
+            ],
+            [
+              "\"",
+              0.0067
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 2.966797,
+          "kl_to_handled": 3.525391,
+          "kl_to_scrambled": 2.875,
+          "js_to_handled": 0.486328,
+          "top1": "\u00c2",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "\u00c2",
+              0.0053
+            ],
+            [
+              "wur",
+              0.0038
+            ],
+            [
+              "The",
+              0.0033
+            ],
+            [
+              "Wer",
+              0.0031
+            ],
+            [
+              "(**",
+              0.0031
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 2.400391,
+          "kl_to_handled": 3.359375,
+          "kl_to_scrambled": 2.347656,
+          "js_to_handled": 0.50769,
+          "top1": "the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "the",
+              0.1181
+            ],
+            [
+              ",",
+              0.0562
+            ],
+            [
+              ".",
+              0.0536
+            ],
+            [
+              "to",
+              0.0524
+            ],
+            [
+              "c",
+              0.0169
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 0.80957,
+          "kl_to_scrambled": 1.707031,
+          "js_to_handled": 0.141663,
+          "top1": "\n",
+          "top1_matches_handled": true,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              "\n",
+              0.1476
+            ],
+            [
+              "</s>",
+              0.1453
+            ],
+            [
+              "",
+              0.0569
+            ],
+            [
+              "(",
+              0.0203
+            ],
+            [
+              "ng",
+              0.0131
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 3.949219,
+          "kl_to_handled": 4.566406,
+          "kl_to_scrambled": 3.320312,
+          "js_to_handled": 0.452148,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.4385
+            ],
+            [
+              "B",
+              0.0444
+            ],
+            [
+              ":",
+              0.0144
+            ],
+            [
+              "of",
+              0.0112
+            ],
+            [
+              "-",
+              0.01
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 2.558594,
+          "kl_to_handled": 2.880859,
+          "kl_to_scrambled": 1.830078,
+          "js_to_handled": 0.430176,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.1119
+            ],
+            [
+              "-",
+              0.0204
+            ],
+            [
+              "_",
+              0.0092
+            ],
+            [
+              "\n",
+              0.0077
+            ],
+            [
+              "more",
+              0.0069
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 2.628906,
+          "kl_to_handled": 2.662109,
+          "kl_to_scrambled": 2.148438,
+          "js_to_handled": 0.453003,
+          "top1": ",",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              ",",
+              0.0077
+            ],
+            [
+              "synchron",
+              0.0044
+            ],
+            [
+              "civil",
+              0.0027
+            ],
+            [
+              "parallel",
+              0.0026
+            ],
+            [
+              "fifty",
+              0.0025
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 2.783203,
+          "kl_to_handled": 2.716797,
+          "kl_to_scrambled": 2.384766,
+          "js_to_handled": 0.461182,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.005
+            ],
+            [
+              "parallel",
+              0.0023
+            ],
+            [
+              "roll",
+              0.0021
+            ],
+            [
+              ",",
+              0.002
+            ],
+            [
+              "civil",
+              0.002
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 2.902344,
+          "kl_to_handled": 2.753906,
+          "kl_to_scrambled": 2.529297,
+          "js_to_handled": 0.464111,
+          "top1": "synchron",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "synchron",
+              0.0032
+            ],
+            [
+              "footnote",
+              0.0025
+            ],
+            [
+              "XX",
+              0.0025
+            ],
+            [
+              "aches",
+              0.0023
+            ],
+            [
+              "roll",
+              0.0017
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 3.001953,
+          "kl_to_handled": 2.810547,
+          "kl_to_scrambled": 2.628906,
+          "js_to_handled": 0.468384,
+          "top1": "XX",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "XX",
+              0.0028
+            ],
+            [
+              "footnote",
+              0.0028
+            ],
+            [
+              "Bald",
+              0.0022
+            ],
+            [
+              "aches",
+              0.0019
+            ],
+            [
+              "synchron",
+              0.0018
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

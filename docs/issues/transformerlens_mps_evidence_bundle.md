@@ -57,7 +57,7 @@ These files explain how the bug was surfaced and why older Qwen/TransformerLens/
 
 - `docs/sessions/SESSION_H.md`
 - `WHAT_DIED.md`
-- `bench/session_h.py`
+- `mechanisms/session_h.py`
 
 ## Posting guidance
 

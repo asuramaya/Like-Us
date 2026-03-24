@@ -38,7 +38,7 @@ The session pivoted three times:
 | `build_dashboard.py` | Comprehensive research dashboard generator |
 | `visualize_all.py` | Earlier results visualization (superseded by dashboard) |
 
-Data in `bench/neuron_data/`:
+Data in `mechanisms/dead/neuron_data/`:
 - Two full matrices (1.5B, 3B) × 16 conditions × 10 scenarios
 - Extended degradation data (8 conditions × 10 scenarios × 8 turns)
 - Causal patching data (both scales, 4 condition pairs, every layer)

@@ -19,7 +19,7 @@ These files explain how the invalid Qwen/TransformerLens/MPS path was discovered
 
 - `docs/sessions/SESSION_H.md`
 - `WHAT_DIED.md`
-- `bench/session_h.py`
-- `bench/session_h_data/session_h_Qwen_Qwen2.5-1.5B-Instruct.json`
-- `bench/session_h_data/session_h_Qwen_Qwen2.5-3B-Instruct.json`
-- `bench/session_h_data/session_h_Qwen_Qwen2.5-7B-Instruct.json`
+- `mechanisms/session_h.py`
+- `mechanisms/session_h_data/session_h_Qwen_Qwen2.5-1.5B-Instruct.json`
+- `mechanisms/session_h_data/session_h_Qwen_Qwen2.5-3B-Instruct.json`
+- `mechanisms/session_h_data/session_h_Qwen_Qwen2.5-7B-Instruct.json`

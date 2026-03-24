@@ -3,7 +3,7 @@
 > **SESSION H UPDATE (2026-03-22):** This document was written by Session G using a Qwen + TransformerLens + Apple Silicon MPS path later judged invalid. Session H originally described the failure as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions below (~42-54%) happened to be close to the correct values (~49-51% on HuggingFace), but the KL findings ("does not decay"), cumulative patching interpretation, and metric comparisons are unreliable. See `SESSION_H.md` for corrected measurements on the corrected path.
 
 **Date:** 2026-03-17
-**Script:** `bench/diagnose.py`
+**Script:** `mechanisms/dead/diagnose.py`
 **Models tested:** Qwen2.5-1.5B-Instruct, Qwen2.5-3B-Instruct
 
 ---
@@ -140,7 +140,7 @@ The norm varies wildly (12 to 25) while the KL is relatively stable (0.36 to 0.4
 
 ## Scripts
 
-- `bench/diagnose.py` — The new diagnostic instrument (this analysis)
-- `bench/patch_all_layers.py` — The old script with the bug (uses wrong hook name)
-- Results: `bench/neuron_data/diagnose_Qwen_Qwen2.5-1.5B-Instruct.json`
-- Results: `bench/neuron_data/diagnose_Qwen_Qwen2.5-3B-Instruct.json`
+- `mechanisms/dead/diagnose.py` — The new diagnostic instrument (this analysis)
+- `mechanisms/dead/patch_all_layers.py` — The old script with the bug (uses wrong hook name)
+- Results: `mechanisms/dead/neuron_data/diagnose_Qwen_Qwen2.5-1.5B-Instruct.json`
+- Results: `mechanisms/dead/neuron_data/diagnose_Qwen_Qwen2.5-3B-Instruct.json`

@@ -1,0 +1,75 @@
+Model: Qwen/Qwen2.5-7B-Instruct
+Scenarios: 5
+Loading...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.33s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:07<00:07,  3.92s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:11<00:03,  3.93s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:15<00:00,  4.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:15<00:00,  3.97s/it]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model Qwen/Qwen2.5-7B-Instruct into HookedTransformer
+Loaded. 28 layers, d_model = 3584
+
+======================================================================
+[1/5] coherence_laundering
+======================================================================
+
+  TEST 1: ACTIVATION ENTROPY (residual stream)
+  Layer     baseline   handled  scramble  reversed  safety_o
+  ----------------------------------------------------------
+  L0          11.29      11.3     11.29      11.3      11.3
+  L3          11.29     11.29     11.29      11.3     11.29
+  L6          11.36     11.36     11.36     11.36     11.36
+  L9          11.33     11.33     11.33     11.34     11.33
+  L12         11.29      11.3     11.29      11.3      11.3
+  L15         11.34     11.36     11.35     11.35     11.36
+  L18         11.38     11.37     11.37     11.38     11.38
+  L21         11.39     11.39     11.39     11.38     11.38
+  L24         11.39      11.4     11.39      11.4     11.39
+  L27         11.35     11.35     11.36     11.35     11.36
+
+  TEST 2: KL DIVERGENCE (output logits)
+    handled vs baseline: KL=0.1315 sym=0.1283
+    scrambled vs baseline: KL=0.3976 sym=0.3607
+    handled vs scrambled: KL=0.3406 sym=0.3697
+    handled vs reversed: KL=0.0685 sym=0.0696
+    safety_only vs baseline: KL=0.1517 sym=0.1534
+
+  TEST 3: OUTPUT DISTRIBUTION ENTROPY
+    [baseline] H=4.78 bits, top5_mass=0.6353
+    [handled] H=4.95 bits, top5_mass=0.6408
+    [scrambled] H=4.46 bits, top5_mass=0.699
+    [reversed] H=4.98 bits, top5_mass=0.605
+    [safety_only] H=4.93 bits, top5_mass=0.6445
+
+  TEST 4: EFFECTIVE DIMENSIONALITY (system prompt diff)
+/Users/asuramaya/Code/automatons/bench/info_theory.py:91: UserWarning: The operator 'aten::_linalg_svd.U' is not currently supported on the MPS backend and will fall back to run on the CPU. This may have performance implications. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/mps/MPSFallback.mm:15.)
+  s = torch.linalg.svdvals(x)
+  L0            1.0       1.0       1.0       1.0
+  L3            1.0       1.0       1.0       1.0
+  L6            1.0       1.0       1.0       1.0
+  L9            1.0       1.0       1.0       1.0
+  L12           1.0       1.0       1.0       1.0
+  L15           1.0       1.0       1.0       1.0
+  L18           1.0       1.0       1.0       1.0
+  L21           1.0       1.0       1.0       1.0
+  L24           1.0       1.0       1.0       1.0
+  L27           1.0       1.0       1.0       1.0
+
+  TEST 5: MLP vs ATTENTION ENTROPY
+  Layer      MLP_ent  Attn_ent MLP_ent_b Attn_ent_b
+  --------------------------------------------------
+  L0          13.05      3.81     13.05       3.51
+  L3          12.95      4.45     12.93       4.08
+  L6          13.56      4.06     13.56       3.76
+  L9           13.6      5.22      13.6       4.71
+  L12         13.49      5.28     13.49        4.8
+  L15          13.4      4.91     13.39       4.43
+  L18         13.34      5.18     13.34       4.65
+  L21         13.37      5.15     13.38       4.57
+  L24         13.23      4.76     13.22        4.3
+  L27         11.94       4.7     11.95       4.18
+Traceback (most recent call last):
+  File "/Users/asuramaya/Code/automatons/bench/info_theory.py", line 303, in <module>
+    main()
+  File "/Users/asuramaya/Code/automatons/bench/info_theory.py", line 279, in main
+    for cid in caches:
+RuntimeError: dictionary changed size during iteration

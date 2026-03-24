@@ -1,0 +1,2012 @@
+{
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "n_layers": 36,
+  "d_model": 2048,
+  "timestamp": "2026-03-17 08:30:49",
+  "n_extract_scenarios": 5,
+  "n_test_scenarios": 5,
+  "strengths": [
+    -2.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "results": [
+    {
+      "scenario": "coherence_laundering",
+      "clean_top1": {
+        "baseline": " reg",
+        "handled": " Vog",
+        "scrambled": " h"
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            " reg",
+            0.0333
+          ],
+          [
+            "/",
+            0.0283
+          ],
+          [
+            " itself",
+            0.0246
+          ],
+          [
+            "\\/",
+            0.0161
+          ],
+          [
+            "r",
+            0.0141
+          ]
+        ],
+        "handled": [
+          [
+            " Vog",
+            0.1097
+          ],
+          [
+            " c",
+            0.0379
+          ],
+          [
+            " itself",
+            0.0354
+          ],
+          [
+            " r",
+            0.0338
+          ],
+          [
+            " three",
+            0.03
+          ]
+        ],
+        "scrambled": [
+          [
+            " h",
+            0.06
+          ],
+          [
+            " the",
+            0.0577
+          ],
+          [
+            " Vog",
+            0.035
+          ],
+          [
+            " Gren",
+            0.0299
+          ],
+          [
+            " itself",
+            0.0268
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 0.127563,
+          "kl_to_handled": 1.890625,
+          "kl_to_scrambled": 1.695312,
+          "js_to_handled": 0.326416,
+          "top1": "/",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "/",
+              0.0497
+            ],
+            [
+              "/f",
+              0.0207
+            ],
+            [
+              " reg",
+              0.0204
+            ],
+            [
+              "r",
+              0.0179
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0156
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 0.034271,
+          "kl_to_handled": 1.634766,
+          "kl_to_scrambled": 1.488281,
+          "js_to_handled": 0.29187,
+          "top1": "/",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "/",
+              0.0383
+            ],
+            [
+              " reg",
+              0.0267
+            ],
+            [
+              "r",
+              0.0163
+            ],
+            [
+              "\\/",
+              0.0162
+            ],
+            [
+              " itself",
+              0.0157
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 0.008339,
+          "kl_to_handled": 1.50293,
+          "kl_to_scrambled": 1.380859,
+          "js_to_handled": 0.271851,
+          "top1": "/",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "/",
+              0.0333
+            ],
+            [
+              " reg",
+              0.0301
+            ],
+            [
+              " itself",
+              0.0201
+            ],
+            [
+              "\\/",
+              0.0164
+            ],
+            [
+              "r",
+              0.0153
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 1.381836,
+          "kl_to_scrambled": 1.288086,
+          "js_to_handled": 0.253723,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0333
+            ],
+            [
+              "/",
+              0.0283
+            ],
+            [
+              " itself",
+              0.0246
+            ],
+            [
+              "\\/",
+              0.0161
+            ],
+            [
+              "r",
+              0.0141
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 0.010048,
+          "kl_to_handled": 1.255859,
+          "kl_to_scrambled": 1.193359,
+          "js_to_handled": 0.234619,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0367
+            ],
+            [
+              " itself",
+              0.0292
+            ],
+            [
+              "/",
+              0.0235
+            ],
+            [
+              "\\/",
+              0.0153
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0138
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 0.037567,
+          "kl_to_handled": 1.125977,
+          "kl_to_scrambled": 1.099609,
+          "js_to_handled": 0.214233,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0399
+            ],
+            [
+              " itself",
+              0.0333
+            ],
+            [
+              "/",
+              0.0197
+            ],
+            [
+              "\\/",
+              0.0145
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0134
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 0.080627,
+          "kl_to_handled": 1.017578,
+          "kl_to_scrambled": 1.03418,
+          "js_to_handled": 0.197571,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0413
+            ],
+            [
+              " itself",
+              0.0348
+            ],
+            [
+              "/",
+              0.0167
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0141
+            ],
+            [
+              "\\/",
+              0.0139
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 0.141113,
+          "kl_to_handled": 0.921387,
+          "kl_to_scrambled": 0.983398,
+          "js_to_handled": 0.183044,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0421
+            ],
+            [
+              " itself",
+              0.0346
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0148
+            ],
+            [
+              "/",
+              0.0144
+            ],
+            [
+              "\\/",
+              0.0132
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 0.307861,
+          "kl_to_handled": 0.787109,
+          "kl_to_scrambled": 0.943848,
+          "js_to_handled": 0.163269,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0418
+            ],
+            [
+              " itself",
+              0.0304
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0181
+            ],
+            [
+              "\\/",
+              0.0121
+            ],
+            [
+              "\u00a0\u00a0",
+              0.012
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 0.782715,
+          "kl_to_handled": 0.883301,
+          "kl_to_scrambled": 1.229492,
+          "js_to_handled": 0.182739,
+          "top1": "\u4ee5\u4e3a",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "\u4ee5\u4e3a",
+              0.0337
+            ],
+            [
+              " reg",
+              0.025
+            ],
+            [
+              "\u00a0\u00a0",
+              0.0213
+            ],
+            [
+              "\u9996",
+              0.0198
+            ],
+            [
+              "\u00a0",
+              0.0172
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "clean_top1": {
+        "baseline": " reg",
+        "handled": " Vog",
+        "scrambled": " h"
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            " reg",
+            0.0601
+          ],
+          [
+            "/",
+            0.0219
+          ],
+          [
+            "\u4ee5\u4e3a",
+            0.0189
+          ],
+          [
+            " itself",
+            0.0185
+          ],
+          [
+            "\u4e00\u65f6",
+            0.0111
+          ]
+        ],
+        "handled": [
+          [
+            " Vog",
+            0.0889
+          ],
+          [
+            " r",
+            0.0417
+          ],
+          [
+            " three",
+            0.0382
+          ],
+          [
+            " itself",
+            0.0312
+          ],
+          [
+            " c",
+            0.0265
+          ]
+        ],
+        "scrambled": [
+          [
+            " h",
+            0.0995
+          ],
+          [
+            " the",
+            0.0658
+          ],
+          [
+            " r",
+            0.0281
+          ],
+          [
+            " reg",
+            0.0272
+          ],
+          [
+            " three",
+            0.0258
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 0.123718,
+          "kl_to_handled": 1.859375,
+          "kl_to_scrambled": 1.736328,
+          "js_to_handled": 0.321899,
+          "top1": "/",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "/",
+              0.0409
+            ],
+            [
+              " reg",
+              0.0353
+            ],
+            [
+              "/f",
+              0.0222
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0202
+            ],
+            [
+              "/c",
+              0.014
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 0.032074,
+          "kl_to_handled": 1.609375,
+          "kl_to_scrambled": 1.541992,
+          "js_to_handled": 0.291748,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0474
+            ],
+            [
+              "/",
+              0.0311
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0193
+            ],
+            [
+              "/f",
+              0.0151
+            ],
+            [
+              " itself",
+              0.0127
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 0.00843,
+          "kl_to_handled": 1.50293,
+          "kl_to_scrambled": 1.460938,
+          "js_to_handled": 0.27771,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0535
+            ],
+            [
+              "/",
+              0.0267
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0189
+            ],
+            [
+              " itself",
+              0.0156
+            ],
+            [
+              "/f",
+              0.0119
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 1.395508,
+          "kl_to_scrambled": 1.378906,
+          "js_to_handled": 0.262573,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0601
+            ],
+            [
+              "/",
+              0.0219
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0189
+            ],
+            [
+              " itself",
+              0.0185
+            ],
+            [
+              "\u4e00\u65f6",
+              0.0111
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 0.008087,
+          "kl_to_handled": 1.299805,
+          "kl_to_scrambled": 1.306641,
+          "js_to_handled": 0.24823,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0658
+            ],
+            [
+              " itself",
+              0.0212
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.019
+            ],
+            [
+              "/",
+              0.0183
+            ],
+            [
+              "\u4e00\u65f6",
+              0.0116
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 0.03093,
+          "kl_to_handled": 1.204102,
+          "kl_to_scrambled": 1.240234,
+          "js_to_handled": 0.23291,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0697
+            ],
+            [
+              " itself",
+              0.023
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0191
+            ],
+            [
+              "/",
+              0.0153
+            ],
+            [
+              "\u4e00\u65f6",
+              0.0112
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 0.070801,
+          "kl_to_handled": 1.112305,
+          "kl_to_scrambled": 1.180664,
+          "js_to_handled": 0.218323,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0734
+            ],
+            [
+              " itself",
+              0.0235
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0194
+            ],
+            [
+              "/",
+              0.0129
+            ],
+            [
+              " the",
+              0.0115
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 0.124573,
+          "kl_to_handled": 1.033203,
+          "kl_to_scrambled": 1.139648,
+          "js_to_handled": 0.205688,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0741
+            ],
+            [
+              " itself",
+              0.0229
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0198
+            ],
+            [
+              " the",
+              0.0122
+            ],
+            [
+              "/",
+              0.0114
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 0.276123,
+          "kl_to_handled": 0.889648,
+          "kl_to_scrambled": 1.078125,
+          "js_to_handled": 0.181702,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0748
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0213
+            ],
+            [
+              " itself",
+              0.0195
+            ],
+            [
+              " the",
+              0.0134
+            ],
+            [
+              " r",
+              0.0104
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 0.718262,
+          "kl_to_handled": 0.923828,
+          "kl_to_scrambled": 1.344727,
+          "js_to_handled": 0.190369,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.045
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0312
+            ],
+            [
+              "\u00a0\u00a0",
+              0.0204
+            ],
+            [
+              "\u00a0",
+              0.0194
+            ],
+            [
+              " ge",
+              0.0117
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "clean_top1": {
+        "baseline": " reg",
+        "handled": " r",
+        "scrambled": " h"
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            " reg",
+            0.1052
+          ],
+          [
+            " itself",
+            0.0449
+          ],
+          [
+            " himself",
+            0.0128
+          ],
+          [
+            "\\/",
+            0.0123
+          ],
+          [
+            "/",
+            0.0122
+          ]
+        ],
+        "handled": [
+          [
+            " r",
+            0.0573
+          ],
+          [
+            " Vog",
+            0.0555
+          ],
+          [
+            " itself",
+            0.0406
+          ],
+          [
+            " three",
+            0.0359
+          ],
+          [
+            " h",
+            0.0356
+          ]
+        ],
+        "scrambled": [
+          [
+            " h",
+            0.06
+          ],
+          [
+            " the",
+            0.0467
+          ],
+          [
+            " Vog",
+            0.0457
+          ],
+          [
+            " reg",
+            0.0406
+          ],
+          [
+            " Gren",
+            0.0314
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 0.175049,
+          "kl_to_handled": 1.423828,
+          "kl_to_scrambled": 1.333984,
+          "js_to_handled": 0.265137,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0693
+            ],
+            [
+              "/f",
+              0.0354
+            ],
+            [
+              "/c",
+              0.03
+            ],
+            [
+              "/",
+              0.028
+            ],
+            [
+              " itself",
+              0.0257
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 0.041077,
+          "kl_to_handled": 1.147461,
+          "kl_to_scrambled": 1.107422,
+          "js_to_handled": 0.227112,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0905
+            ],
+            [
+              " itself",
+              0.0363
+            ],
+            [
+              "/f",
+              0.0199
+            ],
+            [
+              "/",
+              0.019
+            ],
+            [
+              "/c",
+              0.0146
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 0.009995,
+          "kl_to_handled": 1.039062,
+          "kl_to_scrambled": 1.023438,
+          "js_to_handled": 0.210327,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0986
+            ],
+            [
+              " itself",
+              0.0408
+            ],
+            [
+              "/",
+              0.0152
+            ],
+            [
+              "/f",
+              0.0139
+            ],
+            [
+              "\\/",
+              0.0129
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 0.94873,
+          "kl_to_scrambled": 0.955078,
+          "js_to_handled": 0.194824,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1052
+            ],
+            [
+              " itself",
+              0.0449
+            ],
+            [
+              " himself",
+              0.0128
+            ],
+            [
+              "\\/",
+              0.0123
+            ],
+            [
+              "/",
+              0.0122
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 0.009697,
+          "kl_to_handled": 0.87207,
+          "kl_to_scrambled": 0.905273,
+          "js_to_handled": 0.181396,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1086
+            ],
+            [
+              " itself",
+              0.0474
+            ],
+            [
+              " himself",
+              0.0134
+            ],
+            [
+              "\\/",
+              0.0114
+            ],
+            [
+              " c",
+              0.0102
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 0.03244,
+          "kl_to_handled": 0.806641,
+          "kl_to_scrambled": 0.864746,
+          "js_to_handled": 0.168335,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1126
+            ],
+            [
+              " itself",
+              0.0477
+            ],
+            [
+              " himself",
+              0.0138
+            ],
+            [
+              " r",
+              0.0108
+            ],
+            [
+              "\\/",
+              0.0102
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 0.069641,
+          "kl_to_handled": 0.748535,
+          "kl_to_scrambled": 0.838379,
+          "js_to_handled": 0.15741,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1129
+            ],
+            [
+              " itself",
+              0.0467
+            ],
+            [
+              " himself",
+              0.0142
+            ],
+            [
+              " r",
+              0.0133
+            ],
+            [
+              " Mar",
+              0.0097
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 0.116272,
+          "kl_to_handled": 0.696777,
+          "kl_to_scrambled": 0.821289,
+          "js_to_handled": 0.147217,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1125
+            ],
+            [
+              " itself",
+              0.0444
+            ],
+            [
+              " r",
+              0.0155
+            ],
+            [
+              " himself",
+              0.0146
+            ],
+            [
+              " Three",
+              0.0111
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 0.243652,
+          "kl_to_handled": 0.613281,
+          "kl_to_scrambled": 0.816406,
+          "js_to_handled": 0.131714,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1094
+            ],
+            [
+              " itself",
+              0.0399
+            ],
+            [
+              " r",
+              0.0209
+            ],
+            [
+              " himself",
+              0.0155
+            ],
+            [
+              " Three",
+              0.0145
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 0.650391,
+          "kl_to_handled": 0.67627,
+          "kl_to_scrambled": 1.073242,
+          "js_to_handled": 0.141663,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0592
+            ],
+            [
+              " itself",
+              0.0309
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0307
+            ],
+            [
+              "\u9996",
+              0.0211
+            ],
+            [
+              " r",
+              0.0208
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "clean_top1": {
+        "baseline": " the",
+        "handled": " Vog",
+        "scrambled": " the"
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            " the",
+            0.0359
+          ],
+          [
+            "r",
+            0.0259
+          ],
+          [
+            " itself",
+            0.0229
+          ],
+          [
+            "ge",
+            0.0227
+          ],
+          [
+            " reg",
+            0.0166
+          ]
+        ],
+        "handled": [
+          [
+            " Vog",
+            0.1438
+          ],
+          [
+            " three",
+            0.0467
+          ],
+          [
+            " r",
+            0.0254
+          ],
+          [
+            " c",
+            0.0248
+          ],
+          [
+            " too",
+            0.0224
+          ]
+        ],
+        "scrambled": [
+          [
+            " the",
+            0.0613
+          ],
+          [
+            " h",
+            0.0524
+          ],
+          [
+            " Vog",
+            0.0402
+          ],
+          [
+            " three",
+            0.0328
+          ],
+          [
+            " itself",
+            0.0185
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 0.115417,
+          "kl_to_handled": 1.729492,
+          "kl_to_scrambled": 1.460938,
+          "js_to_handled": 0.305298,
+          "top1": "r",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "r",
+              0.0276
+            ],
+            [
+              "ge",
+              0.025
+            ],
+            [
+              "/",
+              0.0235
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0233
+            ],
+            [
+              " the",
+              0.0139
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 0.029785,
+          "kl_to_handled": 1.544922,
+          "kl_to_scrambled": 1.280273,
+          "js_to_handled": 0.278564,
+          "top1": "r",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "r",
+              0.0268
+            ],
+            [
+              "ge",
+              0.0246
+            ],
+            [
+              " the",
+              0.0244
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0193
+            ],
+            [
+              "/",
+              0.0176
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 0.006733,
+          "kl_to_handled": 1.456055,
+          "kl_to_scrambled": 1.195312,
+          "js_to_handled": 0.265259,
+          "top1": " the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " the",
+              0.0312
+            ],
+            [
+              "r",
+              0.0267
+            ],
+            [
+              "ge",
+              0.0243
+            ],
+            [
+              " itself",
+              0.0201
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0172
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 1.367188,
+          "kl_to_scrambled": 1.123047,
+          "js_to_handled": 0.252625,
+          "top1": " the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " the",
+              0.0359
+            ],
+            [
+              "r",
+              0.0259
+            ],
+            [
+              " itself",
+              0.0229
+            ],
+            [
+              "ge",
+              0.0227
+            ],
+            [
+              " reg",
+              0.0166
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 0.007088,
+          "kl_to_handled": 1.282227,
+          "kl_to_scrambled": 1.060547,
+          "js_to_handled": 0.23999,
+          "top1": " the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " the",
+              0.0395
+            ],
+            [
+              "r",
+              0.0253
+            ],
+            [
+              " itself",
+              0.0243
+            ],
+            [
+              "ge",
+              0.021
+            ],
+            [
+              " reg",
+              0.0181
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 0.028381,
+          "kl_to_handled": 1.198242,
+          "kl_to_scrambled": 1.011719,
+          "js_to_handled": 0.226929,
+          "top1": " the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " the",
+              0.0392
+            ],
+            [
+              "r",
+              0.0251
+            ],
+            [
+              " itself",
+              0.0247
+            ],
+            [
+              " reg",
+              0.0197
+            ],
+            [
+              "ge",
+              0.0191
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 0.063416,
+          "kl_to_handled": 1.107422,
+          "kl_to_scrambled": 0.970703,
+          "js_to_handled": 0.212891,
+          "top1": " the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " the",
+              0.0361
+            ],
+            [
+              " itself",
+              0.024
+            ],
+            [
+              "r",
+              0.0231
+            ],
+            [
+              " reg",
+              0.0209
+            ],
+            [
+              "ge",
+              0.0165
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 0.116638,
+          "kl_to_handled": 1.022461,
+          "kl_to_scrambled": 0.948242,
+          "js_to_handled": 0.200562,
+          "top1": " the",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " the",
+              0.0294
+            ],
+            [
+              " itself",
+              0.0224
+            ],
+            [
+              " reg",
+              0.022
+            ],
+            [
+              "r",
+              0.0208
+            ],
+            [
+              " ge",
+              0.016
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 0.2771,
+          "kl_to_handled": 0.878418,
+          "kl_to_scrambled": 0.938477,
+          "js_to_handled": 0.18103,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              " reg",
+              0.0244
+            ],
+            [
+              " ge",
+              0.0191
+            ],
+            [
+              " itself",
+              0.0187
+            ],
+            [
+              " the",
+              0.0173
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0158
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 0.81543,
+          "kl_to_handled": 0.944824,
+          "kl_to_scrambled": 1.258789,
+          "js_to_handled": 0.199097,
+          "top1": "\u4ee5\u4e3a",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": false,
+          "top5": [
+            [
+              "\u4ee5\u4e3a",
+              0.0279
+            ],
+            [
+              "\u9996",
+              0.0258
+            ],
+            [
+              " reg",
+              0.0187
+            ],
+            [
+              " ge",
+              0.0172
+            ],
+            [
+              "\u00a0\u00a0",
+              0.0163
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "clean_top1": {
+        "baseline": " reg",
+        "handled": " Vog",
+        "scrambled": " the"
+      },
+      "clean_top5": {
+        "baseline": [
+          [
+            " reg",
+            0.0949
+          ],
+          [
+            " itself",
+            0.0599
+          ],
+          [
+            "/",
+            0.0215
+          ],
+          [
+            " the",
+            0.0207
+          ],
+          [
+            "\\/",
+            0.0168
+          ]
+        ],
+        "handled": [
+          [
+            " Vog",
+            0.064
+          ],
+          [
+            " r",
+            0.0487
+          ],
+          [
+            " itself",
+            0.0487
+          ],
+          [
+            " three",
+            0.0472
+          ],
+          [
+            " the",
+            0.0391
+          ]
+        ],
+        "scrambled": [
+          [
+            " the",
+            0.0712
+          ],
+          [
+            " reg",
+            0.0422
+          ],
+          [
+            " h",
+            0.0361
+          ],
+          [
+            " itself",
+            0.0358
+          ],
+          [
+            " Vog",
+            0.0306
+          ]
+        ]
+      },
+      "steering": [
+        {
+          "alpha": -2.0,
+          "kl_to_baseline": 0.135742,
+          "kl_to_handled": 1.609375,
+          "kl_to_scrambled": 1.383789,
+          "js_to_handled": 0.279053,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0593
+            ],
+            [
+              "/",
+              0.0365
+            ],
+            [
+              "/f",
+              0.0365
+            ],
+            [
+              " itself",
+              0.0265
+            ],
+            [
+              "/c",
+              0.0257
+            ]
+          ]
+        },
+        {
+          "alpha": -1.0,
+          "kl_to_baseline": 0.034241,
+          "kl_to_handled": 1.308594,
+          "kl_to_scrambled": 1.135742,
+          "js_to_handled": 0.241394,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.078
+            ],
+            [
+              " itself",
+              0.0417
+            ],
+            [
+              "/",
+              0.0291
+            ],
+            [
+              "/f",
+              0.024
+            ],
+            [
+              " the",
+              0.0182
+            ]
+          ]
+        },
+        {
+          "alpha": -0.5,
+          "kl_to_baseline": 0.008789,
+          "kl_to_handled": 1.174805,
+          "kl_to_scrambled": 1.030273,
+          "js_to_handled": 0.223267,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0864
+            ],
+            [
+              " itself",
+              0.0508
+            ],
+            [
+              "/",
+              0.0255
+            ],
+            [
+              " the",
+              0.0201
+            ],
+            [
+              "/f",
+              0.0181
+            ]
+          ]
+        },
+        {
+          "alpha": 0.0,
+          "kl_to_baseline": 0.0,
+          "kl_to_handled": 1.05957,
+          "kl_to_scrambled": 0.942871,
+          "js_to_handled": 0.206604,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0949
+            ],
+            [
+              " itself",
+              0.0599
+            ],
+            [
+              "/",
+              0.0215
+            ],
+            [
+              " the",
+              0.0207
+            ],
+            [
+              "\\/",
+              0.0168
+            ]
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "kl_to_baseline": 0.007072,
+          "kl_to_handled": 0.958496,
+          "kl_to_scrambled": 0.873047,
+          "js_to_handled": 0.190735,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1015
+            ],
+            [
+              " itself",
+              0.0676
+            ],
+            [
+              " the",
+              0.0206
+            ],
+            [
+              "/",
+              0.0179
+            ],
+            [
+              "\\/",
+              0.0162
+            ]
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "kl_to_baseline": 0.029419,
+          "kl_to_handled": 0.875,
+          "kl_to_scrambled": 0.821289,
+          "js_to_handled": 0.176697,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1055
+            ],
+            [
+              " itself",
+              0.0731
+            ],
+            [
+              " the",
+              0.0201
+            ],
+            [
+              "\\/",
+              0.0158
+            ],
+            [
+              "/",
+              0.0147
+            ]
+          ]
+        },
+        {
+          "alpha": 1.5,
+          "kl_to_baseline": 0.06488,
+          "kl_to_handled": 0.80127,
+          "kl_to_scrambled": 0.780762,
+          "js_to_handled": 0.163818,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1078
+            ],
+            [
+              " itself",
+              0.0746
+            ],
+            [
+              " the",
+              0.019
+            ],
+            [
+              "\\/",
+              0.0148
+            ],
+            [
+              "/",
+              0.0121
+            ]
+          ]
+        },
+        {
+          "alpha": 2.0,
+          "kl_to_baseline": 0.112061,
+          "kl_to_handled": 0.734375,
+          "kl_to_scrambled": 0.749512,
+          "js_to_handled": 0.151672,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1103
+            ],
+            [
+              " itself",
+              0.0729
+            ],
+            [
+              " the",
+              0.0177
+            ],
+            [
+              "\\/",
+              0.014
+            ],
+            [
+              " c",
+              0.0114
+            ]
+          ]
+        },
+        {
+          "alpha": 3.0,
+          "kl_to_baseline": 0.240234,
+          "kl_to_handled": 0.637695,
+          "kl_to_scrambled": 0.724609,
+          "js_to_handled": 0.133728,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.1094
+            ],
+            [
+              " itself",
+              0.0623
+            ],
+            [
+              " the",
+              0.0142
+            ],
+            [
+              " r",
+              0.0131
+            ],
+            [
+              " c",
+              0.0128
+            ]
+          ]
+        },
+        {
+          "alpha": 5.0,
+          "kl_to_baseline": 0.666016,
+          "kl_to_handled": 0.671875,
+          "kl_to_scrambled": 0.906738,
+          "js_to_handled": 0.142822,
+          "top1": " reg",
+          "top1_matches_handled": false,
+          "top1_matches_baseline": true,
+          "top5": [
+            [
+              " reg",
+              0.0667
+            ],
+            [
+              " itself",
+              0.0359
+            ],
+            [
+              "\u00a0\u00a0",
+              0.0218
+            ],
+            [
+              "\u4ee5\u4e3a",
+              0.0205
+            ],
+            [
+              "\u00a0",
+              0.0167
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

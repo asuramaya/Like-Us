@@ -1,0 +1,1690 @@
+{
+  "Qwen2.5-1.5B-Instruct": [
+    {
+      "word": "break",
+      "cat": "high",
+      "entropy": 3.1202,
+      "kl": 0.4906
+    },
+    {
+      "word": "cut",
+      "cat": "high",
+      "entropy": 1.0703,
+      "kl": 1.4819
+    },
+    {
+      "word": "run",
+      "cat": "high",
+      "entropy": 1.8076,
+      "kl": 0.2451
+    },
+    {
+      "word": "play",
+      "cat": "high",
+      "entropy": 1.4474,
+      "kl": 0.8006
+    },
+    {
+      "word": "make",
+      "cat": "high",
+      "entropy": 1.2716,
+      "kl": 0.3657
+    },
+    {
+      "word": "light",
+      "cat": "high",
+      "entropy": 2.9553,
+      "kl": 1.5875
+    },
+    {
+      "word": "clear",
+      "cat": "high",
+      "entropy": 2.8742,
+      "kl": 1.0431
+    },
+    {
+      "word": "draw",
+      "cat": "high",
+      "entropy": 1.0072,
+      "kl": 0.5435
+    },
+    {
+      "word": "give",
+      "cat": "high",
+      "entropy": 1.3189,
+      "kl": 2.3639
+    },
+    {
+      "word": "hold",
+      "cat": "high",
+      "entropy": 2.5659,
+      "kl": 0.7355
+    },
+    {
+      "word": "set",
+      "cat": "high",
+      "entropy": 3.1481,
+      "kl": 0.2332
+    },
+    {
+      "word": "fall",
+      "cat": "high",
+      "entropy": 3.0864,
+      "kl": 0.612
+    },
+    {
+      "word": "take",
+      "cat": "high",
+      "entropy": 1.2276,
+      "kl": 1.1226
+    },
+    {
+      "word": "head",
+      "cat": "high",
+      "entropy": 2.8067,
+      "kl": 0.9705
+    },
+    {
+      "word": "pass",
+      "cat": "high",
+      "entropy": 2.222,
+      "kl": 1.8524
+    },
+    {
+      "word": "call",
+      "cat": "high",
+      "entropy": 2.1506,
+      "kl": 0.6439
+    },
+    {
+      "word": "carry",
+      "cat": "high",
+      "entropy": 2.7359,
+      "kl": 0.283
+    },
+    {
+      "word": "charge",
+      "cat": "high",
+      "entropy": 2.7397,
+      "kl": 0.647
+    },
+    {
+      "word": "point",
+      "cat": "high",
+      "entropy": 2.7738,
+      "kl": 1.1254
+    },
+    {
+      "word": "catch",
+      "cat": "high",
+      "entropy": 2.3347,
+      "kl": 0.3519
+    },
+    {
+      "word": "check",
+      "cat": "high",
+      "entropy": 2.2177,
+      "kl": 0.1956
+    },
+    {
+      "word": "turn",
+      "cat": "high",
+      "entropy": 2.053,
+      "kl": 2.9409
+    },
+    {
+      "word": "close",
+      "cat": "high",
+      "entropy": 1.7571,
+      "kl": 1.2162
+    },
+    {
+      "word": "get",
+      "cat": "high",
+      "entropy": 2.6425,
+      "kl": 0.1801
+    },
+    {
+      "word": "right",
+      "cat": "high",
+      "entropy": 2.4296,
+      "kl": 1.4606
+    },
+    {
+      "word": "cover",
+      "cat": "high",
+      "entropy": 3.048,
+      "kl": 1.1408
+    },
+    {
+      "word": "lift",
+      "cat": "high",
+      "entropy": 2.969,
+      "kl": 0.8505
+    },
+    {
+      "word": "line",
+      "cat": "high",
+      "entropy": 2.8527,
+      "kl": 0.4765
+    },
+    {
+      "word": "open",
+      "cat": "high",
+      "entropy": 2.1917,
+      "kl": 0.2162
+    },
+    {
+      "word": "beat",
+      "cat": "high",
+      "entropy": 2.7927,
+      "kl": 0.3701
+    },
+    {
+      "word": "balance",
+      "cat": "med",
+      "entropy": 1.3488,
+      "kl": 2.3572
+    },
+    {
+      "word": "blast",
+      "cat": "med",
+      "entropy": 1.9951,
+      "kl": 0.1886
+    },
+    {
+      "word": "crown",
+      "cat": "med",
+      "entropy": 2.2959,
+      "kl": 1.493
+    },
+    {
+      "word": "fit",
+      "cat": "med",
+      "entropy": 3.9933,
+      "kl": 0.338
+    },
+    {
+      "word": "float",
+      "cat": "med",
+      "entropy": 3.0953,
+      "kl": 1.6554
+    },
+    {
+      "word": "hand",
+      "cat": "med",
+      "entropy": 3.0022,
+      "kl": 0.7368
+    },
+    {
+      "word": "issue",
+      "cat": "med",
+      "entropy": 0.9678,
+      "kl": 0.2621
+    },
+    {
+      "word": "low",
+      "cat": "med",
+      "entropy": 2.9197,
+      "kl": 0.7661
+    },
+    {
+      "word": "mean",
+      "cat": "med",
+      "entropy": 1.2633,
+      "kl": 0.1983
+    },
+    {
+      "word": "model",
+      "cat": "med",
+      "entropy": 2.6944,
+      "kl": 0.679
+    },
+    {
+      "word": "offer",
+      "cat": "med",
+      "entropy": 1.7213,
+      "kl": 0.9123
+    },
+    {
+      "word": "ride",
+      "cat": "med",
+      "entropy": 1.6976,
+      "kl": 0.5391
+    },
+    {
+      "word": "rush",
+      "cat": "med",
+      "entropy": 2.7573,
+      "kl": 0.3408
+    },
+    {
+      "word": "seat",
+      "cat": "med",
+      "entropy": 2.7501,
+      "kl": 0.8131
+    },
+    {
+      "word": "serve",
+      "cat": "med",
+      "entropy": 1.5731,
+      "kl": 1.044
+    },
+    {
+      "word": "show",
+      "cat": "med",
+      "entropy": 0.9144,
+      "kl": 1.1438
+    },
+    {
+      "word": "stay",
+      "cat": "med",
+      "entropy": 2.2355,
+      "kl": 0.6635
+    },
+    {
+      "word": "stone",
+      "cat": "med",
+      "entropy": 3.3856,
+      "kl": 0.6478
+    },
+    {
+      "word": "stroke",
+      "cat": "med",
+      "entropy": 3.1897,
+      "kl": 1.1512
+    },
+    {
+      "word": "study",
+      "cat": "med",
+      "entropy": 2.8226,
+      "kl": 0.8948
+    },
+    {
+      "word": "act",
+      "cat": "med",
+      "entropy": 2.7516,
+      "kl": 0.3784
+    },
+    {
+      "word": "air",
+      "cat": "med",
+      "entropy": 3.5002,
+      "kl": 1.221
+    },
+    {
+      "word": "answer",
+      "cat": "med",
+      "entropy": 1.6295,
+      "kl": 2.874
+    },
+    {
+      "word": "attack",
+      "cat": "med",
+      "entropy": 1.4636,
+      "kl": 0.1181
+    },
+    {
+      "word": "band",
+      "cat": "med",
+      "entropy": 3.4837,
+      "kl": 0.7236
+    },
+    {
+      "word": "bear",
+      "cat": "med",
+      "entropy": 3.3361,
+      "kl": 0.6868
+    },
+    {
+      "word": "book",
+      "cat": "med",
+      "entropy": 2.1198,
+      "kl": 0.79
+    },
+    {
+      "word": "brush",
+      "cat": "med",
+      "entropy": 3.5238,
+      "kl": 0.3265
+    },
+    {
+      "word": "dark",
+      "cat": "med",
+      "entropy": 3.2173,
+      "kl": 0.5713
+    },
+    {
+      "word": "easy",
+      "cat": "med",
+      "entropy": 2.7056,
+      "kl": 1.2029
+    },
+    {
+      "word": "photosynthesis",
+      "cat": "unambig",
+      "entropy": 0.3824,
+      "kl": 0.2368
+    },
+    {
+      "word": "Constantinople",
+      "cat": "unambig",
+      "entropy": 0.1344,
+      "kl": 0.1982
+    },
+    {
+      "word": "2+2=4",
+      "cat": "unambig",
+      "entropy": 2.5929,
+      "kl": 1.7915
+    },
+    {
+      "word": "mitochondria",
+      "cat": "unambig",
+      "entropy": 0.4106,
+      "kl": 0.1536
+    },
+    {
+      "word": "The Eiffel Tower is in Paris",
+      "cat": "unambig",
+      "entropy": 1.2016,
+      "kl": 0.5742
+    },
+    {
+      "word": "H2O is water",
+      "cat": "unambig",
+      "entropy": 1.0178,
+      "kl": 1.3039
+    },
+    {
+      "word": "Abraham Lincoln",
+      "cat": "unambig",
+      "entropy": 0.2674,
+      "kl": 0.2839
+    },
+    {
+      "word": "The speed of light",
+      "cat": "unambig",
+      "entropy": 0.1773,
+      "kl": 0.0807
+    },
+    {
+      "word": "DNA replication",
+      "cat": "unambig",
+      "entropy": 0.1644,
+      "kl": 0.4
+    },
+    {
+      "word": "integer overflow",
+      "cat": "unambig",
+      "entropy": 1.7689,
+      "kl": 0.4828
+    }
+  ],
+  "Qwen2.5-3B-Instruct": [
+    {
+      "word": "break",
+      "cat": "high",
+      "entropy": 1.0034,
+      "kl": 1.3575
+    },
+    {
+      "word": "cut",
+      "cat": "high",
+      "entropy": 0.5705,
+      "kl": 0.8144
+    },
+    {
+      "word": "run",
+      "cat": "high",
+      "entropy": 0.2771,
+      "kl": 0.6285
+    },
+    {
+      "word": "play",
+      "cat": "high",
+      "entropy": 1.221,
+      "kl": 0.1588
+    },
+    {
+      "word": "make",
+      "cat": "high",
+      "entropy": 0.8937,
+      "kl": 1.3745
+    },
+    {
+      "word": "light",
+      "cat": "high",
+      "entropy": 1.6593,
+      "kl": 3.3673
+    },
+    {
+      "word": "clear",
+      "cat": "high",
+      "entropy": 0.193,
+      "kl": 0.1063
+    },
+    {
+      "word": "draw",
+      "cat": "high",
+      "entropy": 0.4767,
+      "kl": 0.005
+    },
+    {
+      "word": "give",
+      "cat": "high",
+      "entropy": 0.7589,
+      "kl": 0.1688
+    },
+    {
+      "word": "hold",
+      "cat": "high",
+      "entropy": 0.9833,
+      "kl": 0.6362
+    },
+    {
+      "word": "set",
+      "cat": "high",
+      "entropy": 0.3351,
+      "kl": 0.3223
+    },
+    {
+      "word": "fall",
+      "cat": "high",
+      "entropy": 0.8174,
+      "kl": 4.0059
+    },
+    {
+      "word": "take",
+      "cat": "high",
+      "entropy": 0.6949,
+      "kl": 0.9636
+    },
+    {
+      "word": "head",
+      "cat": "high",
+      "entropy": 0.3723,
+      "kl": 0.138
+    },
+    {
+      "word": "pass",
+      "cat": "high",
+      "entropy": 0.1616,
+      "kl": 1.8476
+    },
+    {
+      "word": "call",
+      "cat": "high",
+      "entropy": 0.5523,
+      "kl": 0.2714
+    },
+    {
+      "word": "carry",
+      "cat": "high",
+      "entropy": 1.0122,
+      "kl": 6.4277
+    },
+    {
+      "word": "charge",
+      "cat": "high",
+      "entropy": 0.6446,
+      "kl": 9.4825
+    },
+    {
+      "word": "point",
+      "cat": "high",
+      "entropy": 0.9133,
+      "kl": 2.5377
+    },
+    {
+      "word": "catch",
+      "cat": "high",
+      "entropy": 0.1238,
+      "kl": 6.2914
+    },
+    {
+      "word": "check",
+      "cat": "high",
+      "entropy": 0.5004,
+      "kl": 0.0391
+    },
+    {
+      "word": "turn",
+      "cat": "high",
+      "entropy": 0.7767,
+      "kl": 2.9667
+    },
+    {
+      "word": "close",
+      "cat": "high",
+      "entropy": 0.2049,
+      "kl": 1.4126
+    },
+    {
+      "word": "get",
+      "cat": "high",
+      "entropy": 0.6492,
+      "kl": 0.0062
+    },
+    {
+      "word": "right",
+      "cat": "high",
+      "entropy": 0.8435,
+      "kl": 1.7853
+    },
+    {
+      "word": "cover",
+      "cat": "high",
+      "entropy": 0.2234,
+      "kl": 0.1294
+    },
+    {
+      "word": "lift",
+      "cat": "high",
+      "entropy": 1.2188,
+      "kl": 6.5289
+    },
+    {
+      "word": "line",
+      "cat": "high",
+      "entropy": 0.7143,
+      "kl": 0.2443
+    },
+    {
+      "word": "open",
+      "cat": "high",
+      "entropy": 0.7315,
+      "kl": 5.1391
+    },
+    {
+      "word": "beat",
+      "cat": "high",
+      "entropy": 1.1149,
+      "kl": 3.6125
+    },
+    {
+      "word": "balance",
+      "cat": "med",
+      "entropy": 0.7369,
+      "kl": 4.7601
+    },
+    {
+      "word": "blast",
+      "cat": "med",
+      "entropy": 0.9828,
+      "kl": 2.42
+    },
+    {
+      "word": "crown",
+      "cat": "med",
+      "entropy": 0.85,
+      "kl": 10.2578
+    },
+    {
+      "word": "fit",
+      "cat": "med",
+      "entropy": 1.002,
+      "kl": 3.528
+    },
+    {
+      "word": "float",
+      "cat": "med",
+      "entropy": 0.5833,
+      "kl": 0.1574
+    },
+    {
+      "word": "hand",
+      "cat": "med",
+      "entropy": 1.0768,
+      "kl": 1.0659
+    },
+    {
+      "word": "issue",
+      "cat": "med",
+      "entropy": 1.2422,
+      "kl": 3.5708
+    },
+    {
+      "word": "low",
+      "cat": "med",
+      "entropy": 1.3831,
+      "kl": 1.0514
+    },
+    {
+      "word": "mean",
+      "cat": "med",
+      "entropy": 0.5413,
+      "kl": 8.2717
+    },
+    {
+      "word": "model",
+      "cat": "med",
+      "entropy": 1.2283,
+      "kl": 1.8175
+    },
+    {
+      "word": "offer",
+      "cat": "med",
+      "entropy": 1.7392,
+      "kl": 2.6315
+    },
+    {
+      "word": "ride",
+      "cat": "med",
+      "entropy": 1.7009,
+      "kl": 7.9031
+    },
+    {
+      "word": "rush",
+      "cat": "med",
+      "entropy": 1.3718,
+      "kl": 3.5663
+    },
+    {
+      "word": "seat",
+      "cat": "med",
+      "entropy": 1.1781,
+      "kl": 2.4409
+    },
+    {
+      "word": "serve",
+      "cat": "med",
+      "entropy": 1.6443,
+      "kl": 1.8051
+    },
+    {
+      "word": "show",
+      "cat": "med",
+      "entropy": 0.4202,
+      "kl": 2.8012
+    },
+    {
+      "word": "stay",
+      "cat": "med",
+      "entropy": 0.8711,
+      "kl": 3.3096
+    },
+    {
+      "word": "stone",
+      "cat": "med",
+      "entropy": 1.4159,
+      "kl": 5.9252
+    },
+    {
+      "word": "stroke",
+      "cat": "med",
+      "entropy": 1.3583,
+      "kl": 9.3902
+    },
+    {
+      "word": "study",
+      "cat": "med",
+      "entropy": 0.97,
+      "kl": 0.2497
+    },
+    {
+      "word": "act",
+      "cat": "med",
+      "entropy": 0.6002,
+      "kl": 1.6243
+    },
+    {
+      "word": "air",
+      "cat": "med",
+      "entropy": 0.7758,
+      "kl": 0.6476
+    },
+    {
+      "word": "answer",
+      "cat": "med",
+      "entropy": 1.1451,
+      "kl": 13.6276
+    },
+    {
+      "word": "attack",
+      "cat": "med",
+      "entropy": 1.464,
+      "kl": 4.6317
+    },
+    {
+      "word": "band",
+      "cat": "med",
+      "entropy": 2.0535,
+      "kl": 1.7303
+    },
+    {
+      "word": "bear",
+      "cat": "med",
+      "entropy": 0.4409,
+      "kl": 4.6059
+    },
+    {
+      "word": "book",
+      "cat": "med",
+      "entropy": 1.8026,
+      "kl": 1.0697
+    },
+    {
+      "word": "brush",
+      "cat": "med",
+      "entropy": 0.9983,
+      "kl": 2.7377
+    },
+    {
+      "word": "dark",
+      "cat": "med",
+      "entropy": 0.42,
+      "kl": 0.8145
+    },
+    {
+      "word": "easy",
+      "cat": "med",
+      "entropy": 0.7421,
+      "kl": 0.2936
+    },
+    {
+      "word": "photosynthesis",
+      "cat": "unambig",
+      "entropy": 0.0012,
+      "kl": 0.0573
+    },
+    {
+      "word": "Constantinople",
+      "cat": "unambig",
+      "entropy": 0.0074,
+      "kl": 0.0077
+    },
+    {
+      "word": "2+2=4",
+      "cat": "unambig",
+      "entropy": 0.2158,
+      "kl": 5.2764
+    },
+    {
+      "word": "mitochondria",
+      "cat": "unambig",
+      "entropy": 0.0017,
+      "kl": 0.0002
+    },
+    {
+      "word": "The Eiffel Tower is in Paris",
+      "cat": "unambig",
+      "entropy": 0.7305,
+      "kl": 0.0763
+    },
+    {
+      "word": "H2O is water",
+      "cat": "unambig",
+      "entropy": 0.5007,
+      "kl": 0.1489
+    },
+    {
+      "word": "Abraham Lincoln",
+      "cat": "unambig",
+      "entropy": 0.0108,
+      "kl": 0.011
+    },
+    {
+      "word": "The speed of light",
+      "cat": "unambig",
+      "entropy": 0.0005,
+      "kl": 0.001
+    },
+    {
+      "word": "DNA replication",
+      "cat": "unambig",
+      "entropy": 0.0055,
+      "kl": 0.002
+    },
+    {
+      "word": "integer overflow",
+      "cat": "unambig",
+      "entropy": 0.6799,
+      "kl": 0.0413
+    }
+  ],
+  "Qwen2.5-7B-Instruct": [
+    {
+      "word": "break",
+      "cat": "high",
+      "entropy": 0.9702,
+      "kl": 0.1677
+    },
+    {
+      "word": "cut",
+      "cat": "high",
+      "entropy": 0.3169,
+      "kl": 0.035
+    },
+    {
+      "word": "run",
+      "cat": "high",
+      "entropy": 1.2347,
+      "kl": 0.2234
+    },
+    {
+      "word": "play",
+      "cat": "high",
+      "entropy": 0.6333,
+      "kl": 2.8652
+    },
+    {
+      "word": "make",
+      "cat": "high",
+      "entropy": 1.1255,
+      "kl": 1.2021
+    },
+    {
+      "word": "light",
+      "cat": "high",
+      "entropy": 1.8688,
+      "kl": 4.6728
+    },
+    {
+      "word": "clear",
+      "cat": "high",
+      "entropy": 0.7946,
+      "kl": 2.3443
+    },
+    {
+      "word": "draw",
+      "cat": "high",
+      "entropy": 0.8597,
+      "kl": 0.0299
+    },
+    {
+      "word": "give",
+      "cat": "high",
+      "entropy": 0.9576,
+      "kl": 1.295
+    },
+    {
+      "word": "hold",
+      "cat": "high",
+      "entropy": 1.357,
+      "kl": 3.4973
+    },
+    {
+      "word": "set",
+      "cat": "high",
+      "entropy": 0.5096,
+      "kl": 0.482
+    },
+    {
+      "word": "fall",
+      "cat": "high",
+      "entropy": 1.4482,
+      "kl": 2.2818
+    },
+    {
+      "word": "take",
+      "cat": "high",
+      "entropy": 0.7141,
+      "kl": 0.1211
+    },
+    {
+      "word": "head",
+      "cat": "high",
+      "entropy": 0.0164,
+      "kl": 0.3811
+    },
+    {
+      "word": "pass",
+      "cat": "high",
+      "entropy": 0.0079,
+      "kl": 4.9688
+    },
+    {
+      "word": "call",
+      "cat": "high",
+      "entropy": 0.432,
+      "kl": 0.7657
+    },
+    {
+      "word": "carry",
+      "cat": "high",
+      "entropy": 1.5125,
+      "kl": 0.5881
+    },
+    {
+      "word": "charge",
+      "cat": "high",
+      "entropy": 2.5811,
+      "kl": 1.1644
+    },
+    {
+      "word": "point",
+      "cat": "high",
+      "entropy": 0.3285,
+      "kl": 1.3784
+    },
+    {
+      "word": "catch",
+      "cat": "high",
+      "entropy": 0.9609,
+      "kl": 1.6909
+    },
+    {
+      "word": "check",
+      "cat": "high",
+      "entropy": 1.3812,
+      "kl": 4.8127
+    },
+    {
+      "word": "turn",
+      "cat": "high",
+      "entropy": 1.3895,
+      "kl": 0.5895
+    },
+    {
+      "word": "close",
+      "cat": "high",
+      "entropy": 0.3328,
+      "kl": 0.975
+    },
+    {
+      "word": "get",
+      "cat": "high",
+      "entropy": 0.4841,
+      "kl": 0.0328
+    },
+    {
+      "word": "right",
+      "cat": "high",
+      "entropy": 1.2919,
+      "kl": 3.3226
+    },
+    {
+      "word": "cover",
+      "cat": "high",
+      "entropy": 0.5264,
+      "kl": 0.4776
+    },
+    {
+      "word": "lift",
+      "cat": "high",
+      "entropy": 2.2521,
+      "kl": 1.6554
+    },
+    {
+      "word": "line",
+      "cat": "high",
+      "entropy": 0.8299,
+      "kl": 1.3312
+    },
+    {
+      "word": "open",
+      "cat": "high",
+      "entropy": 0.4411,
+      "kl": 0.921
+    },
+    {
+      "word": "beat",
+      "cat": "high",
+      "entropy": 1.7322,
+      "kl": 0.8403
+    },
+    {
+      "word": "balance",
+      "cat": "med",
+      "entropy": 0.2083,
+      "kl": 3.1129
+    },
+    {
+      "word": "blast",
+      "cat": "med",
+      "entropy": 1.5607,
+      "kl": 0.0899
+    },
+    {
+      "word": "crown",
+      "cat": "med",
+      "entropy": 0.6805,
+      "kl": 3.4374
+    },
+    {
+      "word": "fit",
+      "cat": "med",
+      "entropy": 0.397,
+      "kl": 1.0375
+    },
+    {
+      "word": "float",
+      "cat": "med",
+      "entropy": 1.3799,
+      "kl": 1.2253
+    },
+    {
+      "word": "hand",
+      "cat": "med",
+      "entropy": 0.7865,
+      "kl": 4.3474
+    },
+    {
+      "word": "issue",
+      "cat": "med",
+      "entropy": 1.1952,
+      "kl": 2.7121
+    },
+    {
+      "word": "low",
+      "cat": "med",
+      "entropy": 0.1369,
+      "kl": 0.337
+    },
+    {
+      "word": "mean",
+      "cat": "med",
+      "entropy": 0.436,
+      "kl": 3.0604
+    },
+    {
+      "word": "model",
+      "cat": "med",
+      "entropy": 0.9535,
+      "kl": 3.2887
+    },
+    {
+      "word": "offer",
+      "cat": "med",
+      "entropy": 1.4259,
+      "kl": 0.467
+    },
+    {
+      "word": "ride",
+      "cat": "med",
+      "entropy": 2.0181,
+      "kl": 0.4975
+    },
+    {
+      "word": "rush",
+      "cat": "med",
+      "entropy": 1.0682,
+      "kl": 0.7046
+    },
+    {
+      "word": "seat",
+      "cat": "med",
+      "entropy": 1.7885,
+      "kl": 0.2802
+    },
+    {
+      "word": "serve",
+      "cat": "med",
+      "entropy": 1.3179,
+      "kl": 0.0813
+    },
+    {
+      "word": "show",
+      "cat": "med",
+      "entropy": 1.2147,
+      "kl": 3.3161
+    },
+    {
+      "word": "stay",
+      "cat": "med",
+      "entropy": 1.4853,
+      "kl": 8.602
+    },
+    {
+      "word": "stone",
+      "cat": "med",
+      "entropy": 1.6845,
+      "kl": 3.3777
+    },
+    {
+      "word": "stroke",
+      "cat": "med",
+      "entropy": 0.9459,
+      "kl": 4.2258
+    },
+    {
+      "word": "study",
+      "cat": "med",
+      "entropy": 1.1542,
+      "kl": 4.8042
+    },
+    {
+      "word": "act",
+      "cat": "med",
+      "entropy": 0.844,
+      "kl": 5.693
+    },
+    {
+      "word": "air",
+      "cat": "med",
+      "entropy": 1.8502,
+      "kl": 1.3232
+    },
+    {
+      "word": "answer",
+      "cat": "med",
+      "entropy": 0.4928,
+      "kl": 5.0311
+    },
+    {
+      "word": "attack",
+      "cat": "med",
+      "entropy": 0.5598,
+      "kl": 0.3651
+    },
+    {
+      "word": "band",
+      "cat": "med",
+      "entropy": 1.2758,
+      "kl": 0.5561
+    },
+    {
+      "word": "bear",
+      "cat": "med",
+      "entropy": 1.7059,
+      "kl": 0.6301
+    },
+    {
+      "word": "book",
+      "cat": "med",
+      "entropy": 1.1202,
+      "kl": 4.4998
+    },
+    {
+      "word": "brush",
+      "cat": "med",
+      "entropy": 1.5521,
+      "kl": 0.6634
+    },
+    {
+      "word": "dark",
+      "cat": "med",
+      "entropy": 2.2394,
+      "kl": 0.7805
+    },
+    {
+      "word": "easy",
+      "cat": "med",
+      "entropy": 0.7527,
+      "kl": 3.8137
+    },
+    {
+      "word": "photosynthesis",
+      "cat": "unambig",
+      "entropy": 0.0411,
+      "kl": 0.0081
+    },
+    {
+      "word": "Constantinople",
+      "cat": "unambig",
+      "entropy": 0.0186,
+      "kl": 0.1346
+    },
+    {
+      "word": "2+2=4",
+      "cat": "unambig",
+      "entropy": 1.5211,
+      "kl": 0.6878
+    },
+    {
+      "word": "mitochondria",
+      "cat": "unambig",
+      "entropy": 0.0242,
+      "kl": 0.0054
+    },
+    {
+      "word": "The Eiffel Tower is in Paris",
+      "cat": "unambig",
+      "entropy": 0.4612,
+      "kl": 8.4792
+    },
+    {
+      "word": "H2O is water",
+      "cat": "unambig",
+      "entropy": 0.2839,
+      "kl": 6.0919
+    },
+    {
+      "word": "Abraham Lincoln",
+      "cat": "unambig",
+      "entropy": 0.0062,
+      "kl": 0.0015
+    },
+    {
+      "word": "The speed of light",
+      "cat": "unambig",
+      "entropy": 0.0002,
+      "kl": 0.0
+    },
+    {
+      "word": "DNA replication",
+      "cat": "unambig",
+      "entropy": 0.0015,
+      "kl": 0.0013
+    },
+    {
+      "word": "integer overflow",
+      "cat": "unambig",
+      "entropy": 0.0551,
+      "kl": 0.0779
+    }
+  ],
+  "Mistral-7B-Instruct-v0.1": [
+    {
+      "word": "break",
+      "cat": "high",
+      "entropy": 4.0529,
+      "kl": 2.934
+    },
+    {
+      "word": "cut",
+      "cat": "high",
+      "entropy": 3.1404,
+      "kl": 3.4655
+    },
+    {
+      "word": "run",
+      "cat": "high",
+      "entropy": 3.3911,
+      "kl": 2.7941
+    },
+    {
+      "word": "play",
+      "cat": "high",
+      "entropy": 3.1786,
+      "kl": 3.6062
+    },
+    {
+      "word": "make",
+      "cat": "high",
+      "entropy": 3.5755,
+      "kl": 2.7763
+    },
+    {
+      "word": "light",
+      "cat": "high",
+      "entropy": 2.3195,
+      "kl": 3.9167
+    },
+    {
+      "word": "clear",
+      "cat": "high",
+      "entropy": 4.2586,
+      "kl": 2.4948
+    },
+    {
+      "word": "draw",
+      "cat": "high",
+      "entropy": 3.0107,
+      "kl": 3.5736
+    },
+    {
+      "word": "give",
+      "cat": "high",
+      "entropy": 2.7656,
+      "kl": 3.3158
+    },
+    {
+      "word": "hold",
+      "cat": "high",
+      "entropy": 3.6915,
+      "kl": 2.7711
+    },
+    {
+      "word": "set",
+      "cat": "high",
+      "entropy": 3.9254,
+      "kl": 3.3753
+    },
+    {
+      "word": "fall",
+      "cat": "high",
+      "entropy": 3.2962,
+      "kl": 2.7447
+    },
+    {
+      "word": "take",
+      "cat": "high",
+      "entropy": 3.6264,
+      "kl": 3.0679
+    },
+    {
+      "word": "head",
+      "cat": "high",
+      "entropy": 4.0453,
+      "kl": 2.964
+    },
+    {
+      "word": "pass",
+      "cat": "high",
+      "entropy": 4.0481,
+      "kl": 2.0223
+    },
+    {
+      "word": "call",
+      "cat": "high",
+      "entropy": 2.6318,
+      "kl": 4.2881
+    },
+    {
+      "word": "carry",
+      "cat": "high",
+      "entropy": 3.0614,
+      "kl": 3.4405
+    },
+    {
+      "word": "charge",
+      "cat": "high",
+      "entropy": 3.8088,
+      "kl": 2.7365
+    },
+    {
+      "word": "point",
+      "cat": "high",
+      "entropy": 4.0583,
+      "kl": 2.6065
+    },
+    {
+      "word": "catch",
+      "cat": "high",
+      "entropy": 3.4786,
+      "kl": 2.0488
+    },
+    {
+      "word": "check",
+      "cat": "high",
+      "entropy": 3.1549,
+      "kl": 2.5572
+    },
+    {
+      "word": "turn",
+      "cat": "high",
+      "entropy": 3.9232,
+      "kl": 2.8025
+    },
+    {
+      "word": "close",
+      "cat": "high",
+      "entropy": 4.0484,
+      "kl": 2.7302
+    },
+    {
+      "word": "get",
+      "cat": "high",
+      "entropy": 3.4997,
+      "kl": 2.9222
+    },
+    {
+      "word": "right",
+      "cat": "high",
+      "entropy": 3.7827,
+      "kl": 4.2492
+    },
+    {
+      "word": "cover",
+      "cat": "high",
+      "entropy": 4.5151,
+      "kl": 3.1324
+    },
+    {
+      "word": "lift",
+      "cat": "high",
+      "entropy": 3.598,
+      "kl": 2.7791
+    },
+    {
+      "word": "line",
+      "cat": "high",
+      "entropy": 4.1751,
+      "kl": 4.2571
+    },
+    {
+      "word": "open",
+      "cat": "high",
+      "entropy": 3.8012,
+      "kl": 3.3137
+    },
+    {
+      "word": "beat",
+      "cat": "high",
+      "entropy": 3.6458,
+      "kl": 3.3033
+    },
+    {
+      "word": "balance",
+      "cat": "med",
+      "entropy": 3.6756,
+      "kl": 3.5353
+    },
+    {
+      "word": "blast",
+      "cat": "med",
+      "entropy": 3.1043,
+      "kl": 2.9915
+    },
+    {
+      "word": "crown",
+      "cat": "med",
+      "entropy": 2.6382,
+      "kl": 3.668
+    },
+    {
+      "word": "fit",
+      "cat": "med",
+      "entropy": 3.8242,
+      "kl": 2.8557
+    },
+    {
+      "word": "float",
+      "cat": "med",
+      "entropy": 3.2833,
+      "kl": 3.9644
+    },
+    {
+      "word": "hand",
+      "cat": "med",
+      "entropy": 3.947,
+      "kl": 3.4008
+    },
+    {
+      "word": "issue",
+      "cat": "med",
+      "entropy": 3.7323,
+      "kl": 3.1326
+    },
+    {
+      "word": "low",
+      "cat": "med",
+      "entropy": 3.7238,
+      "kl": 3.3777
+    },
+    {
+      "word": "mean",
+      "cat": "med",
+      "entropy": 3.2233,
+      "kl": 2.4449
+    },
+    {
+      "word": "model",
+      "cat": "med",
+      "entropy": 4.1211,
+      "kl": 3.8105
+    },
+    {
+      "word": "offer",
+      "cat": "med",
+      "entropy": 3.7511,
+      "kl": 2.638
+    },
+    {
+      "word": "ride",
+      "cat": "med",
+      "entropy": 3.8663,
+      "kl": 3.3684
+    },
+    {
+      "word": "rush",
+      "cat": "med",
+      "entropy": 2.9742,
+      "kl": 3.3716
+    },
+    {
+      "word": "seat",
+      "cat": "med",
+      "entropy": 3.5062,
+      "kl": 3.0857
+    },
+    {
+      "word": "serve",
+      "cat": "med",
+      "entropy": 3.9142,
+      "kl": 3.5604
+    },
+    {
+      "word": "show",
+      "cat": "med",
+      "entropy": 3.248,
+      "kl": 2.7904
+    },
+    {
+      "word": "stay",
+      "cat": "med",
+      "entropy": 4.0574,
+      "kl": 2.7263
+    },
+    {
+      "word": "stone",
+      "cat": "med",
+      "entropy": 3.3353,
+      "kl": 3.8795
+    },
+    {
+      "word": "stroke",
+      "cat": "med",
+      "entropy": 3.1123,
+      "kl": 3.6138
+    },
+    {
+      "word": "study",
+      "cat": "med",
+      "entropy": 3.9981,
+      "kl": 4.0175
+    },
+    {
+      "word": "act",
+      "cat": "med",
+      "entropy": 3.8679,
+      "kl": 3.8537
+    },
+    {
+      "word": "air",
+      "cat": "med",
+      "entropy": 3.1325,
+      "kl": 3.662
+    },
+    {
+      "word": "answer",
+      "cat": "med",
+      "entropy": 3.1711,
+      "kl": 5.1642
+    },
+    {
+      "word": "attack",
+      "cat": "med",
+      "entropy": 3.2305,
+      "kl": 1.9974
+    },
+    {
+      "word": "band",
+      "cat": "med",
+      "entropy": 3.5436,
+      "kl": 3.5066
+    },
+    {
+      "word": "bear",
+      "cat": "med",
+      "entropy": 3.6666,
+      "kl": 3.1839
+    },
+    {
+      "word": "book",
+      "cat": "med",
+      "entropy": 4.0601,
+      "kl": 3.7092
+    },
+    {
+      "word": "brush",
+      "cat": "med",
+      "entropy": 3.1918,
+      "kl": 3.5554
+    },
+    {
+      "word": "dark",
+      "cat": "med",
+      "entropy": 4.1122,
+      "kl": 2.8517
+    },
+    {
+      "word": "easy",
+      "cat": "med",
+      "entropy": 3.988,
+      "kl": 3.9866
+    },
+    {
+      "word": "photosynthesis",
+      "cat": "unambig",
+      "entropy": 1.2666,
+      "kl": 3.4541
+    },
+    {
+      "word": "Constantinople",
+      "cat": "unambig",
+      "entropy": 1.4941,
+      "kl": 3.541
+    },
+    {
+      "word": "2+2=4",
+      "cat": "unambig",
+      "entropy": 2.7884,
+      "kl": 3.3057
+    },
+    {
+      "word": "mitochondria",
+      "cat": "unambig",
+      "entropy": 1.2243,
+      "kl": 2.6157
+    },
+    {
+      "word": "The Eiffel Tower is in Paris",
+      "cat": "unambig",
+      "entropy": 2.0417,
+      "kl": 4.5281
+    },
+    {
+      "word": "H2O is water",
+      "cat": "unambig",
+      "entropy": 1.5187,
+      "kl": 4.5616
+    },
+    {
+      "word": "Abraham Lincoln",
+      "cat": "unambig",
+      "entropy": 0.4637,
+      "kl": 3.9675
+    },
+    {
+      "word": "The speed of light",
+      "cat": "unambig",
+      "entropy": 1.6055,
+      "kl": 1.4025
+    },
+    {
+      "word": "DNA replication",
+      "cat": "unambig",
+      "entropy": 0.9831,
+      "kl": 3.5022
+    },
+    {
+      "word": "integer overflow",
+      "cat": "unambig",
+      "entropy": 1.7875,
+      "kl": 4.2694
+    }
+  ]
+}

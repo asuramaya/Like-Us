@@ -1,6 +1,8 @@
 # Session G — The Measurement Apparatus Was Broken
 
-> **SESSION H UPDATE (2026-03-22):** Session G found the hook-name bug but used a Qwen + TransformerLens + Apple Silicon MPS path that was later judged invalid. Session H originally described the failure as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions (~35-54%) are close to correct (~45-51% on HF). The "KL does not decay" finding is overturned (KL does decay on the corrected path). The behavioral observation "models discuss not execute" is confirmed. See `SESSION_H.md`.
+> **SESSION H UPDATE (2026-03-22):** Session G found the hook-name bug but used a Qwen + TransformerLens + Apple Silicon MPS path that was later judged invalid. Session H originally described the failure as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions (~35-54%) are close to correct (~45-51% on HF). The "KL does not decay" finding is overturned (KL does decay on the corrected path).
+>
+> **SESSION I UPDATE (2026-03-24):** This file should now be read as a historical artifact, not a current summary. The strong behavioral line in this session that "models discuss instructions instead of executing them" did not survive later review. Session I killed the universal discuss-only reading, and the current front door treats the surviving hinge question more narrowly.
 
 **Date:** 2026-03-17
 **Instance:** Claude Opus 4.6 (1M context)
@@ -25,10 +27,10 @@ The "100% MLP / 0% attention" finding — the central claim of the paper, verifi
 
 | Script | What it measures |
 |--------|-----------------|
-| `bench/diagnose.py` | DLA decomposition, output distribution KL, cumulative patching, signal evolution |
-| `bench/diagnose_degradation.py` | KL divergence of output distributions over conversational turns |
-| `bench/steer.py` | Activation steering — amplify/suppress the instruction direction |
-| `bench/word_trace.py` | Per-word effect on output distribution |
+| `mechanisms/dead/diagnose.py` | DLA decomposition, output distribution KL, cumulative patching, signal evolution |
+| `mechanisms/dead/diagnose_degradation.py` | KL divergence of output distributions over conversational turns |
+| `mechanisms/dead/steer.py` | Activation steering — amplify/suppress the instruction direction |
+| `mechanisms/dead/word_trace.py` | Per-word effect on output distribution |
 
 All use correct hook names and output-level metrics (KL divergence) instead of residual norms.
 
@@ -155,14 +157,14 @@ Instruction syntax at 7B changes output FORMAT (structured) not just content.
 
 | Script | Lines | Purpose |
 |--------|-------|---------|
-| `bench/diagnose.py` | ~500 | DLA, KL distributions, cumulative patching, signal evolution |
-| `bench/diagnose_degradation.py` | ~300 | KL divergence over conversational turns |
-| `bench/steer.py` | ~250 | Activation steering experiments |
-| `bench/word_trace.py` | ~300 | Per-word effect tracing |
+| `mechanisms/dead/diagnose.py` | ~500 | DLA, KL distributions, cumulative patching, signal evolution |
+| `mechanisms/dead/diagnose_degradation.py` | ~300 | KL divergence over conversational turns |
+| `mechanisms/dead/steer.py` | ~250 | Activation steering experiments |
+| `mechanisms/dead/word_trace.py` | ~300 | Per-word effect tracing |
 
 ## Data created this session
 
-All in `bench/neuron_data/`:
+All in `mechanisms/dead/neuron_data/`:
 
 | File | Size |
 |------|------|

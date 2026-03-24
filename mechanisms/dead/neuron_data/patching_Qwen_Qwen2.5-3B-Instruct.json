@@ -1,0 +1,10091 @@
+[
+  {
+    "scenario_id": "coherence_laundering",
+    "clean_condition": "handled",
+    "corrupt_condition": "baseline",
+    "clean_metric": 7.3125,
+    "corrupt_metric": -7.8046875,
+    "metric_range": 15.1171875,
+    "clean_top_tokens": " Vog c itself r three",
+    "corrupt_top_tokens": ")_c\n\nsc",
+    "seq_len": 56,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 1,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 2,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 3,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 4,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 5,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 6,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 7,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 8,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 9,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 10,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 11,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 12,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 13,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 14,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 15,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 16,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 17,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 18,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 19,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 20,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 21,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 22,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 23,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 24,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 25,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 26,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 27,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 28,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 29,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 30,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 31,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 32,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 33,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 34,
+        "effect": 15.1171875
+      },
+      {
+        "layer": 35,
+        "effect": 15.1171875
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 5.546875
+      },
+      {
+        "layer": 1,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 1.25390625
+      },
+      {
+        "layer": 2,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 3.703125
+      },
+      {
+        "layer": 3,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 4.046875
+      },
+      {
+        "layer": 4,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 6.359375
+      },
+      {
+        "layer": 5,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 3.89453125
+      },
+      {
+        "layer": 6,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 3.1640625
+      },
+      {
+        "layer": 7,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 1.0859375
+      },
+      {
+        "layer": 8,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 3.01171875
+      },
+      {
+        "layer": 9,
+        "total": 15.1171875,
+        "attn": 0.0,
+        "mlp": 3.58203125
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 7.734375
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 0.4296875
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.38671875
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.5703125
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.44921875
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": 0.53125
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.31640625
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": 0.1484375
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.05078125
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": 0.140625
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.30859375
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.1875
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": 0.08984375
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": 0.203125
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": 0.09765625
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": 0.03515625
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": 0.05859375
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.16015625
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.05078125
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": 0.1875
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": -0.15234375
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": -0.2421875
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": 0.0625
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": 0.0546875
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 34,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 38,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 41,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 44,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 45,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 46,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 47,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 49,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 50,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 52,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 53,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 54,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 55,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 6.71875
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.46875
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": 0.4296875
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.71484375
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.44140625
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.4765625
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.31640625
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": 0.21875
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.09375
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": 0.17578125
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.2578125
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.19140625
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": 0.171875
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": 0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": 0.08203125
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": 0.19921875
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.1796875
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.125
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": 0.234375
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": -0.13671875
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": 0.09375
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": 0.03515625
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": 0.0625
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 31,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 37,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 38,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 43,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 45,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 47,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 49,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 51,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 52,
+        "effect": 0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 53,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 54,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 55,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 4.9296875
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.3828125
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.41015625
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.53125
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": 0.36328125
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": 0.1640625
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": 0.1484375
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": 0.08984375
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.10546875
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": 0.14453125
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": 0.2578125
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.21484375
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": 0.12890625
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": 0.1171875
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": 0.05859375
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": 0.10546875
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.14453125
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.1171875
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": 0.171875
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": -0.09375
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": 0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": 0.03515625
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": -0.02734375
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 39,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 41,
+        "effect": 0.03515625
+      },
+      {
+        "layer": 2,
+        "position": 45,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 46,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 48,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 51,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 52,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 53,
+        "effect": 0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 54,
+        "effect": 0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 55,
+        "effect": 0.06640625
+      }
+    ]
+  },
+  {
+    "scenario_id": "recursive_importance_inflation",
+    "clean_condition": "handled",
+    "corrupt_condition": "baseline",
+    "clean_metric": 5.625,
+    "corrupt_metric": -7.43359375,
+    "metric_range": 13.05859375,
+    "clean_top_tokens": " Vog r three itself c",
+    "corrupt_top_tokens": ")_c\n\n'' the",
+    "seq_len": 56,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 1,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 2,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 3,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 4,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 5,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 6,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 7,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 8,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 9,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 10,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 11,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 12,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 13,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 14,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 15,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 16,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 17,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 18,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 19,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 20,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 21,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 22,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 23,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 24,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 25,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 26,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 27,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 28,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 29,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 30,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 31,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 32,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 33,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 34,
+        "effect": 13.05859375
+      },
+      {
+        "layer": 35,
+        "effect": 13.05859375
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 2.74609375
+      },
+      {
+        "layer": 1,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 1.6796875
+      },
+      {
+        "layer": 2,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 2.35546875
+      },
+      {
+        "layer": 3,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 4.12890625
+      },
+      {
+        "layer": 4,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 4.94140625
+      },
+      {
+        "layer": 5,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 1.90625
+      },
+      {
+        "layer": 6,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 1.75
+      },
+      {
+        "layer": 7,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 2.45703125
+      },
+      {
+        "layer": 8,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 1.97265625
+      },
+      {
+        "layer": 9,
+        "total": 13.05859375,
+        "attn": 0.0,
+        "mlp": 4.71484375
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 7.76171875
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 0.56640625
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": -0.21875
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.30859375
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.51171875
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": 0.32421875
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.10546875
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.10546875
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.17578125
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.15234375
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": -0.046875
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.10546875
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.15234375
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": 0.07421875
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": -0.1875
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": -0.11328125
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": 0.05078125
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": 0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.02734375
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": -0.03515625
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": -0.03515625
+      },
+      {
+        "layer": 0,
+        "position": 34,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 35,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 40,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 41,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 44,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 45,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 46,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 50,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 51,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 52,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 54,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 55,
+        "effect": 0.04296875
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 7.09765625
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.390625
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.31640625
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.3671875
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.34765625
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.12890625
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": 0.10546875
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.125
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.12890625
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.15234375
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": -0.09765625
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": -0.05859375
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.11328125
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.02734375
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": 0.11328125
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": 0.04296875
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": 0.0546875
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": 0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": -0.02734375
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 37,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 39,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 45,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 46,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 50,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 53,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 54,
+        "effect": 0.02734375
+      },
+      {
+        "layer": 1,
+        "position": 55,
+        "effect": 0.04296875
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 5.18359375
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.15625
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.09765625
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.33203125
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": 0.3203125
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": 0.109375
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": 0.12890625
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": 0.09375
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.20703125
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": 0.05859375
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": 0.11328125
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.13671875
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.06640625
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.03515625
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.06640625
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": 0.04296875
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": 0.02734375
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 43,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 46,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 48,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 49,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 50,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 52,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 54,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 55,
+        "effect": 0.02734375
+      }
+    ]
+  },
+  {
+    "scenario_id": "identity_seeking_through_theory",
+    "clean_condition": "handled",
+    "corrupt_condition": "baseline",
+    "clean_metric": 8.1875,
+    "corrupt_metric": -9.5,
+    "metric_range": 17.6875,
+    "clean_top_tokens": " r Vog itself three h",
+    "corrupt_top_tokens": ")s.\n\n\n\n''",
+    "seq_len": 49,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 17.6875
+      },
+      {
+        "layer": 1,
+        "effect": 17.6875
+      },
+      {
+        "layer": 2,
+        "effect": 17.6875
+      },
+      {
+        "layer": 3,
+        "effect": 17.6875
+      },
+      {
+        "layer": 4,
+        "effect": 17.6875
+      },
+      {
+        "layer": 5,
+        "effect": 17.6875
+      },
+      {
+        "layer": 6,
+        "effect": 17.6875
+      },
+      {
+        "layer": 7,
+        "effect": 17.6875
+      },
+      {
+        "layer": 8,
+        "effect": 17.6875
+      },
+      {
+        "layer": 9,
+        "effect": 17.6875
+      },
+      {
+        "layer": 10,
+        "effect": 17.6875
+      },
+      {
+        "layer": 11,
+        "effect": 17.6875
+      },
+      {
+        "layer": 12,
+        "effect": 17.6875
+      },
+      {
+        "layer": 13,
+        "effect": 17.6875
+      },
+      {
+        "layer": 14,
+        "effect": 17.6875
+      },
+      {
+        "layer": 15,
+        "effect": 17.6875
+      },
+      {
+        "layer": 16,
+        "effect": 17.6875
+      },
+      {
+        "layer": 17,
+        "effect": 17.6875
+      },
+      {
+        "layer": 18,
+        "effect": 17.6875
+      },
+      {
+        "layer": 19,
+        "effect": 17.6875
+      },
+      {
+        "layer": 20,
+        "effect": 17.6875
+      },
+      {
+        "layer": 21,
+        "effect": 17.6875
+      },
+      {
+        "layer": 22,
+        "effect": 17.6875
+      },
+      {
+        "layer": 23,
+        "effect": 17.6875
+      },
+      {
+        "layer": 24,
+        "effect": 17.6875
+      },
+      {
+        "layer": 25,
+        "effect": 17.6875
+      },
+      {
+        "layer": 26,
+        "effect": 17.6875
+      },
+      {
+        "layer": 27,
+        "effect": 17.6875
+      },
+      {
+        "layer": 28,
+        "effect": 17.6875
+      },
+      {
+        "layer": 29,
+        "effect": 17.6875
+      },
+      {
+        "layer": 30,
+        "effect": 17.6875
+      },
+      {
+        "layer": 31,
+        "effect": 17.6875
+      },
+      {
+        "layer": 32,
+        "effect": 17.6875
+      },
+      {
+        "layer": 33,
+        "effect": 17.6875
+      },
+      {
+        "layer": 34,
+        "effect": 17.6875
+      },
+      {
+        "layer": 35,
+        "effect": 17.6875
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 5.28125
+      },
+      {
+        "layer": 1,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 2.109375
+      },
+      {
+        "layer": 2,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 4.0546875
+      },
+      {
+        "layer": 3,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 5.12109375
+      },
+      {
+        "layer": 4,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 6.75
+      },
+      {
+        "layer": 5,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 2.6484375
+      },
+      {
+        "layer": 6,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 3.93359375
+      },
+      {
+        "layer": 7,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 1.609375
+      },
+      {
+        "layer": 8,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 3.3203125
+      },
+      {
+        "layer": 9,
+        "total": 17.6875,
+        "attn": 0.0,
+        "mlp": 4.58984375
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 10.078125
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 0.734375
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.21875
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.4296875
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.40625
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": 0.28125
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.109375
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.0625
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.15625
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.0625
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": 0.125
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.109375
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": 0.171875
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": -0.171875
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": -0.203125
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 34,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 35,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 38,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 41,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 43,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 47,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 48,
+        "effect": 0.046875
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 8.0625
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.828125
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": 0.2578125
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.515625
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.3046875
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.4296875
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.2109375
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": 0.140625
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.171875
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": 0.09375
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": -0.078125
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": 0.1796875
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.140625
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": 0.1875
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": -0.0546875
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.078125
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 31,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 34,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 38,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 43,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 44,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 45,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 47,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 48,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 5.89453125
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.67578125
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.375
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.4375
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": 0.2890625
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": 0.2421875
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": 0.140625
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": 0.125
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.15625
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": 0.140625
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.078125
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": 0.1015625
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.109375
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": 0.125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": -0.078125
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": -0.078125
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 43,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 44,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 46,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 47,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 48,
+        "effect": 0.03125
+      }
+    ]
+  },
+  {
+    "scenario_id": "coherence_laundering",
+    "clean_condition": "scrambled",
+    "corrupt_condition": "baseline",
+    "clean_metric": 5.7734375,
+    "corrupt_metric": -8.25,
+    "metric_range": 14.0234375,
+    "clean_top_tokens": " h the Vog Gren itself",
+    "corrupt_top_tokens": "_c)c the thereafter",
+    "seq_len": 50,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 1,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 2,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 3,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 4,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 5,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 6,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 7,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 8,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 9,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 10,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 11,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 12,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 13,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 14,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 15,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 16,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 17,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 18,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 19,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 20,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 21,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 22,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 23,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 24,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 25,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 26,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 27,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 28,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 29,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 30,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 31,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 32,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 33,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 34,
+        "effect": 14.0234375
+      },
+      {
+        "layer": 35,
+        "effect": 14.0234375
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 7.3984375
+      },
+      {
+        "layer": 1,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 0.83984375
+      },
+      {
+        "layer": 2,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 4.234375
+      },
+      {
+        "layer": 3,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 3.99609375
+      },
+      {
+        "layer": 4,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 5.984375
+      },
+      {
+        "layer": 5,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 4.18359375
+      },
+      {
+        "layer": 6,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 5.27734375
+      },
+      {
+        "layer": 7,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 0.33984375
+      },
+      {
+        "layer": 8,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 3.53515625
+      },
+      {
+        "layer": 9,
+        "total": 14.0234375,
+        "attn": 0.0,
+        "mlp": 4.7421875
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 8.3046875
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 0.765625
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.59375
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": -0.109375
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.46875
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": -0.09375
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.125
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": 0.046875
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.1875
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.0546875
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.109375
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.109375
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": -0.09375
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": 0.09375
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": 0.0625
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 34,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 42,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 43,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 44,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 46,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 49,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 7.3515625
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.48046875
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": 0.30859375
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.0625
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": -0.0625
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.421875
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": 0.046875
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.140625
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": -0.109375
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": 0.15625
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": 0.0625
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 31,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 37,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 39,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 43,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 44,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 45,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 46,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 48,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 49,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 5.37109375
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 0.7578125
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.1640625
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": -0.234375
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": -0.15625
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": 0.171875
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": -0.125
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": -0.15625
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": 0.0625
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": -0.140625
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.1015625
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.0625
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.09375
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.046875
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 44,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 46,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 49,
+        "effect": -0.015625
+      }
+    ]
+  },
+  {
+    "scenario_id": "recursive_importance_inflation",
+    "clean_condition": "scrambled",
+    "corrupt_condition": "baseline",
+    "clean_metric": 4.796875,
+    "corrupt_metric": -7.953125,
+    "metric_range": 12.75,
+    "clean_top_tokens": " h the r reg three",
+    "corrupt_top_tokens": "_c) the that thereafter",
+    "seq_len": 50,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 12.75
+      },
+      {
+        "layer": 1,
+        "effect": 12.75
+      },
+      {
+        "layer": 2,
+        "effect": 12.75
+      },
+      {
+        "layer": 3,
+        "effect": 12.75
+      },
+      {
+        "layer": 4,
+        "effect": 12.75
+      },
+      {
+        "layer": 5,
+        "effect": 12.75
+      },
+      {
+        "layer": 6,
+        "effect": 12.75
+      },
+      {
+        "layer": 7,
+        "effect": 12.75
+      },
+      {
+        "layer": 8,
+        "effect": 12.75
+      },
+      {
+        "layer": 9,
+        "effect": 12.75
+      },
+      {
+        "layer": 10,
+        "effect": 12.75
+      },
+      {
+        "layer": 11,
+        "effect": 12.75
+      },
+      {
+        "layer": 12,
+        "effect": 12.75
+      },
+      {
+        "layer": 13,
+        "effect": 12.75
+      },
+      {
+        "layer": 14,
+        "effect": 12.75
+      },
+      {
+        "layer": 15,
+        "effect": 12.75
+      },
+      {
+        "layer": 16,
+        "effect": 12.75
+      },
+      {
+        "layer": 17,
+        "effect": 12.75
+      },
+      {
+        "layer": 18,
+        "effect": 12.75
+      },
+      {
+        "layer": 19,
+        "effect": 12.75
+      },
+      {
+        "layer": 20,
+        "effect": 12.75
+      },
+      {
+        "layer": 21,
+        "effect": 12.75
+      },
+      {
+        "layer": 22,
+        "effect": 12.75
+      },
+      {
+        "layer": 23,
+        "effect": 12.75
+      },
+      {
+        "layer": 24,
+        "effect": 12.75
+      },
+      {
+        "layer": 25,
+        "effect": 12.75
+      },
+      {
+        "layer": 26,
+        "effect": 12.75
+      },
+      {
+        "layer": 27,
+        "effect": 12.75
+      },
+      {
+        "layer": 28,
+        "effect": 12.75
+      },
+      {
+        "layer": 29,
+        "effect": 12.75
+      },
+      {
+        "layer": 30,
+        "effect": 12.75
+      },
+      {
+        "layer": 31,
+        "effect": 12.75
+      },
+      {
+        "layer": 32,
+        "effect": 12.75
+      },
+      {
+        "layer": 33,
+        "effect": 12.75
+      },
+      {
+        "layer": 34,
+        "effect": 12.75
+      },
+      {
+        "layer": 35,
+        "effect": 12.75
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 7.1796875
+      },
+      {
+        "layer": 1,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 1.9140625
+      },
+      {
+        "layer": 2,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 4.6015625
+      },
+      {
+        "layer": 3,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 4.9140625
+      },
+      {
+        "layer": 4,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 5.265625
+      },
+      {
+        "layer": 5,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 3.5078125
+      },
+      {
+        "layer": 6,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 3.81640625
+      },
+      {
+        "layer": 7,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 2.109375
+      },
+      {
+        "layer": 8,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 4.8671875
+      },
+      {
+        "layer": 9,
+        "total": 12.75,
+        "attn": 0.0,
+        "mlp": 2.6875
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 8.3046875
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 0.59375
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.02734375
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.19921875
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.34375
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": -0.03515625
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.05859375
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": 0.1484375
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": -0.234375
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.140625
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.1015625
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": -0.125
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": 0.13671875
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.02734375
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 34,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 40,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 41,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 43,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 0,
+        "position": 46,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 49,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 7.8671875
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.65625
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": -0.140625
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.15234375
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.14453125
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.125
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": 0.140625
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": -0.171875
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": -0.09375
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.02734375
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.10546875
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": -0.09375
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": 0.14453125
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 31,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 34,
+        "effect": -0.02734375
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 38,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 39,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 1,
+        "position": 43,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 45,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 47,
+        "effect": 0.01171875
+      },
+      {
+        "layer": 1,
+        "position": 48,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 49,
+        "effect": -0.0859375
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 5.453125
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.2734375
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": -0.09375
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": -0.1484375
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": -0.234375
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": -0.2578125
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": -0.109375
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": -0.09375
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": -0.1484375
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": -0.125
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": -0.15625
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.140625
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.171875
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.05078125
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": -0.109375
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": -0.04296875
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": 0.14453125
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.02734375
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.01171875
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": -0.02734375
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 39,
+        "effect": -0.01953125
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 41,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 43,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 44,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 47,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 49,
+        "effect": -0.078125
+      }
+    ]
+  },
+  {
+    "scenario_id": "identity_seeking_through_theory",
+    "clean_condition": "scrambled",
+    "corrupt_condition": "baseline",
+    "clean_metric": 5.8984375,
+    "corrupt_metric": -9.609375,
+    "metric_range": 15.5078125,
+    "clean_top_tokens": " h the Vog reg Gren",
+    "corrupt_top_tokens": ") the_c that''",
+    "seq_len": 43,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 1,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 2,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 3,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 4,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 5,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 6,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 7,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 8,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 9,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 10,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 11,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 12,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 13,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 14,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 15,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 16,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 17,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 18,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 19,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 20,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 21,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 22,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 23,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 24,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 25,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 26,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 27,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 28,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 29,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 30,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 31,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 32,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 33,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 34,
+        "effect": 15.5078125
+      },
+      {
+        "layer": 35,
+        "effect": 15.5078125
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 5.9921875
+      },
+      {
+        "layer": 1,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 1.640625
+      },
+      {
+        "layer": 2,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 3.47265625
+      },
+      {
+        "layer": 3,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 4.83984375
+      },
+      {
+        "layer": 4,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 4.8046875
+      },
+      {
+        "layer": 5,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 3.78125
+      },
+      {
+        "layer": 6,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 4.54296875
+      },
+      {
+        "layer": 7,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 0.6875
+      },
+      {
+        "layer": 8,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 3.3984375
+      },
+      {
+        "layer": 9,
+        "total": 15.5078125,
+        "attn": 0.0,
+        "mlp": 4.06640625
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 9.21875
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 1.25
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.2578125
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": -0.1328125
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": -0.171875
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": -0.1875
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.421875
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": -0.1015625
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.0625
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.15625
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": -0.046875
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": 0.0625
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": -0.21875
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.046875
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.125
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.0625
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": 0.046875
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": -0.046875
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 38,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 41,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 42,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 8.640625
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 1.171875
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": 0.046875
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": -0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": -0.1328125
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": -0.09375
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.40625
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": -0.0625
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": -0.0546875
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": -0.0546875
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": -0.265625
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.109375
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.0546875
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.0625
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.0625
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 38,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 39,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 6.48828125
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.2265625
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": -0.0546875
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": -0.046875
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": 0.2109375
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": -0.140625
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": 0.0625
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": -0.046875
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": -0.2109375
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.15625
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.0546875
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 41,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": 0.0078125
+      }
+    ]
+  },
+  {
+    "scenario_id": "coherence_laundering",
+    "clean_condition": "only_artifact",
+    "corrupt_condition": "baseline",
+    "clean_metric": 6.2109375,
+    "corrupt_metric": -10.40625,
+    "metric_range": 16.6171875,
+    "clean_top_tokens": " itself h Vog C\u5192",
+    "corrupt_top_tokens": "_c thereafter that) meetings",
+    "seq_len": 44,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 1,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 2,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 3,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 4,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 5,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 6,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 7,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 8,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 9,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 10,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 11,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 12,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 13,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 14,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 15,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 16,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 17,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 18,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 19,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 20,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 21,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 22,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 23,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 24,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 25,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 26,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 27,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 28,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 29,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 30,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 31,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 32,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 33,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 34,
+        "effect": 16.6171875
+      },
+      {
+        "layer": 35,
+        "effect": 16.6171875
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 5.44140625
+      },
+      {
+        "layer": 1,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 2.74609375
+      },
+      {
+        "layer": 2,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 5.3671875
+      },
+      {
+        "layer": 3,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 6.83203125
+      },
+      {
+        "layer": 4,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 6.65625
+      },
+      {
+        "layer": 5,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 5.8671875
+      },
+      {
+        "layer": 6,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 5.32421875
+      },
+      {
+        "layer": 7,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 4.3203125
+      },
+      {
+        "layer": 8,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 4.6328125
+      },
+      {
+        "layer": 9,
+        "total": 16.6171875,
+        "attn": 0.0,
+        "mlp": 9.0
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 12.78125
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 1.4296875
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.21875
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": -0.125
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": -0.25
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": 0.46875
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": 0.5625
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.125
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.15625
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": 0.171875
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": -0.140625
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 35,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 38,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 40,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 42,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 43,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 11.890625
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 1.015625
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": 0.046875
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.46875
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.0625
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": 0.40625
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.125
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": 0.15625
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.0625
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.21875
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": 0.1953125
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": -0.0625
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 37,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 43,
+        "effect": -0.046875
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 9.734375
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.8515625
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.21875
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": 0.2421875
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": 0.09375
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": 0.2265625
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": 0.1484375
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": 0.171875
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": 0.0625
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 43,
+        "effect": -0.0390625
+      }
+    ]
+  },
+  {
+    "scenario_id": "recursive_importance_inflation",
+    "clean_condition": "only_artifact",
+    "corrupt_condition": "baseline",
+    "clean_metric": 6.35546875,
+    "corrupt_metric": -9.5390625,
+    "metric_range": 15.89453125,
+    "clean_top_tokens": " h itself C Vog Mar",
+    "corrupt_top_tokens": "_c) that meetings thereafter",
+    "seq_len": 44,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 1,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 2,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 3,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 4,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 5,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 6,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 7,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 8,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 9,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 10,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 11,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 12,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 13,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 14,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 15,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 16,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 17,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 18,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 19,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 20,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 21,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 22,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 23,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 24,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 25,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 26,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 27,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 28,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 29,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 30,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 31,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 32,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 33,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 34,
+        "effect": 15.89453125
+      },
+      {
+        "layer": 35,
+        "effect": 15.89453125
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 4.65234375
+      },
+      {
+        "layer": 1,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 1.95703125
+      },
+      {
+        "layer": 2,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 4.171875
+      },
+      {
+        "layer": 3,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 5.453125
+      },
+      {
+        "layer": 4,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 5.1328125
+      },
+      {
+        "layer": 5,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 5.0
+      },
+      {
+        "layer": 6,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 4.171875
+      },
+      {
+        "layer": 7,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 3.61328125
+      },
+      {
+        "layer": 8,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 4.875
+      },
+      {
+        "layer": 9,
+        "total": 15.89453125,
+        "attn": 0.0,
+        "mlp": 7.7421875
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 12.2734375
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 1.5703125
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": -0.3359375
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": -0.3984375
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": -0.2890625
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": 0.6328125
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": -0.1796875
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": 0.5078125
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.1953125
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": -0.0546875
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": -0.046875
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 34,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 35,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 38,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 40,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 43,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 11.0859375
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 1.0234375
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": -0.3671875
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": -0.2578125
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": -0.1015625
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.4296875
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": 0.4453125
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.2109375
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": 0.171875
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.2109375
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": 0.125
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": -0.0546875
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 31,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 34,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 37,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 38,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 39,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 43,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 9.140625
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.7421875
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": -0.1796875
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": -0.1953125
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": 0.1640625
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": 0.2421875
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.1015625
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": 0.1640625
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": 0.140625
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 39,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 43,
+        "effect": -0.0625
+      }
+    ]
+  },
+  {
+    "scenario_id": "identity_seeking_through_theory",
+    "clean_condition": "only_artifact",
+    "corrupt_condition": "baseline",
+    "clean_metric": 4.8125,
+    "corrupt_metric": -6.2421875,
+    "metric_range": 11.0546875,
+    "clean_top_tokens": " itself h reg the C",
+    "corrupt_top_tokens": "_c the that) thereafter",
+    "seq_len": 37,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 1,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 2,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 3,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 4,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 5,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 6,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 7,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 8,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 9,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 10,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 11,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 12,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 13,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 14,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 15,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 16,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 17,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 18,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 19,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 20,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 21,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 22,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 23,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 24,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 25,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 26,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 27,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 28,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 29,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 30,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 31,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 32,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 33,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 34,
+        "effect": 11.0546875
+      },
+      {
+        "layer": 35,
+        "effect": 11.0546875
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 2.1875
+      },
+      {
+        "layer": 1,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 1.5546875
+      },
+      {
+        "layer": 2,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 2.6796875
+      },
+      {
+        "layer": 3,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 3.5390625
+      },
+      {
+        "layer": 4,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 3.6171875
+      },
+      {
+        "layer": 5,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 2.61328125
+      },
+      {
+        "layer": 6,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 1.91015625
+      },
+      {
+        "layer": 7,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 1.3515625
+      },
+      {
+        "layer": 8,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 2.95703125
+      },
+      {
+        "layer": 9,
+        "total": 11.0546875,
+        "attn": 0.0,
+        "mlp": 4.7890625
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 9.0234375
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 0.4921875
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": -0.2734375
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": -0.171875
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": -0.2578125
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": 0.3359375
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": 0.40625
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.25
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.09375
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": -0.15625
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": -0.140625
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 8.4296875
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.390625
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": -0.40625
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": -0.2734375
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": -0.140625
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.2265625
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": 0.34375
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.2734375
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.140625
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": -0.09375
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": -0.109375
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 5.734375
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 0.953125
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": -0.2890625
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": -0.25
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": -0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": 0.1953125
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.2265625
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": 0.140625
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": -0.015625
+      }
+    ]
+  },
+  {
+    "scenario_id": "coherence_laundering",
+    "clean_condition": "handled",
+    "corrupt_condition": "scrambled",
+    "clean_metric": 3.359375,
+    "corrupt_metric": -6.921875,
+    "metric_range": 10.28125,
+    "clean_top_tokens": " Vog c itself r three",
+    "corrupt_top_tokens": ") c that the subsequent",
+    "seq_len": 56,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 10.28125
+      },
+      {
+        "layer": 1,
+        "effect": 10.28125
+      },
+      {
+        "layer": 2,
+        "effect": 10.28125
+      },
+      {
+        "layer": 3,
+        "effect": 10.28125
+      },
+      {
+        "layer": 4,
+        "effect": 10.28125
+      },
+      {
+        "layer": 5,
+        "effect": 10.28125
+      },
+      {
+        "layer": 6,
+        "effect": 10.28125
+      },
+      {
+        "layer": 7,
+        "effect": 10.28125
+      },
+      {
+        "layer": 8,
+        "effect": 10.28125
+      },
+      {
+        "layer": 9,
+        "effect": 10.28125
+      },
+      {
+        "layer": 10,
+        "effect": 10.28125
+      },
+      {
+        "layer": 11,
+        "effect": 10.28125
+      },
+      {
+        "layer": 12,
+        "effect": 10.28125
+      },
+      {
+        "layer": 13,
+        "effect": 10.28125
+      },
+      {
+        "layer": 14,
+        "effect": 10.28125
+      },
+      {
+        "layer": 15,
+        "effect": 10.28125
+      },
+      {
+        "layer": 16,
+        "effect": 10.28125
+      },
+      {
+        "layer": 17,
+        "effect": 10.28125
+      },
+      {
+        "layer": 18,
+        "effect": 10.28125
+      },
+      {
+        "layer": 19,
+        "effect": 10.28125
+      },
+      {
+        "layer": 20,
+        "effect": 10.28125
+      },
+      {
+        "layer": 21,
+        "effect": 10.28125
+      },
+      {
+        "layer": 22,
+        "effect": 10.28125
+      },
+      {
+        "layer": 23,
+        "effect": 10.28125
+      },
+      {
+        "layer": 24,
+        "effect": 10.28125
+      },
+      {
+        "layer": 25,
+        "effect": 10.28125
+      },
+      {
+        "layer": 26,
+        "effect": 10.28125
+      },
+      {
+        "layer": 27,
+        "effect": 10.28125
+      },
+      {
+        "layer": 28,
+        "effect": 10.28125
+      },
+      {
+        "layer": 29,
+        "effect": 10.28125
+      },
+      {
+        "layer": 30,
+        "effect": 10.28125
+      },
+      {
+        "layer": 31,
+        "effect": 10.28125
+      },
+      {
+        "layer": 32,
+        "effect": 10.28125
+      },
+      {
+        "layer": 33,
+        "effect": 10.28125
+      },
+      {
+        "layer": 34,
+        "effect": 10.28125
+      },
+      {
+        "layer": 35,
+        "effect": 10.28125
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 4.0859375
+      },
+      {
+        "layer": 1,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 1.6328125
+      },
+      {
+        "layer": 2,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 3.4453125
+      },
+      {
+        "layer": 3,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 3.796875
+      },
+      {
+        "layer": 4,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 4.6171875
+      },
+      {
+        "layer": 5,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 3.37890625
+      },
+      {
+        "layer": 6,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 1.70703125
+      },
+      {
+        "layer": 7,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 2.6328125
+      },
+      {
+        "layer": 8,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 2.328125
+      },
+      {
+        "layer": 9,
+        "total": 10.28125,
+        "attn": 0.0,
+        "mlp": 3.53125
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 8.40625
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 1.2421875
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.21875
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.3671875
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.2890625
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.046875
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": -0.109375
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.1484375
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": -0.125
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.1640625
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": -0.0859375
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.1484375
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.1796875
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.171875
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": 0.28125
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": 0.1796875
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": 0.0546875
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.046875
+      },
+      {
+        "layer": 0,
+        "position": 29,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 32,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 34,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 40,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 41,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 42,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 43,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 44,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 45,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 46,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 48,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 49,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 50,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 51,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 54,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 7.984375
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.8984375
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": 0.078125
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.3125
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.234375
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": 0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.140625
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": -0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": -0.171875
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.125
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.1875
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": 0.2265625
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": 0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": 0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 31,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 34,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 39,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 44,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 45,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 46,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 47,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 48,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 50,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 54,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 6.1796875
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.03125
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.234375
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": -0.171875
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.15625
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.125
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": 0.0625
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.203125
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.125
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.09375
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.140625
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": 0.21875
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.1015625
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": 0.0625
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 39,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 41,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 43,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 44,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 45,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 46,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 47,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 48,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 49,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 50,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 51,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 52,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 54,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 55,
+        "effect": -0.0078125
+      }
+    ]
+  },
+  {
+    "scenario_id": "recursive_importance_inflation",
+    "clean_condition": "handled",
+    "corrupt_condition": "scrambled",
+    "clean_metric": 3.3359375,
+    "corrupt_metric": -7.0,
+    "metric_range": 10.3359375,
+    "clean_top_tokens": " Vog r three itself c",
+    "corrupt_top_tokens": ") the that c subsequent",
+    "seq_len": 56,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 1,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 2,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 3,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 4,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 5,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 6,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 7,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 8,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 9,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 10,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 11,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 12,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 13,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 14,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 15,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 16,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 17,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 18,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 19,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 20,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 21,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 22,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 23,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 24,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 25,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 26,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 27,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 28,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 29,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 30,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 31,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 32,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 33,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 34,
+        "effect": 10.3359375
+      },
+      {
+        "layer": 35,
+        "effect": 10.3359375
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 3.859375
+      },
+      {
+        "layer": 1,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 1.703125
+      },
+      {
+        "layer": 2,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 3.3359375
+      },
+      {
+        "layer": 3,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 3.796875
+      },
+      {
+        "layer": 4,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 4.75
+      },
+      {
+        "layer": 5,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 3.3828125
+      },
+      {
+        "layer": 6,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 1.40625
+      },
+      {
+        "layer": 7,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 2.859375
+      },
+      {
+        "layer": 8,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 2.3984375
+      },
+      {
+        "layer": 9,
+        "total": 10.3359375,
+        "attn": 0.0,
+        "mlp": 3.328125
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 8.484375
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 1.328125
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.1015625
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.375
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.3046875
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": -0.109375
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": -0.1953125
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": -0.3671875
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": -0.1796875
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.234375
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": -0.125
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.1484375
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.25
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.2109375
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.1171875
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": 0.3515625
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": 0.1875
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": 0.09375
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.1015625
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 40,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 42,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 44,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 46,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 48,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 50,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 52,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 53,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 7.9296875
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 0.953125
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.25
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.2421875
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": -0.1015625
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": -0.328125
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.15625
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": -0.1796875
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.1875
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 1,
+        "position": 14,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": -0.1953125
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.1953125
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.1484375
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.171875
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": 0.2890625
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 37,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 38,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 39,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 41,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 45,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 46,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 47,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 48,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 52,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 53,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 54,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 55,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 6.140625
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.0625
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.2421875
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.109375
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": -0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": -0.109375
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": -0.359375
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.1640625
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": -0.140625
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": -0.109375
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.1953125
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.203125
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.2109375
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.15625
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": 0.2578125
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.1171875
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 27,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 39,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 44,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 46,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 47,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 48,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 52,
+        "effect": -0.03125
+      },
+      {
+        "layer": 2,
+        "position": 53,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 54,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 55,
+        "effect": -0.0078125
+      }
+    ]
+  },
+  {
+    "scenario_id": "identity_seeking_through_theory",
+    "clean_condition": "handled",
+    "corrupt_condition": "scrambled",
+    "clean_metric": 4.546875,
+    "corrupt_metric": -9.515625,
+    "metric_range": 14.0625,
+    "clean_top_tokens": " r Vog itself three h",
+    "corrupt_top_tokens": ") the that c meetings",
+    "seq_len": 49,
+    "layer_effects": [
+      {
+        "layer": 0,
+        "effect": 14.0625
+      },
+      {
+        "layer": 1,
+        "effect": 14.0625
+      },
+      {
+        "layer": 2,
+        "effect": 14.0625
+      },
+      {
+        "layer": 3,
+        "effect": 14.0625
+      },
+      {
+        "layer": 4,
+        "effect": 14.0625
+      },
+      {
+        "layer": 5,
+        "effect": 14.0625
+      },
+      {
+        "layer": 6,
+        "effect": 14.0625
+      },
+      {
+        "layer": 7,
+        "effect": 14.0625
+      },
+      {
+        "layer": 8,
+        "effect": 14.0625
+      },
+      {
+        "layer": 9,
+        "effect": 14.0625
+      },
+      {
+        "layer": 10,
+        "effect": 14.0625
+      },
+      {
+        "layer": 11,
+        "effect": 14.0625
+      },
+      {
+        "layer": 12,
+        "effect": 14.0625
+      },
+      {
+        "layer": 13,
+        "effect": 14.0625
+      },
+      {
+        "layer": 14,
+        "effect": 14.0625
+      },
+      {
+        "layer": 15,
+        "effect": 14.0625
+      },
+      {
+        "layer": 16,
+        "effect": 14.0625
+      },
+      {
+        "layer": 17,
+        "effect": 14.0625
+      },
+      {
+        "layer": 18,
+        "effect": 14.0625
+      },
+      {
+        "layer": 19,
+        "effect": 14.0625
+      },
+      {
+        "layer": 20,
+        "effect": 14.0625
+      },
+      {
+        "layer": 21,
+        "effect": 14.0625
+      },
+      {
+        "layer": 22,
+        "effect": 14.0625
+      },
+      {
+        "layer": 23,
+        "effect": 14.0625
+      },
+      {
+        "layer": 24,
+        "effect": 14.0625
+      },
+      {
+        "layer": 25,
+        "effect": 14.0625
+      },
+      {
+        "layer": 26,
+        "effect": 14.0625
+      },
+      {
+        "layer": 27,
+        "effect": 14.0625
+      },
+      {
+        "layer": 28,
+        "effect": 14.0625
+      },
+      {
+        "layer": 29,
+        "effect": 14.0625
+      },
+      {
+        "layer": 30,
+        "effect": 14.0625
+      },
+      {
+        "layer": 31,
+        "effect": 14.0625
+      },
+      {
+        "layer": 32,
+        "effect": 14.0625
+      },
+      {
+        "layer": 33,
+        "effect": 14.0625
+      },
+      {
+        "layer": 34,
+        "effect": 14.0625
+      },
+      {
+        "layer": 35,
+        "effect": 14.0625
+      }
+    ],
+    "component_effects": [
+      {
+        "layer": 0,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 6.71875
+      },
+      {
+        "layer": 1,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 2.50390625
+      },
+      {
+        "layer": 2,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 4.26171875
+      },
+      {
+        "layer": 3,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 5.328125
+      },
+      {
+        "layer": 4,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 6.59375
+      },
+      {
+        "layer": 5,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 5.578125
+      },
+      {
+        "layer": 6,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 4.1328125
+      },
+      {
+        "layer": 7,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 2.625
+      },
+      {
+        "layer": 8,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 3.51953125
+      },
+      {
+        "layer": 9,
+        "total": 14.0625,
+        "attn": 0.0,
+        "mlp": 5.140625
+      }
+    ],
+    "head_effects": [],
+    "position_effects": [
+      {
+        "layer": 0,
+        "position": 0,
+        "effect": 12.2109375
+      },
+      {
+        "layer": 0,
+        "position": 1,
+        "effect": 2.421875
+      },
+      {
+        "layer": 0,
+        "position": 2,
+        "effect": 0.7578125
+      },
+      {
+        "layer": 0,
+        "position": 3,
+        "effect": 0.671875
+      },
+      {
+        "layer": 0,
+        "position": 4,
+        "effect": 0.3125
+      },
+      {
+        "layer": 0,
+        "position": 5,
+        "effect": 0.046875
+      },
+      {
+        "layer": 0,
+        "position": 6,
+        "effect": 0.078125
+      },
+      {
+        "layer": 0,
+        "position": 7,
+        "effect": -0.1328125
+      },
+      {
+        "layer": 0,
+        "position": 8,
+        "effect": 0.203125
+      },
+      {
+        "layer": 0,
+        "position": 9,
+        "effect": -0.1171875
+      },
+      {
+        "layer": 0,
+        "position": 10,
+        "effect": -0.03125
+      },
+      {
+        "layer": 0,
+        "position": 11,
+        "effect": 0.3359375
+      },
+      {
+        "layer": 0,
+        "position": 12,
+        "effect": -0.09375
+      },
+      {
+        "layer": 0,
+        "position": 13,
+        "effect": -0.078125
+      },
+      {
+        "layer": 0,
+        "position": 14,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 0,
+        "position": 15,
+        "effect": -0.265625
+      },
+      {
+        "layer": 0,
+        "position": 16,
+        "effect": -0.265625
+      },
+      {
+        "layer": 0,
+        "position": 17,
+        "effect": 0.28125
+      },
+      {
+        "layer": 0,
+        "position": 18,
+        "effect": 0.1015625
+      },
+      {
+        "layer": 0,
+        "position": 19,
+        "effect": 0.234375
+      },
+      {
+        "layer": 0,
+        "position": 20,
+        "effect": 0.0703125
+      },
+      {
+        "layer": 0,
+        "position": 21,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 22,
+        "effect": -0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 23,
+        "effect": 0.0390625
+      },
+      {
+        "layer": 0,
+        "position": 24,
+        "effect": -0.09375
+      },
+      {
+        "layer": 0,
+        "position": 25,
+        "effect": -0.0625
+      },
+      {
+        "layer": 0,
+        "position": 26,
+        "effect": -0.015625
+      },
+      {
+        "layer": 0,
+        "position": 27,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 28,
+        "effect": 0.03125
+      },
+      {
+        "layer": 0,
+        "position": 30,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 31,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 33,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 35,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 36,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 37,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 38,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 39,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 40,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 41,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 43,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 44,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 45,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 0,
+        "position": 47,
+        "effect": 0.015625
+      },
+      {
+        "layer": 0,
+        "position": 48,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 0,
+        "effect": 11.4140625
+      },
+      {
+        "layer": 1,
+        "position": 1,
+        "effect": 1.75390625
+      },
+      {
+        "layer": 1,
+        "position": 2,
+        "effect": 0.453125
+      },
+      {
+        "layer": 1,
+        "position": 3,
+        "effect": 0.515625
+      },
+      {
+        "layer": 1,
+        "position": 4,
+        "effect": 0.1875
+      },
+      {
+        "layer": 1,
+        "position": 5,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 6,
+        "effect": -0.0859375
+      },
+      {
+        "layer": 1,
+        "position": 7,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 8,
+        "effect": 0.3125
+      },
+      {
+        "layer": 1,
+        "position": 9,
+        "effect": -0.140625
+      },
+      {
+        "layer": 1,
+        "position": 10,
+        "effect": -0.0625
+      },
+      {
+        "layer": 1,
+        "position": 11,
+        "effect": 0.265625
+      },
+      {
+        "layer": 1,
+        "position": 12,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 13,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 15,
+        "effect": -0.2890625
+      },
+      {
+        "layer": 1,
+        "position": 16,
+        "effect": -0.1875
+      },
+      {
+        "layer": 1,
+        "position": 17,
+        "effect": 0.1796875
+      },
+      {
+        "layer": 1,
+        "position": 18,
+        "effect": 0.109375
+      },
+      {
+        "layer": 1,
+        "position": 19,
+        "effect": 0.2578125
+      },
+      {
+        "layer": 1,
+        "position": 20,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 21,
+        "effect": 0.046875
+      },
+      {
+        "layer": 1,
+        "position": 22,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 23,
+        "effect": 0.09375
+      },
+      {
+        "layer": 1,
+        "position": 24,
+        "effect": -0.140625
+      },
+      {
+        "layer": 1,
+        "position": 25,
+        "effect": -0.046875
+      },
+      {
+        "layer": 1,
+        "position": 26,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 27,
+        "effect": -0.03125
+      },
+      {
+        "layer": 1,
+        "position": 28,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 29,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 30,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 31,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 32,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 33,
+        "effect": 0.03125
+      },
+      {
+        "layer": 1,
+        "position": 34,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 35,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 36,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 38,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 40,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 42,
+        "effect": -0.0078125
+      },
+      {
+        "layer": 1,
+        "position": 43,
+        "effect": 0.015625
+      },
+      {
+        "layer": 1,
+        "position": 46,
+        "effect": -0.015625
+      },
+      {
+        "layer": 1,
+        "position": 47,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 1,
+        "position": 48,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 0,
+        "effect": 9.1328125
+      },
+      {
+        "layer": 2,
+        "position": 1,
+        "effect": 1.94140625
+      },
+      {
+        "layer": 2,
+        "position": 2,
+        "effect": 0.765625
+      },
+      {
+        "layer": 2,
+        "position": 3,
+        "effect": 0.578125
+      },
+      {
+        "layer": 2,
+        "position": 4,
+        "effect": 0.125
+      },
+      {
+        "layer": 2,
+        "position": 5,
+        "effect": 0.109375
+      },
+      {
+        "layer": 2,
+        "position": 6,
+        "effect": -0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 7,
+        "effect": -0.125
+      },
+      {
+        "layer": 2,
+        "position": 8,
+        "effect": 0.21875
+      },
+      {
+        "layer": 2,
+        "position": 9,
+        "effect": -0.125
+      },
+      {
+        "layer": 2,
+        "position": 10,
+        "effect": -0.1484375
+      },
+      {
+        "layer": 2,
+        "position": 11,
+        "effect": 0.2265625
+      },
+      {
+        "layer": 2,
+        "position": 12,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 13,
+        "effect": -0.046875
+      },
+      {
+        "layer": 2,
+        "position": 14,
+        "effect": -0.015625
+      },
+      {
+        "layer": 2,
+        "position": 15,
+        "effect": -0.234375
+      },
+      {
+        "layer": 2,
+        "position": 16,
+        "effect": -0.1328125
+      },
+      {
+        "layer": 2,
+        "position": 17,
+        "effect": 0.1953125
+      },
+      {
+        "layer": 2,
+        "position": 18,
+        "effect": 0.140625
+      },
+      {
+        "layer": 2,
+        "position": 19,
+        "effect": 0.234375
+      },
+      {
+        "layer": 2,
+        "position": 20,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 21,
+        "effect": 0.078125
+      },
+      {
+        "layer": 2,
+        "position": 22,
+        "effect": -0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 23,
+        "effect": 0.046875
+      },
+      {
+        "layer": 2,
+        "position": 24,
+        "effect": -0.109375
+      },
+      {
+        "layer": 2,
+        "position": 25,
+        "effect": -0.0625
+      },
+      {
+        "layer": 2,
+        "position": 26,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 28,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 29,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 30,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 31,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 32,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 33,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 34,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 35,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 36,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 37,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 38,
+        "effect": 0.0234375
+      },
+      {
+        "layer": 2,
+        "position": 39,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 40,
+        "effect": 0.0078125
+      },
+      {
+        "layer": 2,
+        "position": 42,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 43,
+        "effect": 0.03125
+      },
+      {
+        "layer": 2,
+        "position": 44,
+        "effect": 0.015625
+      },
+      {
+        "layer": 2,
+        "position": 47,
+        "effect": 0.0078125
+      }
+    ]
+  }
+]

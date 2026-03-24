@@ -1,0 +1,6 @@
+{
+  "model": "allenai/OLMoE-1B-7B-0924",
+  "timestamp": "2026-03-16 18:09:47",
+  "num_layers": 16,
+  "num_experts": 64
+}

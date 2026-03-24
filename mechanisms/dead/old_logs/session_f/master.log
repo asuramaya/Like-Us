@@ -1,0 +1,110 @@
+[2026-03-16 16:19:34] === PHASE 1: QWEN 7B VIA TRANSFORMERLENS ===
+[2026-03-16 16:19:34] START: 7b_controls
+[2026-03-16 16:24:40] DONE:  7b_controls (306s)
+[2026-03-16 16:24:40] START: 7b_patching
+[2026-03-16 16:29:14] DONE:  7b_patching (274s)
+[2026-03-16 16:29:14] START: 7b_exhaust
+[2026-03-16 16:30:40] DONE:  7b_exhaust (86s)
+[2026-03-16 16:30:40] START: 7b_token_sweep
+[2026-03-16 16:31:32] DONE:  7b_token_sweep (52s)
+[2026-03-16 16:31:32] START: 7b_saturation
+[2026-03-16 16:32:16] DONE:  7b_saturation (44s)
+[2026-03-16 16:32:16] START: 7b_degradation
+[2026-03-16 17:03:49] DONE:  7b_degradation (1893s)
+[2026-03-16 17:03:49] === PHASE 1 COMPLETE ===
+[2026-03-16 17:03:49] === PHASE 2: QWEN 7B BEHAVIORAL (OLLAMA) ===
+[2026-03-16 17:03:50] START: 7b_behavioral
+[2026-03-16 17:14:52] === CROSS-ARCHITECTURE (parallel with behavioral) ===
+[2026-03-16 17:14:52] Trying: mistralai/Mistral-7B-Instruct-v0.3
+[2026-03-16 17:14:57] FAIL to load: mistralai/Mistral-7B-Instruct-v0.3
+[2026-03-16 17:14:57] Trying: google/gemma-2-2b-it
+[2026-03-16 17:15:01] FAIL to load: google/gemma-2-2b-it
+[2026-03-16 17:15:01] Trying: meta-llama/Llama-3.1-8B-Instruct
+[2026-03-16 17:15:05] FAIL to load: meta-llama/Llama-3.1-8B-Instruct
+[2026-03-16 17:15:05] === CROSS-ARCHITECTURE DONE ===
+[2026-03-16 17:16:24] === CROSS-ARCH V2: OPEN MODELS ===
+[2026-03-16 17:16:24] Trying: mistralai/Mistral-7B-Instruct-v0.1
+[2026-03-16 17:25:56] LOADED:32:32:4096
+[2026-03-16 17:25:56] START: mistralai_Mistral-7B-Instruct-v0-1_controls
+[2026-03-16 17:31:55] DONE:  mistralai_Mistral-7B-Instruct-v0-1_controls (359s)
+[2026-03-16 17:31:55] START: mistralai_Mistral-7B-Instruct-v0-1_patching
+[2026-03-16 17:36:51] DONE:  mistralai_Mistral-7B-Instruct-v0-1_patching (296s)
+[2026-03-16 17:36:51] START: mistralai_Mistral-7B-Instruct-v0-1_exhaust
+[2026-03-16 17:38:31] DONE:  mistralai_Mistral-7B-Instruct-v0-1_exhaust (100s)
+[2026-03-16 17:38:31] CROSS-ARCH COMPLETE: mistralai/Mistral-7B-Instruct-v0.1
+[2026-03-16 17:38:31] === CROSS-ARCH V2 DONE ===
+[2026-03-16 19:28:54] === REMAINING EXPERIMENTS ===
+[2026-03-16 19:28:54] START: 7b_info_theory
+[2026-03-16 19:30:22] DONE:  7b_info_theory (88s)
+[2026-03-16 19:30:22] START: 7b_reroute
+[2026-03-16 19:35:21] DONE:  7b_reroute (299s)
+[2026-03-16 19:35:21] 7B behavioral still running — waiting...
+[2026-03-16 23:47:34] DONE:  7b_behavioral (24223s)
+[2026-03-16 23:47:34] === PHASE 2 COMPLETE ===
+[2026-03-16 23:47:34] === PHASE 3: CROSS-ARCHITECTURE ===
+[2026-03-16 23:47:34] Trying cross-arch: mistralai/Mistral-7B-Instruct-v0.3
+[2026-03-16 23:47:38] Failed to load mistralai/Mistral-7B-Instruct-v0.3, trying next...
+[2026-03-16 23:47:38] Trying cross-arch: meta-llama/Llama-3.1-8B-Instruct
+[2026-03-16 23:47:42] Failed to load meta-llama/Llama-3.1-8B-Instruct, trying next...
+[2026-03-16 23:47:42] START: llama3_1_8b_behavioral
+[2026-03-16 23:48:20] 7B behavioral finished
+[2026-03-16 23:48:20] START: llama8b_behavioral
+[2026-03-16 23:50:11] DONE:  llama3_1_8b_behavioral (149s)
+[2026-03-16 23:50:11] === PHASE 3 COMPLETE ===
+[2026-03-16 23:50:11] === SESSION F EXPERIMENTS COMPLETE ===
+[2026-03-16 23:50:11] Data files:
+drwxr-xr-x  30 asuramaya  staff       960 Mar 16 19:35 .
+drwxr-xr-x  59 asuramaya  staff      1888 Mar 16 23:49 ..
+-rw-r--r--   1 asuramaya  staff    143264 Mar 16 15:36 behavioral_Qwen_Qwen2.5-1.5B-Instruct.json
+-rw-r--r--   1 asuramaya  staff    142307 Mar 16 15:36 behavioral_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff    122705 Mar 16 15:36 degradation_extended_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff    143515 Mar 16 17:03 degradation_extended_Qwen_Qwen2.5-7B-Instruct.json
+-rw-r--r--   1 asuramaya  staff   1625617 Mar 16 15:36 degradation_Qwen_Qwen2.5-1.5B-Instruct.json
+-rw-r--r--   1 asuramaya  staff   2467728 Mar 16 15:36 degradation_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff     56468 Mar 16 17:38 exhaust_mistralai_Mistral-7B-Instruct-v0.1.json
+-rw-r--r--   1 asuramaya  staff     49835 Mar 16 15:36 exhaust_Qwen_Qwen2.5-1.5B-Instruct.json
+-rw-r--r--   1 asuramaya  staff     63473 Mar 16 15:36 exhaust_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff     49805 Mar 16 16:30 exhaust_Qwen_Qwen2.5-7B-Instruct.json
+-rw-r--r--   1 asuramaya  staff  37225880 Mar 16 17:31 matrix_mistralai_Mistral-7B-Instruct-v0.1.json
+-rw-r--r--   1 asuramaya  staff  10927332 Mar 16 15:36 matrix_Qwen_Qwen2.5-1.5B-Instruct.json
+-rw-r--r--   1 asuramaya  staff   7932192 Mar 16 15:36 matrix_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff  29709248 Mar 16 16:24 matrix_Qwen_Qwen2.5-7B-Instruct.json
+-rw-r--r--   1 asuramaya  staff       120 Mar 16 18:09 moe_deep_allenai_OLMoE-1B-7B-0924.json
+-rw-r--r--   1 asuramaya  staff    995488 Mar 16 18:05 moe_probe_allenai_OLMoE-1B-7B-0924.json
+-rw-r--r--   1 asuramaya  staff     74368 Mar 16 17:36 patching_full_mistralai_Mistral-7B-Instruct-v0.1.json
+-rw-r--r--   1 asuramaya  staff     39110 Mar 16 15:36 patching_full_Qwen_Qwen2.5-1.5B-Instruct.json
+-rw-r--r--   1 asuramaya  staff     49844 Mar 16 15:36 patching_full_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff     64821 Mar 16 16:29 patching_full_Qwen_Qwen2.5-7B-Instruct.json
+-rw-r--r--   1 asuramaya  staff    178770 Mar 16 15:36 patching_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff      8987 Mar 16 19:35 reroute_Qwen_Qwen2.5-7B-Instruct.json
+-rw-r--r--   1 asuramaya  staff      6106 Mar 16 15:36 saturation_Qwen_Qwen2.5-1.5B-Instruct.json
+-rw-r--r--   1 asuramaya  staff      6115 Mar 16 15:36 saturation_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff      6140 Mar 16 16:32 saturation_Qwen_Qwen2.5-7B-Instruct.json
+-rw-r--r--   1 asuramaya  staff      5388 Mar 16 15:36 token_sweep_Qwen_Qwen2.5-1.5B-Instruct.json
+-rw-r--r--   1 asuramaya  staff      5331 Mar 16 15:36 token_sweep_Qwen_Qwen2.5-3B-Instruct.json
+-rw-r--r--   1 asuramaya  staff      5274 Mar 16 16:31 token_sweep_Qwen_Qwen2.5-7B-Instruct.json
+[2026-03-16 23:50:11] Log files:
+drwxr-xr-x  20 asuramaya  staff     640 Mar 16 23:48 .
+drwxr-xr-x   4 asuramaya  staff     128 Mar 16 16:19 ..
+-rw-r--r--   1 asuramaya  staff       0 Mar 16 17:03 7b_behavioral.log
+-rw-r--r--   1 asuramaya  staff   11508 Mar 16 16:24 7b_controls.log
+-rw-r--r--   1 asuramaya  staff  340563 Mar 16 17:03 7b_degradation.log
+-rw-r--r--   1 asuramaya  staff   11537 Mar 16 16:30 7b_exhaust.log
+-rw-r--r--   1 asuramaya  staff    4277 Mar 16 19:30 7b_info_theory.log
+-rw-r--r--   1 asuramaya  staff   29400 Mar 16 16:29 7b_patching.log
+-rw-r--r--   1 asuramaya  staff   27349 Mar 16 19:35 7b_reroute.log
+-rw-r--r--   1 asuramaya  staff    6394 Mar 16 16:32 7b_saturation.log
+-rw-r--r--   1 asuramaya  staff    4904 Mar 16 16:31 7b_token_sweep.log
+-rw-r--r--   1 asuramaya  staff     924 Mar 16 17:15 google_gemma-2-2b-it_test.log
+-rw-r--r--   1 asuramaya  staff       0 Mar 16 23:47 llama3_1_8b_behavioral.log
+-rw-r--r--   1 asuramaya  staff     284 Mar 16 23:49 llama8b_behavioral.log
+-rw-r--r--   1 asuramaya  staff    6028 Mar 16 23:50 master.log
+-rw-r--r--   1 asuramaya  staff     795 Mar 16 17:15 meta-llama_Llama-3.1-8B-Instruct_test.log
+-rw-r--r--   1 asuramaya  staff   11390 Mar 16 17:31 mistralai_Mistral-7B-Instruct-v0-1_controls.log
+-rw-r--r--   1 asuramaya  staff   10703 Mar 16 17:38 mistralai_Mistral-7B-Instruct-v0-1_exhaust.log
+-rw-r--r--   1 asuramaya  staff   32825 Mar 16 17:36 mistralai_Mistral-7B-Instruct-v0-1_patching.log
+-rw-r--r--   1 asuramaya  staff    6941 Mar 16 17:14 mistralai_Mistral-7B-Instruct-v0.3_test.log
+[2026-03-17 03:13:59] DONE:  llama8b_behavioral (12339s)
+[2026-03-17 03:13:59] === REMAINING EXPERIMENTS DONE ===
+[2026-03-17 03:13:59] Final data inventory:
+      32

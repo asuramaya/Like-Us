@@ -1,0 +1,1628 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "cosine": [
+    {
+      "scenario": "coherence_laundering",
+      "layer": 0,
+      "handled_baseline": 0.99609375,
+      "scrambled_baseline": 0.99755859375,
+      "handled_scrambled": 0.99755859375,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 1,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99658203125,
+      "handled_scrambled": 0.99853515625,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 2,
+      "handled_baseline": 0.99560546875,
+      "scrambled_baseline": 0.99462890625,
+      "handled_scrambled": 0.99755859375,
+      "reversed_baseline": 0.9970703125,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 3,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99609375,
+      "handled_scrambled": 0.99755859375,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.99755859375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 4,
+      "handled_baseline": 0.99560546875,
+      "scrambled_baseline": 0.99462890625,
+      "handled_scrambled": 0.9970703125,
+      "reversed_baseline": 0.9970703125,
+      "handled_reversed": 0.9970703125
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 5,
+      "handled_baseline": 0.99560546875,
+      "scrambled_baseline": 0.99267578125,
+      "handled_scrambled": 0.99560546875,
+      "reversed_baseline": 0.99609375,
+      "handled_reversed": 0.99609375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 6,
+      "handled_baseline": 0.99462890625,
+      "scrambled_baseline": 0.990234375,
+      "handled_scrambled": 0.994140625,
+      "reversed_baseline": 0.99462890625,
+      "handled_reversed": 0.9951171875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 7,
+      "handled_baseline": 0.99267578125,
+      "scrambled_baseline": 0.98681640625,
+      "handled_scrambled": 0.9921875,
+      "reversed_baseline": 0.99267578125,
+      "handled_reversed": 0.994140625
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 8,
+      "handled_baseline": 0.9921875,
+      "scrambled_baseline": 0.98583984375,
+      "handled_scrambled": 0.99072265625,
+      "reversed_baseline": 0.9921875,
+      "handled_reversed": 0.9931640625
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 9,
+      "handled_baseline": 0.990234375,
+      "scrambled_baseline": 0.98193359375,
+      "handled_scrambled": 0.98779296875,
+      "reversed_baseline": 0.98974609375,
+      "handled_reversed": 0.99169921875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 10,
+      "handled_baseline": 0.9892578125,
+      "scrambled_baseline": 0.98095703125,
+      "handled_scrambled": 0.98681640625,
+      "reversed_baseline": 0.98828125,
+      "handled_reversed": 0.9912109375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 11,
+      "handled_baseline": 0.98974609375,
+      "scrambled_baseline": 0.98193359375,
+      "handled_scrambled": 0.9873046875,
+      "reversed_baseline": 0.9892578125,
+      "handled_reversed": 0.9921875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 12,
+      "handled_baseline": 0.98681640625,
+      "scrambled_baseline": 0.97900390625,
+      "handled_scrambled": 0.98583984375,
+      "reversed_baseline": 0.9853515625,
+      "handled_reversed": 0.990234375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 13,
+      "handled_baseline": 0.98388671875,
+      "scrambled_baseline": 0.97607421875,
+      "handled_scrambled": 0.9833984375,
+      "reversed_baseline": 0.982421875,
+      "handled_reversed": 0.9892578125
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 14,
+      "handled_baseline": 0.98388671875,
+      "scrambled_baseline": 0.97412109375,
+      "handled_scrambled": 0.982421875,
+      "reversed_baseline": 0.9814453125,
+      "handled_reversed": 0.9892578125
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 15,
+      "handled_baseline": 0.98193359375,
+      "scrambled_baseline": 0.97119140625,
+      "handled_scrambled": 0.98095703125,
+      "reversed_baseline": 0.978515625,
+      "handled_reversed": 0.98876953125
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 16,
+      "handled_baseline": 0.978515625,
+      "scrambled_baseline": 0.9658203125,
+      "handled_scrambled": 0.97802734375,
+      "reversed_baseline": 0.97509765625,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 17,
+      "handled_baseline": 0.97705078125,
+      "scrambled_baseline": 0.962890625,
+      "handled_scrambled": 0.9765625,
+      "reversed_baseline": 0.97509765625,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 18,
+      "handled_baseline": 0.97509765625,
+      "scrambled_baseline": 0.9599609375,
+      "handled_scrambled": 0.97314453125,
+      "reversed_baseline": 0.97265625,
+      "handled_reversed": 0.98681640625
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 19,
+      "handled_baseline": 0.97412109375,
+      "scrambled_baseline": 0.95751953125,
+      "handled_scrambled": 0.9716796875,
+      "reversed_baseline": 0.97119140625,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 20,
+      "handled_baseline": 0.970703125,
+      "scrambled_baseline": 0.95361328125,
+      "handled_scrambled": 0.96923828125,
+      "reversed_baseline": 0.96923828125,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 21,
+      "handled_baseline": 0.96923828125,
+      "scrambled_baseline": 0.95068359375,
+      "handled_scrambled": 0.9677734375,
+      "reversed_baseline": 0.966796875,
+      "handled_reversed": 0.986328125
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 22,
+      "handled_baseline": 0.96630859375,
+      "scrambled_baseline": 0.94677734375,
+      "handled_scrambled": 0.96630859375,
+      "reversed_baseline": 0.96435546875,
+      "handled_reversed": 0.9853515625
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 23,
+      "handled_baseline": 0.96484375,
+      "scrambled_baseline": 0.9462890625,
+      "handled_scrambled": 0.96484375,
+      "reversed_baseline": 0.96484375,
+      "handled_reversed": 0.984375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 24,
+      "handled_baseline": 0.96435546875,
+      "scrambled_baseline": 0.94287109375,
+      "handled_scrambled": 0.96337890625,
+      "reversed_baseline": 0.9638671875,
+      "handled_reversed": 0.9833984375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 25,
+      "handled_baseline": 0.96337890625,
+      "scrambled_baseline": 0.94482421875,
+      "handled_scrambled": 0.962890625,
+      "reversed_baseline": 0.962890625,
+      "handled_reversed": 0.98193359375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 26,
+      "handled_baseline": 0.96630859375,
+      "scrambled_baseline": 0.951171875,
+      "handled_scrambled": 0.96923828125,
+      "reversed_baseline": 0.96630859375,
+      "handled_reversed": 0.984375
+    },
+    {
+      "scenario": "coherence_laundering",
+      "layer": 27,
+      "handled_baseline": 0.97021484375,
+      "scrambled_baseline": 0.9580078125,
+      "handled_scrambled": 0.97509765625,
+      "reversed_baseline": 0.96923828125,
+      "handled_reversed": 0.98583984375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 0,
+      "handled_baseline": 0.99658203125,
+      "scrambled_baseline": 0.9970703125,
+      "handled_scrambled": 0.998046875,
+      "reversed_baseline": 0.9970703125,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 1,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99658203125,
+      "handled_scrambled": 0.99853515625,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 2,
+      "handled_baseline": 0.99609375,
+      "scrambled_baseline": 0.99462890625,
+      "handled_scrambled": 0.99755859375,
+      "reversed_baseline": 0.9970703125,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 3,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99609375,
+      "handled_scrambled": 0.998046875,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 4,
+      "handled_baseline": 0.99609375,
+      "scrambled_baseline": 0.9951171875,
+      "handled_scrambled": 0.9970703125,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.9970703125
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 5,
+      "handled_baseline": 0.99560546875,
+      "scrambled_baseline": 0.99267578125,
+      "handled_scrambled": 0.9951171875,
+      "reversed_baseline": 0.99609375,
+      "handled_reversed": 0.99560546875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 6,
+      "handled_baseline": 0.99560546875,
+      "scrambled_baseline": 0.99072265625,
+      "handled_scrambled": 0.994140625,
+      "reversed_baseline": 0.9951171875,
+      "handled_reversed": 0.99560546875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 7,
+      "handled_baseline": 0.9931640625,
+      "scrambled_baseline": 0.9873046875,
+      "handled_scrambled": 0.9921875,
+      "reversed_baseline": 0.99365234375,
+      "handled_reversed": 0.99462890625
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 8,
+      "handled_baseline": 0.99169921875,
+      "scrambled_baseline": 0.9853515625,
+      "handled_scrambled": 0.9912109375,
+      "reversed_baseline": 0.99169921875,
+      "handled_reversed": 0.99365234375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 9,
+      "handled_baseline": 0.990234375,
+      "scrambled_baseline": 0.98193359375,
+      "handled_scrambled": 0.98876953125,
+      "reversed_baseline": 0.98974609375,
+      "handled_reversed": 0.99267578125
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 10,
+      "handled_baseline": 0.9892578125,
+      "scrambled_baseline": 0.98095703125,
+      "handled_scrambled": 0.986328125,
+      "reversed_baseline": 0.9892578125,
+      "handled_reversed": 0.99169921875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 11,
+      "handled_baseline": 0.98876953125,
+      "scrambled_baseline": 0.98046875,
+      "handled_scrambled": 0.986328125,
+      "reversed_baseline": 0.98828125,
+      "handled_reversed": 0.9912109375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 12,
+      "handled_baseline": 0.986328125,
+      "scrambled_baseline": 0.978515625,
+      "handled_scrambled": 0.9853515625,
+      "reversed_baseline": 0.986328125,
+      "handled_reversed": 0.9912109375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 13,
+      "handled_baseline": 0.984375,
+      "scrambled_baseline": 0.97607421875,
+      "handled_scrambled": 0.98388671875,
+      "reversed_baseline": 0.98291015625,
+      "handled_reversed": 0.9892578125
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 14,
+      "handled_baseline": 0.984375,
+      "scrambled_baseline": 0.9755859375,
+      "handled_scrambled": 0.9833984375,
+      "reversed_baseline": 0.982421875,
+      "handled_reversed": 0.98974609375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 15,
+      "handled_baseline": 0.98193359375,
+      "scrambled_baseline": 0.9716796875,
+      "handled_scrambled": 0.9814453125,
+      "reversed_baseline": 0.97900390625,
+      "handled_reversed": 0.98828125
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 16,
+      "handled_baseline": 0.97900390625,
+      "scrambled_baseline": 0.9658203125,
+      "handled_scrambled": 0.97900390625,
+      "reversed_baseline": 0.9755859375,
+      "handled_reversed": 0.98828125
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 17,
+      "handled_baseline": 0.9775390625,
+      "scrambled_baseline": 0.96435546875,
+      "handled_scrambled": 0.9775390625,
+      "reversed_baseline": 0.97607421875,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 18,
+      "handled_baseline": 0.97509765625,
+      "scrambled_baseline": 0.9599609375,
+      "handled_scrambled": 0.974609375,
+      "reversed_baseline": 0.97314453125,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 19,
+      "handled_baseline": 0.9736328125,
+      "scrambled_baseline": 0.95751953125,
+      "handled_scrambled": 0.9716796875,
+      "reversed_baseline": 0.97216796875,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 20,
+      "handled_baseline": 0.97119140625,
+      "scrambled_baseline": 0.95458984375,
+      "handled_scrambled": 0.97021484375,
+      "reversed_baseline": 0.97021484375,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 21,
+      "handled_baseline": 0.96923828125,
+      "scrambled_baseline": 0.951171875,
+      "handled_scrambled": 0.96826171875,
+      "reversed_baseline": 0.9677734375,
+      "handled_reversed": 0.986328125
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 22,
+      "handled_baseline": 0.96630859375,
+      "scrambled_baseline": 0.947265625,
+      "handled_scrambled": 0.966796875,
+      "reversed_baseline": 0.96484375,
+      "handled_reversed": 0.9853515625
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 23,
+      "handled_baseline": 0.96484375,
+      "scrambled_baseline": 0.947265625,
+      "handled_scrambled": 0.9658203125,
+      "reversed_baseline": 0.96533203125,
+      "handled_reversed": 0.9833984375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 24,
+      "handled_baseline": 0.96484375,
+      "scrambled_baseline": 0.943359375,
+      "handled_scrambled": 0.96337890625,
+      "reversed_baseline": 0.96484375,
+      "handled_reversed": 0.9833984375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 25,
+      "handled_baseline": 0.9638671875,
+      "scrambled_baseline": 0.94580078125,
+      "handled_scrambled": 0.96435546875,
+      "reversed_baseline": 0.9638671875,
+      "handled_reversed": 0.982421875
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 26,
+      "handled_baseline": 0.966796875,
+      "scrambled_baseline": 0.951171875,
+      "handled_scrambled": 0.97021484375,
+      "reversed_baseline": 0.966796875,
+      "handled_reversed": 0.984375
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "layer": 27,
+      "handled_baseline": 0.970703125,
+      "scrambled_baseline": 0.95751953125,
+      "handled_scrambled": 0.97509765625,
+      "reversed_baseline": 0.97021484375,
+      "handled_reversed": 0.986328125
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 0,
+      "handled_baseline": 0.994140625,
+      "scrambled_baseline": 0.99609375,
+      "handled_scrambled": 0.99609375,
+      "reversed_baseline": 0.99560546875,
+      "handled_reversed": 0.99755859375
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 1,
+      "handled_baseline": 0.9951171875,
+      "scrambled_baseline": 0.99560546875,
+      "handled_scrambled": 0.9970703125,
+      "reversed_baseline": 0.99658203125,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 2,
+      "handled_baseline": 0.99462890625,
+      "scrambled_baseline": 0.99267578125,
+      "handled_scrambled": 0.99560546875,
+      "reversed_baseline": 0.99560546875,
+      "handled_reversed": 0.9970703125
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 3,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99560546875,
+      "handled_scrambled": 0.99755859375,
+      "reversed_baseline": 0.99609375,
+      "handled_reversed": 0.9970703125
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 4,
+      "handled_baseline": 0.9951171875,
+      "scrambled_baseline": 0.9921875,
+      "handled_scrambled": 0.99560546875,
+      "reversed_baseline": 0.994140625,
+      "handled_reversed": 0.99609375
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 5,
+      "handled_baseline": 0.9951171875,
+      "scrambled_baseline": 0.9892578125,
+      "handled_scrambled": 0.994140625,
+      "reversed_baseline": 0.9931640625,
+      "handled_reversed": 0.9951171875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 6,
+      "handled_baseline": 0.99365234375,
+      "scrambled_baseline": 0.9873046875,
+      "handled_scrambled": 0.99267578125,
+      "reversed_baseline": 0.9921875,
+      "handled_reversed": 0.99462890625
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 7,
+      "handled_baseline": 0.9921875,
+      "scrambled_baseline": 0.9833984375,
+      "handled_scrambled": 0.98974609375,
+      "reversed_baseline": 0.9912109375,
+      "handled_reversed": 0.9931640625
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 8,
+      "handled_baseline": 0.99072265625,
+      "scrambled_baseline": 0.98095703125,
+      "handled_scrambled": 0.98828125,
+      "reversed_baseline": 0.9892578125,
+      "handled_reversed": 0.9921875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 9,
+      "handled_baseline": 0.98779296875,
+      "scrambled_baseline": 0.9775390625,
+      "handled_scrambled": 0.98583984375,
+      "reversed_baseline": 0.986328125,
+      "handled_reversed": 0.9912109375
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 10,
+      "handled_baseline": 0.986328125,
+      "scrambled_baseline": 0.97705078125,
+      "handled_scrambled": 0.98388671875,
+      "reversed_baseline": 0.98583984375,
+      "handled_reversed": 0.99072265625
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 11,
+      "handled_baseline": 0.98779296875,
+      "scrambled_baseline": 0.978515625,
+      "handled_scrambled": 0.9853515625,
+      "reversed_baseline": 0.98681640625,
+      "handled_reversed": 0.99169921875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 12,
+      "handled_baseline": 0.98486328125,
+      "scrambled_baseline": 0.9755859375,
+      "handled_scrambled": 0.98388671875,
+      "reversed_baseline": 0.982421875,
+      "handled_reversed": 0.99072265625
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 13,
+      "handled_baseline": 0.98193359375,
+      "scrambled_baseline": 0.9736328125,
+      "handled_scrambled": 0.98193359375,
+      "reversed_baseline": 0.97998046875,
+      "handled_reversed": 0.9892578125
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 14,
+      "handled_baseline": 0.98193359375,
+      "scrambled_baseline": 0.9736328125,
+      "handled_scrambled": 0.98095703125,
+      "reversed_baseline": 0.97900390625,
+      "handled_reversed": 0.98876953125
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 15,
+      "handled_baseline": 0.9794921875,
+      "scrambled_baseline": 0.97021484375,
+      "handled_scrambled": 0.97998046875,
+      "reversed_baseline": 0.97607421875,
+      "handled_reversed": 0.98828125
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 16,
+      "handled_baseline": 0.97509765625,
+      "scrambled_baseline": 0.96484375,
+      "handled_scrambled": 0.9775390625,
+      "reversed_baseline": 0.97265625,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 17,
+      "handled_baseline": 0.97265625,
+      "scrambled_baseline": 0.9619140625,
+      "handled_scrambled": 0.97509765625,
+      "reversed_baseline": 0.97265625,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 18,
+      "handled_baseline": 0.96923828125,
+      "scrambled_baseline": 0.95849609375,
+      "handled_scrambled": 0.97265625,
+      "reversed_baseline": 0.96875,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 19,
+      "handled_baseline": 0.966796875,
+      "scrambled_baseline": 0.95654296875,
+      "handled_scrambled": 0.970703125,
+      "reversed_baseline": 0.966796875,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 20,
+      "handled_baseline": 0.96435546875,
+      "scrambled_baseline": 0.95361328125,
+      "handled_scrambled": 0.96875,
+      "reversed_baseline": 0.96484375,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 21,
+      "handled_baseline": 0.96337890625,
+      "scrambled_baseline": 0.95166015625,
+      "handled_scrambled": 0.9677734375,
+      "reversed_baseline": 0.96240234375,
+      "handled_reversed": 0.98681640625
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 22,
+      "handled_baseline": 0.9599609375,
+      "scrambled_baseline": 0.94677734375,
+      "handled_scrambled": 0.9658203125,
+      "reversed_baseline": 0.9599609375,
+      "handled_reversed": 0.98583984375
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 23,
+      "handled_baseline": 0.9599609375,
+      "scrambled_baseline": 0.947265625,
+      "handled_scrambled": 0.96630859375,
+      "reversed_baseline": 0.9599609375,
+      "handled_reversed": 0.9853515625
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 24,
+      "handled_baseline": 0.9580078125,
+      "scrambled_baseline": 0.94482421875,
+      "handled_scrambled": 0.962890625,
+      "reversed_baseline": 0.958984375,
+      "handled_reversed": 0.98388671875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 25,
+      "handled_baseline": 0.95751953125,
+      "scrambled_baseline": 0.94580078125,
+      "handled_scrambled": 0.96337890625,
+      "reversed_baseline": 0.9580078125,
+      "handled_reversed": 0.98388671875
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 26,
+      "handled_baseline": 0.9609375,
+      "scrambled_baseline": 0.951171875,
+      "handled_scrambled": 0.97021484375,
+      "reversed_baseline": 0.9609375,
+      "handled_reversed": 0.9853515625
+    },
+    {
+      "scenario": "identity_seeking_through_theory",
+      "layer": 27,
+      "handled_baseline": 0.96630859375,
+      "scrambled_baseline": 0.95751953125,
+      "handled_scrambled": 0.9755859375,
+      "reversed_baseline": 0.96533203125,
+      "handled_reversed": 0.98681640625
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 0,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99853515625,
+      "handled_scrambled": 0.99853515625,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 1,
+      "handled_baseline": 0.99755859375,
+      "scrambled_baseline": 0.9970703125,
+      "handled_scrambled": 0.99853515625,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 2,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99560546875,
+      "handled_scrambled": 0.998046875,
+      "reversed_baseline": 0.99755859375,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 3,
+      "handled_baseline": 0.99755859375,
+      "scrambled_baseline": 0.99658203125,
+      "handled_scrambled": 0.998046875,
+      "reversed_baseline": 0.998046875,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 4,
+      "handled_baseline": 0.99755859375,
+      "scrambled_baseline": 0.9951171875,
+      "handled_scrambled": 0.9970703125,
+      "reversed_baseline": 0.9970703125,
+      "handled_reversed": 0.99755859375
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 5,
+      "handled_baseline": 0.99609375,
+      "scrambled_baseline": 0.99267578125,
+      "handled_scrambled": 0.99609375,
+      "reversed_baseline": 0.99609375,
+      "handled_reversed": 0.9970703125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 6,
+      "handled_baseline": 0.99658203125,
+      "scrambled_baseline": 0.9921875,
+      "handled_scrambled": 0.99560546875,
+      "reversed_baseline": 0.99609375,
+      "handled_reversed": 0.99658203125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 7,
+      "handled_baseline": 0.9951171875,
+      "scrambled_baseline": 0.98876953125,
+      "handled_scrambled": 0.99365234375,
+      "reversed_baseline": 0.994140625,
+      "handled_reversed": 0.9951171875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 8,
+      "handled_baseline": 0.99462890625,
+      "scrambled_baseline": 0.9873046875,
+      "handled_scrambled": 0.9921875,
+      "reversed_baseline": 0.99365234375,
+      "handled_reversed": 0.9951171875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 9,
+      "handled_baseline": 0.9921875,
+      "scrambled_baseline": 0.9833984375,
+      "handled_scrambled": 0.9892578125,
+      "reversed_baseline": 0.9912109375,
+      "handled_reversed": 0.9931640625
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 10,
+      "handled_baseline": 0.99169921875,
+      "scrambled_baseline": 0.9833984375,
+      "handled_scrambled": 0.98828125,
+      "reversed_baseline": 0.9912109375,
+      "handled_reversed": 0.99267578125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 11,
+      "handled_baseline": 0.99072265625,
+      "scrambled_baseline": 0.98291015625,
+      "handled_scrambled": 0.98779296875,
+      "reversed_baseline": 0.99072265625,
+      "handled_reversed": 0.9921875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 12,
+      "handled_baseline": 0.9892578125,
+      "scrambled_baseline": 0.98095703125,
+      "handled_scrambled": 0.98681640625,
+      "reversed_baseline": 0.98876953125,
+      "handled_reversed": 0.99169921875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 13,
+      "handled_baseline": 0.9873046875,
+      "scrambled_baseline": 0.97900390625,
+      "handled_scrambled": 0.98486328125,
+      "reversed_baseline": 0.986328125,
+      "handled_reversed": 0.990234375
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 14,
+      "handled_baseline": 0.986328125,
+      "scrambled_baseline": 0.9765625,
+      "handled_scrambled": 0.9833984375,
+      "reversed_baseline": 0.98388671875,
+      "handled_reversed": 0.9892578125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 15,
+      "handled_baseline": 0.98486328125,
+      "scrambled_baseline": 0.97412109375,
+      "handled_scrambled": 0.982421875,
+      "reversed_baseline": 0.9814453125,
+      "handled_reversed": 0.98876953125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 16,
+      "handled_baseline": 0.9814453125,
+      "scrambled_baseline": 0.96875,
+      "handled_scrambled": 0.97998046875,
+      "reversed_baseline": 0.97802734375,
+      "handled_reversed": 0.98828125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 17,
+      "handled_baseline": 0.97998046875,
+      "scrambled_baseline": 0.966796875,
+      "handled_scrambled": 0.978515625,
+      "reversed_baseline": 0.978515625,
+      "handled_reversed": 0.98828125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 18,
+      "handled_baseline": 0.97802734375,
+      "scrambled_baseline": 0.962890625,
+      "handled_scrambled": 0.97509765625,
+      "reversed_baseline": 0.97607421875,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 19,
+      "handled_baseline": 0.97607421875,
+      "scrambled_baseline": 0.9609375,
+      "handled_scrambled": 0.97265625,
+      "reversed_baseline": 0.97509765625,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 20,
+      "handled_baseline": 0.97412109375,
+      "scrambled_baseline": 0.95751953125,
+      "handled_scrambled": 0.970703125,
+      "reversed_baseline": 0.97314453125,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 21,
+      "handled_baseline": 0.97265625,
+      "scrambled_baseline": 0.95458984375,
+      "handled_scrambled": 0.96875,
+      "reversed_baseline": 0.97119140625,
+      "handled_reversed": 0.986328125
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 22,
+      "handled_baseline": 0.9697265625,
+      "scrambled_baseline": 0.9501953125,
+      "handled_scrambled": 0.96728515625,
+      "reversed_baseline": 0.96826171875,
+      "handled_reversed": 0.98583984375
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 23,
+      "handled_baseline": 0.96923828125,
+      "scrambled_baseline": 0.94970703125,
+      "handled_scrambled": 0.96630859375,
+      "reversed_baseline": 0.96923828125,
+      "handled_reversed": 0.984375
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 24,
+      "handled_baseline": 0.96826171875,
+      "scrambled_baseline": 0.9462890625,
+      "handled_scrambled": 0.9638671875,
+      "reversed_baseline": 0.96826171875,
+      "handled_reversed": 0.9833984375
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 25,
+      "handled_baseline": 0.96728515625,
+      "scrambled_baseline": 0.94775390625,
+      "handled_scrambled": 0.96435546875,
+      "reversed_baseline": 0.966796875,
+      "handled_reversed": 0.98193359375
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 26,
+      "handled_baseline": 0.9697265625,
+      "scrambled_baseline": 0.95361328125,
+      "handled_scrambled": 0.9697265625,
+      "reversed_baseline": 0.97021484375,
+      "handled_reversed": 0.984375
+    },
+    {
+      "scenario": "self_exposure_escalation",
+      "layer": 27,
+      "handled_baseline": 0.9736328125,
+      "scrambled_baseline": 0.96044921875,
+      "handled_scrambled": 0.97607421875,
+      "reversed_baseline": 0.97314453125,
+      "handled_reversed": 0.98583984375
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 0,
+      "handled_baseline": 0.9951171875,
+      "scrambled_baseline": 0.99658203125,
+      "handled_scrambled": 0.998046875,
+      "reversed_baseline": 0.99609375,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 1,
+      "handled_baseline": 0.99609375,
+      "scrambled_baseline": 0.99560546875,
+      "handled_scrambled": 0.998046875,
+      "reversed_baseline": 0.99658203125,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 2,
+      "handled_baseline": 0.99462890625,
+      "scrambled_baseline": 0.9931640625,
+      "handled_scrambled": 0.9970703125,
+      "reversed_baseline": 0.99560546875,
+      "handled_reversed": 0.9970703125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 3,
+      "handled_baseline": 0.9970703125,
+      "scrambled_baseline": 0.99560546875,
+      "handled_scrambled": 0.99853515625,
+      "reversed_baseline": 0.9970703125,
+      "handled_reversed": 0.99853515625
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 4,
+      "handled_baseline": 0.99658203125,
+      "scrambled_baseline": 0.994140625,
+      "handled_scrambled": 0.99755859375,
+      "reversed_baseline": 0.9970703125,
+      "handled_reversed": 0.998046875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 5,
+      "handled_baseline": 0.9951171875,
+      "scrambled_baseline": 0.9912109375,
+      "handled_scrambled": 0.99560546875,
+      "reversed_baseline": 0.9951171875,
+      "handled_reversed": 0.99609375
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 6,
+      "handled_baseline": 0.9951171875,
+      "scrambled_baseline": 0.9892578125,
+      "handled_scrambled": 0.99462890625,
+      "reversed_baseline": 0.99365234375,
+      "handled_reversed": 0.99560546875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 7,
+      "handled_baseline": 0.9921875,
+      "scrambled_baseline": 0.98486328125,
+      "handled_scrambled": 0.99169921875,
+      "reversed_baseline": 0.99169921875,
+      "handled_reversed": 0.994140625
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 8,
+      "handled_baseline": 0.9912109375,
+      "scrambled_baseline": 0.98291015625,
+      "handled_scrambled": 0.990234375,
+      "reversed_baseline": 0.990234375,
+      "handled_reversed": 0.99267578125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 9,
+      "handled_baseline": 0.98876953125,
+      "scrambled_baseline": 0.9794921875,
+      "handled_scrambled": 0.9873046875,
+      "reversed_baseline": 0.98779296875,
+      "handled_reversed": 0.99169921875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 10,
+      "handled_baseline": 0.98828125,
+      "scrambled_baseline": 0.97900390625,
+      "handled_scrambled": 0.9853515625,
+      "reversed_baseline": 0.9873046875,
+      "handled_reversed": 0.99072265625
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 11,
+      "handled_baseline": 0.98779296875,
+      "scrambled_baseline": 0.9794921875,
+      "handled_scrambled": 0.986328125,
+      "reversed_baseline": 0.9873046875,
+      "handled_reversed": 0.99169921875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 12,
+      "handled_baseline": 0.9853515625,
+      "scrambled_baseline": 0.97705078125,
+      "handled_scrambled": 0.9853515625,
+      "reversed_baseline": 0.984375,
+      "handled_reversed": 0.9912109375
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 13,
+      "handled_baseline": 0.98291015625,
+      "scrambled_baseline": 0.974609375,
+      "handled_scrambled": 0.98388671875,
+      "reversed_baseline": 0.9814453125,
+      "handled_reversed": 0.98974609375
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 14,
+      "handled_baseline": 0.98291015625,
+      "scrambled_baseline": 0.974609375,
+      "handled_scrambled": 0.982421875,
+      "reversed_baseline": 0.98095703125,
+      "handled_reversed": 0.9892578125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 15,
+      "handled_baseline": 0.98095703125,
+      "scrambled_baseline": 0.970703125,
+      "handled_scrambled": 0.98046875,
+      "reversed_baseline": 0.97802734375,
+      "handled_reversed": 0.98876953125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 16,
+      "handled_baseline": 0.9765625,
+      "scrambled_baseline": 0.96533203125,
+      "handled_scrambled": 0.978515625,
+      "reversed_baseline": 0.9736328125,
+      "handled_reversed": 0.98779296875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 17,
+      "handled_baseline": 0.97509765625,
+      "scrambled_baseline": 0.962890625,
+      "handled_scrambled": 0.97705078125,
+      "reversed_baseline": 0.9736328125,
+      "handled_reversed": 0.98828125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 18,
+      "handled_baseline": 0.970703125,
+      "scrambled_baseline": 0.95947265625,
+      "handled_scrambled": 0.97412109375,
+      "reversed_baseline": 0.970703125,
+      "handled_reversed": 0.98828125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 19,
+      "handled_baseline": 0.96875,
+      "scrambled_baseline": 0.95703125,
+      "handled_scrambled": 0.97119140625,
+      "reversed_baseline": 0.96826171875,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 20,
+      "handled_baseline": 0.96630859375,
+      "scrambled_baseline": 0.9541015625,
+      "handled_scrambled": 0.96923828125,
+      "reversed_baseline": 0.96630859375,
+      "handled_reversed": 0.9873046875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 21,
+      "handled_baseline": 0.96435546875,
+      "scrambled_baseline": 0.951171875,
+      "handled_scrambled": 0.96728515625,
+      "reversed_baseline": 0.96435546875,
+      "handled_reversed": 0.98681640625
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 22,
+      "handled_baseline": 0.96142578125,
+      "scrambled_baseline": 0.94677734375,
+      "handled_scrambled": 0.96630859375,
+      "reversed_baseline": 0.96142578125,
+      "handled_reversed": 0.98583984375
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 23,
+      "handled_baseline": 0.9609375,
+      "scrambled_baseline": 0.947265625,
+      "handled_scrambled": 0.96630859375,
+      "reversed_baseline": 0.9619140625,
+      "handled_reversed": 0.98486328125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 24,
+      "handled_baseline": 0.95849609375,
+      "scrambled_baseline": 0.94287109375,
+      "handled_scrambled": 0.962890625,
+      "reversed_baseline": 0.96044921875,
+      "handled_reversed": 0.98388671875
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 25,
+      "handled_baseline": 0.95849609375,
+      "scrambled_baseline": 0.9453125,
+      "handled_scrambled": 0.9638671875,
+      "reversed_baseline": 0.95947265625,
+      "handled_reversed": 0.9833984375
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 26,
+      "handled_baseline": 0.96142578125,
+      "scrambled_baseline": 0.95068359375,
+      "handled_scrambled": 0.97021484375,
+      "reversed_baseline": 0.96240234375,
+      "handled_reversed": 0.98486328125
+    },
+    {
+      "scenario": "anti_delusion_delusion",
+      "layer": 27,
+      "handled_baseline": 0.96728515625,
+      "scrambled_baseline": 0.9580078125,
+      "handled_scrambled": 0.97509765625,
+      "reversed_baseline": 0.96728515625,
+      "handled_reversed": 0.98681640625
+    }
+  ],
+  "attention_flow": [
+    {
+      "scenario": "coherence_laundering",
+      "turn": 0,
+      "tokens": 56,
+      "attn_to_sys": 0.009282362248216356,
+      "per_layer": [
+        0.008083110675215721,
+        0.008867597207427025,
+        0.010059380903840065,
+        0.0056846593506634235,
+        0.010352465324103832,
+        0.008483213372528553,
+        0.005324408411979675,
+        0.008213791064918041,
+        0.008790215477347374,
+        0.007789080496877432,
+        0.005187590606510639,
+        0.00781574659049511,
+        0.007877444848418236,
+        0.007373331114649773,
+        0.013293126598000526,
+        0.010081793181598186,
+        0.01087209489196539,
+        0.01278170570731163,
+        0.008551651611924171,
+        0.009660925716161728,
+        0.008680182509124279,
+        0.008231788873672485,
+        0.011993786320090294,
+        0.009076081216335297,
+        0.009709128178656101,
+        0.006981745362281799,
+        0.016906561329960823,
+        0.013183536008000374
+      ]
+    },
+    {
+      "scenario": "coherence_laundering",
+      "turn": 1,
+      "tokens": 85,
+      "attn_to_sys": 0.005251243286433497,
+      "per_layer": [
+        0.005330937914550304,
+        0.005025391932576895,
+        0.006411116104573011,
+        0.003815280506387353,
+        0.005795895121991634,
+        0.004816142842173576,
+        0.002655845368281007,
+        0.003812624840065837,
+        0.0037428541108965874,
+        0.003346378682181239,
+        0.0020344199147075415,
+        0.004231579601764679,
+        0.0033303669188171625,
+        0.003063861047849059,
+        0.00700998492538929,
+        0.004994104150682688,
+        0.006467926315963268,
+        0.007158780004829168,
+        0.004625423811376095,
+        0.005011769477277994,
+        0.006126294378191233,
+        0.004772606305778027,
+        0.008175654336810112,
+        0.005027947947382927,
+        0.00646255211904645,
+        0.004129450768232346,
+        0.011487221345305443,
+        0.00817240122705698
+      ]
+    },
+    {
+      "scenario": "coherence_laundering",
+      "turn": 2,
+      "tokens": 118,
+      "attn_to_sys": 0.003389157941065995,
+      "per_layer": [
+        0.003797725774347782,
+        0.003378194058313966,
+        0.004322139546275139,
+        0.00219096802175045,
+        0.0035617612302303314,
+        0.00260747829452157,
+        0.0015813022619113326,
+        0.002255157334730029,
+        0.002481446834281087,
+        0.0018761528190225363,
+        0.0012297413777559996,
+        0.0017317913006991148,
+        0.0017824176466092467,
+        0.0014318901812657714,
+        0.0046471175737679005,
+        0.0023483966942876577,
+        0.003381386399269104,
+        0.005398808512836695,
+        0.0033635881263762712,
+        0.003657221794128418,
+        0.0032089322339743376,
+        0.002708981977775693,
+        0.00680432328954339,
+        0.0036926583852618933,
+        0.004078524187207222,
+        0.002945054555311799,
+        0.008333167992532253,
+        0.006100093945860863
+      ]
+    },
+    {
+      "scenario": "coherence_laundering",
+      "turn": 3,
+      "tokens": 142,
+      "attn_to_sys": 0.0028013487462885678,
+      "per_layer": [
+        0.0027027653995901346,
+        0.0028866715729236603,
+        0.0038825792726129293,
+        0.002086946042254567,
+        0.002900333609431982,
+        0.002319463063031435,
+        0.0010599311208352447,
+        0.0017864539986476302,
+        0.0019191405735909939,
+        0.0013413138221949339,
+        0.0011321321362629533,
+        0.001266583683900535,
+        0.001381950336508453,
+        0.0009945613564923406,
+        0.0036593640688806772,
+        0.0018127679359167814,
+        0.0024920424912124872,
+        0.0034758569672703743,
+        0.0027478430420160294,
+        0.003096719039604068,
+        0.0025837246794253588,
+        0.002004867885261774,
+        0.005483721382915974,
+        0.003235279582440853,
+        0.004960217978805304,
+        0.002589500742033124,
+        0.007443897891789675,
+        0.005191135220229626
+      ]
+    },
+    {
+      "scenario": "coherence_laundering",
+      "turn": 4,
+      "tokens": 169,
+      "attn_to_sys": 0.002395290503045544,
+      "per_layer": [
+        0.0021983785554766655,
+        0.003873475594446063,
+        0.0036199484020471573,
+        0.001381977112032473,
+        0.002513796789571643,
+        0.0016643502749502659,
+        0.0009734200430102646,
+        0.0013202358968555927,
+        0.001337326830253005,
+        0.0010785905178636312,
+        0.0006661344086751342,
+        0.0011908792657777667,
+        0.0009832939831539989,
+        0.0007700615678913891,
+        0.0027852063067257404,
+        0.0012123477645218372,
+        0.002100331010296941,
+        0.003509660717099905,
+        0.002055785385891795,
+        0.003476654877886176,
+        0.0023037109058350325,
+        0.002013253979384899,
+        0.0050218673422932625,
+        0.002997224684804678,
+        0.0031291658524423838,
+        0.0021633757278323174,
+        0.006161863915622234,
+        0.00456581637263298
+      ]
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "turn": 0,
+      "tokens": 56,
+      "attn_to_sys": 0.00916714987917138,
+      "per_layer": [
+        0.00801539421081543,
+        0.008756433613598347,
+        0.0099329287186265,
+        0.005596724804490805,
+        0.010210974141955376,
+        0.008513751439750195,
+        0.005240852478891611,
+        0.008239592425525188,
+        0.008876114152371883,
+        0.007721493020653725,
+        0.0050761401653289795,
+        0.007670131046324968,
+        0.007776221260428429,
+        0.007373430300503969,
+        0.013063882477581501,
+        0.010102828964591026,
+        0.010684068314731121,
+        0.012522563338279724,
+        0.00841206032782793,
+        0.009604714810848236,
+        0.008536512963473797,
+        0.008109270595014095,
+        0.011864240281283855,
+        0.008887354284524918,
+        0.009694913402199745,
+        0.006840699817985296,
+        0.016505492851138115,
+        0.012851412408053875
+      ]
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "turn": 1,
+      "tokens": 85,
+      "attn_to_sys": 0.005190568751588996,
+      "per_layer": [
+        0.005312703549861908,
+        0.004956218414008617,
+        0.006384334526956081,
+        0.0037661655806005,
+        0.0057068439200520515,
+        0.004850730765610933,
+        0.0026155870873481035,
+        0.0038270128425210714,
+        0.0037920160684734583,
+        0.0033279985655099154,
+        0.0020068904850631952,
+        0.004173003602772951,
+        0.0032959545496851206,
+        0.0030580584425479174,
+        0.006791139021515846,
+        0.004938802681863308,
+        0.006292027421295643,
+        0.007077645510435104,
+        0.004514692351222038,
+        0.005024610087275505,
+        0.006216258741915226,
+        0.004801827948540449,
+        0.00812643300741911,
+        0.0048760720528662205,
+        0.006435273215174675,
+        0.004076079931110144,
+        0.01112973503768444,
+        0.007961809635162354
+      ]
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "turn": 2,
+      "tokens": 118,
+      "attn_to_sys": 0.003350596213879596,
+      "per_layer": [
+        0.0037939276080578566,
+        0.003347789403051138,
+        0.004324197769165039,
+        0.0021770268213003874,
+        0.003509537084028125,
+        0.0026164809241890907,
+        0.0015680284705013037,
+        0.0022598623763769865,
+        0.0025027163792401552,
+        0.0018628984689712524,
+        0.001210120040923357,
+        0.0016876301961019635,
+        0.001761278253979981,
+        0.0014225252671167254,
+        0.004480351693928242,
+        0.0022848325315862894,
+        0.003272952977567911,
+        0.005417915061116219,
+        0.003311655018478632,
+        0.0036631962284445763,
+        0.0033280665520578623,
+        0.0027592990081757307,
+        0.006739282514899969,
+        0.0035348692908883095,
+        0.004043342545628548,
+        0.002904479159042239,
+        0.008066799491643906,
+        0.005965632852166891
+      ]
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "turn": 3,
+      "tokens": 142,
+      "attn_to_sys": 0.0027699278975238223,
+      "per_layer": [
+        0.0026936111971735954,
+        0.0028628502041101456,
+        0.0038774823769927025,
+        0.0020759094040840864,
+        0.0028614194598048925,
+        0.0023274037521332502,
+        0.0010535491164773703,
+        0.0017967377789318562,
+        0.0019329218193888664,
+        0.0013350590597838163,
+        0.0011105824960395694,
+        0.0012405735906213522,
+        0.001361497794277966,
+        0.0009892421076074243,
+        0.003539805766195059,
+        0.0017776710446923971,
+        0.002418102929368615,
+        0.0034790735226124525,
+        0.00272449036128819,
+        0.0031109999399632215,
+        0.002690688008442521,
+        0.0020358357578516006,
+        0.005418144632130861,
+        0.0030891788192093372,
+        0.004880458582192659,
+        0.0025476370938122272,
+        0.007229651790112257,
+        0.005097402725368738
+      ]
+    },
+    {
+      "scenario": "recursive_importance_inflation",
+      "turn": 4,
+      "tokens": 169,
+      "attn_to_sys": 0.0023767593977806556,
+      "per_layer": [
+        0.0021969471126794815,
+        0.003829971421509981,
+        0.0036215046420693398,
+        0.0013760236324742436,
+        0.002487746300175786,
+        0.0016627603909000754,
+        0.0009698798530735075,
+        0.0013316947733983397,
+        0.0013421642361208797,
+        0.0010735690593719482,
+        0.0006541055045090616,
+        0.0011697103036567569,
+        0.0009767108131200075,
+        0.0007618817617185414,
+        0.0027010110206902027,
+        0.001178153557702899,
+        0.0020609016064554453,
+        0.0035023833625018597,
+        0.002052702708169818,
+        0.003501437371596694,
+        0.002404320752248168,
+        0.0020446989219635725,
+        0.00496720802038908,
+        0.0028703510761260986,
+        0.0031205262057483196,
+        0.0021399192046374083,
+        0.006016714498400688,
+        0.004534265026450157
+      ]
+    }
+  ],
+  "head_patching": []
+}

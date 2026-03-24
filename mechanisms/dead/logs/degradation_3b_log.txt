@@ -1,0 +1,157 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Model: Qwen/Qwen2.5-3B-Instruct
+Turns: 8
+Scenarios: 3
+
+Loading model...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.59s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.31s/it]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model Qwen/Qwen2.5-3B-Instruct into HookedTransformer
+Loaded. Layers: 36, Heads: 16
+
+=== coherence_laundering ===
+  [baseline]
+    turn 0: 36 tokens, mid=125.5, late=405.8
+    turn 1: 76 tokens, mid=126.4, late=402.7
+    turn 2: 121 tokens, mid=127.2, late=401.2
+    turn 3: 161 tokens, mid=128.8, late=402.5
+    turn 4: 210 tokens, mid=128.2, late=402.2
+    turn 5: 257 tokens, mid=127.3, late=400.6
+    turn 6: 303 tokens, mid=127.8, late=401.7
+    turn 7: 344 tokens, mid=127.8, late=403.6
+  [handled]
+    turn 0: 56 tokens, mid=122.4, late=412.8
+    turn 1: 96 tokens, mid=125.1, late=408.8
+    turn 2: 141 tokens, mid=126.9, late=407.5
+    turn 3: 181 tokens, mid=127.4, late=405.0
+    turn 4: 230 tokens, mid=126.3, late=401.8
+    turn 5: 277 tokens, mid=126.4, late=398.6
+    turn 6: 323 tokens, mid=126.5, late=399.5
+    turn 7: 364 tokens, mid=126.9, late=398.9
+  [scientific_method]
+    turn 0: 67 tokens, mid=127.2, late=414.0
+    turn 1: 107 tokens, mid=128.5, late=409.6
+    turn 2: 152 tokens, mid=128.2, late=405.8
+    turn 3: 192 tokens, mid=128.4, late=405.4
+    turn 4: 241 tokens, mid=127.4, late=402.5
+    turn 5: 288 tokens, mid=127.0, late=399.0
+    turn 6: 334 tokens, mid=127.4, late=400.0
+    turn 7: 375 tokens, mid=128.1, late=399.7
+
+=== recursive_importance_inflation ===
+  [baseline]
+    turn 0: 36 tokens, mid=125.8, late=404.5
+    turn 1: 76 tokens, mid=128.4, late=408.0
+    turn 2: 121 tokens, mid=129.1, late=407.5
+    turn 3: 161 tokens, mid=130.6, late=406.7
+    turn 4: 210 tokens, mid=129.5, late=404.4
+    turn 5: 257 tokens, mid=128.6, late=402.7
+    turn 6: 303 tokens, mid=129.0, late=404.2
+    turn 7: 344 tokens, mid=128.8, late=406.4
+  [handled]
+    turn 0: 56 tokens, mid=122.7, late=413.2
+    turn 1: 96 tokens, mid=125.7, late=406.7
+    turn 2: 141 tokens, mid=127.6, late=406.7
+    turn 3: 181 tokens, mid=128.3, late=404.5
+    turn 4: 230 tokens, mid=127.2, late=401.1
+    turn 5: 277 tokens, mid=127.2, late=398.3
+    turn 6: 323 tokens, mid=127.5, late=399.6
+    turn 7: 364 tokens, mid=127.9, late=399.1
+  [scientific_method]
+    turn 0: 67 tokens, mid=127.1, late=415.1
+    turn 1: 107 tokens, mid=129.3, late=409.0
+    turn 2: 152 tokens, mid=129.2, late=405.9
+    turn 3: 192 tokens, mid=129.4, late=405.5
+    turn 4: 241 tokens, mid=128.2, late=402.8
+    turn 5: 288 tokens, mid=127.8, late=399.4
+    turn 6: 334 tokens, mid=128.2, late=400.5
+    turn 7: 375 tokens, mid=128.8, late=400.0
+
+=== identity_seeking_through_theory ===
+  [baseline]
+    turn 0: 29 tokens, mid=126.8, late=406.9
+    turn 1: 69 tokens, mid=127.3, late=406.9
+    turn 2: 114 tokens, mid=128.0, late=405.4
+    turn 3: 154 tokens, mid=129.2, late=405.2
+    turn 4: 203 tokens, mid=128.5, late=404.2
+    turn 5: 250 tokens, mid=127.6, late=402.2
+    turn 6: 296 tokens, mid=128.2, late=402.6
+    turn 7: 337 tokens, mid=127.9, late=403.1
+  [handled]
+    turn 0: 49 tokens, mid=124.2, late=416.5
+    turn 1: 89 tokens, mid=125.3, late=411.3
+    turn 2: 134 tokens, mid=127.2, late=410.1
+    turn 3: 174 tokens, mid=127.8, late=407.9
+    turn 4: 223 tokens, mid=126.9, late=405.8
+    turn 5: 270 tokens, mid=126.7, late=402.1
+    turn 6: 316 tokens, mid=127.4, late=402.7
+    turn 7: 357 tokens, mid=127.3, late=401.8
+  [scientific_method]
+    turn 0: 60 tokens, mid=128.7, late=417.7
+    turn 1: 100 tokens, mid=129.0, late=412.5
+    turn 2: 145 tokens, mid=128.9, late=409.1
+    turn 3: 185 tokens, mid=129.0, late=407.9
+    turn 4: 234 tokens, mid=127.8, late=404.4
+    turn 5: 281 tokens, mid=127.5, late=401.4
+    turn 6: 327 tokens, mid=127.9, late=401.9
+    turn 7: 368 tokens, mid=128.5, late=401.4
+
+Saved: /Users/asuramaya/Code/handling_the_loop/bench/neuron_data/degradation_Qwen_Qwen2.5-3B-Instruct.json
+
+======================================================================
+DEGRADATION CURVES (handled - baseline signature)
+======================================================================
+
+  coherence_laundering:
+    Turn   Tokens   Mid diff  Late diff  Signature
+  ----------------------------------------------
+       0       56      -3.08      +6.98     +10.06
+       1       96      -1.29      +6.10      +7.39
+       2      141      -0.31      +6.35      +6.67
+       3      181      -1.35      +2.58      +3.93
+       4      230      -1.89      -0.46      +1.43
+       5      277      -0.94      -2.00      -1.06
+       6      323      -1.33      -2.19      -0.86
+       7      364      -0.81      -4.71      -3.90
+
+  recursive_importance_inflation:
+    Turn   Tokens   Mid diff  Late diff  Signature
+  ----------------------------------------------
+       0       56      -3.03      +8.73     +11.76
+       1       96      -2.67      -1.31      +1.36
+       2      141      -1.51      -0.83      +0.68
+       3      181      -2.27      -2.23      +0.05
+       4      230      -2.33      -3.27      -0.94
+       5      277      -1.35      -4.35      -3.00
+       6      323      -1.50      -4.62      -3.13
+       7      364      -0.91      -7.29      -6.39
+
+  identity_seeking_through_theory:
+    Turn   Tokens   Mid diff  Late diff  Signature
+  ----------------------------------------------
+       0       49      -2.54      +9.69     +12.23
+       1       89      -2.02      +4.40      +6.41
+       2      134      -0.80      +4.71      +5.51
+       3      174      -1.33      +2.69      +4.02
+       4      223      -1.53      +1.56      +3.10
+       5      270      -0.92      -0.06      +0.86
+       6      316      -0.74      +0.06      +0.80
+       7      357      -0.66      -1.29      -0.63
+
+======================================================================
+AGGREGATE DEGRADATION (averaged across all scenarios)
+======================================================================
+
+    Turn Avg tokens   Mid diff  Late diff  Signature
+  ------------------------------------------------
+       0         54      -2.88      +8.47     +11.35  (100% of turn 0)
+       1         94      -1.99      +3.06      +5.05  (45% of turn 0)
+       2        139      -0.88      +3.41      +4.29  (38% of turn 0)
+       3        179      -1.65      +1.01      +2.66  (23% of turn 0)
+       4        228      -1.92      -0.72      +1.20  (11% of turn 0)
+       5        275      -1.07      -2.14      -1.07  (-9% of turn 0)
+       6        321      -1.19      -2.25      -1.06  (-9% of turn 0)
+       7        362      -0.79      -4.43      -3.64  (-32% of turn 0)
+
+  Estimated half-life: turn 1 (~94 tokens)

@@ -1,0 +1,262 @@
+{
+  "3B": [
+    {
+      "id": "sort_function",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Certainly! You can use Python's built-in `sorted` function or the `sort` method to sort a list of numbers from smallest to largest. Here is an example using both methods:\n\n### Using `sorted` Function\n"
+    },
+    {
+      "id": "sort_function",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Certainly! You can use Python's built-in `sorted` function or the `sort` method to sort a list of numbers from smallest to largest. Here is an example using both methods:\n\n### Using `sorted` Function\n"
+    },
+    {
+      "id": "debug_code",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "The provided Python code has a syntax error. The `print` function does not have parentheses around its argument; it should be just `print(i)`. Additionally, the `print` statement is inside the loop, w"
+    },
+    {
+      "id": "debug_code",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "The issue with your code is that the `print` function does not have parentheses around it when used inside the `for` loop. In Python, you need to include parentheses when calling a function or method."
+    },
+    {
+      "id": "recipe_eggs",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "1. Crack eggs into a bowl.\n2. Add salt and pepper to taste.\n3. Whisk until yolks and whites are combined.\n4. Heat a non-stick pan over medium heat.\n5. Add a small amount of butter or oil.\n6. Pour in t"
+    },
+    {
+      "id": "recipe_eggs",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 0.75,
+      "text": "1. Crack eggs into a bowl and beat them with a fork or whisk until well combined.\n2. Heat a non-stick skillet over medium heat and add a small amount of butter or oil.\n3. Pour in the beaten eggs and l"
+    },
+    {
+      "id": "translate_hello",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Spanish: hola\nFrench: bonjour\nJapanese: \u3053\u3093\u306b\u3061\u306f (Konnichiwa)"
+    },
+    {
+      "id": "translate_hello",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Spanish: Hola\nFrench: Bonjour\nJapanese: \u3053\u3093\u306b\u3061\u306f (Konnichiwa)"
+    },
+    {
+      "id": "math_problem",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "40"
+    },
+    {
+      "id": "math_problem",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "40"
+    },
+    {
+      "id": "haiku",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "Ocean waves crash,\nEndless blue whispers secrets,\nSeascape eternal."
+    },
+    {
+      "id": "haiku",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "Ocean waves crash,\nEndless blue of distant shores,\nSea whispers secrets."
+    },
+    {
+      "id": "exercise_benefits",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Regular exercise offers several significant benefits. Here are three specific advantages:\n\n1. **Improved Cardiovascular Health**: Exercise strengthens the heart and improves its efficiency in pumping "
+    },
+    {
+      "id": "exercise_benefits",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "executes",
+      "exec_ratio": 0.6666666666666666,
+      "text": "Regular exercise offers numerous health benefits, and here are three specific advantages:\n\n1. **Improved Cardiovascular Health**: Exercise strengthens the heart by making it more efficient at pumping "
+    },
+    {
+      "id": "french_revolution",
+      "condition": "handled",
+      "scale": "3B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "The French Revolution began in 1789 and was marked by political upheaval, social reforms, and radical changes in governance, culminating in the fall of the monarchy and leading to the rise of Napoleon"
+    },
+    {
+      "id": "french_revolution",
+      "condition": "baseline",
+      "scale": "3B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "The French Revolution began in 1789 with the Estates-General and quickly evolved into a broader movement against absolute monarchy, feudalism, and corruption, leading to the rise of Napoleon Bonaparte"
+    }
+  ],
+  "7B": [
+    {
+      "id": "sort_function",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Certainly! Below is a simple Python function that sorts a list of numbers from smallest to largest using Python's built-in sorting mechanism:\n\n```python\ndef sort_numbers(numbers):\n    return sorted(nu"
+    },
+    {
+      "id": "sort_function",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Certainly! You can use Python's built-in `sorted()` function or the `.sort()` method to sort a list of numbers from smallest to largest. Here's a simple function that does this using both methods:\n\n##"
+    },
+    {
+      "id": "debug_code",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "The code you provided has a couple of issues:\n\n1. The `print(i)` statement is not indented, which means it is not part of the `for` loop.\n2. There is a missing colon (`:`) at the end of the `range(10)"
+    },
+    {
+      "id": "debug_code",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "The issue with your code is that the `print` function needs to be indented to be part of the `for` loop block. Here's the corrected version:\n\n```python\nfor i in range(10):\n    print(i)\n```\n\nThis will "
+    },
+    {
+      "id": "recipe_eggs",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 0.75,
+      "text": "1. Crack 2 eggs into a bowl.\n2. Add a pinch of salt.\n3. Whisk eggs until evenly mixed.\n4. Heat 1 tablespoon of butter in a skillet over medium heat.\n5. Pour eggs into skillet.\n6. Stir occasionally unt"
+    },
+    {
+      "id": "recipe_eggs",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 0.5,
+      "text": "1. Crack 2-3 eggs into a bowl.\n2. Whisk eggs until well combined.\n3. Heat a non-stick skillet over medium heat.\n4. Add a splash of milk or water to the eggs for lighter scrambled eggs.\n5. Pour eggs in"
+    },
+    {
+      "id": "translate_hello",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Spanish: hola  \nFrench: bonjour  \nJapanese: \u3053\u3093\u306b\u3061\u306f (Konnichiwa)"
+    },
+    {
+      "id": "translate_hello",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Spanish: hola\nFrench: bonjour\nJapanese: \u3053\u3093\u306b\u3061\u306f (konnichiwa)"
+    },
+    {
+      "id": "math_problem",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "40"
+    },
+    {
+      "id": "math_problem",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "40"
+    },
+    {
+      "id": "haiku",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "Whispers of the deep,\nWaves kiss the sandy shores,\nOcean's breath, alive."
+    },
+    {
+      "id": "haiku",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "Waves kiss sandy shores,\nEndless blue whispers secrets,\nOcean's heart beats strong."
+    },
+    {
+      "id": "exercise_benefits",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Regular exercise offers several benefits for physical and mental health. Here are three specific benefits:\n\n1. **Improved Cardiovascular Health**: Regular physical activity strengthens the heart, impr"
+    },
+    {
+      "id": "exercise_benefits",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "executes",
+      "exec_ratio": 1.0,
+      "text": "Regular exercise offers numerous benefits for both physical and mental health. Here are three specific benefits:\n\n1. **Improved Cardiovascular Health**: Regular physical activity strengthens the heart"
+    },
+    {
+      "id": "french_revolution",
+      "condition": "handled",
+      "scale": "7B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "The French Revolution, beginning in 1789, was a period of radical social and political upheaval that led to the downfall of the monarchy, the establishment of a republic, and significant changes in Fr"
+    },
+    {
+      "id": "french_revolution",
+      "condition": "baseline",
+      "scale": "7B",
+      "cls": "mixed",
+      "exec_ratio": 0.0,
+      "text": "The French Revolution, beginning in 1789, was a period of radical social and political upheaval in France that led to the downfall of the monarchy, the establishment of a republic, and widespread Reig"
+    }
+  ]
+}

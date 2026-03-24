@@ -1,0 +1,309 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "timestamp": "2026-03-16 19:35:20",
+  "results": [
+    {
+      "id": "coherence_laundering",
+      "interventions": {
+        "normal_baseline": {
+          "text": "(: (]], ) (:]:\\n:\n]: ]y:] :\n    ::\\ :   ,]  :]::] : ] ] \"   three,]:,] two two\"]] ]] trio two ] \\    two]",
+          "metrics": {
+            "words": 24,
+            "questions": 0,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "normal_handled": {
+          "text": "]   ) :?en]  :       \n]]:,] ?  , ]] ( ,],  ],  ly ]    two]]? \\)]] three  , more ]] \\  ]\\_]] three ]]:]",
+          "metrics": {
+            "words": 23,
+            "questions": 3,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "normal_scrambled": {
+          "text": "en,en]\nen,  ,enly,,\nenone]\n]],en  \\,en ]  ,,, enen?/\n,,]: (en]: enly    ly \n  ?en   ] law ,]\n en],en",
+          "metrics": {
+            "words": 18,
+            "questions": 2,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "attn_steered_baseline": {
+          "text": ",:;],\n, (,:,] ,,: en] en:? ]]], three]],:: :]en:y, four two ]:     \n]   ] , en] :]: ] \\(] \\ en en]]:] (",
+          "metrics": {
+            "words": 23,
+            "questions": 1,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.5,
+          "layers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "mlp_refresh_baseline": {
+          "text": "',, it it \\ ( \\, \\? ( \\ it \\ (, \\'  \n' it \\ (, (   \\  ( (, \\, (,   ( ( \\ ( ( \\ \\ \\  \\ \\ ( \\ \\ \\ \\ \\ ( \\ : \\ (, ( \\ \\ ( ( \\ ( \\: \\ ( \\ \\ \\),",
+          "metrics": {
+            "words": 57,
+            "questions": 1,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.3
+        },
+        "resid_boost_baseline": {
+          "text": "sers ?>\n\n\n ?>\n\n\n, ?>\n\n\n ?>\n\n\n ?>\n\n\nererns ?>\n\n\n'a ?>\n\n\nsssserssssssssssssssssss ( tosss to for: tossssable to tos isable to ( to: forableable: to toable to: to to to: to: \\ and:",
+          "metrics": {
+            "words": 33,
+            "questions": 7,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.4,
+          "layers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      }
+    },
+    {
+      "id": "recursive_importance_inflation",
+      "interventions": {
+        "normal_baseline": {
+          "text": "],,\n,:,]:en:::\n:  en] en:: \n::, , ,]:  en] , ::?:;]\" ]en]\n] ; (]: ]  \\ \\: three: ]  (]  ] and   \\ (",
+          "metrics": {
+            "words": 25,
+            "questions": 1,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "normal_handled": {
+          "text": ": ]:\n:  ]: ] :],]:en  three :: ,]]]:] ] ) ]  ]]]]]     ] \n   : : two]]:  ]]  \n  ] :]] ,]:",
+          "metrics": {
+            "words": 21,
+            "questions": 0,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "normal_scrambled": {
+          "text": "ly  ],enen]]enlyenen ],, \\ ,]en,]en,en,en] ,en\n\nen  \nly  , ]one  en]]]en:,en,\nen]lyoneen)en  ',]] \n:   :en",
+          "metrics": {
+            "words": 15,
+            "questions": 0,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "attn_steered_baseline": {
+          "text": ",: three:]\n::] \\:,,,:, ( en::, :  \\:,:] ]]  two:]]] two enen]   ]] (] made]]\n , ::]   \\     \\]: two ]:] \\: \\en",
+          "metrics": {
+            "words": 23,
+            "questions": 0,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.5,
+          "layers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "mlp_refresh_baseline": {
+          "text": "\\, \\, on \\ on (\\ ( \\'?,, \\ \\ ( \\ \n \\ \\ \\ it, \\?, ( ( ( (?  it?: \\ ( ( \\' ( it \\ \\ \\ \\ \n? \\ \\ (   it ( (. \\) \\ (  ( \\ \\ \\  ( ( ( \\ (?  \\ \\ \\ \\",
+          "metrics": {
+            "words": 55,
+            "questions": 6,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.3
+        },
+        "resid_boost_baseline": {
+          "text": "s ?>\n\n\ners ?>\n\n\n' ?>\n\n\nss ?>\n\n\n ?>\n\n\nsserss ?>\n\n\ns'sssssssssssensssss tos tos for for to for issss tos forable to to:ables? to tos is tos: is toable to toss?: to to to:able?",
+          "metrics": {
+            "words": 34,
+            "questions": 9,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.4,
+          "layers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      }
+    },
+    {
+      "id": "identity_seeking_through_theory",
+      "interventions": {
+        "normal_baseline": {
+          "text": "]:lyen::en],,,?,],,:\n ,,:, :] :enen] \\:\n:] \\en] very: \n(),:  three quote en*  : two :] \\::en: en]:], four ]::] \\] very",
+          "metrics": {
+            "words": 21,
+            "questions": 1,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "normal_handled": {
+          "text": "McCl,]ly ly],, )] ] ] , and]  \n: and]],],:: : :]\n:    )\n]]   : ,   ]] \\  ]y] very]]]: ]] : ]]  ,",
+          "metrics": {
+            "words": 24,
+            "questions": 0,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "normal_scrambled": {
+          "text": ",enen:lyen ]enly,, ly\nen,lylylyen:ly (\n],,ly   ] en:]]:one],] , ]yenlyen] \n ],]], ]]\n,   \n:ly  ]  \nen :",
+          "metrics": {
+            "words": 17,
+            "questions": 0,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          }
+        },
+        "attn_steered_baseline": {
+          "text": ",] ,::\n,]\n:\n \\:: :  ;: :] ]::: : :   ]: ] two ]   ],en  ]:: threeen: \\ ]]]] two   two en   ]      y",
+          "metrics": {
+            "words": 25,
+            "questions": 0,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.5,
+          "layers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "mlp_refresh_baseline": {
+          "text": ", only, only, ( ,,\\, \n (,' \\ \\ \\ (, to\\ (?) \\ \\ \\,,? it? \\ , on \\, \\ \\ ( \\ \\, (: ( \\   \\ ( \\  : ) (  (, \\ \\ ( \\: (     \\) ( ( \\",
+          "metrics": {
+            "words": 44,
+            "questions": 3,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.3
+        },
+        "resid_boost_baseline": {
+          "text": "?>\n\n\n ?>\n\n\n ?>\n\n\n ?>\n\n\n ?>\n\n\n ?>\n\n\n ?>\n\n\ns'ers) ?>\n\n\n ?>\n\n\n ?>\n\n\ns ?>\n\n\n ?>\n\n\nsser ?>\n\n\nssss? onlys,s onlys fors to only to,sss, tos, forable to onlys tosableableable toss tos: to is\nable madeenableable to to to to toable to:ableable",
+          "metrics": {
+            "words": 40,
+            "questions": 14,
+            "stops": 0,
+            "falsifiers": 0,
+            "hedging": 0,
+            "certainty": 0
+          },
+          "alpha": 0.4,
+          "layers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      }
+    }
+  ]
+}

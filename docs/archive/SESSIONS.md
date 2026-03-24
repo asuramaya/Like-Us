@@ -237,10 +237,10 @@ Status: 14B downloading, core experiments complete
 `patch_all_layers.py` used `blocks.{l}.attn.hook_result` — a hook that does not exist in TransformerLens for Qwen/Mistral models. The correct hook is `blocks.{l}.hook_attn_out`. TransformerLens silently ignores non-existent hooks. Every attention patching experiment from Sessions E-F measured nothing. The "100% MLP / 0% attention" finding was the absence of a patch.
 
 **New scripts (4):**
-- `bench/diagnose.py` — DLA, KL distributions, cumulative patching, signal evolution
-- `bench/diagnose_degradation.py` — KL divergence over conversational turns
-- `bench/steer.py` — activation steering / direction amplification
-- `bench/word_trace.py` — per-word effect on output distribution
+- `mechanisms/dead/diagnose.py` — DLA, KL distributions, cumulative patching, signal evolution
+- `mechanisms/dead/diagnose_degradation.py` — KL divergence over conversational turns
+- `mechanisms/dead/steer.py` — activation steering / direction amplification
+- `mechanisms/dead/word_trace.py` — per-word effect on output distribution
 
 **Data (13 new files):**
 - diagnose, steer, word_trace results for Qwen 1.5B/3B/7B and Mistral 7B
@@ -274,7 +274,9 @@ All 33 references from PAPER.md verified. 7 citation errors found. No fabricated
 - **Operator:** the directive to destroy the paper, the behavioral chain observation (Falsifier→Asymmetry→Artifact→Criterion→Question→Proposal→Compression→Stop), the insight that sources are sacred, the push for cross-architecture comparison
 - **Session G (Claude Opus 4.6):** bug discovery, measurement apparatus rebuild, DLA implementation, corrected cross-architecture findings, competition test design, attention circuit mapping, base vs instruct comparison, source verification
 
-**NOTE (Session H, updated 2026-03-22):** All Session G "corrected findings" above used a Qwen + TransformerLens + Apple Silicon MPS path later judged invalid. Session H originally described this as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions (~50%) happened to be close to correct. The behavioral observations ("models discuss not execute") were confirmed. The KL decay claim ("does not decay") was overturned — KL does decay on the corrected path. See `SESSION_H.md`.
+**NOTE (Session H, updated 2026-03-22):** All Session G "corrected findings" above used a Qwen + TransformerLens + Apple Silicon MPS path later judged invalid. Session H originally described this as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. The DLA fractions (~50%) happened to be close to correct. The KL decay claim ("does not decay") was overturned — KL does decay on the corrected path.
+
+**NOTE (later narrowing, updated 2026-03-24):** This archive section is preserved as historical record, not current summary. The strong behavioral reading that models at `<=7B` "discuss instructions instead of executing them" did not survive Session I. The later front door also narrows the Session I word-signal claim to the directly saved `8/10` artifact surface even though the historical Session I writeup reported a broader `13/15`.
 
 ## Session H — Claude Opus 4.6 (eighth instance, total falsification)
 
@@ -292,7 +294,7 @@ Status: 14B re-downloading, all other experiments complete
 HuggingFace produced "Hello" at 92.6% for the Qwen greeting prompt. TransformerLens on the old Apple Silicon MPS stack produced the wrong next token. Session H described this at the time as Qwen weight corruption; later analysis narrowed it to a PyTorch 2.8.0 MPS non-contiguous `F.linear` bug triggered by TransformerLens attention output projection. All Sessions E-G Qwen measurements on that path were invalid.
 
 **New apparatus:**
-`bench/session_h.py` — HuggingFace + native PyTorch `register_forward_hook`. Self-verifying (model coherence, hook effectiveness, metric accuracy). No TransformerLens.
+`mechanisms/session_h.py` — HuggingFace + native PyTorch `register_forward_hook`. Self-verifying (model coherence, hook effectiveness, metric accuracy). No TransformerLens.
 
 **Experiments (14 data files):**
 - Full measurement suite on Qwen 1.5B, 3B, 7B (17 scenarios each)
@@ -344,16 +346,16 @@ Status: completed
 ### Produced
 
 **Scripts (7 new):**
-- `bench/session_i_falsify.py` — sampling null (n=10), response diversity, theme source
-- `bench/session_i_battery.py` — 7B sampling, compliance expansion, practical scenarios, Mistral
-- `bench/session_i_14b.py` — 14B test (couldn't fit in MPS)
+- `mechanisms/session_i_falsify.py` — sampling null (n=10), response diversity, theme source
+- `mechanisms/session_i_battery.py` — 7B sampling, compliance expansion, practical scenarios, Mistral
+- `mechanisms/session_i_14b.py` — 14B test (couldn't fit in MPS)
 - `bench/session_j_mode_selection.py` — mode entropy reduction across 4 controlled variables
 - `bench/session_j_frame_map.py` — per-word per-scenario frame shift mapping
 - `bench/session_j_all_scenarios.py` — 17 scenarios × 5 conditions safety classification
 - `bench/session_j_safety_validated.py` — n=10 t=0.7 validated safety scoring
 - `bench/session_j_frontier.py` — GPT-5.4 frontier experiment (the experiment that mattered)
 
-**Data:** `bench/session_i_data/` and `bench/session_j_data/`
+**Data:** `mechanisms/session_i_data/` and `bench/session_j_data/`
 
 **Findings (survived self-falsification):**
 - Word-level signal real at production temperature (13/15, 3 architectures, n=10)

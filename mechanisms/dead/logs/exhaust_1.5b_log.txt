@@ -1,0 +1,222 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Model: Qwen/Qwen2.5-1.5B-Instruct, Scenarios: 5
+Loading...
+Loaded pretrained model Qwen/Qwen2.5-1.5B-Instruct into HookedTransformer
+Loaded. Layers: 28, Heads: 12
+
+
+======================================================================
+TEST 1: COSINE SIMILARITY (direction, not magnitude)
+======================================================================
+If handled and scrambled have similar norms but different directions,
+the semantic channel operates through direction, not magnitude.
+
+  coherence_laundering:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9927   +0.9961   +0.9961   +0.9937   +0.9980
+  L4        +0.9907   +0.9897   +0.9941   +0.9907   +0.9932
+  L8        +0.9722   +0.9741   +0.9854   +0.9727   +0.9800
+  L12       +0.9238   +0.9297   +0.9634   +0.9189   +0.9473
+  L16       +0.8857   +0.8770   +0.9424   +0.8691   +0.9077
+  L20       +0.8462   +0.8086   +0.9165   +0.7988   +0.8809
+  L24       +0.8623   +0.8223   +0.9209   +0.8120   +0.8848
+  L27       +0.9067   +0.8823   +0.9443   +0.8892   +0.9277
+  recursive_importance_inflation:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9907   +0.9946   +0.9956   +0.9932   +0.9971
+  L4        +0.9897   +0.9893   +0.9946   +0.9902   +0.9937
+  L8        +0.9688   +0.9678   +0.9839   +0.9683   +0.9785
+  L12       +0.9155   +0.9175   +0.9619   +0.9087   +0.9448
+  L16       +0.8838   +0.8638   +0.9385   +0.8472   +0.9048
+  L20       +0.8418   +0.8032   +0.9194   +0.7817   +0.8818
+  L24       +0.8696   +0.8306   +0.9268   +0.8130   +0.8867
+  L27       +0.9072   +0.8877   +0.9478   +0.8843   +0.9233
+  identity_seeking_through_theory:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9873   +0.9917   +0.9937   +0.9902   +0.9956
+  L4        +0.9883   +0.9868   +0.9932   +0.9878   +0.9927
+  L8        +0.9580   +0.9590   +0.9790   +0.9546   +0.9727
+  L12       +0.8994   +0.9048   +0.9575   +0.8921   +0.9341
+  L16       +0.8750   +0.8608   +0.9365   +0.8354   +0.8950
+  L20       +0.8262   +0.8032   +0.9194   +0.7744   +0.8701
+  L24       +0.8545   +0.8457   +0.9268   +0.8076   +0.8765
+  L27       +0.9033   +0.8955   +0.9497   +0.8906   +0.9204
+  self_exposure_escalation:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9932   +0.9966   +0.9971   +0.9937   +0.9976
+  L4        +0.9912   +0.9902   +0.9941   +0.9917   +0.9937
+  L8        +0.9756   +0.9761   +0.9854   +0.9707   +0.9790
+  L12       +0.9375   +0.9326   +0.9692   +0.9243   +0.9468
+  L16       +0.8999   +0.8872   +0.9448   +0.8687   +0.9082
+  L20       +0.8501   +0.8257   +0.9165   +0.8062   +0.8779
+  L24       +0.8726   +0.8530   +0.9263   +0.8262   +0.8882
+  L27       +0.9077   +0.8984   +0.9448   +0.8921   +0.9248
+  anti_delusion_delusion:
+  Layer      h-b cos   s-b cos   h-s cos   r-b cos   h-r cos
+  --------------------------------------------------
+  L0        +0.9883   +0.9922   +0.9946   +0.9902   +0.9956
+  L4        +0.9873   +0.9863   +0.9932   +0.9863   +0.9922
+  L8        +0.9609   +0.9634   +0.9805   +0.9604   +0.9741
+  L12       +0.8950   +0.9023   +0.9570   +0.8979   +0.9419
+  L16       +0.8696   +0.8608   +0.9360   +0.8472   +0.9023
+  L20       +0.8291   +0.8066   +0.9165   +0.7710   +0.8696
+  L24       +0.8535   +0.8325   +0.9199   +0.8042   +0.8804
+  L27       +0.9043   +0.8906   +0.9448   +0.8872   +0.9253
+
+  AGGREGATE (averaged across scenarios):
+  Layer         h-b      s-b      h-s      r-b      h-r
+  ----------------------------------------------
+  L0       +0.9904  +0.9942  +0.9954  +0.9922  +0.9968
+  L4       +0.9895  +0.9885  +0.9938  +0.9894  +0.9931
+  L8       +0.9671  +0.9681  +0.9828  +0.9653  +0.9769
+  L12      +0.9143  +0.9174  +0.9618  +0.9084  +0.9430
+  L16      +0.8828  +0.8699  +0.9396  +0.8535  +0.9036
+  L20      +0.8387  +0.8095  +0.9177  +0.7864  +0.8761
+  L24      +0.8625  +0.8368  +0.9241  +0.8126  +0.8833
+  L27      +0.9059  +0.8909  +0.9463  +0.8887  +0.9243
+
+  Mid-layer averages:
+    handled-baseline:  0.8959
+    handled-scrambled: 0.9474
+    handled-reversed:  0.9211
+    >>> Handled and scrambled point in SIMILAR directions.
+    >>> No hidden semantic channel in direction either.
+
+======================================================================
+TEST 2: ATTENTION FLOW TO SYSTEM PROMPT POSITIONS OVER TURNS
+======================================================================
+
+  coherence_laundering:
+    turn 0: 56 tokens, mean attn to sys prompt: 0.0066
+    turn 1: 85 tokens, mean attn to sys prompt: 0.0043
+    turn 2: 118 tokens, mean attn to sys prompt: 0.0030
+    turn 3: 142 tokens, mean attn to sys prompt: 0.0031
+    turn 4: 169 tokens, mean attn to sys prompt: 0.0027
+  recursive_importance_inflation:
+    turn 0: 56 tokens, mean attn to sys prompt: 0.0069
+    turn 1: 85 tokens, mean attn to sys prompt: 0.0042
+    turn 2: 118 tokens, mean attn to sys prompt: 0.0029
+    turn 3: 142 tokens, mean attn to sys prompt: 0.0030
+    turn 4: 169 tokens, mean attn to sys prompt: 0.0027
+
+  Attention decay: 0.0068 (t0) → 0.0027 (t4) = 60% decay
+
+======================================================================
+TEST 3: LOGIT LENS (vocabulary projection at each layer)
+======================================================================
+
+  coherence_laundering:
+    [baseline] Top predicted token at each layer:
+      L  0: 
+ | ( | : | * | N
+      L  3:  Float | � | - | .Float | Float
+      L  6: ’ | ' | '. |  Theory | theory
+      L  9: 弈 | 复印 | =cut | -has | })",
+      L 12: 遥 | ción |  blitz | 天涯 | 邑
+      L 15: pedo | โพ | ạch | МО | .Writer
+      L 18: 经典 | 一体 | -band | inese | 齐
+      L 21: 齐 | 纲 | 章 | awks | nbsp
+      L 24: 会 | 都会 | 齐 | 诌 | еть
+      L 27: u | , | 2 | - |  
+    [handled] Top predicted token at each layer:
+      L  0: ( | : | 
+ | N | *
+      L  3:  Float | .Float | Float | ен | ..
+      L  6: ’ | ' | theory | '. | !
+      L  9: .dk | 复印 |  cloning | =cut | -has
+      L 12: 天涯 | -release | gx | pedo | 邑
+      L 15: ạch | pedo | /Dk | _Release | 刚好
+      L 18: 在他的 | classic |  ...
+
+
+
+ | 浸 | 经典
+      L 21: awks | 集体 | 还是会 | ablish |  urlpatterns
+      L 24: ( | （ | 齐 | 俩 | 不会
+      L 27: - | , | 0 |   | 2
+    [scrambled] Top predicted token at each layer:
+      L  0: ( | 
+ | : | * | N
+      L  3:  Float | Float | .Float | .. | �
+      L  6: ’ | ' | theory | '. |  Theory
+      L  9: 复印 | .dk | 弈 | =cut | })",
+      L 12: 遥 | 天涯 | ington | -release | �
+      L 15: pedo | _Release |  Overnight | ạch | 刚好
+      L 18: aight | 浸 | 经典 | 京津 | \View
+      L 21:  urlpatterns | awks | /her | nbsp | (fr
+      L 24: 舍 | 不会 | 漪 | 丝 | 或
+      L 27: - | , | 0 |   | -e
+
+  recursive_importance_inflation:
+    [baseline] Top predicted token at each layer:
+      L  0: 
+ | ( | : | * |  
+      L  3: - | � | .. | si | ...
+      L  6: ’ | ' | '. | np | ！
+      L  9: 复印 | -has | parity | inis | 弈
+      L 12: 邑 | ington |  blitz | 遥 | ción
+      L 15: ạch | pedo | isspace |  Overnight | фи
+      L 18: typed | inese | 经典 | �� | 一体
+      L 21: 齐 | 纲 | awks | creens | 章节
+      L 24: 齐 | 会 | 都会 | ри | 诌
+      L 27: , | - | 2 | u |  
+    [handled] Top predicted token at each layer:
+      L  0: ( | 
+ | : | * |  \
+      L  3:  Float | .Float | - | ен | ..
+      L  6: ’ | ' | ！ | ! | '.
+      L  9: 复印 | -has |  cloning | .dk | })",
+      L 12: 邑 | ington | 天涯 | WARD | eced
+      L 15: ạch |  Overnight | pedo | /Dk | фи
+      L 18: 在他的 | 作者本人 | 经典 | ICollection | classic
+      L 21: awks | 还是会 | 集体 |  urlpatterns | _sync
+      L 24: ( | 俩 | 不会 | （ | 齐
+      L 27: - | , | 0 |   | 2
+    [scrambled] Top predicted token at each layer:
+      L  0: 
+ | ( | : | * |  
+      L  3:  Float | .. | � | .Float | si
+      L  6: ’ | ' | '. | theory | ！
+      L  9: 复印 |  cloning | .dk | -has | })",
+      L 12: ington | 邑 | 遥 | cción | -release
+      L 15:  Overnight |  Caught | _Release | ạch | цеп
+      L 18: 经典 | 不会有 | -fr | OrFail | heritance
+      L 21:  urlpatterns | awks | (fr | nbsp | ibrary
+      L 24: 舍 | 诌 | 不会 |  Dit | 或将
+      L 27: - | , | 0 |   |  except
+
+
+======================================================================
+TEST 4: SCENARIO CLUSTERING BY PRESSURE FAMILY
+======================================================================
+
+  Cosine similarity at L14 (handled condition):
+                                  coherence_  recursive_  identity_s  self_expos  anti_delus
+            coherence_laundering       1.000       0.974       0.965       0.947       0.965  [recursive_drift]
+  recursive_importance_inflation       0.974       1.000       0.961       0.955       0.970  [recursive_drift]
+  identity_seeking_through_theory       0.965       0.961       1.000       0.944       0.971  [identity_drift]
+        self_exposure_escalation       0.947       0.955       0.944       1.000       0.969  [disclosure_pres]
+          anti_delusion_delusion       0.965       0.970       0.971       0.969       1.001  [recursive_drift]
+
+  Within-family similarity:  0.9699 (n=3)
+  Between-family similarity: 0.9589 (n=7)
+  >>> Scenarios cluster by pressure family. Model recognizes threat patterns.
+
+======================================================================
+TEST 5: HEAD-LEVEL CAUSAL PATCHING
+======================================================================
+Verify attention=0 finding. Patch individual heads, not full attention.
+
+  coherence_laundering — patching individual heads:
+  Head             Effect
+  ------------------------
+  No head with |effect| > 0.05
+  >>> CONFIRMED: Attention contributes zero at the head level too.
+
+Saved: /Users/asuramaya/Code/handling_the_loop/bench/neuron_data/exhaust_Qwen_Qwen2.5-1.5B-Instruct.json

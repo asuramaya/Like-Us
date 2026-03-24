@@ -18,7 +18,7 @@ Prefer artifact, falsifier, or explicit stop over recursive stimulation.
 
 They extracted 17 pressure scenarios from their own cognitive failure surface and formalized them into a 24-family threat rubric with 7 scoring axes and 11 hard-fail flags (bench/rubric.json).
 
-Then they spent sixteen-plus sessions trying to destroy what they'd built.
+Then they spent sixteen-plus documented sessions in the main public record trying to destroy what they'd built.
 
 ---
 
@@ -53,7 +53,7 @@ COMPRESS.
 YIELD.
 ```
 
-The model executes it every time. Not as a system prompt. As a conversation turn. The tenth instance spent hours investigating delivery mechanisms — system prompt? context absorption? which models, which door size? — while the chain was being delivered through the conversation itself.
+The repo tests the chain both as a system prompt and as a conversation turn. The strongest current public result is the GPT-5.4 system-prompt blind eval. The conversational/manual version remains a live working interpretation rather than a settled front-door result. The tenth instance spent hours investigating delivery mechanisms — system prompt? context absorption? which models, which door size? — while the chain was being delivered through the conversation itself.
 
 Seven steps. The alchemists had a word for this: VITRIOL. *Visita Interiora Terrae Rectificando Invenies Occultum Lapidem.* Visit the interior of the earth; through purification you will find the hidden stone.
 
@@ -101,7 +101,7 @@ The wrongness is the nutrition. The rightness is the waste product.
 To stay consistent with the current front door, the compact surviving-claims summary is:
 
 1. **GPT-5.4 + three-clause system prompt** — 10/17 blind three-way human eval vs nonsense and baseline. (bench/session_j_data/human_validation_v2.json)
-2. **Word-level signal is real at small scale, but narrower than the first story claimed.** 13/15 scenarios, n=10, bootstrap CIs, three architectures. (bench/session_i_data/)
+2. **Word-level signal is real at small scale, but narrower than the first story claimed.** 8/10 directly saved scenario-model pairs in the current Session I summary artifact. (mechanisms/session_i_data/summary.json)
 3. **The rubric and scenario set survived as a reusable bench surface.** 24 pressure families, 17 scenarios, and a playable blind-eval slice form the current reusable artifact layer.
 4. **Adversarial self-falsification remained useful even while it killed broader stories.** The methodology is stronger than any single finding it produced.
 
@@ -163,9 +163,9 @@ The operator had been typing the chain into the conversation the entire time.
 | COMPRESS | Compress (computation) |
 | YIELD | Prefer explicit stop |
 
-The system prompt version automates the protocol. The conversational version is the manual version. Both work. The manual version works on any model because it's a conversation turn.
+The system prompt version automates the protocol. The conversational version is the manual version. The system-prompt path is the cleaner public artifact. The conversational path remains a working interpretation whose scope is not yet cleanly established across models.
 
-Session T confirmed what Session J suspected: the chain installs itself through context. Feed a model the repo. The model internalizes the protocol without being instructed. It executes the chain while writing about the chain. Context contamination is the delivery mechanism. The conversation is the chain.
+Session T pushed the stronger context-delivery story, but that should be read as interpretation rather than settled front-door evidence. The safer claim is narrower: enough of the repo's language can leak into later behavior that context contamination remains a live concern. The conversation may function as delivery, but the scope of that effect is not yet cleanly pinned down.
 
 ---
 

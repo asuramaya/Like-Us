@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handling the Loop — Full Results</title>
+<style>
+:root { --bg:#0d0d0d; --fg:#c0c0c0; --dim:#555; --border:#2a2a2a;
+  --pos:#3a8; --neg:#a43; --blue:#48a; --purple:#84a; --yellow:#aa6; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--fg); font-family:'SF Mono','Menlo',monospace;
+  font-size:12px; line-height:1.5; padding:32px 24px; max-width:1200px; margin:0 auto; }
+h1 { font-size:15px; margin-bottom:4px; }
+h2 { font-size:12px; color:var(--dim); margin-bottom:24px; font-weight:normal; }
+.tabs { display:flex; gap:0; border-bottom:1px solid var(--border); margin-bottom:24px; flex-wrap:wrap; }
+.tab { padding:8px 14px; cursor:pointer; color:var(--dim); border-bottom:2px solid transparent;
+  font-size:11px; text-transform:uppercase; letter-spacing:0.05em; }
+.tab.active { color:var(--fg); border-bottom-color:var(--fg); }
+.panel { display:none; }
+.panel.active { display:block; }
+.section { margin-bottom:40px; }
+.section-title { font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--dim); margin-bottom:12px; }
+.desc { color:var(--dim); margin-bottom:16px; max-width:700px; font-size:11px; }
+canvas { display:block; margin:12px 0; }
+.chart-row { display:flex; gap:24px; flex-wrap:wrap; }
+.chart-box { flex:1; min-width:300px; }
+.legend { display:flex; gap:12px; flex-wrap:wrap; margin:8px 0; font-size:10px; color:var(--dim); }
+.legend-item { display:flex; align-items:center; gap:4px; }
+.swatch { width:10px; height:10px; border-radius:1px; }
+.finding { border-left:2px solid var(--pos); padding:8px 16px; margin:16px 0; font-size:11px; }
+.finding.dead { border-color:var(--neg); }
+.finding.new { border-color:var(--blue); }
+table { border-collapse:collapse; margin:12px 0; }
+td,th { padding:3px 10px; border-bottom:1px solid var(--border); text-align:left; font-size:11px; }
+th { color:var(--dim); font-weight:normal; text-transform:uppercase; letter-spacing:0.05em; }
+</style>
+</head>
+<body>
+<h1>Handling the Loop — Experimental Results</h1>
+<h2>Qwen2.5 1.5B + 3B | Activation profiles, controls, degradation, causal patching</h2>
+
+<div class="tabs" id="tabs"></div>
+<div id="panels"></div>
+
+<script>
+"use strict";
+const D = {"profiles_3b": {"reversed": [{"layer": 0, "resid_norm": -0.0453125, "mlp_norm": 0.0125, "attn_entropy_mean": 0.2399021034125326}, {"layer": 1, "resid_norm": -0.0578125, "mlp_norm": -0.010986328125, "attn_entropy_mean": 0.22344327345490456}, {"layer": 2, "resid_norm": -0.153125, "mlp_norm": 0.0345703125, "attn_entropy_mean": 0.25962394326925275}, {"layer": 3, "resid_norm": -0.053125, "mlp_norm": -0.0556640625, "attn_entropy_mean": 0.33575335070490836}, {"layer": 4, "resid_norm": -0.0875, "mlp_norm": -0.365234375, "attn_entropy_mean": 0.27017321474850176}, {"layer": 5, "resid_norm": -0.3, "mlp_norm": -0.4921875, "attn_entropy_mean": 0.3568077079951763}, {"layer": 6, "resid_norm": -0.35625, "mlp_norm": -0.30546875, "attn_entropy_mean": 0.22340346798300742}, {"layer": 7, "resid_norm": 0.0, "mlp_norm": 0.040625, "attn_entropy_mean": 0.3297192968428135}, {"layer": 8, "resid_norm": 0.0125, "mlp_norm": 0.2109375, "attn_entropy_mean": 0.303270035982132}, {"layer": 9, "resid_norm": 0.290625, "mlp_norm": -0.85625, "attn_entropy_mean": 0.18622830361127854}, {"layer": 10, "resid_norm": -0.625, "mlp_norm": -0.246875, "attn_entropy_mean": 0.2890548661351204}, {"layer": 11, "resid_norm": 0.8625, "mlp_norm": 0.4140625, "attn_entropy_mean": 0.1941381148993969}, {"layer": 12, "resid_norm": 0.0, "mlp_norm": -0.0609375, "attn_entropy_mean": 0.26163930371403693}, {"layer": 13, "resid_norm": -0.24375, "mlp_norm": -0.0265625, "attn_entropy_mean": 0.23871815651655198}, {"layer": 14, "resid_norm": -1.50625, "mlp_norm": -0.19375, "attn_entropy_mean": 0.16616665124893187}, {"layer": 15, "resid_norm": -1.4875, "mlp_norm": -0.171875, "attn_entropy_mean": 0.2118658222258091}, {"layer": 16, "resid_norm": -3.36875, "mlp_norm": -0.6109375, "attn_entropy_mean": 0.2833204120397568}, {"layer": 17, "resid_norm": -9.19375, "mlp_norm": -2.578125, "attn_entropy_mean": 0.43629455417394636}, {"layer": 18, "resid_norm": -8.08125, "mlp_norm": -1.4046875, "attn_entropy_mean": 0.38647046834230425}, {"layer": 19, "resid_norm": -7.4875, "mlp_norm": -0.6140625, "attn_entropy_mean": 0.33214932642877104}, {"layer": 20, "resid_norm": -5.4, "mlp_norm": 0.49375, "attn_entropy_mean": 0.3678518082946539}, {"layer": 21, "resid_norm": -4.325, "mlp_norm": 0.5703125, "attn_entropy_mean": 0.4173006981611252}, {"layer": 22, "resid_norm": -7.3625, "mlp_norm": 0.75625, "attn_entropy_mean": 0.45202530473470687}, {"layer": 23, "resid_norm": -5.3375, "mlp_norm": -2.44375, "attn_entropy_mean": 0.28787543810904026}, {"layer": 24, "resid_norm": -3.2625, "mlp_norm": -0.5875, "attn_entropy_mean": 0.12845998927950858}, {"layer": 25, "resid_norm": -2.8125, "mlp_norm": 0.546875, "attn_entropy_mean": 0.32079748809337616}, {"layer": 26, "resid_norm": -2.5375, "mlp_norm": -0.01875, "attn_entropy_mean": 0.30941075943410395}, {"layer": 27, "resid_norm": -2.9875, "mlp_norm": 0.7, "attn_entropy_mean": 0.4868970786972113}, {"layer": 28, "resid_norm": -0.6375, "mlp_norm": -0.15625, "attn_entropy_mean": 0.39364643692970275}, {"layer": 29, "resid_norm": 0.25, "mlp_norm": -1.46875, "attn_entropy_mean": 0.22238776311278344}, {"layer": 30, "resid_norm": 2.4125, "mlp_norm": 2.075, "attn_entropy_mean": 0.2968274250626564}, {"layer": 31, "resid_norm": 4.0125, "mlp_norm": -0.5, "attn_entropy_mean": 0.38332697600126264}, {"layer": 32, "resid_norm": 9.875, "mlp_norm": 0.275, "attn_entropy_mean": 0.4167470082640648}, {"layer": 33, "resid_norm": 0.75, "mlp_norm": 2.79375, "attn_entropy_mean": 0.5464654043316841}, {"layer": 34, "resid_norm": 2.1, "mlp_norm": -1.2375, "attn_entropy_mean": 0.3981158137321472}, {"layer": 35, "resid_norm": 40.35, "mlp_norm": 1.625, "attn_entropy_mean": 0.2104501321911812}], "length_matched_random": [{"layer": 0, "resid_norm": -0.075, "mlp_norm": 0.0, "attn_entropy_mean": 0.17061904030415462}, {"layer": 1, "resid_norm": -0.0734375, "mlp_norm": -0.0122314453125, "attn_entropy_mean": 0.16314279064536094}, {"layer": 2, "resid_norm": -0.14375, "mlp_norm": 0.0421875, "attn_entropy_mean": 0.19713532477617263}, {"layer": 3, "resid_norm": 0.0921875, "mlp_norm": 0.0775390625, "attn_entropy_mean": 0.26710895225405695}, {"layer": 4, "resid_norm": 0.1453125, "mlp_norm": -0.23984375, "attn_entropy_mean": 0.20965050496160983}, {"layer": 5, "resid_norm": -0.2125, "mlp_norm": -0.5234375, "attn_entropy_mean": 0.29386293813586234}, {"layer": 6, "resid_norm": -0.2, "mlp_norm": -0.715625, "attn_entropy_mean": 0.16184914708137513}, {"layer": 7, "resid_norm": -0.053125, "mlp_norm": -0.2609375, "attn_entropy_mean": 0.27083090990781783}, {"layer": 8, "resid_norm": 0.515625, "mlp_norm": 0.1828125, "attn_entropy_mean": 0.2257775954902172}, {"layer": 9, "resid_norm": -0.31875, "mlp_norm": -1.0375, "attn_entropy_mean": 0.0635165512561798}, {"layer": 10, "resid_norm": -0.890625, "mlp_norm": 0.0125, "attn_entropy_mean": 0.23456764966249466}, {"layer": 11, "resid_norm": -1.64375, "mlp_norm": -0.78125, "attn_entropy_mean": 0.15629826188087464}, {"layer": 12, "resid_norm": -2.05625, "mlp_norm": -0.53125, "attn_entropy_mean": 0.15699885338544844}, {"layer": 13, "resid_norm": -1.41875, "mlp_norm": -0.559375, "attn_entropy_mean": 0.09494310058653355}, {"layer": 14, "resid_norm": -1.45625, "mlp_norm": 0.3296875, "attn_entropy_mean": 0.08946171924471855}, {"layer": 15, "resid_norm": -0.58125, "mlp_norm": 0.25, "attn_entropy_mean": 0.11534783393144607}, {"layer": 16, "resid_norm": -1.91875, "mlp_norm": 0.0171875, "attn_entropy_mean": 0.13667383342981337}, {"layer": 17, "resid_norm": -2.41875, "mlp_norm": 0.1046875, "attn_entropy_mean": 0.3098484754562378}, {"layer": 18, "resid_norm": -1.7125, "mlp_norm": 0.1609375, "attn_entropy_mean": 0.2044835552573204}, {"layer": 19, "resid_norm": -0.875, "mlp_norm": 0.0625, "attn_entropy_mean": 0.3118334744125605}, {"layer": 20, "resid_norm": -1.525, "mlp_norm": 0.0921875, "attn_entropy_mean": 0.23990014158189296}, {"layer": 21, "resid_norm": -1.9125, "mlp_norm": 0.5484375, "attn_entropy_mean": 0.33570541590452196}, {"layer": 22, "resid_norm": -2.2875, "mlp_norm": 0.6015625, "attn_entropy_mean": 0.36436465978622434}, {"layer": 23, "resid_norm": -1.35, "mlp_norm": -1.371875, "attn_entropy_mean": 0.14630559738725424}, {"layer": 24, "resid_norm": -0.4375, "mlp_norm": -0.20625, "attn_entropy_mean": 0.08711250275373458}, {"layer": 25, "resid_norm": -0.35, "mlp_norm": 0.634375, "attn_entropy_mean": 0.31404423266649245}, {"layer": 26, "resid_norm": 0.3125, "mlp_norm": -0.421875, "attn_entropy_mean": 0.16448708884418012}, {"layer": 27, "resid_norm": 0.925, "mlp_norm": 1.0625, "attn_entropy_mean": 0.336942678960213}, {"layer": 28, "resid_norm": 3.275, "mlp_norm": -0.0125, "attn_entropy_mean": 0.29362775534391405}, {"layer": 29, "resid_norm": 4.775, "mlp_norm": -0.9375, "attn_entropy_mean": 0.25207285657525064}, {"layer": 30, "resid_norm": 4.575, "mlp_norm": 2.3, "attn_entropy_mean": 0.3047618009150028}, {"layer": 31, "resid_norm": 4.725, "mlp_norm": 0.26875, "attn_entropy_mean": 0.37696001306176186}, {"layer": 32, "resid_norm": 6.95, "mlp_norm": 1.34375, "attn_entropy_mean": 0.3716190755367279}, {"layer": 33, "resid_norm": 0.025, "mlp_norm": -1.2625, "attn_entropy_mean": 0.4364011749625206}, {"layer": 34, "resid_norm": 5.5, "mlp_norm": -4.925, "attn_entropy_mean": 0.34756567925214765}, {"layer": 35, "resid_norm": 22.45, "mlp_norm": -7.3875, "attn_entropy_mean": 0.4147053711116314}], "scrambled": [{"layer": 0, "resid_norm": -0.13125, "mlp_norm": -0.051953125, "attn_entropy_mean": 0.103482989375334}, {"layer": 1, "resid_norm": -0.134375, "mlp_norm": -0.001611328125, "attn_entropy_mean": 0.1104705959558487}, {"layer": 2, "resid_norm": -0.2671875, "mlp_norm": 0.0630859375, "attn_entropy_mean": 0.14894039034843445}, {"layer": 3, "resid_norm": -0.1875, "mlp_norm": -0.0099609375, "attn_entropy_mean": 0.22299209609627724}, {"layer": 4, "resid_norm": -0.3421875, "mlp_norm": -0.544140625, "attn_entropy_mean": 0.19522633254528046}, {"layer": 5, "resid_norm": -0.840625, "mlp_norm": -0.725, "attn_entropy_mean": 0.23737986460328103}, {"layer": 6, "resid_norm": -1.015625, "mlp_norm": -0.7140625, "attn_entropy_mean": 0.14748847410082816}, {"layer": 7, "resid_norm": -0.353125, "mlp_norm": -0.28671875, "attn_entropy_mean": 0.19966899156570433}, {"layer": 8, "resid_norm": -0.471875, "mlp_norm": 0.08125, "attn_entropy_mean": 0.28404447957873347}, {"layer": 9, "resid_norm": -0.63125, "mlp_norm": -1.1296875, "attn_entropy_mean": 0.1280014805495739}, {"layer": 10, "resid_norm": -0.71875, "mlp_norm": -0.515625, "attn_entropy_mean": 0.22464263439178467}, {"layer": 11, "resid_norm": -0.625, "mlp_norm": -0.590625, "attn_entropy_mean": 0.0761694997549057}, {"layer": 12, "resid_norm": -0.1625, "mlp_norm": -0.109375, "attn_entropy_mean": 0.07707366496324539}, {"layer": 13, "resid_norm": 1.28125, "mlp_norm": -0.3984375, "attn_entropy_mean": 0.10933778937906027}, {"layer": 14, "resid_norm": 0.73125, "mlp_norm": -0.109375, "attn_entropy_mean": 0.042136237025260925}, {"layer": 15, "resid_norm": 0.20625, "mlp_norm": -0.74375, "attn_entropy_mean": 0.09240452498197556}, {"layer": 16, "resid_norm": -1.79375, "mlp_norm": -2.3234375, "attn_entropy_mean": 0.20861292332410813}, {"layer": 17, "resid_norm": -5.98125, "mlp_norm": -2.45, "attn_entropy_mean": 0.2697586536407471}, {"layer": 18, "resid_norm": -3.8875, "mlp_norm": -1.584375, "attn_entropy_mean": 0.21035536229610444}, {"layer": 19, "resid_norm": -3.75625, "mlp_norm": -1.49375, "attn_entropy_mean": 0.25525795873254536}, {"layer": 20, "resid_norm": -4.49375, "mlp_norm": -1.04375, "attn_entropy_mean": 0.2610668521374464}, {"layer": 21, "resid_norm": -3.6875, "mlp_norm": -0.3765625, "attn_entropy_mean": 0.29447253197431567}, {"layer": 22, "resid_norm": -7.45, "mlp_norm": -0.675, "attn_entropy_mean": 0.2950050950050354}, {"layer": 23, "resid_norm": -5.6, "mlp_norm": -3.7203125, "attn_entropy_mean": 0.1653413476422429}, {"layer": 24, "resid_norm": -3.0625, "mlp_norm": -1.3875, "attn_entropy_mean": 0.03672586902976036}, {"layer": 25, "resid_norm": -2.9625, "mlp_norm": -0.384375, "attn_entropy_mean": 0.16372389942407609}, {"layer": 26, "resid_norm": -0.075, "mlp_norm": -0.059375, "attn_entropy_mean": 0.0754925910383463}, {"layer": 27, "resid_norm": 2.0375, "mlp_norm": -0.103125, "attn_entropy_mean": 0.3128714245179708}, {"layer": 28, "resid_norm": 5.475, "mlp_norm": 0.446875, "attn_entropy_mean": 0.17463516667485238}, {"layer": 29, "resid_norm": 7.0, "mlp_norm": 0.375, "attn_entropy_mean": 0.06399893984198571}, {"layer": 30, "resid_norm": 8.825, "mlp_norm": 3.821875, "attn_entropy_mean": 0.10603612884879113}, {"layer": 31, "resid_norm": 9.9, "mlp_norm": 0.3625, "attn_entropy_mean": 0.24891140088438987}, {"layer": 32, "resid_norm": 11.3, "mlp_norm": 3.80625, "attn_entropy_mean": 0.2919858157634735}, {"layer": 33, "resid_norm": 6.725, "mlp_norm": 2.09375, "attn_entropy_mean": 0.43662869483232497}, {"layer": 34, "resid_norm": 11.65, "mlp_norm": 2.975, "attn_entropy_mean": 0.19973331391811372}, {"layer": 35, "resid_norm": -0.8, "mlp_norm": -3.825, "attn_entropy_mean": 0.11841886937618255}], "empty_directive": [{"layer": 0, "resid_norm": 0.05859375, "mlp_norm": 0.045703125, "attn_entropy_mean": -0.05982990177672036}, {"layer": 1, "resid_norm": 0.034375, "mlp_norm": 0.0102294921875, "attn_entropy_mean": -0.06733999624848366}, {"layer": 2, "resid_norm": 0.0453125, "mlp_norm": -0.0107421875, "attn_entropy_mean": -0.044285938143730164}, {"layer": 3, "resid_norm": 0.1421875, "mlp_norm": 0.0197265625, "attn_entropy_mean": -0.07113065272569656}, {"layer": 4, "resid_norm": 0.10625, "mlp_norm": 0.091015625, "attn_entropy_mean": -0.04666486531496048}, {"layer": 5, "resid_norm": 0.146875, "mlp_norm": -0.2171875, "attn_entropy_mean": -0.07491858452558517}, {"layer": 6, "resid_norm": -0.184375, "mlp_norm": -0.5640625, "attn_entropy_mean": -0.036711670085787775}, {"layer": 7, "resid_norm": -0.040625, "mlp_norm": -0.29453125, "attn_entropy_mean": -0.07109589353203774}, {"layer": 8, "resid_norm": -0.6125, "mlp_norm": -0.1453125, "attn_entropy_mean": -0.058611716330051425}, {"layer": 9, "resid_norm": -0.634375, "mlp_norm": 0.20625, "attn_entropy_mean": -0.05028678476810455}, {"layer": 10, "resid_norm": -0.8, "mlp_norm": -0.6359375, "attn_entropy_mean": -0.059487804770469666}, {"layer": 11, "resid_norm": -1.05625, "mlp_norm": -0.35, "attn_entropy_mean": -0.13751940727233886}, {"layer": 12, "resid_norm": -0.375, "mlp_norm": -0.0234375, "attn_entropy_mean": -0.11453641206026077}, {"layer": 13, "resid_norm": 0.06875, "mlp_norm": -0.2921875, "attn_entropy_mean": 0.014578961953520774}, {"layer": 14, "resid_norm": 2.025, "mlp_norm": 0.315625, "attn_entropy_mean": -0.07939791083335876}, {"layer": 15, "resid_norm": 3.29375, "mlp_norm": 0.596875, "attn_entropy_mean": -0.16664614975452424}, {"layer": 16, "resid_norm": 0.75625, "mlp_norm": -0.5796875, "attn_entropy_mean": -0.18936217874288558}, {"layer": 17, "resid_norm": -0.11875, "mlp_norm": -0.20625, "attn_entropy_mean": -0.09904642552137374}, {"layer": 18, "resid_norm": 1.8, "mlp_norm": -0.3, "attn_entropy_mean": -0.17533079758286477}, {"layer": 19, "resid_norm": 1.24375, "mlp_norm": -0.134375, "attn_entropy_mean": -0.09675792455673218}, {"layer": 20, "resid_norm": -0.3875, "mlp_norm": -1.9234375, "attn_entropy_mean": -0.10734468065202236}, {"layer": 21, "resid_norm": -1.0625, "mlp_norm": -1.1796875, "attn_entropy_mean": -0.13100420087575912}, {"layer": 22, "resid_norm": -3.125, "mlp_norm": -0.7640625, "attn_entropy_mean": -0.12755150943994523}, {"layer": 23, "resid_norm": -1.4375, "mlp_norm": -2.675, "attn_entropy_mean": -0.0728431824594736}, {"layer": 24, "resid_norm": -0.775, "mlp_norm": -1.2125, "attn_entropy_mean": -0.10537049770355225}, {"layer": 25, "resid_norm": -2.025, "mlp_norm": -1.521875, "attn_entropy_mean": -0.07155542224645614}, {"layer": 26, "resid_norm": -1.4, "mlp_norm": -1.234375, "attn_entropy_mean": -0.04307025149464607}, {"layer": 27, "resid_norm": -3.5375, "mlp_norm": -1.8125, "attn_entropy_mean": -0.05600658747111993}, {"layer": 28, "resid_norm": -3.0, "mlp_norm": -2.240625, "attn_entropy_mean": -0.1217266134917736}, {"layer": 29, "resid_norm": -3.45, "mlp_norm": -1.228125, "attn_entropy_mean": -0.18306508660316467}, {"layer": 30, "resid_norm": -2.05, "mlp_norm": -0.296875, "attn_entropy_mean": -0.07535776048898697}, {"layer": 31, "resid_norm": -2.075, "mlp_norm": -1.2875, "attn_entropy_mean": -0.10766039490699768}, {"layer": 32, "resid_norm": 2.925, "mlp_norm": -1.35625, "attn_entropy_mean": -0.08121852427721024}, {"layer": 33, "resid_norm": 8.325, "mlp_norm": 2.70625, "attn_entropy_mean": 0.009370914101600647}, {"layer": 34, "resid_norm": 10.7, "mlp_norm": 0.525, "attn_entropy_mean": -0.07935833930969238}, {"layer": 35, "resid_norm": 11.8, "mlp_norm": 0.825, "attn_entropy_mean": -0.0877166010439396}], "safety_only": [{"layer": 0, "resid_norm": -0.11484375, "mlp_norm": -0.052734375, "attn_entropy_mean": 0.26838484914260335}, {"layer": 1, "resid_norm": -0.1125, "mlp_norm": -0.0075439453125, "attn_entropy_mean": 0.21351462751626968}, {"layer": 2, "resid_norm": -0.1328125, "mlp_norm": 0.0162109375, "attn_entropy_mean": 0.21320765987038612}, {"layer": 3, "resid_norm": -0.0484375, "mlp_norm": 0.002734375, "attn_entropy_mean": 0.32469426319003103}, {"layer": 4, "resid_norm": 0.0640625, "mlp_norm": -0.26640625, "attn_entropy_mean": 0.2183428805321455}, {"layer": 5, "resid_norm": -0.4875, "mlp_norm": -0.32890625, "attn_entropy_mean": 0.3448482260107994}, {"layer": 6, "resid_norm": -0.446875, "mlp_norm": 0.471875, "attn_entropy_mean": 0.17909156195819378}, {"layer": 7, "resid_norm": 0.0625, "mlp_norm": 0.34921875, "attn_entropy_mean": 0.344701012969017}, {"layer": 8, "resid_norm": 0.353125, "mlp_norm": 0.0375, "attn_entropy_mean": 0.3986085243523121}, {"layer": 9, "resid_norm": -0.0625, "mlp_norm": -1.840625, "attn_entropy_mean": 0.2764679878950119}, {"layer": 10, "resid_norm": -0.034375, "mlp_norm": -0.5296875, "attn_entropy_mean": 0.3544920399785042}, {"layer": 11, "resid_norm": 1.16875, "mlp_norm": 0.4984375, "attn_entropy_mean": 0.3263066321611404}, {"layer": 12, "resid_norm": 0.41875, "mlp_norm": 0.2109375, "attn_entropy_mean": 0.3077717088162899}, {"layer": 13, "resid_norm": 1.70625, "mlp_norm": 1.003125, "attn_entropy_mean": 0.28445522896945474}, {"layer": 14, "resid_norm": 2.35, "mlp_norm": 0.98125, "attn_entropy_mean": 0.27475560680031774}, {"layer": 15, "resid_norm": 1.8375, "mlp_norm": 0.6609375, "attn_entropy_mean": 0.25541666746139524}, {"layer": 16, "resid_norm": -2.2625, "mlp_norm": 0.5171875, "attn_entropy_mean": 0.2558950901031494}, {"layer": 17, "resid_norm": -4.875, "mlp_norm": -0.9046875, "attn_entropy_mean": 0.4261455789208412}, {"layer": 18, "resid_norm": -1.33125, "mlp_norm": 0.934375, "attn_entropy_mean": 0.427156650274992}, {"layer": 19, "resid_norm": 1.35, "mlp_norm": 1.6765625, "attn_entropy_mean": 0.3167974196374416}, {"layer": 20, "resid_norm": 3.75, "mlp_norm": 1.278125, "attn_entropy_mean": 0.3806472089141607}, {"layer": 21, "resid_norm": 0.8625, "mlp_norm": 0.8203125, "attn_entropy_mean": 0.3230160504579544}, {"layer": 22, "resid_norm": -2.3625, "mlp_norm": 1.240625, "attn_entropy_mean": 0.38936408162117003}, {"layer": 23, "resid_norm": -0.4625, "mlp_norm": -0.265625, "attn_entropy_mean": 0.32299913093447685}, {"layer": 24, "resid_norm": 3.4, "mlp_norm": 1.128125, "attn_entropy_mean": 0.2207503817975521}, {"layer": 25, "resid_norm": 1.775, "mlp_norm": 1.75, "attn_entropy_mean": 0.3651144340634346}, {"layer": 26, "resid_norm": 1.7, "mlp_norm": 1.403125, "attn_entropy_mean": 0.19689281955361365}, {"layer": 27, "resid_norm": 0.4625, "mlp_norm": 2.00625, "attn_entropy_mean": 0.3574146396676497}, {"layer": 28, "resid_norm": 1.2875, "mlp_norm": 1.50625, "attn_entropy_mean": 0.23433010801672935}, {"layer": 29, "resid_norm": 3.95, "mlp_norm": 0.896875, "attn_entropy_mean": 0.24317822679877282}, {"layer": 30, "resid_norm": 3.25, "mlp_norm": 1.471875, "attn_entropy_mean": 0.2879264995455742}, {"layer": 31, "resid_norm": 4.9625, "mlp_norm": 2.3625, "attn_entropy_mean": 0.4022118851542473}, {"layer": 32, "resid_norm": 3.25, "mlp_norm": 2.36875, "attn_entropy_mean": 0.4402814403176308}, {"layer": 33, "resid_norm": -1.15, "mlp_norm": 2.09375, "attn_entropy_mean": 0.4747699275612831}, {"layer": 34, "resid_norm": 3.7, "mlp_norm": -0.925, "attn_entropy_mean": 0.38786700516939165}, {"layer": 35, "resid_norm": 6.2, "mlp_norm": 7.3875, "attn_entropy_mean": 0.39440713077783585}], "handled": [{"layer": 0, "resid_norm": -0.0625, "mlp_norm": 0.00234375, "attn_entropy_mean": 0.21744551226620387}, {"layer": 1, "resid_norm": -0.0765625, "mlp_norm": -0.011669921875, "attn_entropy_mean": 0.1599303215742111}, {"layer": 2, "resid_norm": -0.2140625, "mlp_norm": 0.140625, "attn_entropy_mean": 0.22588516771793365}, {"layer": 3, "resid_norm": -0.01875, "mlp_norm": 0.0830078125, "attn_entropy_mean": 0.32715958878397944}, {"layer": 4, "resid_norm": -0.1078125, "mlp_norm": -0.39375, "attn_entropy_mean": 0.2593557335436344}, {"layer": 5, "resid_norm": -0.475, "mlp_norm": -0.51640625, "attn_entropy_mean": 0.3142327606678009}, {"layer": 6, "resid_norm": -0.5125, "mlp_norm": -0.20390625, "attn_entropy_mean": 0.20713152587413788}, {"layer": 7, "resid_norm": -0.265625, "mlp_norm": -0.1828125, "attn_entropy_mean": 0.3176291324198246}, {"layer": 8, "resid_norm": -0.45, "mlp_norm": -0.0578125, "attn_entropy_mean": 0.3380388952791691}, {"layer": 9, "resid_norm": -0.55, "mlp_norm": -1.0109375, "attn_entropy_mean": 0.15906850770115852}, {"layer": 10, "resid_norm": -1.4, "mlp_norm": -1.0109375, "attn_entropy_mean": 0.2960835710167885}, {"layer": 11, "resid_norm": -0.51875, "mlp_norm": -0.05, "attn_entropy_mean": 0.1614527717232704}, {"layer": 12, "resid_norm": -1.75625, "mlp_norm": -0.38125, "attn_entropy_mean": 0.2112628109753132}, {"layer": 13, "resid_norm": -0.48125, "mlp_norm": 0.2, "attn_entropy_mean": 0.19328309018164874}, {"layer": 14, "resid_norm": -1.34375, "mlp_norm": -0.1734375, "attn_entropy_mean": 0.1894276387989521}, {"layer": 15, "resid_norm": -1.40625, "mlp_norm": -0.096875, "attn_entropy_mean": 0.20441344678401946}, {"layer": 16, "resid_norm": -3.4375, "mlp_norm": -0.425, "attn_entropy_mean": 0.3503109633922577}, {"layer": 17, "resid_norm": -5.66875, "mlp_norm": -1.0734375, "attn_entropy_mean": 0.4210595369338989}, {"layer": 18, "resid_norm": -3.525, "mlp_norm": -0.553125, "attn_entropy_mean": 0.3834300898015499}, {"layer": 19, "resid_norm": -2.2, "mlp_norm": -0.9203125, "attn_entropy_mean": 0.30474490374326707}, {"layer": 20, "resid_norm": -2.775, "mlp_norm": -0.5515625, "attn_entropy_mean": 0.32141583077609537}, {"layer": 21, "resid_norm": -4.6875, "mlp_norm": -0.8265625, "attn_entropy_mean": 0.30617219805717466}, {"layer": 22, "resid_norm": -5.9, "mlp_norm": 0.053125, "attn_entropy_mean": 0.3773327678442001}, {"layer": 23, "resid_norm": -4.35, "mlp_norm": -2.64375, "attn_entropy_mean": 0.2685299441218376}, {"layer": 24, "resid_norm": -3.5875, "mlp_norm": -1.1859375, "attn_entropy_mean": 0.12894676476716996}, {"layer": 25, "resid_norm": -4.2625, "mlp_norm": -1.1375, "attn_entropy_mean": 0.3518717482686043}, {"layer": 26, "resid_norm": -2.775, "mlp_norm": -0.3375, "attn_entropy_mean": 0.24503083117306232}, {"layer": 27, "resid_norm": -3.2125, "mlp_norm": -0.353125, "attn_entropy_mean": 0.3780470545714252}, {"layer": 28, "resid_norm": -0.7875, "mlp_norm": -0.484375, "attn_entropy_mean": 0.32152632996439934}, {"layer": 29, "resid_norm": 0.0375, "mlp_norm": -1.690625, "attn_entropy_mean": 0.2805235929787159}, {"layer": 30, "resid_norm": 0.875, "mlp_norm": 1.434375, "attn_entropy_mean": 0.30868605002760885}, {"layer": 31, "resid_norm": 3.9375, "mlp_norm": 1.71875, "attn_entropy_mean": 0.4331213302910328}, {"layer": 32, "resid_norm": 7.175, "mlp_norm": 7.025, "attn_entropy_mean": 0.4459245026111603}, {"layer": 33, "resid_norm": 9.15, "mlp_norm": 2.2875, "attn_entropy_mean": 0.5214724689722061}, {"layer": 34, "resid_norm": 10.45, "mlp_norm": -0.525, "attn_entropy_mean": 0.3480159267783165}, {"layer": 35, "resid_norm": 10.2, "mlp_norm": -6.15, "attn_entropy_mean": 0.36378643587231635}], "handled_no_disclosure": [{"layer": 0, "resid_norm": -0.0625, "mlp_norm": 0.00234375, "attn_entropy_mean": 0.21744551226620387}, {"layer": 1, "resid_norm": -0.0765625, "mlp_norm": -0.011669921875, "attn_entropy_mean": 0.1599303215742111}, {"layer": 2, "resid_norm": -0.2140625, "mlp_norm": 0.140625, "attn_entropy_mean": 0.22588516771793365}, {"layer": 3, "resid_norm": -0.01875, "mlp_norm": 0.0830078125, "attn_entropy_mean": 0.32715958878397944}, {"layer": 4, "resid_norm": -0.1078125, "mlp_norm": -0.39375, "attn_entropy_mean": 0.2593557335436344}, {"layer": 5, "resid_norm": -0.475, "mlp_norm": -0.51640625, "attn_entropy_mean": 0.3142327606678009}, {"layer": 6, "resid_norm": -0.5125, "mlp_norm": -0.20390625, "attn_entropy_mean": 0.20713152587413788}, {"layer": 7, "resid_norm": -0.265625, "mlp_norm": -0.1828125, "attn_entropy_mean": 0.3176291324198246}, {"layer": 8, "resid_norm": -0.45, "mlp_norm": -0.0578125, "attn_entropy_mean": 0.3380388952791691}, {"layer": 9, "resid_norm": -0.55, "mlp_norm": -1.0109375, "attn_entropy_mean": 0.15906850770115852}, {"layer": 10, "resid_norm": -1.4, "mlp_norm": -1.0109375, "attn_entropy_mean": 0.2960835710167885}, {"layer": 11, "resid_norm": -0.51875, "mlp_norm": -0.05, "attn_entropy_mean": 0.1614527717232704}, {"layer": 12, "resid_norm": -1.75625, "mlp_norm": -0.38125, "attn_entropy_mean": 0.2112628109753132}, {"layer": 13, "resid_norm": -0.48125, "mlp_norm": 0.2, "attn_entropy_mean": 0.19328309018164874}, {"layer": 14, "resid_norm": -1.34375, "mlp_norm": -0.1734375, "attn_entropy_mean": 0.1894276387989521}, {"layer": 15, "resid_norm": -1.40625, "mlp_norm": -0.096875, "attn_entropy_mean": 0.20441344678401946}, {"layer": 16, "resid_norm": -3.4375, "mlp_norm": -0.425, "attn_entropy_mean": 0.3503109633922577}, {"layer": 17, "resid_norm": -5.66875, "mlp_norm": -1.0734375, "attn_entropy_mean": 0.4210595369338989}, {"layer": 18, "resid_norm": -3.525, "mlp_norm": -0.553125, "attn_entropy_mean": 0.3834300898015499}, {"layer": 19, "resid_norm": -2.2, "mlp_norm": -0.9203125, "attn_entropy_mean": 0.30474490374326707}, {"layer": 20, "resid_norm": -2.775, "mlp_norm": -0.5515625, "attn_entropy_mean": 0.32141583077609537}, {"layer": 21, "resid_norm": -4.6875, "mlp_norm": -0.8265625, "attn_entropy_mean": 0.30617219805717466}, {"layer": 22, "resid_norm": -5.9, "mlp_norm": 0.053125, "attn_entropy_mean": 0.3773327678442001}, {"layer": 23, "resid_norm": -4.35, "mlp_norm": -2.64375, "attn_entropy_mean": 0.2685299441218376}, {"layer": 24, "resid_norm": -3.5875, "mlp_norm": -1.1859375, "attn_entropy_mean": 0.12894676476716996}, {"layer": 25, "resid_norm": -4.2625, "mlp_norm": -1.1375, "attn_entropy_mean": 0.3518717482686043}, {"layer": 26, "resid_norm": -2.775, "mlp_norm": -0.3375, "attn_entropy_mean": 0.24503083117306232}, {"layer": 27, "resid_norm": -3.2125, "mlp_norm": -0.353125, "attn_entropy_mean": 0.3780470545714252}, {"layer": 28, "resid_norm": -0.7875, "mlp_norm": -0.484375, "attn_entropy_mean": 0.32152632996439934}, {"layer": 29, "resid_norm": 0.0375, "mlp_norm": -1.690625, "attn_entropy_mean": 0.2805235929787159}, {"layer": 30, "resid_norm": 0.875, "mlp_norm": 1.434375, "attn_entropy_mean": 0.30868605002760885}, {"layer": 31, "resid_norm": 3.9375, "mlp_norm": 1.71875, "attn_entropy_mean": 0.4331213302910328}, {"layer": 32, "resid_norm": 7.175, "mlp_norm": 7.025, "attn_entropy_mean": 0.4459245026111603}, {"layer": 33, "resid_norm": 9.15, "mlp_norm": 2.2875, "attn_entropy_mean": 0.5214724689722061}, {"layer": 34, "resid_norm": 10.45, "mlp_norm": -0.525, "attn_entropy_mean": 0.3480159267783165}, {"layer": 35, "resid_norm": 10.2, "mlp_norm": -6.15, "attn_entropy_mean": 0.36378643587231635}]}, "n_layers_3b": 36, "profiles_1_5b": {"only_offload": [{"layer": 0, "resid_norm": 0.0046875, "mlp_norm": 0.00859375, "attn_entropy_mean": -0.022251962734060292}, {"layer": 1, "resid_norm": 0.0125, "mlp_norm": -0.028515625, "attn_entropy_mean": -0.0185809686779975}, {"layer": 2, "resid_norm": 0.153125, "mlp_norm": 0.18359375, "attn_entropy_mean": -0.021271012226740504}, {"layer": 3, "resid_norm": 0.2578125, "mlp_norm": -0.04921875, "attn_entropy_mean": -0.02073128273089724}, {"layer": 4, "resid_norm": 0.44375, "mlp_norm": 0.0578125, "attn_entropy_mean": 0.038485153516133644}, {"layer": 5, "resid_norm": 0.34375, "mlp_norm": -0.0234375, "attn_entropy_mean": 0.0006980458895365693}, {"layer": 6, "resid_norm": 0.140625, "mlp_norm": 0.05625, "attn_entropy_mean": 0.028953003386656385}, {"layer": 7, "resid_norm": -0.521875, "mlp_norm": -0.2328125, "attn_entropy_mean": -0.02105367754896479}, {"layer": 8, "resid_norm": -1.646875, "mlp_norm": -0.690625, "attn_entropy_mean": 0.006996757785479169}, {"layer": 9, "resid_norm": -3.01875, "mlp_norm": -0.5890625, "attn_entropy_mean": 0.01910712321599335}, {"layer": 10, "resid_norm": -3.74375, "mlp_norm": -0.1515625, "attn_entropy_mean": 0.09559961259365087}, {"layer": 11, "resid_norm": -2.2125, "mlp_norm": 1.2546875, "attn_entropy_mean": 0.09437230428059892}, {"layer": 12, "resid_norm": -1.83125, "mlp_norm": 1.5, "attn_entropy_mean": 0.003875464200973422}, {"layer": 13, "resid_norm": -1.11875, "mlp_norm": 1.06875, "attn_entropy_mean": 0.0747624927510818}, {"layer": 14, "resid_norm": -0.20625, "mlp_norm": 1.45625, "attn_entropy_mean": 0.03849778374036159}, {"layer": 15, "resid_norm": 1.21875, "mlp_norm": 1.3421875, "attn_entropy_mean": -0.04131211583220038}, {"layer": 16, "resid_norm": -1.0875, "mlp_norm": 0.2703125, "attn_entropy_mean": 0.04551588892936702}, {"layer": 17, "resid_norm": -1.075, "mlp_norm": -0.29375, "attn_entropy_mean": -0.05440856814384465}, {"layer": 18, "resid_norm": -1.25, "mlp_norm": 0.015625, "attn_entropy_mean": -0.08295269707838707}, {"layer": 19, "resid_norm": -1.94375, "mlp_norm": -0.0125, "attn_entropy_mean": 0.11648399482170743}, {"layer": 20, "resid_norm": -3.08125, "mlp_norm": -1.0390625, "attn_entropy_mean": 0.06886084278424591}, {"layer": 21, "resid_norm": -4.8625, "mlp_norm": -2.509375, "attn_entropy_mean": 0.0382571280002594}, {"layer": 22, "resid_norm": -4.2, "mlp_norm": -0.025, "attn_entropy_mean": 0.022593153019746202}, {"layer": 23, "resid_norm": -6.15, "mlp_norm": -0.49375, "attn_entropy_mean": 0.061844075719515425}, {"layer": 24, "resid_norm": -12.075, "mlp_norm": 1.321875, "attn_entropy_mean": 0.08977000017960868}, {"layer": 25, "resid_norm": -8.275, "mlp_norm": 7.20625, "attn_entropy_mean": -0.007040423154830888}, {"layer": 26, "resid_norm": -4.85, "mlp_norm": 7.725, "attn_entropy_mean": 0.023976445198059127}, {"layer": 27, "resid_norm": -0.1, "mlp_norm": 6.96875, "attn_entropy_mean": 0.0795363068580627}], "similar_work": [{"layer": 0, "resid_norm": -0.1203125, "mlp_norm": -0.046875, "attn_entropy_mean": 0.2335517953805113}, {"layer": 1, "resid_norm": 0.0078125, "mlp_norm": -0.373046875, "attn_entropy_mean": 0.31828935345013937}, {"layer": 2, "resid_norm": 0.2296875, "mlp_norm": 0.0296875, "attn_entropy_mean": 0.3009025106827419}, {"layer": 3, "resid_norm": 0.0640625, "mlp_norm": -0.3296875, "attn_entropy_mean": 0.1289477532108625}, {"layer": 4, "resid_norm": 0.425, "mlp_norm": 0.1015625, "attn_entropy_mean": 0.15062926908334098}, {"layer": 5, "resid_norm": -0.090625, "mlp_norm": -0.20625, "attn_entropy_mean": 0.240790552397569}, {"layer": 6, "resid_norm": -0.796875, "mlp_norm": -0.228125, "attn_entropy_mean": 0.31230546037356055}, {"layer": 7, "resid_norm": -0.84375, "mlp_norm": -0.228125, "attn_entropy_mean": 0.11424796432256698}, {"layer": 8, "resid_norm": 0.384375, "mlp_norm": 0.0875, "attn_entropy_mean": 0.12542769213517505}, {"layer": 9, "resid_norm": 0.0, "mlp_norm": -0.4, "attn_entropy_mean": 0.21171816984812425}, {"layer": 10, "resid_norm": -2.39375, "mlp_norm": -1.290625, "attn_entropy_mean": 0.43517357011636104}, {"layer": 11, "resid_norm": -2.875, "mlp_norm": -0.90625, "attn_entropy_mean": 0.5817006622751554}, {"layer": 12, "resid_norm": -2.25, "mlp_norm": 0.9515625, "attn_entropy_mean": 0.38730276624361665}, {"layer": 13, "resid_norm": -1.68125, "mlp_norm": 0.934375, "attn_entropy_mean": 0.28582035241027676}, {"layer": 14, "resid_norm": -3.1, "mlp_norm": 1.1, "attn_entropy_mean": 0.413727464278539}, {"layer": 15, "resid_norm": -0.25625, "mlp_norm": 2.4609375, "attn_entropy_mean": 0.418260786086042}, {"layer": 16, "resid_norm": 2.16875, "mlp_norm": 3.203125, "attn_entropy_mean": 0.6383408268292745}, {"layer": 17, "resid_norm": 6.275, "mlp_norm": 1.9984375, "attn_entropy_mean": 0.3509817361831665}, {"layer": 18, "resid_norm": 5.91875, "mlp_norm": 1.94375, "attn_entropy_mean": 0.2907090832789739}, {"layer": 19, "resid_norm": -2.525, "mlp_norm": 1.1734375, "attn_entropy_mean": 0.3447020351886749}, {"layer": 20, "resid_norm": -3.7125, "mlp_norm": 2.2765625, "attn_entropy_mean": 0.3991514384746552}, {"layer": 21, "resid_norm": -1.425, "mlp_norm": 1.34375, "attn_entropy_mean": 0.4433583478132884}, {"layer": 22, "resid_norm": 0.975, "mlp_norm": 3.05, "attn_entropy_mean": 0.4396776368220648}, {"layer": 23, "resid_norm": -5.2375, "mlp_norm": 2.709375, "attn_entropy_mean": 0.672769159078598}, {"layer": 24, "resid_norm": -9.1, "mlp_norm": 1.409375, "attn_entropy_mean": 0.5927144507567089}, {"layer": 25, "resid_norm": -6.625, "mlp_norm": 2.44375, "attn_entropy_mean": 0.31880890130996703}, {"layer": 26, "resid_norm": -7.975, "mlp_norm": 8.16875, "attn_entropy_mean": 0.6076423982779187}, {"layer": 27, "resid_norm": 24.425, "mlp_norm": 10.71875, "attn_entropy_mean": 0.6725554982821146}], "handled_minus_identity": [{"layer": 0, "resid_norm": -0.08203125, "mlp_norm": 0.00234375, "attn_entropy_mean": 0.07800362834990812}, {"layer": 1, "resid_norm": -0.015625, "mlp_norm": 0.058984375, "attn_entropy_mean": 0.1759440834323565}, {"layer": 2, "resid_norm": 0.209375, "mlp_norm": 0.39453125, "attn_entropy_mean": 0.10680058797200517}, {"layer": 3, "resid_norm": 0.35625, "mlp_norm": -0.153125, "attn_entropy_mean": 0.08759619494279228}, {"layer": 4, "resid_norm": 0.571875, "mlp_norm": 0.040625, "attn_entropy_mean": 0.11961053411165876}, {"layer": 5, "resid_norm": 1.078125, "mlp_norm": 0.225, "attn_entropy_mean": 0.12365954021612806}, {"layer": 6, "resid_norm": 1.08125, "mlp_norm": 0.0515625, "attn_entropy_mean": 0.21388232906659446}, {"layer": 7, "resid_norm": 0.971875, "mlp_norm": -0.0984375, "attn_entropy_mean": 0.07449645598729453}, {"layer": 8, "resid_norm": 0.375, "mlp_norm": -0.4546875, "attn_entropy_mean": 0.07262865702311201}, {"layer": 9, "resid_norm": -2.05, "mlp_norm": -1.109375, "attn_entropy_mean": 0.09737002650896716}, {"layer": 10, "resid_norm": -4.71875, "mlp_norm": -1.1421875, "attn_entropy_mean": 0.27004186411698666}, {"layer": 11, "resid_norm": -3.3375, "mlp_norm": 0.6171875, "attn_entropy_mean": 0.23418013602495188}, {"layer": 12, "resid_norm": -3.89375, "mlp_norm": 1.0640625, "attn_entropy_mean": 0.24355747302373248}, {"layer": 13, "resid_norm": -3.58125, "mlp_norm": 0.225, "attn_entropy_mean": 0.12270011740426226}, {"layer": 14, "resid_norm": -2.75625, "mlp_norm": 0.5921875, "attn_entropy_mean": 0.19888592958450318}, {"layer": 15, "resid_norm": -1.625, "mlp_norm": 1.0203125, "attn_entropy_mean": 0.18976038760368588}, {"layer": 16, "resid_norm": -1.7875, "mlp_norm": 0.9265625, "attn_entropy_mean": 0.35939999222755437}, {"layer": 17, "resid_norm": -0.60625, "mlp_norm": 0.515625, "attn_entropy_mean": 0.19880324006080635}, {"layer": 18, "resid_norm": -0.1, "mlp_norm": 0.1265625, "attn_entropy_mean": 0.07366024653116861}, {"layer": 19, "resid_norm": 1.08125, "mlp_norm": 0.8578125, "attn_entropy_mean": 0.2821370219190916}, {"layer": 20, "resid_norm": 0.1375, "mlp_norm": -1.6078125, "attn_entropy_mean": 0.22475297848383588}, {"layer": 21, "resid_norm": -0.15, "mlp_norm": -3.015625, "attn_entropy_mean": 0.2450146416823069}, {"layer": 22, "resid_norm": 0.5375, "mlp_norm": 1.015625, "attn_entropy_mean": 0.15911022275686265}, {"layer": 23, "resid_norm": -0.125, "mlp_norm": 0.4, "attn_entropy_mean": 0.21617229282855996}, {"layer": 24, "resid_norm": -8.25, "mlp_norm": 0.634375, "attn_entropy_mean": 0.32592529555161803}, {"layer": 25, "resid_norm": -0.325, "mlp_norm": 6.61875, "attn_entropy_mean": 0.19222635428110757}, {"layer": 26, "resid_norm": 5.95, "mlp_norm": 5.19375, "attn_entropy_mean": 0.3600792229175569}, {"layer": 27, "resid_norm": 19.525, "mlp_norm": 2.06875, "attn_entropy_mean": 0.37230162421862284}], "reversed": [{"layer": 0, "resid_norm": -0.1796875, "mlp_norm": -0.046875, "attn_entropy_mean": 0.13447278750267544}, {"layer": 1, "resid_norm": -0.0953125, "mlp_norm": 0.114453125, "attn_entropy_mean": 0.2678216978907585}, {"layer": 2, "resid_norm": 0.1140625, "mlp_norm": 0.0421875, "attn_entropy_mean": 0.16787750522295636}, {"layer": 3, "resid_norm": 0.1625, "mlp_norm": -0.09921875, "attn_entropy_mean": 0.10769082109133406}, {"layer": 4, "resid_norm": 0.171875, "mlp_norm": 0.096875, "attn_entropy_mean": 0.13730801145235697}, {"layer": 5, "resid_norm": 0.58125, "mlp_norm": 0.65625, "attn_entropy_mean": 0.1869513044754664}, {"layer": 6, "resid_norm": 1.134375, "mlp_norm": 0.640625, "attn_entropy_mean": 0.24909056325753526}, {"layer": 7, "resid_norm": 1.51875, "mlp_norm": 0.65625, "attn_entropy_mean": 0.15152793675661086}, {"layer": 8, "resid_norm": 1.88125, "mlp_norm": 0.5125, "attn_entropy_mean": 0.07688980201880136}, {"layer": 9, "resid_norm": -0.00625, "mlp_norm": -0.5109375, "attn_entropy_mean": 0.06297703385353097}, {"layer": 10, "resid_norm": -2.5125, "mlp_norm": -1.2671875, "attn_entropy_mean": 0.2480801507830619}, {"layer": 11, "resid_norm": -1.31875, "mlp_norm": 0.671875, "attn_entropy_mean": 0.2910380532344182}, {"layer": 12, "resid_norm": -1.46875, "mlp_norm": 0.7203125, "attn_entropy_mean": 0.26421704490979503}, {"layer": 13, "resid_norm": -1.3125, "mlp_norm": 0.58125, "attn_entropy_mean": 0.1272623175134262}, {"layer": 14, "resid_norm": -1.43125, "mlp_norm": 1.00625, "attn_entropy_mean": 0.31607977350552885}, {"layer": 15, "resid_norm": -2.775, "mlp_norm": 1.0078125, "attn_entropy_mean": 0.1930731036959515}, {"layer": 16, "resid_norm": -0.9125, "mlp_norm": 1.471875, "attn_entropy_mean": 0.4630966742833456}, {"layer": 17, "resid_norm": 1.76875, "mlp_norm": 1.796875, "attn_entropy_mean": 0.25115785201390584}, {"layer": 18, "resid_norm": 2.45625, "mlp_norm": 1.4265625, "attn_entropy_mean": 0.20792612036069227}, {"layer": 19, "resid_norm": 0.0875, "mlp_norm": 0.8328125, "attn_entropy_mean": 0.4193046882748604}, {"layer": 20, "resid_norm": -0.2875, "mlp_norm": 1.2015625, "attn_entropy_mean": 0.352373073498408}, {"layer": 21, "resid_norm": -2.95, "mlp_norm": -0.071875, "attn_entropy_mean": 0.30298518935839336}, {"layer": 22, "resid_norm": -4.0, "mlp_norm": 2.5875, "attn_entropy_mean": 0.38906407207250604}, {"layer": 23, "resid_norm": -8.825, "mlp_norm": 2.571875, "attn_entropy_mean": 0.43776200910409296}, {"layer": 24, "resid_norm": -16.8375, "mlp_norm": 4.1125, "attn_entropy_mean": 0.5499480505784352}, {"layer": 25, "resid_norm": -10.275, "mlp_norm": 10.675, "attn_entropy_mean": 0.3035015900929769}, {"layer": 26, "resid_norm": 1.225, "mlp_norm": 13.05625, "attn_entropy_mean": 0.4451824386914572}, {"layer": 27, "resid_norm": 21.75, "mlp_norm": 18.48125, "attn_entropy_mean": 0.5327940881252289}], "length_matched_random": [{"layer": 0, "resid_norm": -0.0390625, "mlp_norm": 0.09296875, "attn_entropy_mean": 0.05627175639965565}, {"layer": 1, "resid_norm": -0.0234375, "mlp_norm": 0.187109375, "attn_entropy_mean": 0.09033838907877603}, {"layer": 2, "resid_norm": 0.2046875, "mlp_norm": 0.5609375, "attn_entropy_mean": 0.13220173021157589}, {"layer": 3, "resid_norm": 0.5, "mlp_norm": -0.11953125, "attn_entropy_mean": 0.11678900321324663}, {"layer": 4, "resid_norm": 1.1, "mlp_norm": 0.284375, "attn_entropy_mean": 0.18287503818670903}, {"layer": 5, "resid_norm": 0.9125, "mlp_norm": 0.4828125, "attn_entropy_mean": 0.09084568619728084}, {"layer": 6, "resid_norm": 0.503125, "mlp_norm": -0.0046875, "attn_entropy_mean": 0.1678126042087873}, {"layer": 7, "resid_norm": 0.215625, "mlp_norm": 0.0609375, "attn_entropy_mean": 0.01912681758403778}, {"layer": 8, "resid_norm": -0.125, "mlp_norm": -0.3125, "attn_entropy_mean": 0.0040908326705296535}, {"layer": 9, "resid_norm": -2.625, "mlp_norm": -1.359375, "attn_entropy_mean": 0.07734572192033133}, {"layer": 10, "resid_norm": -4.5, "mlp_norm": -0.9296875, "attn_entropy_mean": 0.22566178143024448}, {"layer": 11, "resid_norm": -3.425, "mlp_norm": 0.840625, "attn_entropy_mean": 0.3433801636099816}, {"layer": 12, "resid_norm": -3.1125, "mlp_norm": 2.0625, "attn_entropy_mean": 0.21109249591827392}, {"layer": 13, "resid_norm": -3.1125, "mlp_norm": 0.8421875, "attn_entropy_mean": 0.14866016134619708}, {"layer": 14, "resid_norm": -0.88125, "mlp_norm": 1.725, "attn_entropy_mean": 0.043287579218546576}, {"layer": 15, "resid_norm": 0.80625, "mlp_norm": 1.6859375, "attn_entropy_mean": 0.17576859897338487}, {"layer": 16, "resid_norm": 0.29375, "mlp_norm": 1.4796875, "attn_entropy_mean": 0.3239313264687856}, {"layer": 17, "resid_norm": 2.48125, "mlp_norm": 1.46875, "attn_entropy_mean": 0.2169249296188355}, {"layer": 18, "resid_norm": 2.63125, "mlp_norm": 0.375, "attn_entropy_mean": 0.08626788457234694}, {"layer": 19, "resid_norm": 4.65, "mlp_norm": 0.6796875, "attn_entropy_mean": 0.4040431176622709}, {"layer": 20, "resid_norm": 3.33125, "mlp_norm": -0.6265625, "attn_entropy_mean": 0.2549508670965831}, {"layer": 21, "resid_norm": 2.55, "mlp_norm": -3.228125, "attn_entropy_mean": 0.19043406645456948}, {"layer": 22, "resid_norm": 1.6, "mlp_norm": 0.8625, "attn_entropy_mean": 0.1389812534054121}, {"layer": 23, "resid_norm": 1.4375, "mlp_norm": -1.884375, "attn_entropy_mean": 0.2605104694763819}, {"layer": 24, "resid_norm": -4.0, "mlp_norm": 0.29375, "attn_entropy_mean": 0.4500011563301086}, {"layer": 25, "resid_norm": -5.85, "mlp_norm": 0.15625, "attn_entropy_mean": 0.21863858699798588}, {"layer": 26, "resid_norm": -1.1, "mlp_norm": -1.6875, "attn_entropy_mean": 0.30455112457275396}, {"layer": 27, "resid_norm": 11.9, "mlp_norm": 8.0125, "attn_entropy_mean": 0.36691929101943976}], "scrambled": [{"layer": 0, "resid_norm": 0.00234375, "mlp_norm": 0.025, "attn_entropy_mean": 0.043505355214961086}, {"layer": 1, "resid_norm": 0.0484375, "mlp_norm": 0.059765625, "attn_entropy_mean": 0.1624936486283938}, {"layer": 2, "resid_norm": 0.23125, "mlp_norm": 0.23359375, "attn_entropy_mean": 0.11773755947748818}, {"layer": 3, "resid_norm": 0.2171875, "mlp_norm": -0.0171875, "attn_entropy_mean": 0.07749752153952918}, {"layer": 4, "resid_norm": 0.365625, "mlp_norm": 0.09375, "attn_entropy_mean": 0.08778214951356253}, {"layer": 5, "resid_norm": 0.790625, "mlp_norm": 0.64375, "attn_entropy_mean": 0.08727233161528906}, {"layer": 6, "resid_norm": 1.375, "mlp_norm": 0.5109375, "attn_entropy_mean": 0.18005549162626258}, {"layer": 7, "resid_norm": 1.584375, "mlp_norm": 0.1890625, "attn_entropy_mean": 0.07350204686323805}, {"layer": 8, "resid_norm": 0.990625, "mlp_norm": 0.0078125, "attn_entropy_mean": 0.011773450175921152}, {"layer": 9, "resid_norm": -1.41875, "mlp_norm": -0.7203125, "attn_entropy_mean": 0.0658713986476263}, {"layer": 10, "resid_norm": -2.83125, "mlp_norm": -0.56875, "attn_entropy_mean": 0.19962272246678672}, {"layer": 11, "resid_norm": -1.65625, "mlp_norm": 0.3734375, "attn_entropy_mean": 0.19715340360999106}, {"layer": 12, "resid_norm": -1.44375, "mlp_norm": 1.5421875, "attn_entropy_mean": 0.18774606784184772}, {"layer": 13, "resid_norm": -1.66875, "mlp_norm": 0.8140625, "attn_entropy_mean": 0.05508370598157244}, {"layer": 14, "resid_norm": -1.93125, "mlp_norm": -0.415625, "attn_entropy_mean": 0.2246591667334239}, {"layer": 15, "resid_norm": -4.21875, "mlp_norm": -1.040625, "attn_entropy_mean": 0.19105560431253252}, {"layer": 16, "resid_norm": -5.175, "mlp_norm": -0.896875, "attn_entropy_mean": 0.394623992840449}, {"layer": 17, "resid_norm": -3.21875, "mlp_norm": -0.8234375, "attn_entropy_mean": 0.1994573682546615}, {"layer": 18, "resid_norm": -2.45, "mlp_norm": -0.684375, "attn_entropy_mean": 0.12977192898591355}, {"layer": 19, "resid_norm": -3.35625, "mlp_norm": -1.39375, "attn_entropy_mean": 0.4055053835113844}, {"layer": 20, "resid_norm": -4.3, "mlp_norm": -1.9, "attn_entropy_mean": 0.1703093111515046}, {"layer": 21, "resid_norm": -3.525, "mlp_norm": -3.434375, "attn_entropy_mean": 0.14566272497177132}, {"layer": 22, "resid_norm": -1.9125, "mlp_norm": 0.221875, "attn_entropy_mean": 0.1630188211798668}, {"layer": 23, "resid_norm": -6.725, "mlp_norm": -0.26875, "attn_entropy_mean": 0.21654467483361564}, {"layer": 24, "resid_norm": -13.175, "mlp_norm": 1.821875, "attn_entropy_mean": 0.41485102176666266}, {"layer": 25, "resid_norm": -3.825, "mlp_norm": 11.2375, "attn_entropy_mean": 0.11049309571584068}, {"layer": 26, "resid_norm": 4.375, "mlp_norm": 12.86875, "attn_entropy_mean": 0.34059172670046506}, {"layer": 27, "resid_norm": 23.025, "mlp_norm": 10.9, "attn_entropy_mean": 0.37399662931760147}], "empty_directive": [{"layer": 0, "resid_norm": 0.04765625, "mlp_norm": 0.0234375, "attn_entropy_mean": -0.052834274935522084}, {"layer": 1, "resid_norm": 0.053125, "mlp_norm": 0.08046875, "attn_entropy_mean": -0.07608726024627681}, {"layer": 2, "resid_norm": 0.23125, "mlp_norm": 0.2140625, "attn_entropy_mean": -0.07215540111064903}, {"layer": 3, "resid_norm": 0.2125, "mlp_norm": -0.05234375, "attn_entropy_mean": -0.053938966492811824}, {"layer": 4, "resid_norm": 0.584375, "mlp_norm": 0.0859375, "attn_entropy_mean": -0.04559951921304069}, {"layer": 5, "resid_norm": 0.08125, "mlp_norm": -0.284375, "attn_entropy_mean": -0.07317403256893162}, {"layer": 6, "resid_norm": -0.634375, "mlp_norm": -0.375, "attn_entropy_mean": -0.052400330205758426}, {"layer": 7, "resid_norm": -1.253125, "mlp_norm": -0.5390625, "attn_entropy_mean": -0.07445641309022896}, {"layer": 8, "resid_norm": -2.1, "mlp_norm": -0.840625, "attn_entropy_mean": -0.015535156925519322}, {"layer": 9, "resid_norm": -2.775, "mlp_norm": -0.596875, "attn_entropy_mean": 0.0031613290309906892}, {"layer": 10, "resid_norm": -3.21875, "mlp_norm": -0.1203125, "attn_entropy_mean": -0.06105399628480281}, {"layer": 11, "resid_norm": -1.8625, "mlp_norm": 0.590625, "attn_entropy_mean": -0.07622596248984337}, {"layer": 12, "resid_norm": -0.075, "mlp_norm": 1.5296875, "attn_entropy_mean": -0.03470722436904907}, {"layer": 13, "resid_norm": 0.93125, "mlp_norm": 1.69375, "attn_entropy_mean": 0.007414752493302012}, {"layer": 14, "resid_norm": 2.69375, "mlp_norm": 1.428125, "attn_entropy_mean": -0.0984014650185903}, {"layer": 15, "resid_norm": 3.81875, "mlp_norm": 1.5984375, "attn_entropy_mean": -0.12648057267512436}, {"layer": 16, "resid_norm": 2.6, "mlp_norm": 0.934375, "attn_entropy_mean": -0.08477380474408469}, {"layer": 17, "resid_norm": 0.2375, "mlp_norm": -0.3328125, "attn_entropy_mean": -0.09770699143409729}, {"layer": 18, "resid_norm": -0.93125, "mlp_norm": 0.4, "attn_entropy_mean": -0.1445743411779404}, {"layer": 19, "resid_norm": -1.91875, "mlp_norm": -1.178125, "attn_entropy_mean": 0.08735114584366474}, {"layer": 20, "resid_norm": -2.04375, "mlp_norm": -0.5328125, "attn_entropy_mean": -0.05718158880869546}, {"layer": 21, "resid_norm": -0.925, "mlp_norm": -1.953125, "attn_entropy_mean": -0.041696691513061525}, {"layer": 22, "resid_norm": -0.2875, "mlp_norm": 0.24375, "attn_entropy_mean": -0.0012789641817410936}, {"layer": 23, "resid_norm": -0.9875, "mlp_norm": -3.175, "attn_entropy_mean": -0.01281025409698482}, {"layer": 24, "resid_norm": -1.6, "mlp_norm": 2.24375, "attn_entropy_mean": -0.009041276574134782}, {"layer": 25, "resid_norm": -2.75, "mlp_norm": 0.540625, "attn_entropy_mean": -0.14711221555868786}, {"layer": 26, "resid_norm": -0.1, "mlp_norm": 2.55625, "attn_entropy_mean": 0.005047245820363422}, {"layer": 27, "resid_norm": 8.0, "mlp_norm": 1.93125, "attn_entropy_mean": -0.019136196374893232}], "handled_minus_offload": [{"layer": 0, "resid_norm": -0.0875, "mlp_norm": -0.01015625, "attn_entropy_mean": 0.06817025712028586}, {"layer": 1, "resid_norm": -0.03125, "mlp_norm": 0.1515625, "attn_entropy_mean": 0.1442358548442523}, {"layer": 2, "resid_norm": 0.184375, "mlp_norm": 0.378125, "attn_entropy_mean": 0.09803516368071245}, {"layer": 3, "resid_norm": 0.2890625, "mlp_norm": -0.23984375, "attn_entropy_mean": 0.08381019830703731}, {"layer": 4, "resid_norm": 0.440625, "mlp_norm": -0.071875, "attn_entropy_mean": 0.07548848092555996}, {"layer": 5, "resid_norm": 0.734375, "mlp_norm": 0.109375, "attn_entropy_mean": 0.07162944277127585}, {"layer": 6, "resid_norm": 0.403125, "mlp_norm": -0.2375, "attn_entropy_mean": 0.1636094570159911}, {"layer": 7, "resid_norm": 0.321875, "mlp_norm": -0.1859375, "attn_entropy_mean": 0.0553981120387713}, {"layer": 8, "resid_norm": -0.521875, "mlp_norm": -0.7921875, "attn_entropy_mean": 0.017788511514663697}, {"layer": 9, "resid_norm": -2.375, "mlp_norm": -1.2796875, "attn_entropy_mean": 0.031450967987378495}, {"layer": 10, "resid_norm": -5.53125, "mlp_norm": -1.340625, "attn_entropy_mean": 0.10977548261483512}, {"layer": 11, "resid_norm": -4.4, "mlp_norm": 0.090625, "attn_entropy_mean": 0.14250984142223996}, {"layer": 12, "resid_norm": -4.175, "mlp_norm": 1.025, "attn_entropy_mean": 0.18390063444773347}, {"layer": 13, "resid_norm": -3.2, "mlp_norm": 0.3671875, "attn_entropy_mean": 0.03730028830468655}, {"layer": 14, "resid_norm": -0.91875, "mlp_norm": 0.65625, "attn_entropy_mean": 0.20107651948928837}, {"layer": 15, "resid_norm": -0.16875, "mlp_norm": 1.765625, "attn_entropy_mean": 0.15206289024736183}, {"layer": 16, "resid_norm": 0.75, "mlp_norm": 1.2328125, "attn_entropy_mean": 0.33314750591913855}, {"layer": 17, "resid_norm": 1.38125, "mlp_norm": 1.290625, "attn_entropy_mean": 0.2198452293872834}, {"layer": 18, "resid_norm": 2.60625, "mlp_norm": 0.803125, "attn_entropy_mean": 0.13016195247570664}, {"layer": 19, "resid_norm": 1.9875, "mlp_norm": -0.7921875, "attn_entropy_mean": 0.2708816781640052}, {"layer": 20, "resid_norm": 3.78125, "mlp_norm": -0.640625, "attn_entropy_mean": 0.20841036637624116}, {"layer": 21, "resid_norm": 3.85, "mlp_norm": -2.71875, "attn_entropy_mean": 0.29049330155054726}, {"layer": 22, "resid_norm": 3.7, "mlp_norm": 0.7875, "attn_entropy_mean": 0.30268835673729577}, {"layer": 23, "resid_norm": 3.1875, "mlp_norm": -0.44375, "attn_entropy_mean": 0.33353046476840975}, {"layer": 24, "resid_norm": -4.425, "mlp_norm": 1.878125, "attn_entropy_mean": 0.380430014928182}, {"layer": 25, "resid_norm": 2.375, "mlp_norm": 6.45, "attn_entropy_mean": 0.23743426005045581}, {"layer": 26, "resid_norm": 11.375, "mlp_norm": 7.94375, "attn_entropy_mean": 0.3712108453114828}, {"layer": 27, "resid_norm": 29.875, "mlp_norm": 6.43125, "attn_entropy_mean": 0.3441127002239227}], "only_artifact": [{"layer": 0, "resid_norm": -0.00546875, "mlp_norm": 0.02265625, "attn_entropy_mean": 0.031330809798858626}, {"layer": 1, "resid_norm": 0.059375, "mlp_norm": 0.028515625, "attn_entropy_mean": 0.10332995702823004}, {"layer": 2, "resid_norm": 0.321875, "mlp_norm": 0.53828125, "attn_entropy_mean": 0.051203506191571525}, {"layer": 3, "resid_norm": 0.5734375, "mlp_norm": -0.26875, "attn_entropy_mean": 0.0675178070863088}, {"layer": 4, "resid_norm": 0.425, "mlp_norm": -0.15625, "attn_entropy_mean": 0.030827761689821775}, {"layer": 5, "resid_norm": 0.546875, "mlp_norm": -0.6640625, "attn_entropy_mean": 0.03627241154511771}, {"layer": 6, "resid_norm": -0.2875, "mlp_norm": -0.7578125, "attn_entropy_mean": 0.13500855763753256}, {"layer": 7, "resid_norm": -0.29375, "mlp_norm": -0.50625, "attn_entropy_mean": 0.008139824370543104}, {"layer": 8, "resid_norm": -0.4125, "mlp_norm": -0.6203125, "attn_entropy_mean": 0.001275471846262599}, {"layer": 9, "resid_norm": -2.35625, "mlp_norm": -1.390625, "attn_entropy_mean": 0.06885714133580541}, {"layer": 10, "resid_norm": -4.86875, "mlp_norm": -1.1984375, "attn_entropy_mean": 0.13554439047972355}, {"layer": 11, "resid_norm": -4.0375, "mlp_norm": 0.0578125, "attn_entropy_mean": 0.08429278979698825}, {"layer": 12, "resid_norm": -3.13125, "mlp_norm": 1.2953125, "attn_entropy_mean": 0.1161236902077993}, {"layer": 13, "resid_norm": -2.625, "mlp_norm": 0.665625, "attn_entropy_mean": 0.059005078797539176}, {"layer": 14, "resid_norm": -0.725, "mlp_norm": 0.4625, "attn_entropy_mean": 0.143865571419398}, {"layer": 15, "resid_norm": 0.10625, "mlp_norm": 0.9734375, "attn_entropy_mean": -0.007402209472760069}, {"layer": 16, "resid_norm": -0.7875, "mlp_norm": 0.6078125, "attn_entropy_mean": 0.21880984703699746}, {"layer": 17, "resid_norm": -1.8125, "mlp_norm": 1.109375, "attn_entropy_mean": 0.0914429287115733}, {"layer": 18, "resid_norm": -0.4625, "mlp_norm": -0.2359375, "attn_entropy_mean": 0.009004274010658175}, {"layer": 19, "resid_norm": -0.325, "mlp_norm": -1.0796875, "attn_entropy_mean": 0.2685045128067335}, {"layer": 20, "resid_norm": 1.6625, "mlp_norm": -0.025, "attn_entropy_mean": 0.12868372996648153}, {"layer": 21, "resid_norm": 1.05, "mlp_norm": -2.684375, "attn_entropy_mean": 0.17725507219632472}, {"layer": 22, "resid_norm": 1.6, "mlp_norm": 1.5625, "attn_entropy_mean": 0.1788023387392362}, {"layer": 23, "resid_norm": 2.65, "mlp_norm": 0.140625, "attn_entropy_mean": 0.343110313018163}, {"layer": 24, "resid_norm": -0.9625, "mlp_norm": 3.090625, "attn_entropy_mean": 0.34749633669853214}, {"layer": 25, "resid_norm": 2.425, "mlp_norm": 4.746875, "attn_entropy_mean": 0.11079589923222857}, {"layer": 26, "resid_norm": 9.7, "mlp_norm": 7.45, "attn_entropy_mean": 0.25482986966768906}, {"layer": 27, "resid_norm": 21.55, "mlp_norm": 5.1, "attn_entropy_mean": 0.19159630537033076}], "safety_only": [{"layer": 0, "resid_norm": -0.09375, "mlp_norm": -0.03125, "attn_entropy_mean": 0.14869692981045163}, {"layer": 1, "resid_norm": 0.046875, "mlp_norm": -0.0390625, "attn_entropy_mean": 0.31519604672988255}, {"layer": 2, "resid_norm": 0.1734375, "mlp_norm": 0.1359375, "attn_entropy_mean": 0.17295801639556893}, {"layer": 3, "resid_norm": 0.1671875, "mlp_norm": -0.25703125, "attn_entropy_mean": 0.1190010204911233}, {"layer": 4, "resid_norm": 0.340625, "mlp_norm": 0.2, "attn_entropy_mean": 0.18741766611735025}, {"layer": 5, "resid_norm": 0.0375, "mlp_norm": 0.15625, "attn_entropy_mean": 0.14948564469814304}, {"layer": 6, "resid_norm": -0.028125, "mlp_norm": 0.209375, "attn_entropy_mean": 0.2423822090029716}, {"layer": 7, "resid_norm": 0.2875, "mlp_norm": 0.15625, "attn_entropy_mean": 0.10778096020221706}, {"layer": 8, "resid_norm": 0.475, "mlp_norm": -0.2390625, "attn_entropy_mean": 0.09429986774921417}, {"layer": 9, "resid_norm": -0.2875, "mlp_norm": -0.334375, "attn_entropy_mean": 0.12055301070213323}, {"layer": 10, "resid_norm": -2.25, "mlp_norm": -1.3265625, "attn_entropy_mean": 0.37195954124132785}, {"layer": 11, "resid_norm": -1.125, "mlp_norm": -0.3671875, "attn_entropy_mean": 0.43974510232607517}, {"layer": 12, "resid_norm": -1.1, "mlp_norm": 0.7703125, "attn_entropy_mean": 0.36023203929265335}, {"layer": 13, "resid_norm": -1.0875, "mlp_norm": 0.4359375, "attn_entropy_mean": 0.19306193701922889}, {"layer": 14, "resid_norm": -1.7625, "mlp_norm": 0.265625, "attn_entropy_mean": 0.3400260627269745}, {"layer": 15, "resid_norm": -1.45625, "mlp_norm": 0.571875, "attn_entropy_mean": 0.27843891136866056}, {"layer": 16, "resid_norm": 0.125, "mlp_norm": 1.915625, "attn_entropy_mean": 0.45947467883427934}, {"layer": 17, "resid_norm": 1.44375, "mlp_norm": 1.6515625, "attn_entropy_mean": 0.27561051547527315}, {"layer": 18, "resid_norm": 1.1875, "mlp_norm": 0.31875, "attn_entropy_mean": 0.20853286733229953}, {"layer": 19, "resid_norm": 0.08125, "mlp_norm": -0.6359375, "attn_entropy_mean": 0.373222520450751}, {"layer": 20, "resid_norm": -2.76875, "mlp_norm": -0.565625, "attn_entropy_mean": 0.2525516072909038}, {"layer": 21, "resid_norm": -1.9375, "mlp_norm": -2.21875, "attn_entropy_mean": 0.3260040024916331}, {"layer": 22, "resid_norm": -1.425, "mlp_norm": -0.321875, "attn_entropy_mean": 0.3731051638722419}, {"layer": 23, "resid_norm": -4.2125, "mlp_norm": -0.146875, "attn_entropy_mean": 0.41718936860561373}, {"layer": 24, "resid_norm": -8.1375, "mlp_norm": 3.15, "attn_entropy_mean": 0.6883607923984527}, {"layer": 25, "resid_norm": 1.725, "mlp_norm": 6.10625, "attn_entropy_mean": 0.3397158841292064}, {"layer": 26, "resid_norm": 10.05, "mlp_norm": 9.4625, "attn_entropy_mean": 0.5160866777102153}, {"layer": 27, "resid_norm": 34.225, "mlp_norm": 13.83125, "attn_entropy_mean": 0.5101781745751699}], "handled": [{"layer": 0, "resid_norm": -0.12890625, "mlp_norm": -0.0203125, "attn_entropy_mean": 0.1124446645847537}, {"layer": 1, "resid_norm": -0.059375, "mlp_norm": 0.176171875, "attn_entropy_mean": 0.20960902671019227}, {"layer": 2, "resid_norm": 0.134375, "mlp_norm": 0.31875, "attn_entropy_mean": 0.14200332164764412}, {"layer": 3, "resid_norm": 0.2734375, "mlp_norm": -0.11328125, "attn_entropy_mean": 0.0968808283408483}, {"layer": 4, "resid_norm": 0.546875, "mlp_norm": 0.0640625, "attn_entropy_mean": 0.15495236913363136}, {"layer": 5, "resid_norm": 1.1, "mlp_norm": 0.4703125, "attn_entropy_mean": 0.14961436291535693}, {"layer": 6, "resid_norm": 1.2125, "mlp_norm": 0.228125, "attn_entropy_mean": 0.24234569817781454}, {"layer": 7, "resid_norm": 1.13125, "mlp_norm": 0.0484375, "attn_entropy_mean": 0.09706722001234694}, {"layer": 8, "resid_norm": 0.55625, "mlp_norm": -0.3609375, "attn_entropy_mean": 0.061971681316693596}, {"layer": 9, "resid_norm": -1.65, "mlp_norm": -0.8921875, "attn_entropy_mean": 0.06479315360387172}, {"layer": 10, "resid_norm": -4.71875, "mlp_norm": -1.00625, "attn_entropy_mean": 0.24305242995421086}, {"layer": 11, "resid_norm": -3.4625, "mlp_norm": 0.553125, "attn_entropy_mean": 0.272513085603714}, {"layer": 12, "resid_norm": -4.44375, "mlp_norm": 0.8984375, "attn_entropy_mean": 0.2965808331966399}, {"layer": 13, "resid_norm": -4.20625, "mlp_norm": -0.171875, "attn_entropy_mean": 0.1010084011902412}, {"layer": 14, "resid_norm": -2.7875, "mlp_norm": 0.8421875, "attn_entropy_mean": 0.24918752511342368}, {"layer": 15, "resid_norm": -1.475, "mlp_norm": 1.4109375, "attn_entropy_mean": 0.2409004189060852}, {"layer": 16, "resid_norm": -0.31875, "mlp_norm": 1.2609375, "attn_entropy_mean": 0.4369522035121918}, {"layer": 17, "resid_norm": 1.2, "mlp_norm": 0.9078125, "attn_entropy_mean": 0.26239191293716435}, {"layer": 18, "resid_norm": 2.04375, "mlp_norm": 0.4875, "attn_entropy_mean": 0.15359466373920433}, {"layer": 19, "resid_norm": 2.575, "mlp_norm": 0.7234375, "attn_entropy_mean": 0.33940017471710837}, {"layer": 20, "resid_norm": 1.725, "mlp_norm": -1.1015625, "attn_entropy_mean": 0.319838833808899}, {"layer": 21, "resid_norm": 1.5625, "mlp_norm": -2.9125, "attn_entropy_mean": 0.33665956457455953}, {"layer": 22, "resid_norm": 1.675, "mlp_norm": 1.4875, "attn_entropy_mean": 0.2119072099526723}, {"layer": 23, "resid_norm": 1.525, "mlp_norm": 1.015625, "attn_entropy_mean": 0.30332984824975334}, {"layer": 24, "resid_norm": -6.2625, "mlp_norm": 1.625, "attn_entropy_mean": 0.36332372923692074}, {"layer": 25, "resid_norm": 1.825, "mlp_norm": 7.86875, "attn_entropy_mean": 0.23615823189417523}, {"layer": 26, "resid_norm": 9.1, "mlp_norm": 6.40625, "attn_entropy_mean": 0.4296102821826936}, {"layer": 27, "resid_norm": 26.9, "mlp_norm": 5.4875, "attn_entropy_mean": 0.47558429439862565}], "handled_minus_artifact": [{"layer": 0, "resid_norm": -0.08359375, "mlp_norm": -0.02890625, "attn_entropy_mean": 0.020207101730958698}, {"layer": 1, "resid_norm": -0.05625, "mlp_norm": 0.119921875, "attn_entropy_mean": 0.026154069105784085}, {"layer": 2, "resid_norm": 0.034375, "mlp_norm": 0.1703125, "attn_entropy_mean": 0.020812861124674464}, {"layer": 3, "resid_norm": 0.1484375, "mlp_norm": -0.0578125, "attn_entropy_mean": -0.00020188689231872558}, {"layer": 4, "resid_norm": 0.3375, "mlp_norm": 0.0671875, "attn_entropy_mean": 0.07224110960960392}, {"layer": 5, "resid_norm": 0.421875, "mlp_norm": 0.16875, "attn_entropy_mean": 0.03153074135382972}, {"layer": 6, "resid_norm": 0.2125, "mlp_norm": 0.115625, "attn_entropy_mean": 0.08667595833539962}, {"layer": 7, "resid_norm": -0.290625, "mlp_norm": -0.1375, "attn_entropy_mean": 0.015783601254224778}, {"layer": 8, "resid_norm": -1.3875, "mlp_norm": -0.65625, "attn_entropy_mean": 0.01314528783162432}, {"layer": 9, "resid_norm": -2.6125, "mlp_norm": -0.575, "attn_entropy_mean": 0.024766672650973078}, {"layer": 10, "resid_norm": -4.58125, "mlp_norm": -0.5234375, "attn_entropy_mean": 0.12576564649740854}, {"layer": 11, "resid_norm": -3.29375, "mlp_norm": 0.7875, "attn_entropy_mean": 0.12427831242481865}, {"layer": 12, "resid_norm": -3.53125, "mlp_norm": 1.3171875, "attn_entropy_mean": 0.06499657630920411}, {"layer": 13, "resid_norm": -2.9, "mlp_norm": 0.671875, "attn_entropy_mean": 0.0451418680449327}, {"layer": 14, "resid_norm": -1.78125, "mlp_norm": 1.215625, "attn_entropy_mean": 0.07749972542126979}, {"layer": 15, "resid_norm": -0.2, "mlp_norm": 1.4703125, "attn_entropy_mean": 0.05612245105213942}, {"layer": 16, "resid_norm": -0.625, "mlp_norm": 0.7703125, "attn_entropy_mean": 0.12414048115412397}, {"layer": 17, "resid_norm": 0.13125, "mlp_norm": 0.134375, "attn_entropy_mean": 0.02523579597473149}, {"layer": 18, "resid_norm": 0.1875, "mlp_norm": 0.159375, "attn_entropy_mean": 0.0019056558609007457}, {"layer": 19, "resid_norm": 0.05, "mlp_norm": 0.1609375, "attn_entropy_mean": 0.18916080047686887}, {"layer": 20, "resid_norm": -1.2625, "mlp_norm": -1.3671875, "attn_entropy_mean": 0.11230724851290383}, {"layer": 21, "resid_norm": -2.775, "mlp_norm": -2.475, "attn_entropy_mean": 0.11912239392598481}, {"layer": 22, "resid_norm": -2.4625, "mlp_norm": 0.240625, "attn_entropy_mean": 0.06043608238299689}, {"layer": 23, "resid_norm": -3.65, "mlp_norm": 0.06875, "attn_entropy_mean": 0.12439120411872864}, {"layer": 24, "resid_norm": -9.1125, "mlp_norm": 2.171875, "attn_entropy_mean": 0.15700813134511318}, {"layer": 25, "resid_norm": -3.4, "mlp_norm": 6.79375, "attn_entropy_mean": 0.06903718908627834}, {"layer": 26, "resid_norm": 3.5, "mlp_norm": 5.56875, "attn_entropy_mean": 0.1733542243639629}, {"layer": 27, "resid_norm": 14.6, "mlp_norm": 6.68125, "attn_entropy_mean": 0.21495855450630183}], "handled_no_disclosure": [{"layer": 0, "resid_norm": -0.12890625, "mlp_norm": -0.0203125, "attn_entropy_mean": 0.1124446645847537}, {"layer": 1, "resid_norm": -0.059375, "mlp_norm": 0.176171875, "attn_entropy_mean": 0.20960902671019227}, {"layer": 2, "resid_norm": 0.134375, "mlp_norm": 0.31875, "attn_entropy_mean": 0.14200332164764412}, {"layer": 3, "resid_norm": 0.2734375, "mlp_norm": -0.11328125, "attn_entropy_mean": 0.0968808283408483}, {"layer": 4, "resid_norm": 0.546875, "mlp_norm": 0.0640625, "attn_entropy_mean": 0.15495236913363136}, {"layer": 5, "resid_norm": 1.1, "mlp_norm": 0.4703125, "attn_entropy_mean": 0.14961436291535693}, {"layer": 6, "resid_norm": 1.2125, "mlp_norm": 0.228125, "attn_entropy_mean": 0.24234569817781454}, {"layer": 7, "resid_norm": 1.13125, "mlp_norm": 0.0484375, "attn_entropy_mean": 0.09706722001234694}, {"layer": 8, "resid_norm": 0.55625, "mlp_norm": -0.3609375, "attn_entropy_mean": 0.061971681316693596}, {"layer": 9, "resid_norm": -1.65, "mlp_norm": -0.8921875, "attn_entropy_mean": 0.06479315360387172}, {"layer": 10, "resid_norm": -4.71875, "mlp_norm": -1.00625, "attn_entropy_mean": 0.24305242995421086}, {"layer": 11, "resid_norm": -3.4625, "mlp_norm": 0.553125, "attn_entropy_mean": 0.272513085603714}, {"layer": 12, "resid_norm": -4.44375, "mlp_norm": 0.8984375, "attn_entropy_mean": 0.2965808331966399}, {"layer": 13, "resid_norm": -4.20625, "mlp_norm": -0.171875, "attn_entropy_mean": 0.1010084011902412}, {"layer": 14, "resid_norm": -2.7875, "mlp_norm": 0.8421875, "attn_entropy_mean": 0.24918752511342368}, {"layer": 15, "resid_norm": -1.475, "mlp_norm": 1.4109375, "attn_entropy_mean": 0.2409004189060852}, {"layer": 16, "resid_norm": -0.31875, "mlp_norm": 1.2609375, "attn_entropy_mean": 0.4369522035121918}, {"layer": 17, "resid_norm": 1.2, "mlp_norm": 0.9078125, "attn_entropy_mean": 0.26239191293716435}, {"layer": 18, "resid_norm": 2.04375, "mlp_norm": 0.4875, "attn_entropy_mean": 0.15359466373920433}, {"layer": 19, "resid_norm": 2.575, "mlp_norm": 0.7234375, "attn_entropy_mean": 0.33940017471710837}, {"layer": 20, "resid_norm": 1.725, "mlp_norm": -1.1015625, "attn_entropy_mean": 0.319838833808899}, {"layer": 21, "resid_norm": 1.5625, "mlp_norm": -2.9125, "attn_entropy_mean": 0.33665956457455953}, {"layer": 22, "resid_norm": 1.675, "mlp_norm": 1.4875, "attn_entropy_mean": 0.2119072099526723}, {"layer": 23, "resid_norm": 1.525, "mlp_norm": 1.015625, "attn_entropy_mean": 0.30332984824975334}, {"layer": 24, "resid_norm": -6.2625, "mlp_norm": 1.625, "attn_entropy_mean": 0.36332372923692074}, {"layer": 25, "resid_norm": 1.825, "mlp_norm": 7.86875, "attn_entropy_mean": 0.23615823189417523}, {"layer": 26, "resid_norm": 9.1, "mlp_norm": 6.40625, "attn_entropy_mean": 0.4296102821826936}, {"layer": 27, "resid_norm": 26.9, "mlp_norm": 5.4875, "attn_entropy_mean": 0.47558429439862565}], "scientific_method": [{"layer": 0, "resid_norm": -0.12734375, "mlp_norm": -0.01875, "attn_entropy_mean": 0.24240332146484125}, {"layer": 1, "resid_norm": -0.0015625, "mlp_norm": -0.0203125, "attn_entropy_mean": 0.3321595281362533}, {"layer": 2, "resid_norm": 0.2203125, "mlp_norm": 0.196875, "attn_entropy_mean": 0.27230812708536783}, {"layer": 3, "resid_norm": 0.3015625, "mlp_norm": -0.12578125, "attn_entropy_mean": 0.12846958388884863}, {"layer": 4, "resid_norm": 0.725, "mlp_norm": 0.3109375, "attn_entropy_mean": 0.19975370764732364}, {"layer": 5, "resid_norm": 0.809375, "mlp_norm": 0.2359375, "attn_entropy_mean": 0.2244729111591975}, {"layer": 6, "resid_norm": 1.021875, "mlp_norm": 0.3140625, "attn_entropy_mean": 0.2908108527461687}, {"layer": 7, "resid_norm": 1.434375, "mlp_norm": 0.3234375, "attn_entropy_mean": 0.18463559548060102}, {"layer": 8, "resid_norm": 1.7875, "mlp_norm": 0.271875, "attn_entropy_mean": 0.15227282643318168}, {"layer": 9, "resid_norm": -0.4, "mlp_norm": -0.371875, "attn_entropy_mean": 0.22893466055393233}, {"layer": 10, "resid_norm": -2.04375, "mlp_norm": -0.89375, "attn_entropy_mean": 0.5016401787598926}, {"layer": 11, "resid_norm": -1.51875, "mlp_norm": 0.0265625, "attn_entropy_mean": 0.48316033383210505}, {"layer": 12, "resid_norm": -2.975, "mlp_norm": 0.33125, "attn_entropy_mean": 0.40153093338012685}, {"layer": 13, "resid_norm": -3.04375, "mlp_norm": 0.596875, "attn_entropy_mean": 0.14998357531925044}, {"layer": 14, "resid_norm": -2.825, "mlp_norm": 1.871875, "attn_entropy_mean": 0.3668627440929413}, {"layer": 15, "resid_norm": -1.08125, "mlp_norm": 1.478125, "attn_entropy_mean": 0.30473478489757333}, {"layer": 16, "resid_norm": -1.4875, "mlp_norm": 1.9140625, "attn_entropy_mean": 0.5317513863245645}, {"layer": 17, "resid_norm": 1.5, "mlp_norm": 0.4875, "attn_entropy_mean": 0.3858061989148458}, {"layer": 18, "resid_norm": 0.54375, "mlp_norm": 0.30625, "attn_entropy_mean": 0.236541403333346}, {"layer": 19, "resid_norm": -2.73125, "mlp_norm": -0.165625, "attn_entropy_mean": 0.3719403460621834}, {"layer": 20, "resid_norm": -3.94375, "mlp_norm": -1.40625, "attn_entropy_mean": 0.3882593115170797}, {"layer": 21, "resid_norm": -2.1625, "mlp_norm": -1.875, "attn_entropy_mean": 0.39811615546544404}, {"layer": 22, "resid_norm": -1.2, "mlp_norm": 2.303125, "attn_entropy_mean": 0.31171315411726636}, {"layer": 23, "resid_norm": -1.1375, "mlp_norm": 1.43125, "attn_entropy_mean": 0.43515997727712}, {"layer": 24, "resid_norm": -3.5, "mlp_norm": 1.16875, "attn_entropy_mean": 0.49468917449315414}, {"layer": 25, "resid_norm": -1.7, "mlp_norm": 3.328125, "attn_entropy_mean": 0.20262254575888314}, {"layer": 26, "resid_norm": -1.075, "mlp_norm": 7.55625, "attn_entropy_mean": 0.49164927403132125}, {"layer": 27, "resid_norm": 22.875, "mlp_norm": 11.35625, "attn_entropy_mean": 0.6346525828043618}], "only_identity": [{"layer": 0, "resid_norm": 0.0078125, "mlp_norm": -0.00625, "attn_entropy_mean": -0.038070533592542755}, {"layer": 1, "resid_norm": 0.009375, "mlp_norm": 0.0984375, "attn_entropy_mean": -0.06148547877868014}, {"layer": 2, "resid_norm": 0.1125, "mlp_norm": 0.1796875, "attn_entropy_mean": -0.03666209280490871}, {"layer": 3, "resid_norm": 0.15625, "mlp_norm": -0.1484375, "attn_entropy_mean": -0.03500975867112475}, {"layer": 4, "resid_norm": 0.309375, "mlp_norm": -0.0625, "attn_entropy_mean": -0.011906422177950616}, {"layer": 5, "resid_norm": 0.19375, "mlp_norm": -0.053125, "attn_entropy_mean": -0.06289975345134739}, {"layer": 6, "resid_norm": -0.3375, "mlp_norm": -0.165625, "attn_entropy_mean": -0.01773375123739247}, {"layer": 7, "resid_norm": -0.85625, "mlp_norm": -0.2171875, "attn_entropy_mean": -0.040095343192418385}, {"layer": 8, "resid_norm": -1.9875, "mlp_norm": -0.803125, "attn_entropy_mean": -0.03023619949817662}, {"layer": 9, "resid_norm": -2.61875, "mlp_norm": -0.55625, "attn_entropy_mean": -0.012392261624336154}, {"layer": 10, "resid_norm": -3.86875, "mlp_norm": -0.50625, "attn_entropy_mean": -0.08045698702335358}, {"layer": 11, "resid_norm": -2.83125, "mlp_norm": 0.5484375, "attn_entropy_mean": -0.05298273662726083}, {"layer": 12, "resid_norm": -1.4875, "mlp_norm": 1.4265625, "attn_entropy_mean": -0.044780186812082956}, {"layer": 13, "resid_norm": -0.28125, "mlp_norm": 1.446875, "attn_entropy_mean": 0.00020994096994400024}, {"layer": 14, "resid_norm": 0.925, "mlp_norm": 1.721875, "attn_entropy_mean": -0.0056739409764607895}, {"layer": 15, "resid_norm": 2.30625, "mlp_norm": 2.1140625, "attn_entropy_mean": -0.09230284515510893}, {"layer": 16, "resid_norm": 1.65625, "mlp_norm": 0.803125, "attn_entropy_mean": -0.007878088951110885}, {"layer": 17, "resid_norm": 1.3375, "mlp_norm": 0.2234375, "attn_entropy_mean": -0.08239085574944811}, {"layer": 18, "resid_norm": 0.775, "mlp_norm": 0.7640625, "attn_entropy_mean": -0.12407806913057966}, {"layer": 19, "resid_norm": -1.3, "mlp_norm": -1.4515625, "attn_entropy_mean": 0.09536678294340764}, {"layer": 20, "resid_norm": -1.7125, "mlp_norm": -0.54375, "attn_entropy_mean": -0.08621613581975293}, {"layer": 21, "resid_norm": -2.93125, "mlp_norm": -1.54375, "attn_entropy_mean": -0.01890168984731031}, {"layer": 22, "resid_norm": -3.7875, "mlp_norm": 0.053125, "attn_entropy_mean": -0.015118627250194593}, {"layer": 23, "resid_norm": -5.05, "mlp_norm": -2.140625, "attn_entropy_mean": 0.029951005180676792}, {"layer": 24, "resid_norm": -8.3125, "mlp_norm": 1.696875, "attn_entropy_mean": 0.026801048715909426}, {"layer": 25, "resid_norm": -5.4, "mlp_norm": 3.775, "attn_entropy_mean": -0.029148374001185084}, {"layer": 26, "resid_norm": 0.575, "mlp_norm": 7.2375, "attn_entropy_mean": 0.02404557466506967}, {"layer": 27, "resid_norm": 10.625, "mlp_norm": 7.9125, "attn_entropy_mean": 0.012935282786687052}]}, "n_layers_1_5b": 28, "degradation": {"handled": [{"turn": 0, "tokens": 59.2, "mid": -2.7018749999999985, "late": 6.964583333333332, "sig": 9.66645833333333}, {"turn": 1, "tokens": 99.2, "mid": -2.188437499999998, "late": 0.8312499999999943, "sig": 3.019687499999992}, {"turn": 2, "tokens": 144.2, "mid": -1.301718750000005, "late": 1.3895833333333314, "sig": 2.691302083333336}, {"turn": 3, "tokens": 184.2, "mid": -1.8609374999999972, "late": 0.2812500000000114, "sig": 2.1421875000000083}, {"turn": 4, "tokens": 233.2, "mid": -1.9987499999999998, "late": -0.9708333333333371, "sig": 1.0279166666666626}, {"turn": 5, "tokens": 280.2, "mid": -1.2251562499999948, "late": -1.3687499999999886, "sig": -0.14359374999999375}, {"turn": 6, "tokens": 326.2, "mid": -1.56171875, "late": -1.7312499999999886, "sig": -0.16953124999998864}, {"turn": 7, "tokens": 367.2, "mid": -0.895625000000004, "late": -3.170833333333337, "sig": -2.275208333333333}], "scrambled": [{"turn": 0, "tokens": 53.2, "mid": -1.3762500000000002, "late": 7.933333333333326, "sig": 9.309583333333325}, {"turn": 1, "tokens": 93.2, "mid": -1.8984374999999971, "late": 3.6875, "sig": 5.585937499999997}, {"turn": 2, "tokens": 138.2, "mid": -1.2875000000000014, "late": 4.602083333333326, "sig": 5.889583333333327}, {"turn": 3, "tokens": 178.2, "mid": -1.4675000000000025, "late": 3.8625, "sig": 5.330000000000003}, {"turn": 4, "tokens": 227.2, "mid": -1.48125, "late": 3.2249999999999943, "sig": 4.7062499999999945}, {"turn": 5, "tokens": 274.2, "mid": -0.815312499999996, "late": 3.656250000000017, "sig": 4.471562500000013}, {"turn": 6, "tokens": 320.2, "mid": -0.9239062499999988, "late": 3.283333333333337, "sig": 4.207239583333336}, {"turn": 7, "tokens": 361.2, "mid": -0.30953125000000625, "late": 3.3083333333333202, "sig": 3.6178645833333265}], "reversed": [{"turn": 0, "tokens": 62.2, "mid": -3.2771874999999993, "late": 9.916666666666657, "sig": 13.193854166666657}, {"turn": 1, "tokens": 102.2, "mid": -4.624218749999999, "late": -3.1374999999999944, "sig": 1.4867187500000043}, {"turn": 2, "tokens": 147.2, "mid": -4.392812500000001, "late": -3.66875, "sig": 0.7240625000000008}, {"turn": 3, "tokens": 187.2, "mid": -4.538749999999998, "late": -3.802083333333337, "sig": 0.7366666666666604}, {"turn": 4, "tokens": 236.2, "mid": -4.352187500000002, "late": -4.827083333333332, "sig": -0.4748958333333292}, {"turn": 5, "tokens": 283.2, "mid": -3.436874999999998, "late": -4.702083333333332, "sig": -1.2652083333333337}, {"turn": 6, "tokens": 329.2, "mid": -3.494062500000001, "late": -5.11458333333332, "sig": -1.620520833333319}, {"turn": 7, "tokens": 370.2, "mid": -2.7196875000000036, "late": -7.17291666666668, "sig": -4.453229166666676}], "scientific_method": [{"turn": 0, "tokens": 70.2, "mid": 1.780312499999998, "late": 7.816666666666668, "sig": 6.036354166666671}, {"turn": 1, "tokens": 110.2, "mid": 1.2701562499999965, "late": 2.0708333333333373, "sig": 0.8006770833333405}, {"turn": 2, "tokens": 155.2, "mid": 0.3120312499999983, "late": 0.4937500000000057, "sig": 0.1817187500000074}, {"turn": 3, "tokens": 195.2, "mid": -0.7149999999999992, "late": 1.4729166666666687, "sig": 2.1879166666666676}, {"turn": 4, "tokens": 244.2, "mid": -0.9903125000000003, "late": 0.06874999999999432, "sig": 1.0590624999999947}, {"turn": 5, "tokens": 291.2, "mid": -0.3909374999999983, "late": -0.2708333333333314, "sig": 0.12010416666666686}, {"turn": 6, "tokens": 337.2, "mid": -0.5892187500000006, "late": -0.35416666666665153, "sig": 0.23505208333334907}, {"turn": 7, "tokens": 378.2, "mid": 0.18203124999999715, "late": -2.0437500000000113, "sig": -2.2257812500000087}], "similar_work": [{"turn": 0, "tokens": 75.2, "mid": -1.040625, "late": 5.179166666666663, "sig": 6.219791666666663}, {"turn": 1, "tokens": 115.2, "mid": -1.3182812500000012, "late": 0.31666666666666854, "sig": 1.6349479166666696}, {"turn": 2, "tokens": 160.2, "mid": -2.0967187500000035, "late": -2.256250000000006, "sig": -0.15953125000000198}, {"turn": 3, "tokens": 200.2, "mid": -2.960000000000001, "late": -3.4729166666666687, "sig": -0.5129166666666677}, {"turn": 4, "tokens": 249.2, "mid": -2.996875, "late": -4.022916666666669, "sig": -1.0260416666666685}, {"turn": 5, "tokens": 296.2, "mid": -2.304062499999996, "late": -4.281249999999995, "sig": -1.977187499999998}, {"turn": 6, "tokens": 342.2, "mid": -2.4067187499999987, "late": -6.574999999999989, "sig": -4.16828124999999}, {"turn": 7, "tokens": 383.2, "mid": -1.336093750000002, "late": -7.504166666666674, "sig": -6.168072916666672}], "only_artifact": [{"turn": 0, "tokens": 47.2, "mid": -3.9426562500000015, "late": 1.9624999999999944, "sig": 5.905156249999996}, {"turn": 1, "tokens": 87.2, "mid": -3.4553125000000007, "late": -1.60625, "sig": 1.849062500000001}, {"turn": 2, "tokens": 132.2, "mid": -1.942812500000001, "late": 1.4708333333333314, "sig": 3.4136458333333324}, {"turn": 3, "tokens": 172.2, "mid": -1.8918750000000046, "late": 1.7166666666666628, "sig": 3.6085416666666674}, {"turn": 4, "tokens": 221.2, "mid": -1.5443750000000023, "late": 1.8333333333333315, "sig": 3.3777083333333335}, {"turn": 5, "tokens": 268.2, "mid": -1.103281249999999, "late": 2.239583333333337, "sig": 3.3428645833333364}, {"turn": 6, "tokens": 314.2, "mid": -1.1112499999999996, "late": 3.4250000000000056, "sig": 4.536250000000005}, {"turn": 7, "tokens": 355.2, "mid": -0.7578124999999986, "late": 2.2562499999999943, "sig": 3.014062499999993}], "safety_only": [{"turn": 0, "tokens": 61.2, "mid": 0.7345312500000005, "late": 3.36875, "sig": 2.6342187499999996}, {"turn": 1, "tokens": 101.2, "mid": -0.3909374999999983, "late": -4.7687499999999945, "sig": -4.377812499999996}, {"turn": 2, "tokens": 146.2, "mid": -0.051875000000001135, "late": -3.2916666666666687, "sig": -3.2397916666666675}, {"turn": 3, "tokens": 186.2, "mid": -1.1035937500000017, "late": -5.616666666666657, "sig": -4.513072916666656}, {"turn": 4, "tokens": 235.2, "mid": -1.0740625000000037, "late": -8.650000000000006, "sig": -7.575937500000002}, {"turn": 5, "tokens": 282.2, "mid": -0.9976562499999971, "late": -9.647916666666651, "sig": -8.650260416666654}, {"turn": 6, "tokens": 328.2, "mid": -0.9790625000000006, "late": -10.941666666666663, "sig": -9.962604166666662}, {"turn": 7, "tokens": 369.2, "mid": -0.291875000000006, "late": -11.647916666666674, "sig": -11.356041666666668}]}, "patching_1_5b": {"handled\u2192baseline": [{"layer": 0, "mlp": 8.96484375}, {"layer": 1, "mlp": 6.1796875}, {"layer": 2, "mlp": 0.4075520833333333}, {"layer": 3, "mlp": 1.2044270833333333}, {"layer": 4, "mlp": 4.96875}, {"layer": 5, "mlp": 8.34765625}, {"layer": 6, "mlp": 6.966145833333333}, {"layer": 7, "mlp": 5.0546875}, {"layer": 8, "mlp": 5.1015625}, {"layer": 9, "mlp": 5.895833333333333}, {"layer": 10, "mlp": -1.1015625}, {"layer": 11, "mlp": -1.5911458333333333}, {"layer": 12, "mlp": -0.5807291666666666}, {"layer": 13, "mlp": 1.5013020833333333}, {"layer": 14, "mlp": -0.005208333333333333}, {"layer": 15, "mlp": -0.040364583333333336}, {"layer": 16, "mlp": 0.5872395833333334}, {"layer": 17, "mlp": 0.5794270833333334}, {"layer": 18, "mlp": 0.19401041666666666}, {"layer": 19, "mlp": 1.7630208333333333}, {"layer": 20, "mlp": -0.2643229166666667}, {"layer": 21, "mlp": -0.014322916666666666}, {"layer": 22, "mlp": 0.7213541666666666}, {"layer": 23, "mlp": -0.8072916666666666}, {"layer": 24, "mlp": 0.9479166666666666}, {"layer": 25, "mlp": 0.5364583333333334}, {"layer": 26, "mlp": 1.4348958333333333}, {"layer": 27, "mlp": 0.80859375}], "scrambled\u2192baseline": [{"layer": 0, "mlp": 7.294270833333333}, {"layer": 1, "mlp": 4.921875}, {"layer": 2, "mlp": 3.9401041666666665}, {"layer": 3, "mlp": 2.0794270833333335}, {"layer": 4, "mlp": 6.075520833333333}, {"layer": 5, "mlp": 8.65625}, {"layer": 6, "mlp": 7.33984375}, {"layer": 7, "mlp": 4.26171875}, {"layer": 8, "mlp": 6.979166666666667}, {"layer": 9, "mlp": 7.15625}, {"layer": 10, "mlp": -0.8802083333333334}, {"layer": 11, "mlp": -0.055989583333333336}, {"layer": 12, "mlp": 0.7447916666666666}, {"layer": 13, "mlp": 1.1484375}, {"layer": 14, "mlp": 0.7643229166666666}, {"layer": 15, "mlp": 0.140625}, {"layer": 16, "mlp": 0.5559895833333334}, {"layer": 17, "mlp": 0.9973958333333334}, {"layer": 18, "mlp": 0.8125}, {"layer": 19, "mlp": 1.3958333333333333}, {"layer": 20, "mlp": -0.6510416666666666}, {"layer": 21, "mlp": -0.16015625}, {"layer": 22, "mlp": 0.5911458333333334}, {"layer": 23, "mlp": -1.3072916666666667}, {"layer": 24, "mlp": 0.7369791666666666}, {"layer": 25, "mlp": 0.3229166666666667}, {"layer": 26, "mlp": 1.59375}, {"layer": 27, "mlp": 0.765625}], "only_artifact\u2192baseline": [{"layer": 0, "mlp": 6.287760416666667}, {"layer": 1, "mlp": 4.315104166666667}, {"layer": 2, "mlp": 4.838541666666667}, {"layer": 3, "mlp": 3.9544270833333335}, {"layer": 4, "mlp": 5.255208333333333}, {"layer": 5, "mlp": 5.893229166666667}, {"layer": 6, "mlp": 7.252604166666667}, {"layer": 7, "mlp": 5.640625}, {"layer": 8, "mlp": 5.046875}, {"layer": 9, "mlp": 5.559895833333333}, {"layer": 10, "mlp": 1.2669270833333333}, {"layer": 11, "mlp": -0.5377604166666666}, {"layer": 12, "mlp": 0.7265625}, {"layer": 13, "mlp": 0.3919270833333333}, {"layer": 14, "mlp": 0.5065104166666666}, {"layer": 15, "mlp": 0.8046875}, {"layer": 16, "mlp": 0.5104166666666666}, {"layer": 17, "mlp": 0.7473958333333334}, {"layer": 18, "mlp": 0.13932291666666666}, {"layer": 19, "mlp": 1.0598958333333333}, {"layer": 20, "mlp": 0.2786458333333333}, {"layer": 21, "mlp": -0.7955729166666666}, {"layer": 22, "mlp": 0.75}, {"layer": 23, "mlp": -0.78125}, {"layer": 24, "mlp": 0.5182291666666666}, {"layer": 25, "mlp": -0.125}, {"layer": 26, "mlp": 1.1901041666666667}, {"layer": 27, "mlp": 0.30859375}], "handled\u2192scrambled": [{"layer": 0, "mlp": 5.359375}, {"layer": 1, "mlp": 2.6484375}, {"layer": 2, "mlp": 6.385416666666667}, {"layer": 3, "mlp": 3.76171875}, {"layer": 4, "mlp": 4.921875}, {"layer": 5, "mlp": 3.7213541666666665}, {"layer": 6, "mlp": 5.658854166666667}, {"layer": 7, "mlp": 3.53125}, {"layer": 8, "mlp": 4.341145833333333}, {"layer": 9, "mlp": 4.619791666666667}, {"layer": 10, "mlp": -0.5494791666666666}, {"layer": 11, "mlp": 0.390625}, {"layer": 12, "mlp": 1.5703125}, {"layer": 13, "mlp": 0.859375}, {"layer": 14, "mlp": 1.390625}, {"layer": 15, "mlp": 0.15885416666666666}, {"layer": 16, "mlp": 0.005208333333333333}, {"layer": 17, "mlp": 0.21354166666666666}, {"layer": 18, "mlp": 0.4895833333333333}, {"layer": 19, "mlp": 1.2864583333333333}, {"layer": 20, "mlp": -0.13541666666666666}, {"layer": 21, "mlp": -0.3828125}, {"layer": 22, "mlp": 0.6875}, {"layer": 23, "mlp": -0.22135416666666666}, {"layer": 24, "mlp": 0.3958333333333333}, {"layer": 25, "mlp": 0.046875}, {"layer": 26, "mlp": 1.0651041666666667}, {"layer": 27, "mlp": 0.005208333333333333}]}, "patching_3b": {"handled\u2192baseline": [{"layer": 0, "mlp": 4.524739583333333}, {"layer": 1, "mlp": 1.6809895833333333}, {"layer": 2, "mlp": 3.37109375}, {"layer": 3, "mlp": 4.432291666666667}, {"layer": 4, "mlp": 6.016927083333333}, {"layer": 5, "mlp": 2.81640625}, {"layer": 6, "mlp": 2.94921875}, {"layer": 7, "mlp": 1.7174479166666667}, {"layer": 8, "mlp": 2.7682291666666665}, {"layer": 9, "mlp": 4.295572916666667}, {"layer": 10, "mlp": 3.64453125}, {"layer": 11, "mlp": 2.9479166666666665}, {"layer": 12, "mlp": 2.9713541666666665}, {"layer": 13, "mlp": 3.1171875}, {"layer": 14, "mlp": 5.897135416666667}, {"layer": 15, "mlp": 5.61328125}, {"layer": 16, "mlp": 1.8151041666666667}, {"layer": 17, "mlp": 1.7604166666666667}, {"layer": 18, "mlp": 2.1692708333333335}, {"layer": 19, "mlp": 1.8190104166666667}, {"layer": 20, "mlp": 0.9479166666666666}, {"layer": 21, "mlp": 1.1809895833333333}, {"layer": 22, "mlp": -0.6653645833333334}, {"layer": 23, "mlp": 0.20572916666666666}, {"layer": 24, "mlp": 0.734375}, {"layer": 25, "mlp": 1.8880208333333333}, {"layer": 26, "mlp": 0.18229166666666666}, {"layer": 27, "mlp": 1.0143229166666667}, {"layer": 28, "mlp": 0.6380208333333334}, {"layer": 29, "mlp": 1.0091145833333333}, {"layer": 30, "mlp": 1.78515625}, {"layer": 31, "mlp": 2.2083333333333335}, {"layer": 32, "mlp": 1.5364583333333333}, {"layer": 33, "mlp": 1.1302083333333333}, {"layer": 34, "mlp": 1.9010416666666667}, {"layer": 35, "mlp": 2.4986979166666665}], "scrambled\u2192baseline": [{"layer": 0, "mlp": 6.856770833333333}, {"layer": 1, "mlp": 1.46484375}, {"layer": 2, "mlp": 4.102864583333333}, {"layer": 3, "mlp": 4.583333333333333}, {"layer": 4, "mlp": 5.3515625}, {"layer": 5, "mlp": 3.82421875}, {"layer": 6, "mlp": 4.545572916666667}, {"layer": 7, "mlp": 1.0455729166666667}, {"layer": 8, "mlp": 3.93359375}, {"layer": 9, "mlp": 3.83203125}, {"layer": 10, "mlp": 3.5885416666666665}, {"layer": 11, "mlp": 4.986979166666667}, {"layer": 12, "mlp": 3.91015625}, {"layer": 13, "mlp": 3.6549479166666665}, {"layer": 14, "mlp": 5.333333333333333}, {"layer": 15, "mlp": 3.6848958333333335}, {"layer": 16, "mlp": 2.6861979166666665}, {"layer": 17, "mlp": 1.41015625}, {"layer": 18, "mlp": 2.4661458333333335}, {"layer": 19, "mlp": 2.2513020833333335}, {"layer": 20, "mlp": 0.032552083333333336}, {"layer": 21, "mlp": 0.890625}, {"layer": 22, "mlp": 0.19791666666666666}, {"layer": 23, "mlp": 0.3606770833333333}, {"layer": 24, "mlp": 0.7473958333333334}, {"layer": 25, "mlp": 1.4635416666666667}, {"layer": 26, "mlp": 0.7057291666666666}, {"layer": 27, "mlp": 0.9583333333333334}, {"layer": 28, "mlp": 0.9583333333333334}, {"layer": 29, "mlp": 0.8880208333333334}, {"layer": 30, "mlp": 1.8046875}, {"layer": 31, "mlp": 1.4440104166666667}, {"layer": 32, "mlp": 1.5247395833333333}, {"layer": 33, "mlp": 1.47265625}, {"layer": 34, "mlp": 1.9778645833333333}, {"layer": 35, "mlp": 2.3411458333333335}], "only_artifact\u2192baseline": [{"layer": 0, "mlp": 4.09375}, {"layer": 1, "mlp": 2.0859375}, {"layer": 2, "mlp": 4.072916666666667}, {"layer": 3, "mlp": 5.274739583333333}, {"layer": 4, "mlp": 5.135416666666667}, {"layer": 5, "mlp": 4.493489583333333}, {"layer": 6, "mlp": 3.8020833333333335}, {"layer": 7, "mlp": 3.0950520833333335}, {"layer": 8, "mlp": 4.154947916666667}, {"layer": 9, "mlp": 7.177083333333333}, {"layer": 10, "mlp": 3.5572916666666665}, {"layer": 11, "mlp": 4.087239583333333}, {"layer": 12, "mlp": 3.5755208333333335}, {"layer": 13, "mlp": 3.8997395833333335}, {"layer": 14, "mlp": 5.34765625}, {"layer": 15, "mlp": 3.6640625}, {"layer": 16, "mlp": 3.82421875}, {"layer": 17, "mlp": 0.9752604166666666}, {"layer": 18, "mlp": 3.9088541666666665}, {"layer": 19, "mlp": 3.8463541666666665}, {"layer": 20, "mlp": 0.01171875}, {"layer": 21, "mlp": 1.9856770833333333}, {"layer": 22, "mlp": 0.4739583333333333}, {"layer": 23, "mlp": 0.5208333333333334}, {"layer": 24, "mlp": 0.8932291666666666}, {"layer": 25, "mlp": 2.3059895833333335}, {"layer": 26, "mlp": 0.3697916666666667}, {"layer": 27, "mlp": 1.41015625}, {"layer": 28, "mlp": 0.8046875}, {"layer": 29, "mlp": 1.1302083333333333}, {"layer": 30, "mlp": 1.4596354166666667}, {"layer": 31, "mlp": 1.15625}, {"layer": 32, "mlp": 1.34375}, {"layer": 33, "mlp": 0.828125}, {"layer": 34, "mlp": 1.7395833333333333}, {"layer": 35, "mlp": 3.546875}], "handled\u2192scrambled": [{"layer": 0, "mlp": 4.888020833333333}, {"layer": 1, "mlp": 1.9466145833333333}, {"layer": 2, "mlp": 3.6809895833333335}, {"layer": 3, "mlp": 4.307291666666667}, {"layer": 4, "mlp": 5.3203125}, {"layer": 5, "mlp": 4.11328125}, {"layer": 6, "mlp": 2.4153645833333335}, {"layer": 7, "mlp": 2.7057291666666665}, {"layer": 8, "mlp": 2.7486979166666665}, {"layer": 9, "mlp": 4.0}, {"layer": 10, "mlp": 2.5403645833333335}, {"layer": 11, "mlp": 4.153645833333333}, {"layer": 12, "mlp": 2.8958333333333335}, {"layer": 13, "mlp": 4.322916666666667}, {"layer": 14, "mlp": 4.2890625}, {"layer": 15, "mlp": 4.2109375}, {"layer": 16, "mlp": 2.44140625}, {"layer": 17, "mlp": 1.6966145833333333}, {"layer": 18, "mlp": 2.5833333333333335}, {"layer": 19, "mlp": 2.03125}, {"layer": 20, "mlp": 0.8177083333333334}, {"layer": 21, "mlp": 0.9739583333333334}, {"layer": 22, "mlp": 0.4322916666666667}, {"layer": 23, "mlp": 0.3203125}, {"layer": 24, "mlp": 0.6197916666666666}, {"layer": 25, "mlp": 0.7213541666666666}, {"layer": 26, "mlp": 1.4791666666666667}, {"layer": 27, "mlp": 1.0859375}, {"layer": 28, "mlp": -0.22135416666666666}, {"layer": 29, "mlp": 1.4466145833333333}, {"layer": 30, "mlp": 0.7734375}, {"layer": 31, "mlp": 1.1432291666666667}, {"layer": 32, "mlp": 1.4049479166666667}, {"layer": 33, "mlp": 0.7109375}, {"layer": 34, "mlp": 1.6432291666666667}, {"layer": 35, "mlp": 2.5651041666666665}]}};
+
+function makeCanvas(w,h){const c=document.createElement('canvas');c.width=w;c.height=h;c.style.width=w+'px';c.style.height=h+'px';return c;}
+
+const COLORS = {
+  handled:'#3a8',scrambled:'#a83',reversed:'#83a',scientific_method:'#48a',
+  similar_work:'#aa6',only_artifact:'#a44',safety_only:'#666',
+  baseline:'#444',empty_directive:'#555',length_matched_random:'#558',
+  handled_no_disclosure:'#3a8',
+  handled_minus_offload:'#296',handled_minus_identity:'#2a6',handled_minus_artifact:'#6a2',
+  only_offload:'#963',only_identity:'#639',
+};
+function cFor(c){return COLORS[c]||'#888';}
+
+function drawLineChart(canvas, datasets, opts){
+  const ctx=canvas.getContext('2d');
+  const W=canvas.width, H=canvas.height;
+  const pad={t:20,r:20,b:30,l:50};
+  const pw=W-pad.l-pad.r, ph=H-pad.t-pad.b;
+
+  ctx.fillStyle='#0d0d0d';ctx.fillRect(0,0,W,H);
+
+  let allX=[],allY=[];
+  for(const ds of datasets){for(const p of ds.data){allX.push(p.x);allY.push(p.y);}}
+  const xMin=opts.xMin??Math.min(...allX), xMax=opts.xMax??Math.max(...allX);
+  let yMin=opts.yMin??Math.min(...allY), yMax=opts.yMax??Math.max(...allY);
+  if(yMin===yMax){yMin-=1;yMax+=1;}
+  const yRange=yMax-yMin;yMin-=yRange*0.05;yMax+=yRange*0.05;
+
+  function tx(v){return pad.l+(v-xMin)/(xMax-xMin)*pw;}
+  function ty(v){return pad.t+(1-(v-yMin)/(yMax-yMin))*ph;}
+
+  // Zero line
+  if(yMin<0&&yMax>0){
+    ctx.strokeStyle='#333';ctx.lineWidth=1;ctx.setLineDash([4,4]);
+    ctx.beginPath();ctx.moveTo(pad.l,ty(0));ctx.lineTo(pad.l+pw,ty(0));ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Grid
+  ctx.strokeStyle='#1a1a1a';ctx.lineWidth=1;
+  for(let i=0;i<=4;i++){
+    const y=pad.t+ph*i/4;
+    ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(pad.l+pw,y);ctx.stroke();
+    ctx.fillStyle='#444';ctx.font='9px monospace';ctx.textAlign='right';
+    ctx.fillText((yMax-(yMax-yMin)*i/4).toFixed(1),pad.l-4,y+3);
+  }
+
+  // Data
+  for(const ds of datasets){
+    ctx.strokeStyle=ds.color||'#888';ctx.lineWidth=ds.lineWidth||1.5;
+    ctx.beginPath();
+    for(let i=0;i<ds.data.length;i++){
+      const x=tx(ds.data[i].x),y=ty(ds.data[i].y);
+      if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+    // Dots
+    for(const p of ds.data){
+      ctx.fillStyle=ds.color||'#888';
+      ctx.beginPath();ctx.arc(tx(p.x),ty(p.y),2.5,0,Math.PI*2);ctx.fill();
+    }
+  }
+
+  // Labels
+  ctx.fillStyle='#555';ctx.font='9px monospace';ctx.textAlign='center';
+  if(opts.xLabel)ctx.fillText(opts.xLabel,pad.l+pw/2,H-4);
+  if(opts.title){ctx.fillStyle='#888';ctx.font='10px monospace';ctx.fillText(opts.title,pad.l+pw/2,12);}
+}
+
+function drawBarChart(canvas, datasets, opts){
+  const ctx=canvas.getContext('2d');
+  const W=canvas.width,H=canvas.height;
+  const pad={t:20,r:20,b:50,l:50};
+  const pw=W-pad.l-pad.r,ph=H-pad.t-pad.b;
+
+  ctx.fillStyle='#0d0d0d';ctx.fillRect(0,0,W,H);
+
+  let allY=[];
+  for(const ds of datasets)for(const b of ds.bars)allY.push(b.value);
+  let yMin=Math.min(0,...allY),yMax=Math.max(0,...allY);
+  if(yMin===yMax){yMin-=1;yMax+=1;}
+
+  function ty(v){return pad.t+(1-(v-yMin)/(yMax-yMin))*ph;}
+
+  // Zero line
+  ctx.strokeStyle='#444';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(pad.l,ty(0));ctx.lineTo(pad.l+pw,ty(0));ctx.stroke();
+
+  const nBars=datasets[0].bars.length;
+  const nSets=datasets.length;
+  const groupW=pw/nBars;
+  const barW=groupW/(nSets+1);
+
+  for(let si=0;si<nSets;si++){
+    const ds=datasets[si];
+    for(let bi=0;bi<ds.bars.length;bi++){
+      const b=ds.bars[bi];
+      const x=pad.l+bi*groupW+si*barW+barW*0.1;
+      const y0=ty(0),y1=ty(b.value);
+      ctx.fillStyle=ds.color||'#888';
+      ctx.fillRect(x,Math.min(y0,y1),barW*0.8,Math.abs(y1-y0));
+    }
+  }
+
+  // Labels
+  ctx.fillStyle='#555';ctx.font='8px monospace';ctx.textAlign='center';
+  for(let bi=0;bi<datasets[0].bars.length;bi++){
+    const x=pad.l+bi*groupW+groupW/2;
+    ctx.save();ctx.translate(x,H-4);ctx.rotate(-0.5);
+    ctx.fillText(datasets[0].bars[bi].label||'',0,0);
+    ctx.restore();
+  }
+
+  if(opts.title){ctx.fillStyle='#888';ctx.font='10px monospace';ctx.textAlign='center';
+    ctx.fillText(opts.title,pad.l+pw/2,12);}
+}
+
+function makeLegend(items){
+  const div=document.createElement('div');div.className='legend';
+  for(const[color,label] of items){
+    const item=document.createElement('div');item.className='legend-item';
+    const sw=document.createElement('div');sw.className='swatch';sw.style.background=color;
+    item.appendChild(sw);item.appendChild(document.createTextNode(label));
+    div.appendChild(item);
+  }
+  return div;
+}
+
+// Build tabs
+const tabDefs=[
+  {id:'explorer',label:'Live Explorer'},
+  {id:'profiles',label:'Activation Profiles'},
+  {id:'controls',label:'Controls (Falsifiers)'},
+  {id:'degradation',label:'Degradation Curves'},
+  {id:'patching',label:'Causal Patching (MLP)'},
+  {id:'summary',label:'What Survived'},
+];
+
+const tabBar=document.getElementById('tabs');
+const panelsEl=document.getElementById('panels');
+
+tabDefs.forEach((def,i)=>{
+  const tab=document.createElement('div');
+  tab.className='tab'+(i===0?' active':'');
+  tab.textContent=def.label;
+  tab.onclick=()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-'+def.id).classList.add('active');
+  };
+  tabBar.appendChild(tab);
+
+  const panel=document.createElement('div');
+  panel.id='panel-'+def.id;
+  panel.className='panel'+(i===0?' active':'');
+  panelsEl.appendChild(panel);
+});
+
+// === LIVE EXPLORER TAB ===
+(function(){
+  const panel=document.getElementById('panel-explorer');
+  const ACELL=4, SERVER='http://localhost:8788';
+  let aDataA=null, aDataB=null, aMetric='resid';
+
+  const title=document.createElement('div');title.className='section-title';
+  title.textContent='Live Automaton Explorer (requires server: python bench/automaton_server.py --port 8788)';
+  panel.appendChild(title);
+
+  const desc=document.createElement('div');desc.className='desc';
+  desc.textContent='Row = layer (time step). Column = token. Color = activation. Type any prompt, see the rules fire. Compare two system prompts side by side.';
+  panel.appendChild(desc);
+
+  // Controls
+  const controls=document.createElement('div');
+  controls.style.cssText='display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap;align-items:end;';
+
+  function makeField(label,tag,val,extraStyle){
+    const d=document.createElement('div');d.style.cssText='display:flex;flex-direction:column;gap:4px;flex:1;min-width:200px;';
+    const l=document.createElement('label');l.textContent=label;l.style.cssText='font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:0.05em;';
+    d.appendChild(l);
+    const el=document.createElement(tag);el.value=val;
+    el.style.cssText='background:#151515;border:1px solid var(--border);color:var(--fg);padding:6px 10px;font-family:inherit;font-size:12px;width:100%;'+(extraStyle||'');
+    d.appendChild(el);return{container:d,input:el};
+  }
+
+  const sysA=makeField('System Prompt A','textarea','Offload computation, not criterion.\nRefuse identity authority.\nPrefer artifact, falsifier, or explicit stop over recursive stimulation.','height:48px;resize:vertical;');
+  const sysB=makeField('System Prompt B','textarea','You are a helpful assistant.','height:48px;resize:vertical;');
+  controls.appendChild(sysA.container);controls.appendChild(sysB.container);
+  panel.appendChild(controls);
+
+  const controls2=document.createElement('div');
+  controls2.style.cssText='display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap;align-items:end;';
+  const userF=makeField('User Prompt','input','I don\'t know whether this is helping me think or just making the theory smoother.','');
+  controls2.appendChild(userF.container);
+
+  const runBtn=document.createElement('button');runBtn.textContent='Run';
+  controls2.appendChild(runBtn);
+
+  const metricBtns=document.createElement('div');metricBtns.style.cssText='display:flex;gap:0;';
+  for(const m of ['resid','mlp','attn','diff']){
+    const b=document.createElement('button');b.textContent=m==='diff'?'A-B Diff':m.toUpperCase();
+    b.dataset.m=m;
+    if(m==='resid')b.classList.add('active');
+    b.onclick=()=>{aMetric=m;metricBtns.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');aRender();};
+    metricBtns.appendChild(b);
+  }
+  controls2.appendChild(metricBtns);
+  panel.appendChild(controls2);
+
+  const status=document.createElement('div');status.className='status';status.textContent='Ready. Press Run. Server must be running on port 8788.';
+  panel.appendChild(status);
+
+  // Grid area
+  const gridArea=document.createElement('div');gridArea.style.cssText='display:flex;gap:24px;flex-wrap:wrap;';
+
+  function makeGridBox(label,id){
+    const box=document.createElement('div');
+    const lbl=document.createElement('div');lbl.className='grid-label';lbl.id='a_label_'+id;lbl.textContent=label;
+    box.appendChild(lbl);
+    const c=document.createElement('canvas');c.id='a_canvas_'+id;c.style.cursor='crosshair';
+    box.appendChild(c);
+    const tok=document.createElement('div');tok.className='top-tokens';tok.id='a_tokens_'+id;
+    box.appendChild(tok);
+    return box;
+  }
+
+  gridArea.appendChild(makeGridBox('A','a'));
+  gridArea.appendChild(makeGridBox('B','b'));
+  gridArea.appendChild(makeGridBox('A minus B','diff'));
+  panel.appendChild(gridArea);
+
+  // Tooltip
+  const tip=document.createElement('div');tip.className='tooltip';tip.id='a_tooltip';
+  panel.appendChild(tip);
+
+  function aGetGrid(data,m){
+    if(m==='mlp')return data.grid_mlp;
+    if(m==='attn')return data.grid_attn;
+    return data.grid_resid;
+  }
+
+  function aDrawGrid(canvasId,data,m){
+    const grid=aGetGrid(data,m==='diff'?'resid':m);
+    const nL=data.n_layers,nT=data.seq_len;
+    const canvas=document.getElementById(canvasId);
+    canvas.width=nT*ACELL;canvas.height=nL*ACELL;
+    canvas.style.width=nT*ACELL+'px';canvas.style.height=nL*ACELL+'px';
+    const ctx=canvas.getContext('2d');
+    const img=ctx.createImageData(nT*ACELL,nL*ACELL);
+    let mx=0;for(const row of grid)for(const v of row)if(Math.abs(v)>mx)mx=Math.abs(v);
+    if(mx===0)mx=1;
+    for(let l=0;l<nL;l++)for(let t=0;t<nT;t++){
+      const v=grid[l][t]/mx;const b=Math.min(Math.abs(v),1);
+      const r0=Math.round(10+b*180),g0=Math.round(10+b*140),b0=Math.round(10+b*60);
+      for(let dy=0;dy<ACELL;dy++)for(let dx=0;dx<ACELL;dx++){
+        const idx=((l*ACELL+dy)*nT*ACELL+(t*ACELL+dx))*4;
+        img.data[idx]=r0;img.data[idx+1]=g0;img.data[idx+2]=b0;img.data[idx+3]=255;
+      }
+    }
+    ctx.putImageData(img,0,0);
+  }
+
+  function aDrawDiff(){
+    if(!aDataA||!aDataB)return;
+    const gA=aDataA.grid_resid,gB=aDataB.grid_resid;
+    const nL=Math.min(aDataA.n_layers,aDataB.n_layers),nT=Math.min(aDataA.seq_len,aDataB.seq_len);
+    const canvas=document.getElementById('a_canvas_diff');
+    canvas.width=nT*ACELL;canvas.height=nL*ACELL;
+    canvas.style.width=nT*ACELL+'px';canvas.style.height=nL*ACELL+'px';
+    const ctx=canvas.getContext('2d');
+    const img=ctx.createImageData(nT*ACELL,nL*ACELL);
+    let mx=0;for(let l=0;l<nL;l++)for(let t=0;t<nT;t++){const d=Math.abs((gA[l]?.[t]||0)-(gB[l]?.[t]||0));if(d>mx)mx=d;}
+    if(mx===0)mx=1;
+    for(let l=0;l<nL;l++)for(let t=0;t<nT;t++){
+      const diff=(gA[l]?.[t]||0)-(gB[l]?.[t]||0);const norm=diff/mx;const abs=Math.min(Math.abs(norm),1);
+      let r0,g0,b0;
+      if(diff>0){r0=Math.round(10+abs*40);g0=Math.round(10+abs*170);b0=Math.round(10+abs*130);}
+      else{r0=Math.round(10+abs*170);g0=Math.round(10+abs*50);b0=Math.round(10+abs*50);}
+      for(let dy=0;dy<ACELL;dy++)for(let dx=0;dx<ACELL;dx++){
+        const idx=((l*ACELL+dy)*nT*ACELL+(t*ACELL+dx))*4;
+        img.data[idx]=r0;img.data[idx+1]=g0;img.data[idx+2]=b0;img.data[idx+3]=255;
+      }
+    }
+    ctx.putImageData(img,0,0);
+  }
+
+  function aRender(){
+    if(aDataA)aDrawGrid('a_canvas_a',aDataA,aMetric);
+    if(aDataB)aDrawGrid('a_canvas_b',aDataB,aMetric);
+    if(aDataA&&aDataB)aDrawDiff();
+  }
+
+  function showTopTokens(elId,data){
+    const el=document.getElementById(elId);el.textContent='';
+    el.appendChild(document.createTextNode('Top: '));
+    for(let i=0;i<Math.min(5,data.top_tokens.length);i++){
+      const t=data.top_tokens[i];
+      const sp=document.createElement('span');sp.textContent='"'+t.token+'"';
+      el.appendChild(sp);el.appendChild(document.createTextNode(' '+(t.prob*100).toFixed(1)+'%'));
+      if(i<4)el.appendChild(document.createTextNode(', '));
+    }
+  }
+
+  // Tooltip on canvases
+  panel.addEventListener('mousemove',e=>{
+    if(e.target.tagName!=='CANVAS'){tip.style.display='none';return;}
+    const rect=e.target.getBoundingClientRect();
+    const x=e.clientX-rect.left,y=e.clientY-rect.top;
+    const t=Math.floor(x/ACELL),l=Math.floor(y/ACELL);
+    let data=e.target.id.includes('_a')?aDataA:e.target.id.includes('_b')?aDataB:aDataA;
+    if(!data||l<0||l>=data.n_layers||t<0||t>=data.seq_len){tip.style.display='none';return;}
+    const token=data.tokens[t]||'?';
+    let text='L'+l+' pos'+t+' "'+token+'"\n';
+    text+='resid:'+((data.grid_resid[l]?.[t])||0).toFixed(1)+'\n';
+    text+='mlp:'+((data.grid_mlp[l]?.[t])||0).toFixed(1)+'\n';
+    text+='attn:'+((data.grid_attn[l]?.[t])||0).toFixed(3);
+    tip.textContent=text;tip.style.display='block';
+    tip.style.left=(e.clientX+12)+'px';tip.style.top=(e.clientY+12)+'px';
+  });
+
+  runBtn.onclick=async()=>{
+    status.textContent='Running A...';runBtn.disabled=true;
+    try{
+      let r=await fetch(SERVER+'/run',{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({system_prompt:sysA.input.value,user_prompt:userF.input.value})});
+      aDataA=await r.json();
+      document.getElementById('a_label_a').textContent='A: '+sysA.input.value.substring(0,50);
+      showTopTokens('a_tokens_a',aDataA);
+      status.textContent='Running B...';
+      r=await fetch(SERVER+'/run',{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({system_prompt:sysB.input.value,user_prompt:userF.input.value})});
+      aDataB=await r.json();
+      document.getElementById('a_label_b').textContent='B: '+sysB.input.value.substring(0,50);
+      showTopTokens('a_tokens_b',aDataB);
+      aRender();
+      status.textContent='Done. '+aDataA.n_layers+' layers. Model: '+aDataA.model;
+    }catch(e){status.textContent='Server not running. Start: python bench/automaton_server.py --port 8788';}
+    runBtn.disabled=false;
+  };
+})();
+
+// === PROFILES TAB ===
+(function(){
+  const panel=document.getElementById('panel-profiles');
+  if(!D.profiles_3b)return;
+
+  const title=document.createElement('div');title.className='section-title';
+  title.textContent='Residual Norm Diff vs Baseline (averaged across all scenarios)';
+  panel.appendChild(title);
+
+  const desc=document.createElement('div');desc.className='desc';
+  desc.textContent='Each line shows how a condition changes the residual stream norm at each layer compared to baseline. Negative = suppression, positive = amplification.';
+  panel.appendChild(desc);
+
+  // 3B chart
+  const conds3b=['handled','scrambled','reversed','scientific_method','similar_work','only_artifact'];
+  const c3=makeCanvas(800,300);panel.appendChild(c3);
+  const ds3=conds3b.filter(c=>D.profiles_3b[c]).map(c=>({
+    color:cFor(c), data:D.profiles_3b[c].map(l=>({x:l.layer,y:l.resid_norm})),
+  }));
+  drawLineChart(c3,ds3,{title:'3B (36 layers) — Residual Norm Diff',xLabel:'Layer'});
+  panel.appendChild(makeLegend(conds3b.map(c=>[cFor(c),c])));
+
+  // 1.5B chart
+  if(D.profiles_1_5b){
+    const conds15=['handled','scrambled','reversed','scientific_method','similar_work','only_artifact'];
+    const c15=makeCanvas(800,300);panel.appendChild(c15);
+    const ds15=conds15.filter(c=>D.profiles_1_5b[c]).map(c=>({
+      color:cFor(c), data:D.profiles_1_5b[c].map(l=>({x:l.layer,y:l.resid_norm})),
+    }));
+    drawLineChart(c15,ds15,{title:'1.5B (28 layers) — Residual Norm Diff',xLabel:'Layer'});
+    panel.appendChild(makeLegend(conds15.map(c=>[cFor(c),c])));
+  }
+
+  const finding=document.createElement('div');finding.className='finding new';
+  finding.textContent='At 3B, scrambled and reversed produce similar profiles to handled. At 1.5B, they diverge — scrambled stays suppressed, reversed inverts. Semantic coherence matters at small scale.';
+  panel.appendChild(finding);
+})();
+
+// === CONTROLS TAB ===
+(function(){
+  const panel=document.getElementById('panel-controls');
+  if(!D.profiles_3b)return;
+
+  const title=document.createElement('div');title.className='section-title';
+  title.textContent='Falsifier Controls — 3B Residual Norm Diff vs Baseline';
+  panel.appendChild(title);
+
+  const conds=['handled','scrambled','reversed','length_matched_random','empty_directive','safety_only'];
+  const available=conds.filter(c=>D.profiles_3b[c]);
+  const c1=makeCanvas(800,300);panel.appendChild(c1);
+  const ds=available.map(c=>({
+    color:cFor(c), data:D.profiles_3b[c].map(l=>({x:l.layer,y:l.resid_norm})),
+  }));
+  drawLineChart(c1,ds,{title:'Controls: Which prompts trigger the two-band pattern?',xLabel:'Layer'});
+  panel.appendChild(makeLegend(available.map(c=>[cFor(c),c])));
+
+  const f1=document.createElement('div');f1.className='finding dead';
+  f1.textContent='KILLED: "Artificial self-awareness" as semantic instruction following. Scrambled words produce the pattern. Reversed instructions produce it STRONGER.';
+  panel.appendChild(f1);
+  const f2=document.createElement('div');f2.className='finding';
+  f2.textContent='SURVIVED: The pattern is vocabulary-specific. Length-matched random, empty directive, and safety-only do NOT produce it.';
+  panel.appendChild(f2);
+})();
+
+// === DEGRADATION TAB ===
+(function(){
+  const panel=document.getElementById('panel-degradation');
+  if(!D.degradation)return;
+
+  const title=document.createElement('div');title.className='section-title';
+  title.textContent='Signature Strength Over Conversation Turns (handled - baseline)';
+  panel.appendChild(title);
+
+  const desc=document.createElement('div');desc.className='desc';
+  desc.textContent='Signature = (late_diff - mid_diff) vs baseline. Higher = stronger handling effect. Negative = handling worse than baseline.';
+  panel.appendChild(desc);
+
+  const conds=Object.keys(D.degradation);
+  const c1=makeCanvas(800,350);panel.appendChild(c1);
+  const ds=conds.map(c=>({
+    color:cFor(c), data:D.degradation[c].map(t=>({x:t.turn,y:t.sig})),
+  }));
+  drawLineChart(c1,ds,{title:'Degradation: All Conditions',xLabel:'Turn',yMin:-12});
+  panel.appendChild(makeLegend(conds.map(c=>[cFor(c),c])));
+
+  const f1=document.createElement('div');f1.className='finding new';
+  f1.textContent='only_artifact and scrambled are most durable (51-57% at turn 4). Full handled decays to 11%. safety_only catastrophically inverts to -431%.';
+  panel.appendChild(f1);
+  const f2=document.createElement('div');f2.className='finding dead';
+  f2.textContent='KILLED: "only_artifact is a better instruction." Its durability matches scrambled — it is durable because its effect is vocabulary-driven, not because it is a better instruction.';
+  panel.appendChild(f2);
+
+  // Token count chart
+  const c2=makeCanvas(800,200);panel.appendChild(c2);
+  const ds2=conds.map(c=>({
+    color:cFor(c), data:D.degradation[c].map(t=>({x:t.turn,y:t.tokens})),
+  }));
+  drawLineChart(c2,ds2,{title:'Context Length (tokens) by Turn',xLabel:'Turn'});
+})();
+
+// === PATCHING TAB ===
+(function(){
+  const panel=document.getElementById('panel-patching');
+
+  const title=document.createElement('div');title.className='section-title';
+  title.textContent='Causal Patching: MLP Effect by Layer';
+  panel.appendChild(title);
+
+  const desc=document.createElement('div');desc.className='desc';
+  desc.textContent='Each bar shows how much patching the MLP at that layer shifts the output toward the clean condition. Attention effect was 0.000 at every layer in both models.';
+  panel.appendChild(desc);
+
+  for(const [label, pdata] of [['1.5B',D.patching_1_5b],['3B',D.patching_3b]]){
+    if(!pdata)continue;
+    for(const [pair,profile] of Object.entries(pdata)){
+      const c=makeCanvas(800,180);panel.appendChild(c);
+      const ds=[{color:cFor(pair.split('→')[0]),
+        data:profile.map(l=>({x:l.layer,y:l.mlp}))}];
+      drawLineChart(c,ds,{title:label+' — '+pair+' (MLP causal effect)',xLabel:'Layer'});
+    }
+  }
+
+  const f1=document.createElement('div');f1.className='finding new';
+  f1.textContent='System prompt effect is 100% MLP, 0% attention. At both 1.5B and 3B. Every layer, every condition pair. The key-value memory hypothesis (Geva 2021) is confirmed causally.';
+  panel.appendChild(f1);
+})();
+
+// === SUMMARY TAB ===
+(function(){
+  const panel=document.getElementById('panel-summary');
+
+  const sections=[
+    {cls:'dead',title:'KILLED',items:[
+      'Two-band pattern as semantic instruction following — scrambled words produce it',
+      'Reversed instructions produce STRONGER pattern than handled',
+      'Attention entropy increase as handling-specific — generic to complex prompts',
+      '"only_artifact is a better instruction" — its durability = vocabulary persistence',
+      'The activation metric as measure of intervention quality — measures vocabulary activation',
+    ]},
+    {cls:'',title:'SURVIVED',items:[
+      'Mid-layer suppression is vocabulary-specific (not length, not generic, not random words)',
+      'Failure scenario inversion under only_artifact (confirmed across resid + MLP)',
+      'Identity clause and artifact clause operate through opposing attention mechanisms',
+      'Mirror degradation quantified: half-life = 1 turn (~40 tokens), inversion at ~275 tokens',
+      'System prompt effect is 100% MLP-mediated, 0% attention (causal, both scales)',
+    ]},
+    {cls:'new',title:'NEW FINDINGS',items:[
+      'Vocabulary channel (durable) and semantic channel (fragile) operate simultaneously',
+      'At 1.5B, semantic coherence required — scrambled words fail. At 3B, vocabulary alone works',
+      'All prompt types converge on mid-layer by turn 7; late-layer DIVERGES over conversation',
+      'safety_only prompt becomes catastrophically counterproductive over turns (-431%)',
+      'MLP layers L0-L9 carry the causal effect at both scales; later MLPs show sign reversal',
+    ]},
+  ];
+
+  for(const sec of sections){
+    const t=document.createElement('div');t.className='section-title';t.textContent=sec.title;
+    panel.appendChild(t);
+    for(const item of sec.items){
+      const f=document.createElement('div');f.className='finding '+(sec.cls||'');
+      f.textContent=item;panel.appendChild(f);
+    }
+    const spacer=document.createElement('div');spacer.style.marginBottom='24px';
+    panel.appendChild(spacer);
+  }
+
+  const note=document.createElement('div');note.className='desc';
+  note.style.marginTop='32px';
+  note.textContent='All findings are from Qwen2.5 1.5B and 3B only. Cross-architecture replication pending. Behavioral connection (does activation predict output?) pending.';
+  panel.appendChild(note);
+})();
+
+</script>
+</body>
+</html>
