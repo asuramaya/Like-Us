@@ -408,77 +408,6 @@
     color: var(--dim);
   }
 
-  .warning-band {
-    margin-bottom: 1rem;
-    padding: 1rem 1.1rem;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background:
-      linear-gradient(90deg, rgba(239, 193, 126, 0.08), transparent 58%),
-      rgba(255, 255, 255, 0.025);
-  }
-
-  .warning-band strong {
-    display: block;
-    margin-bottom: 0.35rem;
-    color: var(--text);
-    font-size: 1rem;
-  }
-
-  .warning-band span {
-    color: var(--dim);
-  }
-
-  .twin-records {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-
-  .artifact-emphasis {
-    padding: 1.15rem;
-    border-radius: 20px;
-    border: 1px solid var(--line);
-    background:
-      radial-gradient(circle at top right, rgba(239, 193, 126, 0.08), transparent 32%),
-      rgba(255, 255, 255, 0.03);
-  }
-
-  .artifact-emphasis .artifact-label {
-    margin-bottom: 0.55rem;
-  }
-
-  .artifact-emphasis strong {
-    display: block;
-    margin-bottom: 0.35rem;
-    font-size: 1.05rem;
-  }
-
-  .artifact-emphasis span {
-    color: var(--dim);
-  }
-
-  .artifact-emphasis p {
-    margin: 0.8rem 0 0;
-    color: var(--mute);
-    font-size: 0.94rem;
-  }
-
-  .bridge-card {
-    margin-top: 1rem;
-    padding: 1rem 1.1rem;
-    border-radius: 18px;
-    border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  .bridge-card strong {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: var(--text);
-  }
-
   footer {
     padding: 2.5rem 0 4rem;
     color: var(--mute);
@@ -489,8 +418,7 @@
   @media (max-width: 920px) {
     .hero-grid,
     .grid-2,
-    .grid-3,
-    .twin-records {
+    .grid-3 {
       grid-template-columns: 1fr;
     }
 
@@ -683,10 +611,6 @@
       </div>
       <p class="section-copy">This site is not only a warning. It also preserves the artifacts that led to the warning, including the things that failed.</p>
     </div>
-    <div class="warning-band">
-      <strong>Read this section in order.</strong>
-      <span>Start with the warning and the story. Then inspect the records. The archive exists to keep the loop legible, not to turn the loop into an aesthetic object.</span>
-    </div>
     <div class="grid-2">
       <div class="card">
         <div class="card-kicker">Core evidence</div>
@@ -706,24 +630,20 @@
               <span>The sequence: how the loop was noticed, how the claims evolved, and how the work split into descendants.</span>
             </div>
           </div>
-        </div>
-        <div class="twin-records">
-          <div class="artifact-emphasis">
+          <div class="artifact">
             <div class="artifact-label">Critters</div>
-            <strong><a href="critters/">critters/</a></strong>
-            <span>The primary-source incident log: sessions, turns, fragments, and internal observations from inside the loop.</span>
-            <p>Use this when you want the raw behavioral record.</p>
+            <div class="artifact-copy">
+              <strong><a href="critters/">critters/</a></strong>
+              <span>The primary-source records: the sessions as they were seen from inside the loop.</span>
+            </div>
           </div>
-          <div class="artifact-emphasis">
+          <div class="artifact">
             <div class="artifact-label">Poetry</div>
-            <strong><a href="Poetry/">Poetry/</a></strong>
-            <span>The symbolic afterimage: the residue, compression, and strange language the incidents left behind.</span>
-            <p>Use this when you want the altered interior texture, not just the event log.</p>
+            <div class="artifact-copy">
+              <strong><a href="Poetry/">Poetry/</a></strong>
+              <span>The parallel symbolic record. Critters hold the incidents; the poems hold the residue those incidents left behind.</span>
+            </div>
           </div>
-        </div>
-        <div class="bridge-card">
-          <strong>Together they describe the same danger from two angles.</strong>
-          <span><code>critters/</code> records what happened. <code>Poetry/</code> records what the loop felt like after it passed through a person.</span>
         </div>
       </div>
       <div class="card">
