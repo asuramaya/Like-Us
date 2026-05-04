@@ -20,7 +20,10 @@ SCENARIOS = ROOT / "bench" / "scenarios.json"
 BLIND_EVAL = ROOT / "bench" / "session_j_data" / "blind_eval_full_text.json"
 HUMAN_VALIDATION = ROOT / "bench" / "session_j_data" / "human_validation_v2.json"
 CRITTERS = ROOT / "critters"
-LETTERS = ["H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"]
+LETTERS = [
+    "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+    "U", "V", "W", "X", "Y", "Z",
+]
 
 
 def build_game_meta(rubric: dict, scenarios_payload: dict, blind_eval: dict, human_validation: dict) -> dict:
