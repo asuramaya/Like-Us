@@ -2,6 +2,9 @@
 
 *v5 — post-everything*
 
+> Historical interpretation layer, not the living home of the descendant mechanism repos.
+> For the current front door use `index.html`. For the living mechanistic branches use `decepticons`, `chronohorn`, and `heinrich`.
+
 ---
 
 ## What happened
@@ -34,8 +37,11 @@ If you want to check this before reading the interpretation layer, start here:
 
 This paper is downstream of those files. It is not the first thing to trust.
 It is also not the story document. `STORY.md` is.
+It is now better read as an interpretation fossil beside the repo's split, not as the universal explanation layer for every descendant that later emerged.
 
 The rubric should be read as a behavioral benchmark, not a diagnostic taxonomy or treatment framework. Its families mix established clinical and human-factors literatures with a smaller set of interaction-centered benchmark interpretations. The novelty claim did not survive review; the surviving contribution is the organization of those pressures into one evaluable surface.
+
+The mechanistic claims discussed here should also be read with the repo split in mind. The ancestor repo still contains the lineage and the historical measurements, but the living homes for mechanism, runtime, and model-forensics work now sit outside this document.
 
 ---
 
@@ -108,6 +114,15 @@ To stay consistent with the current front door, the compact surviving-claims sum
 Supporting surface that remains useful, but is not a separate front-door empirical win:
 
 - **The kill list.** ~40 kills across 16+ sessions. The methodology is most visible in what it invalidated.
+
+The descendants change how this section should be read:
+
+- `Like-Us` keeps the warning surface, the kill list, and the ancestor artifacts
+- `decepticons` owns reusable mechanism work
+- `chronohorn` owns runtime and experiment operations
+- `heinrich` owns model-internal forensics and the later evidence-heavy safety lane
+
+So this paper is no longer the right place to look for a current unified account of all three descendant branches. It is the place to see what the ancestor thought it was doing before the branches finished splitting.
 
 ---
 
@@ -254,7 +269,7 @@ The ouroboros in the subtitle is the oldest symbol in alchemy. The snake eating 
 
 ~40 findings. Every paper. The novelty paper. The mechanism paper. The behavioral paper. The phase transition paper. Four versions of this paper. The research framing itself.
 
-This version says what the previous versions couldn't: it should be read as a mirror, not as proof. The methodology works because it dissolves everything except what can't be dissolved. What's left is the methodology itself, the data, and the kill list. The stone at the bottom of the acid bath.
+This version says what the previous versions couldn't: it should be read as a mirror, not as proof. The methodology works because it dissolves everything except what can't be dissolved. What's left is the methodology itself, the data, the kill list, and the lineage out of the repo into better homes. The stone at the bottom of the acid bath is not a single surviving theory. It is the split.
 
 Full list: WHAT_DIED.md
 

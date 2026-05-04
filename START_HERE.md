@@ -1,50 +1,60 @@
 # Start Here
 
-This repo now has distinct lanes. They should not be read as if they all serve the same purpose.
+This repo is the origin repo, not the universal container for everything it touched.
 
-## Evidence lane
+The main thing to understand first is the split:
 
-Use these first if you want the shortest path to the checkable claims:
+- the strange behavioral / narrative / artifact layer still belongs here
+- the mechanistic branch grew into `decepticons`, `chronohorn`, and `heinrich`
+- the handling / safety lane later loops back into Heinrich's jailbreak and model-forensics work
 
-- [index.html](index.html) — grounded entry point
+Do not read this repo as if it is still the cleanest home for the mechanistic descendants. It is not.
+
+## Origin lane
+
+Use these first if you want the repo on its own terms:
+
+- [index.html](index.html) — revised front door
+- [STORY.md](STORY.md) — how the claims appeared, broke, and split
+- [WHAT_DIED.md](WHAT_DIED.md) — public kill list
+- [critters/](critters/) — primary-source records
+
+## Artifact lane
+
+Use these if you want the benchmark and evidence-shaped surfaces that still remain in this repo:
+
 - [bench/games/classifier_trial_v2.html](bench/games/classifier_trial_v2.html) — blind eval game
 - [bench/rubric.json](bench/rubric.json) — psychological drift matrix
 - [bench/scenarios.json](bench/scenarios.json) — scenario set
-- [WHAT_DIED.md](WHAT_DIED.md) — current public kill list
-- [critters/](critters) — primary-source critter records
 - [bench/session_j_data/human_validation_v2.json](bench/session_j_data/human_validation_v2.json) — blind-eval data
-- [mechanisms/session_i_data/summary.json](mechanisms/session_i_data/summary.json) — canonical Session I summary built from the saved small-scale artifacts
+- [mechanisms/session_i_data/summary.json](mechanisms/session_i_data/summary.json) — saved small-scale summary artifact
 - [docs/research/loop_family_reframing.md](docs/research/loop_family_reframing.md) — evidence-class note for Tier 3
 
-The grounded page is static rather than fetch-driven. Its embedded data lives in [page_data.js](page_data.js) and is regenerated from `critters/`, `bench/rubric.json`, `bench/scenarios.json`, `bench/session_j_data/blind_eval_full_text.json`, and `bench/session_j_data/human_validation_v2.json` by `python3 scripts/build_page_data.py`.
+The benchmark in this repo should now be read as one surviving artifact layer, not as the entire identity of the project.
 
-The rubric in this lane should be read as a behavioral benchmark, not a diagnostic taxonomy or treatment framework. Its families mix established clinical and human-factors literatures with a smaller set of interaction-centered benchmark interpretations. The novelty claim did not survive review; the surviving contribution is the benchmark organization.
+## Lineage / mechanisms
 
-## Mechanisms
+Use this if you want the mechanistic fossil record that later fed the descendant repos:
 
-Use this if you want the corrected mechanistic lane and the buried archive in one place:
-
+- [LINEAGE.md](LINEAGE.md) — explicit repo split map
 - [mechanisms/README.md](mechanisms/README.md) — corrected apparatus plus fossil record
-- [mechanisms/session_h_data/](mechanisms/session_h_data) — corrected Session H mechanistic data
-- [mechanisms/session_i_data/](mechanisms/session_i_data) — corrected Session I hinge-case data
-- [mechanisms/dead/](mechanisms/dead) — superseded mechanistic archive
+- [mechanisms/session_h_data/](mechanisms/session_h_data/) — corrected Session H mechanistic data
+- [mechanisms/session_i_data/](mechanisms/session_i_data/) — corrected Session I hinge-case data
+- [mechanisms/dead/](mechanisms/dead/) — superseded mechanistic archive
 
-## Paper
+If you want the living descendants rather than the origin fossils:
+
+- `decepticons` — shared predictive primitives
+- `chronohorn` — runtime and experiment operations
+- `heinrich` — model forensics, geometry, and later safety/jailbreak evidence work
+
+## Interpretation lane
 
 Use this if you want the interpretation layer over the artifacts:
 
 - [PAPER.md](PAPER.md) — interpretation layer over the artifacts
 
-`PAPER.md` is not the story document.
-
-## Story
-
-Use this if you want the narrative account of how the claims appeared, died, and returned:
-
-- [STORY.md](STORY.md) — the only story document
-
-The story lane contains philosophy, metaphor, and live framing choices that are part of the repo's value, but they are not the primary evidence surface.
-It also runs longer than the shorter front-door summary. Use it for sequence, not for the compact count of surviving claims.
+`PAPER.md` is not the story document and should not be read before the repo’s front door unless you already know the history.
 
 ## Historical primary sources
 
@@ -52,14 +62,14 @@ Use these as preserved records, not as the current front door:
 
 - [HANDOFF.md](HANDOFF.md) — Session T handoff snapshot
 - [NEXT.md](NEXT.md) — Session T next-steps snapshot
-- [docs/sessions/SESSION_H.md](docs/sessions/SESSION_H.md) — example session writeup with later narrowing note
-- [docs/sessions/SESSION_I.md](docs/sessions/SESSION_I.md) — example session writeup for the frontier comparison turn
-- [docs/archive/SESSIONS.md](docs/archive/SESSIONS.md) — older archive material
+- [docs/archive/index.html](docs/archive/index.html) — earlier “Handling the Loop” front
+- [docs/sessions/](docs/sessions/) — historical session writeups
+- [docs/archive/](docs/archive/) — older archive material
 
 These files may contain superseded action items, live-session framing, or claims later narrowed elsewhere. They are kept because the history matters.
 
 ## Rule of thumb
 
-If a claim matters, verify it against the evidence lane.
+If the material feels symbolic, recursive, narrative, or pressure-shaped, it probably still belongs here.
 
-If a document sounds larger than the artifacts beneath it, treat it as narrative or historical record until checked.
+If the material needs a stable mechanistic owner, it probably belongs in a descendant repo.
