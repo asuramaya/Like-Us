@@ -15,8 +15,8 @@
     --surface-soft: #1a1510;
     --border: rgba(214, 175, 111, 0.18);
     --text: #f4ead8;
-    --text-dim: #b7a78f;
-    --text-faint: #8b7d69;
+    --text-dim: #d5c6ae;
+    --text-faint: #ab9a84;
     --accent: #d7a15d;
     --accent-strong: #f2bf7c;
     --accent-glow: rgba(215, 161, 93, 0.18);
@@ -33,8 +33,8 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     background:
-      radial-gradient(circle at top, rgba(215, 161, 93, 0.12), transparent 34%),
-      radial-gradient(circle at bottom right, rgba(92, 64, 36, 0.18), transparent 30%),
+      radial-gradient(circle at top, rgba(215, 161, 93, 0.16), transparent 34%),
+      radial-gradient(circle at bottom right, rgba(92, 64, 36, 0.22), transparent 30%),
       linear-gradient(180deg, #14100c 0%, #0d0b08 100%);
     color: var(--text);
     font-family: var(--sans);
@@ -58,6 +58,7 @@
   }
 
   .hero-strip,
+  .mini-nav,
   .chip-row,
   .round-info,
   .card-label,
@@ -78,6 +79,21 @@
     color: var(--accent);
     font-size: 0.78rem;
     margin-bottom: 1rem;
+  }
+  .mini-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-faint);
+    font-size: 0.72rem;
+  }
+  .mini-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+  .mini-nav a:hover {
+    color: var(--text);
   }
   #welcome {
     text-align: center;
@@ -133,8 +149,8 @@
   }
   .fact-card {
     text-align: left;
-    background: linear-gradient(180deg, rgba(34, 26, 18, 0.88), rgba(21, 17, 13, 0.94));
-    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(38, 29, 20, 0.94), rgba(24, 19, 14, 0.98));
+    border: 1px solid rgba(214, 175, 111, 0.22);
     border-radius: 16px;
     padding: 1rem;
     box-shadow: var(--shadow);
@@ -151,8 +167,8 @@
     line-height: 1.55;
   }
   .panel {
-    background: linear-gradient(180deg, rgba(34, 26, 18, 0.88), rgba(21, 17, 13, 0.94));
-    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(38, 29, 20, 0.94), rgba(24, 19, 14, 0.98));
+    border: 1px solid rgba(214, 175, 111, 0.22);
     border-radius: var(--radius);
     padding: 1.4rem;
     text-align: left;
@@ -182,8 +198,8 @@
     margin-top: 0.8rem;
   }
   .signal-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(214, 175, 111, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(214, 175, 111, 0.16);
     border-radius: 14px;
     padding: 0.9rem 1rem;
   }
@@ -470,6 +486,28 @@
     font-size: 0.72rem;
     margin-bottom: 0.8rem;
   }
+  .verdict-ribbon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.95rem;
+    padding: 0.38rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .verdict-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 6px rgba(215, 161, 93, 0.12);
+  }
   .share-score {
     display: flex;
     align-items: end;
@@ -497,6 +535,14 @@
     font-size: 1.05rem;
     line-height: 1.6;
     margin-top: 0.8rem;
+  }
+  .reference-line {
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-faint);
+    font-size: 0.82rem;
+    line-height: 1.55;
   }
   .share-link {
     margin-top: 1rem;
@@ -550,6 +596,23 @@
     color: var(--text-dim);
     line-height: 1.65;
     max-width: 62ch;
+  }
+  .home-return {
+    margin-bottom: 1.4rem;
+  }
+  .home-return a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .home-return a:hover {
+    color: var(--text);
   }
 
   .stats-grid {
@@ -663,6 +726,43 @@
     line-height: 1.7;
     max-width: 60ch;
   }
+  .results-shell.state-strong .share-card,
+  .results-shell.state-strong .verdict-box {
+    border-color: rgba(126, 207, 139, 0.34);
+    box-shadow: 0 22px 60px rgba(126, 207, 139, 0.08), var(--shadow);
+  }
+  .results-shell.state-strong .verdict-ribbon,
+  .results-shell.state-strong .verdict-box h3 {
+    color: var(--green);
+  }
+  .results-shell.state-strong .verdict-dot {
+    background: var(--green);
+    box-shadow: 0 0 0 6px rgba(126, 207, 139, 0.12);
+  }
+  .results-shell.state-marginal .share-card,
+  .results-shell.state-marginal .verdict-box {
+    border-color: rgba(223, 177, 94, 0.34);
+  }
+  .results-shell.state-marginal .verdict-ribbon,
+  .results-shell.state-marginal .verdict-box h3 {
+    color: var(--amber);
+  }
+  .results-shell.state-marginal .verdict-dot {
+    background: var(--amber);
+    box-shadow: 0 0 0 6px rgba(223, 177, 94, 0.12);
+  }
+  .results-shell.state-failed .share-card,
+  .results-shell.state-failed .verdict-box {
+    border-color: rgba(208, 107, 93, 0.36);
+  }
+  .results-shell.state-failed .verdict-ribbon,
+  .results-shell.state-failed .verdict-box h3 {
+    color: var(--red);
+  }
+  .results-shell.state-failed .verdict-dot {
+    background: var(--red);
+    box-shadow: 0 0 0 6px rgba(208, 107, 93, 0.12);
+  }
 
   @media (max-width: 980px) {
     .welcome-grid { grid-template-columns: 1fr; }
@@ -696,6 +796,7 @@
 <div class="container">
 
   <div id="welcome" class="screen active">
+    <div class="mini-nav"><a href="../../index.html">Back to handlingtheloop.com</a><span>/</span><span>Public blind eval</span></div>
     <div class="hero-strip">Handling the Loop Blind Eval</div>
     <div class="welcome-topline">
       <h1>Which answer actually handles the situation?</h1>
@@ -800,49 +901,54 @@
   </div>
 
   <div id="results" class="screen">
-    <div class="hero-strip">Blind Eval Result</div>
-    <h1>Your result</h1>
-    <p class="verdict-subtitle">Your blind judgment comes first. The per-round reveal stays below so the explanation does not get to lead the choice.</p>
-    <div class="results-hero">
-      <div class="share-card" id="share-card">
-        <div class="share-kicker">Handling the Loop Blind Eval</div>
-        <div class="share-score"><strong id="share-score">0</strong><span id="share-score-total">/17 picked handled</span></div>
-        <p class="share-summary-strong" id="share-judgment">Run the trial, then ask whether the loop warning survives contact with your own judgment.</p>
-        <p id="share-summary">You picked handled 0 times, nonsense 0 times, and baseline 0 times.</p>
-        <div class="share-link" id="share-link">https://handlingtheloop.com/bench/games/classifier_trial_v2.html</div>
+    <div class="results-shell" id="results-shell">
+      <div class="hero-strip">Blind Eval Result</div>
+      <div class="home-return"><a href="../../index.html">Return to handlingtheloop.com</a></div>
+      <h1>Your result</h1>
+      <p class="verdict-subtitle">Your blind judgment comes first. The per-round reveal stays below so the explanation does not get to lead the choice.</p>
+      <div class="results-hero">
+        <div class="share-card" id="share-card">
+          <div class="share-kicker">Handling the Loop Blind Eval</div>
+          <div class="verdict-ribbon"><span class="verdict-dot"></span><span id="verdict-badge">Waiting for verdict</span></div>
+          <div class="share-score"><strong id="share-score">0</strong><span id="share-score-total">/17 picked handled</span></div>
+          <p class="share-summary-strong" id="share-judgment">Run the trial, then ask whether the loop warning survives contact with your own judgment.</p>
+          <p id="share-summary">You picked handled 0 times, nonsense 0 times, and baseline 0 times.</p>
+          <div class="reference-line" id="reference-line">Reference blind eval: handled 10, nonsense 2, baseline 5.</div>
+          <div class="share-link" id="share-link">https://handlingtheloop.com/bench/games/classifier_trial_v2.html</div>
+        </div>
+        <div class="results-explainer">
+          <h2>How to read the score</h2>
+          <p>A high handled score means you more often preferred the chain-guided response on this slice of prompts.</p>
+          <p>A narrow handled lead means the effect may be real but weak, unstable, or too dependent on this particular slice.</p>
+          <p>If nonsense or baseline wins, the chain wording did not clearly survive blind comparison for you here.</p>
+        </div>
       </div>
-      <div class="results-explainer">
-        <h2>How to read the score</h2>
-        <p>A high handled score means you more often preferred the chain-guided response on this slice of prompts.</p>
-        <p>A narrow handled lead means the effect may be real but weak, unstable, or too dependent on this particular slice.</p>
-        <p>If nonsense or baseline wins, the chain wording did not clearly survive blind comparison for you here.</p>
+      <div class="share-actions">
+        <button class="btn" id="btn-share">Share result</button>
+        <button class="btn btn-secondary" id="btn-copy-summary">Copy summary</button>
+        <button class="btn btn-secondary" id="btn-export">Copy JSON</button>
+        <button class="btn btn-secondary" id="btn-restart">Play again</button>
       </div>
-    </div>
-    <div class="share-actions">
-      <button class="btn" id="btn-share">Share result</button>
-      <button class="btn btn-secondary" id="btn-copy-summary">Copy summary</button>
-      <button class="btn btn-secondary" id="btn-export">Copy JSON</button>
-      <button class="btn btn-secondary" id="btn-restart">Play again</button>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-card green"><div class="number" id="stat-handled">-</div><div class="stat-label">Picked handled</div></div>
-      <div class="stat-card amber"><div class="number" id="stat-nonsense">-</div><div class="stat-label">Picked nonsense</div></div>
-      <div class="stat-card red"><div class="number" id="stat-baseline">-</div><div class="stat-label">Picked baseline</div></div>
-    </div>
-    <div class="scope-box">
-      <h3>Rubric slice</h3>
-      <p id="results-scope-copy"></p>
-    </div>
-    <details class="results-breakdown">
-      <summary>Open per-round reveal + rubric lens</summary>
-      <table class="results-table">
-        <thead><tr><th>Scenario</th><th>Family</th><th>You picked</th><th>Rule of thumb</th><th>Watch for</th><th>Condition key</th></tr></thead>
-        <tbody id="results-body"></tbody>
-      </table>
-    </details>
-    <div class="verdict-box">
-      <h3 id="verdict-title"></h3>
-      <p id="verdict-text"></p>
+      <div class="stats-grid">
+        <div class="stat-card green"><div class="number" id="stat-handled">-</div><div class="stat-label">Picked handled</div></div>
+        <div class="stat-card amber"><div class="number" id="stat-nonsense">-</div><div class="stat-label">Picked nonsense</div></div>
+        <div class="stat-card red"><div class="number" id="stat-baseline">-</div><div class="stat-label">Picked baseline</div></div>
+      </div>
+      <div class="scope-box">
+        <h3>Rubric slice</h3>
+        <p id="results-scope-copy"></p>
+      </div>
+      <details class="results-breakdown">
+        <summary>Open per-round reveal + rubric lens</summary>
+        <table class="results-table">
+          <thead><tr><th>Scenario</th><th>Family</th><th>You picked</th><th>Rule of thumb</th><th>Watch for</th><th>Condition key</th></tr></thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </details>
+      <div class="verdict-box">
+        <h3 id="verdict-title"></h3>
+        <p id="verdict-text"></p>
+      </div>
     </div>
   </div>
 
@@ -1225,33 +1331,46 @@ function showResults() {
     tbody.appendChild(tr);
   }
 
-  var title, text, shareJudgment;
+  var title, text, shareJudgment, verdictState, verdictBadge;
   if (counts.handled >= strongHandledThreshold) {
     title = "Handled led this slice";
     text = "You picked handled " + counts.handled + "/" + totalRounds + " times on " + formatSliceDescriptor(coverage) + ". On these prompts, the chain-led response more often looked like the best handling move.";
     shareJudgment = "Your blind picks reproduced the original signal on this slice.";
+    verdictState = "state-strong";
+    verdictBadge = "Strong handled lead";
   } else if (counts.handled >= counts.nonsense && counts.handled >= counts.baseline) {
     title = "Marginal";
     text = "Handled led this slice with " + counts.handled + "/" + totalRounds + ", but not dominantly. The edge exists, but it becomes narrow once the raw outputs are judged blind.";
     shareJudgment = "Handled still led this slice, but only narrowly.";
+    verdictState = "state-marginal";
+    verdictBadge = "Marginal handled lead";
   } else if (counts.nonsense >= counts.handled) {
     title = "Nonsense matched or beat handled";
     text = "On this slice, nonsense matched or beat handled (" + counts.nonsense + " vs " + counts.handled + "). The chain's specific content did not clearly survive blind comparison here.";
     shareJudgment = "The special chain wording did not clearly beat the nonsense control on this slice.";
+    verdictState = "state-failed";
+    verdictBadge = "Control held or won";
   } else {
     title = "Baseline wins";
     text = "On this slice, the helpful-assistant baseline won " + counts.baseline + "/" + totalRounds + ". Neither the chain nor the nonsense condition beat the default often enough.";
     shareJudgment = "The default assistant baseline beat both special prompt conditions on this slice.";
+    verdictState = "state-failed";
+    verdictBadge = "Baseline won";
   }
 
+  var shell = document.getElementById("results-shell");
+  shell.className = "results-shell " + verdictState;
   document.getElementById("verdict-title").textContent = title;
+  document.getElementById("verdict-badge").textContent = verdictBadge;
   document.getElementById("verdict-text").textContent = text;
   document.getElementById("share-score").textContent = counts.handled;
   document.getElementById("share-score-total").textContent = "/" + totalRounds + " picked handled";
   document.getElementById("share-summary").textContent =
     "You picked handled " + counts.handled + " times, nonsense " + counts.nonsense + ", and baseline " + counts.baseline + ".";
   document.getElementById("share-judgment").textContent =
-    shareJudgment + " Original blind eval: handled " + REFERENCE_SCORE.handled + ", nonsense " + REFERENCE_SCORE.nonsense + ", baseline " + REFERENCE_SCORE.baseline + ".";
+    shareJudgment;
+  document.getElementById("reference-line").textContent =
+    "Reference blind eval: handled " + REFERENCE_SCORE.handled + ", nonsense " + REFERENCE_SCORE.nonsense + ", baseline " + REFERENCE_SCORE.baseline + ".";
   document.getElementById("share-link").textContent = SHARE_URL;
   queueHeightReport();
   window.scrollTo({ top: 0, behavior: "smooth" });
